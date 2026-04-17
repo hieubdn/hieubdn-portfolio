@@ -103,6 +103,9 @@
     text-decoration: none;
     transition: color 0.15s ease;
     padding: 0 12px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
 
     @media (max-width: 919px) {
       padding: 0 8px;
@@ -119,6 +122,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: 44px;
+    min-width: 44px;
     padding: 0;
     border: none;
     background: transparent;

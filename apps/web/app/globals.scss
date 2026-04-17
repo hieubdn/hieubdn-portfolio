@@ -170,19 +170,35 @@ html[data-theme="dark"] {
   box-sizing: border-box;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 *::-webkit-scrollbar {
   display: none;
 }
 
+html {
+  scroll-padding-bottom: max(12px, env(safe-area-inset-bottom));
+}
+
 html,
 body {
   background-color: var(--color-page-background);
+  touch-action: manipulation;
+  overscroll-behavior: none;
+  overflow-x: hidden;
 }
 
 body {
   font-family: "Open Sans", sans-serif;
+}
+
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  min-height: 44px;
+  min-width: 44px;
 }
 
 h1,

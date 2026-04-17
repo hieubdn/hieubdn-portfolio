@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic";
 import type { ReactNode } from "react";
 
 import AboutBlock from "@/components/pages/customer/home/about-block/about-block";
@@ -9,10 +10,21 @@ import SelectedWorkBlock from "@/components/pages/customer/home/selected-work-bl
 import SocialBlock from "@/components/pages/customer/home/social-block/social-block";
 import StatsBlock from "@/components/pages/customer/home/stats-block/stats-block";
 import TestimonialsBlock from "@/components/pages/customer/home/testimonials-block/testimonials-block";
-import SkillSection from "@/components/sections/skill/skill";
+import { Skeleton } from "@/components/ui/skeleton";
 import CompanyBlock from "@/components/pages/customer/home/company-block/company";
 import BlogBlock from "@/components/pages/customer/home/blog-block/blog-block";
 import styles from "./styles.module.scss";
+
+const SkillSection = dynamic(
+  () => import("@/components/sections/skill/skill"),
+  {
+    loading: () => (
+      <div className={styles.skillDynamic} aria-hidden>
+        <Skeleton className={styles.skillSkeleton} />
+      </div>
+    ),
+  },
+);
 
 const BLOCK_REVEAL_STAGGER_MS = 50;
 

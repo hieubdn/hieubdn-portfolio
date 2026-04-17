@@ -1,0 +1,11 @@
+.banner {
+  width: 100%;
+  padding: 10px 16px;
+  padding-top: max(10px, env(safe-area-inset-top));
+  background: #000000;
+  color: #fafafa;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
