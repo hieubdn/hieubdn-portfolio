@@ -18,6 +18,7 @@ import HdwebsoftCompany from "./hdwebsoft-company/hdwebsoft-company";
 import ToyarCompany from "./toyar-company/toyar-company";
 import Phase2Company from "./phase2-company/phase2-company";
 import MindxCompany from "./mindx-company/mindx-company";
+import CavaCompany from "./cava-company/cava-company";
 
 const BLOCK_REVEAL_STAGGER_MS = 50;
 
@@ -31,6 +32,7 @@ type AboutBlockId =
   | "hdwebsoft"
   | "toyar"
   | "phase2"
+  | "cava"
   | "otherExperienceHeading"
   | "mindx"
   | "footerDivider"
@@ -53,6 +55,7 @@ const ABOUT_BLOCKS: readonly AboutBlock[] = [
   { id: "hdwebsoft", label: "HDWEBSOFT" },
   { id: "toyar", label: "Toyar" },
   { id: "phase2", label: "Phase 2" },
+  { id: "cava", label: "Cava" },
   { id: "otherExperienceHeading", label: "Other experience section" },
   { id: "mindx", label: "MindX" },
   { id: "footerDivider", label: "Section divider" },
@@ -121,6 +124,8 @@ export default function AboutSection() {
             inner = <HdwebsoftCompany />;
           } else if (block.id === "toyar") {
             inner = <ToyarCompany />;
+          } else if (block.id === "cava") {
+            inner = <CavaCompany />;
           } else if (block.id === "phase2") {
             inner = <Phase2Company />;
           } else if (block.id === "otherExperienceHeading") {

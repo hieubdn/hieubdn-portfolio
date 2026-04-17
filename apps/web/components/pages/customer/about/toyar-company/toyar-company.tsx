@@ -10,9 +10,6 @@ const RESPONSIBILITY_KEYS = [
   "about.page.experience.toyar.responsibility.2",
   "about.page.experience.toyar.responsibility.3",
   "about.page.experience.toyar.responsibility.4",
-  "about.page.experience.toyar.responsibility.5",
-  "about.page.experience.toyar.responsibility.6",
-  "about.page.experience.toyar.responsibility.7",
 ] as const;
 
 const TECH_LINE_KEYS = ["about.page.experience.toyar.tech"] as const;
@@ -33,7 +30,7 @@ export default function ToyarCompany() {
           <span className={styles.durationValue}>
             {t("about.page.experience.toyar.durationValue")}
           </span>
-          ●
+          ◦
           <span className={styles.locationValue}>
             {t("about.page.experience.toyar.locationValue")}
           </span>
