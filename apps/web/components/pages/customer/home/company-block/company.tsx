@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useEffect, useRef } from "react";
 
 import { useLocaleText } from "@/components/layout/setting/translate/locale-provider";
@@ -31,18 +30,22 @@ const LOGO_CLASS = {
   phase2: styles.logoPhase2,
 } as Record<CompanyId, string>;
 
-function CompanyMarqueeSegment() {
+function CompanyMarqueeSegment({ repeatIndex }: { repeatIndex: number }) {
   return (
     <div className={styles.segment}>
       {COMPANIES.map((company) => (
-        <Image
-          key={company.id}
-          src={company.logo}
+        // Marquee: plain img avoids SSR/client mismatch from next/image in this layout.
+        // eslint-disable-next-line @next/next/no-img-element -- intentional for hydration-stable markup
+        <img
+          key={`${repeatIndex}-${company.id}`}
+          src={company.logo.src}
+          width={company.logo.width}
+          height={company.logo.height}
           alt={company.label}
-          width={320}
-          height={160}
-          unoptimized
           className={`${styles.logoCompany} ${LOGO_CLASS[company.id]}`}
+          decoding="async"
+          loading="lazy"
+          draggable={false}
         />
       ))}
     </div>
@@ -109,8 +112,8 @@ export default function CompanyBlock() {
       <section className={styles.marqueeSection}>
         <div className={styles.viewport} aria-hidden>
           <div ref={trackRef} className={styles.track}>
-            <CompanyMarqueeSegment />
-            <CompanyMarqueeSegment />
+            <CompanyMarqueeSegment repeatIndex={0} />
+            <CompanyMarqueeSegment repeatIndex={1} />
           </div>
         </div>
       </section>

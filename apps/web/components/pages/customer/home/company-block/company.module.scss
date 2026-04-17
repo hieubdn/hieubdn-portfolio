@@ -67,6 +67,8 @@
   flex-shrink: 0;
   display: block;
   width: auto;
+  max-width: 100%;
+  height: auto;
   object-fit: contain;
 }
 

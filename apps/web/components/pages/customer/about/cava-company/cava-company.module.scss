@@ -3,6 +3,8 @@
     flex-direction: column;
     gap: 16px;
     width: 100%;
+    min-width: 0;
+    max-width: 100%;
     min-height: 0;
   }
   
@@ -21,7 +23,9 @@
   
     .metaLine {
       display: flex;
+      flex-wrap: wrap;
       gap: 8px;
+      min-width: 0;
       color: #a0a0a0;
       font-family: "Open Sans", sans-serif;
       font-size: 16px;
@@ -67,6 +71,8 @@
       letter-spacing: 1.5px;
       line-height: 32px;
       color: var(--color-home-text-body);
+      overflow-wrap: anywhere;
+      word-break: break-word;
     }
   }
   
