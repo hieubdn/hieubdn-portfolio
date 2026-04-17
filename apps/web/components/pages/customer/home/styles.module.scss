@@ -1,5 +1,9 @@
 .homeSection {
   align-self: stretch;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
   border-radius: 24px;
   padding: 24px 0;
   margin-top: 24px;
@@ -8,6 +12,8 @@
 .grid {
   display: grid;
   gap: 24px;
+  min-width: 0;
+  width: 100%;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   grid-template-areas:
     "profile profile profile profile profile profile skills skills skills skills skills skills"
@@ -19,14 +25,19 @@
 }
 
 .block {
+  box-sizing: border-box;
   height: 100%;
   min-height: 24vh;
+  min-width: 0;
+  max-width: 100%;
   border-radius: 20px;
   border: 2px solid var(--color-home-block-border);
   background-color: var(--color-home-block-background);
   padding: 20px;
   display: flex;
   align-items: flex-end;
+  overflow-wrap: anywhere;
+  word-break: break-word;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   animation: reveal 0.28s ease both;
 }
@@ -196,7 +207,7 @@
 @media (max-width: 767px) {
   .grid {
     gap: 16px;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     grid-template-areas:
       "profile"
       "skills"
