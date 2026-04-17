@@ -8,6 +8,7 @@ import { PATH_URL, SOCIAL_LINKS } from "@/config/path";
 import { GlobalActionsMenu } from "@/components/layout/global-actions/global-actions-menu";
 import { useMainScreen } from "@/components/layout/main-screen/main-screen-context";
 import { useLocaleText } from "@/components/layout/setting/translate/locale-provider";
+import { useInstallPrompt } from "@/hooks/use-install-prompt";
 
 function openGitHubProfile() {
   window.open(SOCIAL_LINKS.GITHUB, "_blank", "noopener,noreferrer");
@@ -24,6 +25,7 @@ function openAdminLoginTab() {
 export default function Header() {
   const { showRouteView } = useMainScreen();
   const { t } = useLocaleText();
+  const { canInstall, promptInstall } = useInstallPrompt();
   const nav = [
     { href: PATH_URL.ROOT, label: t("navBar.home") },
     { href: PATH_URL.ABOUT, label: t("navBar.about") },
@@ -63,6 +65,16 @@ export default function Header() {
             </button>
           </div>
           <GlobalActionsMenu
+            installAction={
+              canInstall
+                ? {
+                    label: t("pwa.installApp"),
+                    onSelect: () => {
+                      void promptInstall();
+                    },
+                  }
+                : null
+            }
             menuLeading={(closeMenu) => (
               <>
                 {nav.map((item) => (

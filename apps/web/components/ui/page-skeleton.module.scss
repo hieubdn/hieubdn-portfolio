@@ -1,0 +1,34 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding: 24px 16px 48px;
+  min-height: 40vh;
+}
+
+.hero {
+  width: 100%;
+  height: 120px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  height: 96px;
+}
+
+.wide {
+  width: 100%;
+  height: 200px;
+}

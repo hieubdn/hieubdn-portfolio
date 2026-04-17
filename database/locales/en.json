@@ -3,6 +3,11 @@
   "navBar.about": "About",
   "navBar.projects": "Projects",
   "navBar.contact": "Contact",
+  "pwa.offlineBanner": "You are offline.",
+  "pwa.installApp": "Install app",
+  "pwa.offlinePage.title": "Offline",
+  "pwa.offlinePage.body": "Check your connection and try again.",
+  "pwa.offlinePage.home": "Back to home",
 
 
 

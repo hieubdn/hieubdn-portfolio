@@ -7,6 +7,7 @@ import { NotificationProvider } from "@/components/layout/notification/notificat
 import { LocaleProvider } from "@/components/layout/setting/translate/locale-provider";
 import type { AppLocaleCode } from "@/components/layout/setting/translate/locale-constants";
 import { AppToaster } from "@/components/layout/toast/app-toaster";
+import { OfflineBanner } from "@/components/pwa/offline-banner";
 import { ThemePreferenceProvider } from "@/components/theme/theme-preference-provider";
 import { ThemeInitScript } from "./theme-init-script";
 
@@ -22,6 +23,7 @@ export function AppProviders({
       <ThemeInitScript />
       <ThemePreferenceProvider>
         <LocaleProvider initialLocale={initialLocale}>
+          <OfflineBanner />
           <NotificationFeedProvider>
             <NotificationProvider>
               <MainScreenProvider>{children}</MainScreenProvider>

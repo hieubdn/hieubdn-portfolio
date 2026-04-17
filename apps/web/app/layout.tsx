@@ -1,5 +1,6 @@
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import type { Viewport } from "next";
 import { cookies } from "next/headers";
 import {
   DEFAULT_APP_LOCALE,
@@ -20,6 +21,13 @@ function resolveMetadataBaseUrl(): string {
   }
   return "http://localhost:3000";
 }
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
 
 export const metadata = {
   metadataBase: new URL(resolveMetadataBaseUrl()),
@@ -62,10 +70,13 @@ export default async function RootLayout({
     <html lang={initialLocale} suppressHydrationWarning>
       <head>
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#5c5c5c" />
+        <meta name="theme-color" content="#000000" />
         <link rel="apple-touch-icon" href="/icons/icon-192.png" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta
+          name="apple-mobile-web-app-status-bar-style"
+          content="black-translucent"
+        />
         <meta name="apple-mobile-web-app-title" content="hieubdn" />
       </head>
       <body>

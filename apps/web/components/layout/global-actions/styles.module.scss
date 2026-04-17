@@ -8,6 +8,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 44px;
+  min-width: 44px;
   padding: 6px;
   border: none;
   border-radius: 999px;
@@ -104,6 +106,7 @@
   align-self: stretch;
   width: auto;
   margin: 0;
+  min-height: 44px;
   padding: 8px 0;
   border: none;
   background: var(--shell-surface-popover);

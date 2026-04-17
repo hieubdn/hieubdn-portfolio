@@ -25,7 +25,7 @@ export function AppShell({ children }: { children: ReactNode }) {
   const hideHeader = isAdminPath(pathname);
 
   return (
-    <div className={layoutStyles.shell}>
+    <div className={`${layoutStyles.shell} ${layoutStyles.mainApp}`}>
       {!hideHeader ? <Header /> : null}
       {showAdminHeader(pathname) ? <AdminHeader /> : null}
       <MainContent className={layoutStyles.main}>{children}</MainContent>

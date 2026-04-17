@@ -14,11 +14,16 @@ export type GlobalActionsMenuProps = {
     onSelect: () => void;
   };
   menuLeading?: (closeMenu: () => void) => ReactNode;
+  installAction?: {
+    label: string;
+    onSelect: () => void;
+  } | null;
 };
 
 export function GlobalActionsMenu({
   thirdItem,
   menuLeading,
+  installAction,
 }: GlobalActionsMenuProps) {
   const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
@@ -65,6 +70,20 @@ export function GlobalActionsMenu({
           <div className={styles.popoverInner}>
             <ul className={styles.popoverList}>
               {menuLeading ? menuLeading(() => setOpen(false)) : null}
+              {installAction ? (
+                <li>
+                  <button
+                    type="button"
+                    className={styles.popoverItem}
+                    onClick={() => {
+                      setOpen(false);
+                      installAction.onSelect();
+                    }}
+                  >
+                    {installAction.label}
+                  </button>
+                </li>
+              ) : null}
               <li>
                 <button
                   type="button"

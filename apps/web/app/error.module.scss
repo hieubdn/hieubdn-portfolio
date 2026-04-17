@@ -1,0 +1,28 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  min-height: 50vh;
+  padding: 24px;
+  text-align: center;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-home-text-primary);
+}
+
+.retry {
+  min-height: 44px;
+  min-width: 120px;
+  padding: 0 16px;
+  border-radius: 8px;
+  border: 1px solid var(--shell-border);
+  background: var(--shell-surface-panel);
+  color: var(--shell-text);
+  cursor: pointer;
+  font-size: 16px;
+}
