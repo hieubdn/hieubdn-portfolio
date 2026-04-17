@@ -26,7 +26,7 @@ export default function MindxCompany() {
           <span className={styles.durationValue}>
             {t("about.page.experience.mindx.durationValue")}
           </span>
-          ●
+          ◦
           <span className={styles.locationValue}>
             {t("about.page.experience.mindx.locationValue")}
           </span>

@@ -24,7 +24,7 @@
     "technical technical technical technical technical technical education education education education education education"
     "workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading"
     "hdwebsoft hdwebsoft hdwebsoft hdwebsoft hdwebsoft hdwebsoft toyar toyar toyar toyar toyar toyar"
-    "phase2 phase2 phase2 phase2 phase2 phase2 phase2 phase2 phase2 phase2 phase2 phase2"
+    "cava cava cava cava cava cava phase2 phase2 phase2 phase2 phase2 phase2"
     "otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading"
     "mindx mindx mindx mindx mindx mindx . . . . . ."
     "footerDivider footerDivider footerDivider footerDivider footerDivider footerDivider footerDivider footerDivider footerDivider footerDivider footerDivider footerDivider"
@@ -158,6 +158,12 @@
   grid-area: otherExperienceHeading;
 }
 
+.cava {
+  grid-area: cava;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
 .mindx {
   grid-area: mindx;
   align-items: stretch;
@@ -212,7 +218,7 @@
       "technical technical technical technical technical technical education education education education education education"
       "workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading"
       "hdwebsoft hdwebsoft hdwebsoft hdwebsoft hdwebsoft hdwebsoft toyar toyar toyar toyar toyar toyar"
-      "phase2 phase2 phase2 phase2 phase2 phase2 . . . . . ."
+      "cava cava cava cava cava cava phase2 phase2 phase2 phase2 phase2 phase2"
       "otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading"
       "mindx mindx mindx mindx mindx mindx mindx mindx mindx mindx mindx mindx"
       "footerDivider footerDivider footerDivider footerDivider footerDivider footerDivider footerDivider footerDivider footerDivider footerDivider footerDivider footerDivider"
@@ -231,6 +237,7 @@
       "workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading"
       "hdwebsoft hdwebsoft hdwebsoft hdwebsoft hdwebsoft hdwebsoft"
       "toyar toyar toyar toyar toyar toyar"
+      "cava cava cava cava cava cava"
       "phase2 phase2 phase2 phase2 phase2 phase2"
       "otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading"
       "mindx mindx mindx mindx mindx mindx"
@@ -257,6 +264,7 @@
       "workExperienceHeading"
       "hdwebsoft"
       "toyar"
+      "cava"
       "phase2"
       "otherExperienceHeading"
       "mindx"

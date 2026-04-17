@@ -30,7 +30,7 @@ export default function Phase2Company() {
           <span className={styles.durationValue}>
             {t("about.page.experience.phase2.durationValue")}
           </span>
-          ●
+          ◦
           <span className={styles.locationValue}>
             {t("about.page.experience.phase2.locationValue")}
           </span>

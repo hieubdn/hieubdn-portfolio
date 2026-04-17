@@ -2,50 +2,45 @@
 
 import { useLocaleText } from "@/components/layout/setting/translate/locale-provider";
 
-import styles from "./hdwebsoft-company.module.scss";
+import styles from "./cava-company.module.scss";
 
 const RESPONSIBILITY_KEYS = [
-  "about.page.experience.hdwebsoft.responsibility.0",
-  "about.page.experience.hdwebsoft.responsibility.1",
-  "about.page.experience.hdwebsoft.responsibility.2",
-  "about.page.experience.hdwebsoft.responsibility.3",
-  "about.page.experience.hdwebsoft.responsibility.4",
+  "about.page.experience.cava.responsibility.0",
+  "about.page.experience.cava.responsibility.1",
+  "about.page.experience.cava.responsibility.2",
+  "about.page.experience.cava.responsibility.3",
+  "about.page.experience.cava.responsibility.4",
 ] as const;
 
 const TECH_LINE_KEYS = [
-  "about.page.experience.hdwebsoft.tech.frontend",
-  "about.page.experience.hdwebsoft.tech.backend",
-  "about.page.experience.hdwebsoft.tech.cloud",
-  "about.page.experience.hdwebsoft.tech.database",
-  "about.page.experience.hdwebsoft.tech.integrations",
-  "about.page.experience.hdwebsoft.tech.devops",
+  "about.page.experience.cava.tech",
 ] as const;
 
-export default function HdwebsoftCompany() {
+export default function CavaCompany() {
   const { t } = useLocaleText();
 
   return (
     <div className={styles.root}>
       <div className={styles.meta}>
         <h3 className={styles.company}>
-          {t("about.page.experience.hdwebsoft.company")}
+          {t("about.page.experience.cava.company")}
         </h3>
         <span className={styles.positionValue}>
-          {t("about.page.experience.hdwebsoft.positionValue")}
+          {t("about.page.experience.cava.positionValue")}
         </span>
         <span className={styles.metaLine}>
           <span className={styles.durationValue}>
-            {t("about.page.experience.hdwebsoft.durationValue")}
+            {t("about.page.experience.cava.durationValue")}
           </span>
           ◦
           <span className={styles.locationValue}>
-            {t("about.page.experience.hdwebsoft.locationValue")}
+            {t("about.page.experience.cava.locationValue")}
           </span>
         </span>
       </div>
       <div className={styles.responsibilities}>
         <span className={styles.subheading}>
-          {t("about.page.experience.hdwebsoft.responsibilities")}:{" "}
+          {t("about.page.experience.cava.responsibilities")}:{" "}
         </span>
         <ul className={styles.bulletList}>
           {RESPONSIBILITY_KEYS.map((key) => (
@@ -55,7 +50,7 @@ export default function HdwebsoftCompany() {
       </div>
       <div className={styles.techStack}>
         <span className={styles.subheading}>
-          {t("about.page.experience.hdwebsoft.techStack")}:
+          {t("about.page.experience.cava.techStack")}:
         </span>
         <ul className={styles.techList}>
           {TECH_LINE_KEYS.map((key) => (
