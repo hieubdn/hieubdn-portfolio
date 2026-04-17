@@ -1,0 +1,222 @@
+.homeSection {
+  align-self: stretch;
+  border-radius: 24px;
+  padding: 24px 0;
+  margin-top: 24px;
+}
+
+.grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-areas:
+    "profile profile profile profile profile profile skills skills skills skills skills skills"
+    "profile profile profile profile profile profile about about about projects projects projects"
+    "hobby hobby hobby hobby quote quote quote quote social social social social"
+    "company company company company company company testimonials testimonials testimonials testimonials testimonials testimonials"
+    "selectedWork selectedWork selectedWork blog blog blog testimonials testimonials testimonials testimonials testimonials testimonials"
+    "stats stats stats stats stats stats cta cta cta cta cta cta";
+}
+
+.block {
+  height: 100%;
+  min-height: 24vh;
+  border-radius: 20px;
+  border: 2px solid var(--color-home-block-border);
+  background-color: var(--color-home-block-background);
+  padding: 20px;
+  display: flex;
+  align-items: flex-end;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  animation: reveal 0.28s ease both;
+}
+
+.blockLabel {
+  color: var(--color-home-text-subtle);
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 32px;
+  letter-spacing: 1.2px;
+}
+
+.profile {
+  grid-area: profile;
+  align-items: stretch;
+  justify-content: flex-start;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.about {
+  grid-area: about;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.projects {
+  grid-area: projects;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.selectedWork {
+  grid-area: selectedWork;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.skills {
+  grid-area: skills;
+  justify-content: stretch;
+  align-items: stretch;
+  min-height: 60px;
+  height: 100%;
+  border-radius: 999px;
+  padding: 0 8px !important;
+  overflow: hidden;
+}
+
+.company {
+  grid-area: company;
+  justify-content: stretch;
+  align-items: stretch;
+  height: 100%;
+  min-height: 100px;
+  height: 100%;
+  padding: 16px 24px;
+  overflow: hidden;
+}
+
+.hobby {
+  grid-area: hobby;
+}
+
+.quote {
+  grid-area: quote;
+}
+
+.testimonials {
+  grid-area: testimonials;
+}
+
+.social {
+  grid-area: social;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.stats {
+  grid-area: stats;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.availability {
+  grid-area: availability;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.company {
+  grid-area: company;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.selectedWork {
+  grid-area: selectedWork;
+}
+
+.blog {
+  grid-area: blog;
+  align-items: stretch;
+  justify-content: flex-start;
+  min-height: 0;
+}
+
+.cta {
+  grid-area: cta;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    gap: 18px;
+    grid-template-columns: repeat(11, minmax(0, 1fr));
+    grid-template-areas:
+      "profile profile profile profile profile skills skills skills skills skills skills"
+      "profile profile profile profile profile about about about projects projects projects"
+      "hobby hobby hobby quote quote quote quote social social social social"
+      "company company company company company company company company blog blog blog "
+      "selectedWork selectedWork selectedWork selectedWork testimonials testimonials testimonials testimonials testimonials testimonials testimonials"
+
+      "stats stats stats stats stats stats cta cta cta cta cta";
+  }
+}
+
+@media (max-width: 919px) {
+  .grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-template-areas:
+      "profile profile profile profile profile profile"
+      "skills skills skills skills skills skills"
+      "about about about projects projects projects"
+      "hobby hobby hobby quote quote quote"
+      "social social social social social social"
+      "blog blog blog selectedWork selectedWork selectedWork"
+      "company company company company company company"
+      "testimonials testimonials testimonials testimonials testimonials testimonials"
+      "stats stats stats stats stats stats"
+      "cta cta cta cta cta cta";
+  }
+}
+
+@media (max-width: 768px) {
+  .homeSection {
+    border-radius: 16px;
+  }
+
+  .block {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .grid {
+    gap: 16px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "profile"
+      "skills"
+      "about"
+      "projects"
+      "selectedWork"
+      "hobby"
+      "quote"
+      "company"
+      "blog"
+      "social"
+      "stats"
+      "testimonials"
+
+      "cta";
+  }
+}
+
+@media (max-width: 500px) {
+  .block {
+    padding: 16px;
+  }
+}

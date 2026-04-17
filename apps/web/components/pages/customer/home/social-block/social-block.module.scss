@@ -1,0 +1,155 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  min-height: 0;
+  gap: 32px;
+}
+
+.iconsBand {
+  flex: 1;
+  min-height: 150px;
+  width: 100%;
+  border-radius: 14px;
+  background: var(--color-home-icons-band);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconRow {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  .iconButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background: var(--color-home-icon-button-bg);
+    box-shadow: 0 2px 8px #0f172a3e;
+    transition:
+      transform 0.15s ease,
+      box-shadow 0.15s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 14px #0f172a7b;
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--color-home-focus-outline);
+      outline-offset: 2px;
+    }
+
+    @media (max-width: 1024px) {
+      width: 75px;
+      height: 75px;
+    }
+
+    .iconImage {
+      width: 28px;
+      height: 28px;
+      object-fit: contain;
+    }
+
+    .iconImageGithub {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+    }
+  }
+
+  .iconButtonLinkedin:hover {
+    background: linear-gradient(
+      135deg,
+      #004063,
+      #0073b1 25%,
+      #00a2ff 50%,
+      #004b7c 75%,
+      #00364a
+    );
+    opacity: 0.8;
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    background-size: 101% 101%;
+    background-position: 50%;
+  }
+
+  .iconButtonInstagram:hover {
+    background: linear-gradient(
+      -225deg,
+      #405de6,
+      #5851db 20%,
+      #833ab4 40%,
+      #c13584 60%,
+      #e1306c 70%,
+      #fd1d1d 80%,
+      #f56040 90%,
+      #fcaf45
+    );
+    opacity: 0.8;
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    background-size: 101% 101%;
+    background-position: 50%;
+  }
+
+  .iconButtonGithub:hover {
+    background: linear-gradient(90deg, #333, #6e5494);
+    opacity: 0.8;
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    background-size: 101% 101%;
+    background-position: 50%;
+  }
+}
+
+.caption {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.kicker {
+  color: var(--color-home-text-subtle);
+  letter-spacing: 1.4px;
+  margin: 0;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.title {
+  color: var(--color-home-text-subtle);
+  letter-spacing: 1.5px;
+  margin: 0;
+  font-family:
+    Open Sans,
+    sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+@media (max-width: 500px) {
+  .iconRow {
+    gap: 24px;
+  }
+
+  .iconImageGithub {
+    width: 55px;
+    height: 55px;
+  }
+
+  .kicker {
+    font-size: 12px;
+  }
+}

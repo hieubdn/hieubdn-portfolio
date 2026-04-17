@@ -1,0 +1,190 @@
+.setting {
+  min-height: 400px;
+  padding: 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.settingContent {
+  display: flex;
+  gap: 24px;
+  min-height: 420px;
+
+  @media (max-width: 1024px) {
+    gap: 16px;
+  }
+
+  .settingSidebar {
+    width: 280px;
+    flex-shrink: 0;
+    padding: 16px;
+    border-radius: 12px;
+
+    @media (max-width: 1024px) {
+      width: 220px;
+    }
+  }
+
+  .settingTitle {
+    margin: 0 0 48px;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--shell-text-strong);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    svg {
+      width: 28px;
+      height: 28px;
+      fill: var(--shell-text-strong);
+    }
+  }
+
+  .settingOptionList {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .settingOption {
+    width: 100%;
+    padding: 10px 12px;
+    border: 0;
+    border-radius: 8px;
+    background: transparent;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 390;
+    letter-spacing: 1.2px;
+    line-height: 32px;
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+    color: var(--shell-text-strong);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease;
+
+    &:hover {
+      background: var(--shell-surface-hover);
+      color: var(--shell-text-strong);
+    }
+  }
+
+  .active {
+    background: var(--shell-surface-active);
+    color: var(--shell-text-strong);
+  }
+
+  .settingOptionIcon {
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: currentColor;
+    }
+  }
+}
+
+.settingPanelSingle {
+  flex: 1;
+  min-width: 0;
+}
+
+.settingPanelStack {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 0;
+  width: 100%;
+}
+
+.settingMobileTitle {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--shell-text-strong);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  svg {
+    width: 28px;
+    height: 28px;
+    fill: var(--shell-text-strong);
+  }
+}
+
+.settingPanel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 24px;
+  border-radius: 12px;
+  background: var(--shell-surface-panel);
+  box-shadow: var(--shell-shadow-panel);
+  color: var(--shell-text);
+
+  .settingPanelTitle {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    line-height: 32px;
+    font-family: "Open Sans", sans-serif;
+    color: var(--shell-text-panel-title);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    svg {
+      width: 32px;
+      height: 32px;
+      fill: var(--shell-text-panel-title);
+    }
+  }
+}
+
+
+
+.settingPanelDescription {
+  margin: 0;
+  font-size: 15px;
+  color: var(--shell-text-description);
+  line-height: 1.6;
+}
+
+.backToHome {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  color: var(--shell-text-muted);
+  cursor: pointer;
+  opacity: 0.8;
+
+  svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--shell-text-muted);
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+

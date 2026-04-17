@@ -1,0 +1,11 @@
+.root {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 100%;
+    min-height: 0;
+    text-decoration: none;
+    color: inherit;
+    gap: 16px;
+    outline-offset: 2px;
+  }
