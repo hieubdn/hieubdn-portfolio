@@ -1,0 +1,67 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  min-height: 0;
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+
+  .company {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    color: #52525b;
+    text-transform: uppercase;
+  }
+
+  .metaLine {
+    display: flex;
+    gap: 8px;
+    color: #a0a0a0;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+  }
+
+  .positionValue,
+  .durationValue,
+  .locationValue {
+    color: #a0a0a0;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+  }
+}
+
+.responsibilities,
+.techStack {
+  display: flex;
+  flex-direction: column;
+}
+
+.subheading {
+  margin: 0;
+  color: #52525b;
+  font-family: "Open Sans", sans-serif;
+  font-size: 17px;
+}
+
+.bulletList,
+.techList {
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  li {
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    line-height: 32px;
+    color: var(--color-home-text-body);
+  }
+}

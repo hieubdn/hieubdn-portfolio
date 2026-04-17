@@ -42,6 +42,7 @@ export default function ProfileBlock() {
       href={PATH_URL.ABOUT}
       className={styles.root}
       aria-label={profile.name}
+      suppressHydrationWarning
     >
       <div className={styles.body}>
         <div className={styles.imageWrap}>
@@ -68,9 +69,18 @@ export default function ProfileBlock() {
           </div>
         </div>
         <div className={styles.info}>
-          <p className={styles.name}>{profile.name}</p>
-          <p className={styles.title}>{profile.title}</p>
-          <p className={`${styles.contact} ${styles.email}`}>{profile.email}</p>
+          <p className={styles.name} suppressHydrationWarning>
+            {profile.name}
+          </p>
+          <p className={styles.title} suppressHydrationWarning>
+            {profile.title}
+          </p>
+          <p
+            className={`${styles.contact} ${styles.email}`}
+            suppressHydrationWarning
+          >
+            {profile.email}
+          </p>
         </div>
       </div>
     </Link>

@@ -3,7 +3,7 @@
 import {
   createContext,
   useContext,
-  useLayoutEffect,
+  useEffect,
   useMemo,
   useState,
   type ReactNode,
@@ -20,6 +20,7 @@ import {
   DEFAULT_APP_LOCALE,
   type AppLocaleCode,
   readStoredLocale,
+  writeLocaleCookie,
   writeStoredLocale,
 } from "./locale-constants";
 
@@ -50,31 +51,43 @@ type LocaleContextValue = {
 
 const LocaleContext = createContext<LocaleContextValue | null>(null);
 
-export function LocaleProvider({ children }: { children: ReactNode }) {
-  const [locale, setLocaleState] = useState<AppLocaleCode>(DEFAULT_APP_LOCALE);
+type LocaleProviderProps = {
+  children: ReactNode;
+  /** From `cookies()` in root layout so SSR matches the first client render. */
+  initialLocale: AppLocaleCode;
+};
 
-  useLayoutEffect(() => {
+export function LocaleProvider({ children, initialLocale }: LocaleProviderProps) {
+  const [locale, setLocaleState] = useState<AppLocaleCode>(initialLocale);
+  const [hasHydrated, setHasHydrated] = useState(false);
+
+  useEffect(() => {
     const stored = readStoredLocale();
     document.documentElement.lang = stored;
-    if (stored !== DEFAULT_APP_LOCALE) {
-      setLocaleState(stored);
-    }
+    writeLocaleCookie(stored);
+    setLocaleState((prev) => (stored !== prev ? stored : prev));
+    setHasHydrated(true);
   }, []);
 
   const value = useMemo<LocaleContextValue>(() => {
-    const currentMessages = MESSAGES[locale] ?? MESSAGES[DEFAULT_APP_LOCALE];
+    // Use the `initialLocale` prop (not a ref) until hydrated so SSR and the first
+    // client pass always share the same source of truth from the layout.
+    const effectiveLocale = hasHydrated ? locale : initialLocale;
+    const currentMessages = MESSAGES[effectiveLocale] ?? MESSAGES[DEFAULT_APP_LOCALE];
     const fallbackMessages = MESSAGES[DEFAULT_APP_LOCALE];
 
     return {
-      locale,
+      locale: effectiveLocale,
       setLocale: (nextLocale: AppLocaleCode) => {
         writeStoredLocale(nextLocale);
+        writeLocaleCookie(nextLocale);
         document.documentElement.lang = nextLocale;
         setLocaleState(nextLocale);
       },
-      t: (key: string) => currentMessages[key] ?? fallbackMessages[key] ?? key,
+      t: (key: string) =>
+        currentMessages[key] ?? fallbackMessages[key] ?? key,
     };
-  }, [locale]);
+  }, [hasHydrated, locale, initialLocale]);
 
   return <LocaleContext.Provider value={value}>{children}</LocaleContext.Provider>;
 }
