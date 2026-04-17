@@ -1,0 +1,56 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  min-height: 0;
+  flex: 1;
+}
+
+.headingBlock {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  color: #a0a0a0;
+  text-transform: uppercase;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--color-home-text-body);
+
+  li {
+    display: flex;
+    gap: 24px;
+
+    @media (max-width: 425px) {
+      gap: 12px;
+    }
+
+    @media (max-width: 375px) {
+      gap: 4px;
+    }
+
+    .head {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      @media (max-width: 375px) {
+        gap: 6px;
+      }
+
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+}
+

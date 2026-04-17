@@ -1,0 +1,139 @@
+.header {
+  .inner {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    max-width: 1280px;
+    height: 85px;
+    margin-inline: auto;
+    padding: 0 16px;
+    gap: 16px;
+
+    @media (max-width: 768px) {
+      align-items: center;
+      height: auto;
+      min-height: 72px;
+      padding-top: 24px;
+      padding-bottom: 16px;
+    }
+  }
+
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+    font-family: "Open Sans", sans-serif;
+    font-size: 48px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    background: linear-gradient(
+        90deg,
+        #5c5c5b 0%,
+        #d5d5d5 25%,
+        #a6a6a6 55%,
+        #cecece 80%,
+        #929292 100%
+      );
+      background-size: 200% 100%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: #7a7a7a;
+      animation: gradientShift 2s ease-in-out infinite;
+
+      @keyframes gradientShift {
+        0%,
+        100% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+      }
+
+    @media (max-width: 919px) {
+      font-size: 40px;
+    }
+
+    @media (max-width: 425px) {
+      font-size: 42px;
+    }
+
+    @media (max-width: 400px) {
+      font-size: 32px;
+    }
+  }
+
+  .nav {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    gap: 32px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1.2px;
+    line-height: 32px;
+    color: var(--header-text);
+
+    @media (max-width: 919px) {
+      gap: 16px;
+    }
+  }
+
+  .navInline {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+    @media (max-width: 955px) {
+      gap: 16px;
+    }
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  .navLink {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.15s ease;
+    padding: 0 12px;
+
+    @media (max-width: 919px) {
+      padding: 0 8px;
+    }
+
+    &:hover {
+      color: var(--shell-accent-hover);
+    }
+
+    
+  }
+
+  .social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: inherit;
+    transition: color 0.15s ease;
+
+    &:hover {
+      color: var(--shell-accent-hover);
+    }
+
+    svg {
+      display: block;
+      width: 26px;
+      height: 26px;
+      fill: currentColor;
+    }
+  }
+}

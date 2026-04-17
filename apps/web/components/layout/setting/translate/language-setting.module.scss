@@ -1,0 +1,242 @@
+.languageSetting {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  line-height: 32px;
+  font-family: "Open Sans", sans-serif;
+  color: var(--shell-text-panel-title);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  svg {
+    width: 32px;
+    height: 32px;
+    fill: var(--shell-text-panel-title);
+  }
+}
+
+.languageSettingContent {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  .languageSettingContentTitle {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    .contentTitle {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      line-height: 32px;
+      font-family: "Open Sans", sans-serif;
+      color: var(--shell-text-panel-title);
+    }
+
+    .hint {
+      font-size: 16px;
+      line-height: 24px;
+      color: var(--shell-text-description);
+      font-family: "Open Sans", sans-serif;
+    }
+    
+  }
+}
+
+.optionList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  min-width: 250px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.optionRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 16px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  border-radius: 8px;
+
+  &:focus-visible {
+    outline: 2px solid #09c469;
+    outline-offset: 2px;
+  }
+}
+
+.optionTexts {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.nativeLabel {
+  font-size: 16px;
+  font-weight: 390;
+  letter-spacing: 1.2px;
+  line-height: 1.3;
+  font-family: "Open Sans", sans-serif;
+  color: var(--shell-text-panel-title);
+}
+
+.hintVi {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.35;
+  color: var(--shell-text-description);
+  font-family: "Open Sans", sans-serif;
+}
+
+.radio {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 3px solid var(--shell-theme-radio-border);
+  background: transparent;
+}
+
+.radioActive {
+  border-color: #09c469;
+  background: #09c469;
+  box-shadow: inset 0 0 0 3px var(--shell-theme-radio-inner);
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.saveButton {
+  min-width: 120px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  background: #06c569;
+  color: #fff;
+
+  &:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #008f4a;
+    outline-offset: 2px;
+  }
+
+  &:not(:disabled):hover {
+    filter: brightness(1.05);
+  }
+}
+
+.confirmDialog {
+  margin: auto;
+  padding: 0;
+  max-width: min(400px, 92vw);
+  border: none;
+  border-radius: 12px;
+  background: var(--shell-surface-panel);
+  color: var(--shell-text);
+  box-shadow: var(--shell-shadow-panel);
+
+  &::backdrop {
+    background: rgb(0 0 0 / 45%);
+  }
+}
+
+.confirmInner {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.confirmTitle {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "Open Sans", sans-serif;
+  color: var(--shell-text-panel-title);
+}
+
+.confirmBody {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--shell-text-description);
+  font-family: "Open Sans", sans-serif;
+}
+
+.confirmActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.confirmCancel,
+.confirmOk {
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  border: none;
+
+  &:focus-visible {
+    outline: 2px solid #09c469;
+    outline-offset: 2px;
+  }
+}
+
+.confirmCancel {
+  background: var(--shell-surface-hover);
+  color: var(--shell-text-strong);
+}
+
+.confirmOk {
+  background: #09c469;
+  color: #fff;
+}
+
+@media (max-width: 960px) {
+  .radio {
+    border-width: 2px;
+  }
+
+  .radioActive {
+    box-shadow: inset 0 0 0 3px var(--shell-theme-radio-inner-mobile);
+  }
+}

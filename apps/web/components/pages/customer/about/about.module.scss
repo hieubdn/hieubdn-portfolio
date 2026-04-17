@@ -1,0 +1,272 @@
+.aboutSection {
+  align-self: stretch;
+  border-radius: 24px;
+  padding: 24px 0;
+  margin-top: 24px;
+}
+
+.pageTitle {
+  margin: 0 0 20px;
+  font-family: "Open Sans", sans-serif;
+  font-size: clamp(22px, 4vw, 28px);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--color-home-text-heading);
+}
+
+.grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-areas:
+    "image image image image summaryKicker summaryKicker summaryKicker summaryKicker summaryKicker summaryKicker summaryKicker summaryKicker"
+    "image image image image summary summary summary summary summary summary summary summary"
+    "technical technical technical technical technical technical education education education education education education"
+    "workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading"
+    "hdwebsoft hdwebsoft hdwebsoft hdwebsoft hdwebsoft hdwebsoft toyar toyar toyar toyar toyar toyar"
+    "phase2 phase2 phase2 phase2 phase2 phase2 . . . . . ."
+    "otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading"
+    "mindx mindx mindx mindx mindx mindx . . . . . ."
+    "footerDivider footerDivider footerDivider footerDivider footerDivider footerDivider footerDivider footerDivider footerDivider footerDivider footerDivider footerDivider"
+    "footerSocial footerSocial footerSocial footerSocial cta cta cta cta cta footerCv footerCv footerCv";
+}
+
+.block {
+  height: 100%;
+  min-height: 24vh;
+  border-radius: 20px;
+  border: 1px solid var(--color-home-block-border);
+  background-color: var(--color-home-block-background);
+  box-shadow: 0 10px 24px var(--color-home-block-shadow);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-end;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  animation: reveal 0.28s ease both;
+
+  &:hover {
+    box-shadow: 0 5px 14px var(--color-home-block-hover-shadow);
+  }
+}
+
+.sectionHeadingRow {
+  display: flex;
+  align-items: center;
+  min-height: 0;
+  padding: 4px 0;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  animation: reveal 0.28s ease both;
+}
+
+.dividerRow {
+  display: flex;
+  align-items: center;
+  min-height: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  animation: reveal 0.28s ease both;
+}
+
+.rule {
+  width: 100%;
+  border: none;
+  margin: 24px 0;
+}
+
+.spacerRow {
+  min-height: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  pointer-events: none;
+  animation: reveal 0.28s ease both;
+}
+
+.kickerStrip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+}
+
+.summaryKicker {
+  grid-area: summaryKicker;
+}
+
+.image {
+  grid-area: image;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+}
+
+.summary {
+  grid-area: summary;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.technical {
+  grid-area: technical;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.education {
+  grid-area: education;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.workExperienceHeading {
+  grid-area: workExperienceHeading;
+}
+
+.hdwebsoft {
+  grid-area: hdwebsoft;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.toyar {
+  grid-area: toyar;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.phase2 {
+  grid-area: phase2;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.otherExperienceHeading {
+  grid-area: otherExperienceHeading;
+}
+
+.mindx {
+  grid-area: mindx;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.footerDivider {
+  grid-area: footerDivider;
+}
+
+.footerSocial {
+  grid-area: footerSocial;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.cta {
+  grid-area: cta;
+  align-items: stretch;
+  justify-content: flex-start;
+  min-width: 0;
+}
+
+.footerSpacer {
+  grid-area: footerSpacer;
+}
+
+.footerCv {
+  grid-area: footerCv;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    gap: 18px;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-template-areas:
+      "summaryKicker summaryKicker summaryKicker summaryKicker summaryKicker summaryKicker summaryKicker summaryKicker summaryKicker summaryKicker summaryKicker summaryKicker"
+      "image image image image summary summary summary summary summary summary summary summary"
+      "technical technical technical technical technical technical education education education education education education"
+      "workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading"
+      "hdwebsoft hdwebsoft hdwebsoft hdwebsoft hdwebsoft hdwebsoft toyar toyar toyar toyar toyar toyar"
+      "phase2 phase2 phase2 phase2 phase2 phase2 . . . . . ."
+      "otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading"
+      "mindx mindx mindx mindx mindx mindx mindx mindx mindx mindx mindx mindx"
+      "footerDivider footerDivider footerDivider footerDivider footerDivider footerDivider footerDivider footerDivider footerDivider footerDivider footerDivider footerDivider"
+      "footerSocial footerSocial footerSocial footerSocial cta cta cta cta cta footerCv footerCv footerCv";
+  }
+}
+
+@media (max-width: 919px) {
+  .grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-template-areas:
+      "summaryKicker summaryKicker summaryKicker summaryKicker summaryKicker summaryKicker"
+      "summary summary summary summary summary summary"
+      "image image image technical technical technical"
+      "education education education education education education"
+      "workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading"
+      "hdwebsoft hdwebsoft hdwebsoft hdwebsoft hdwebsoft hdwebsoft"
+      "toyar toyar toyar toyar toyar toyar"
+      "phase2 phase2 phase2 phase2 phase2 phase2"
+      "otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading"
+      "mindx mindx mindx mindx mindx mindx"
+      "footerDivider footerDivider footerDivider footerDivider footerDivider footerDivider"
+      "footerSocial footerSocial footerSocial footerCv footerCv footerCv"
+      "cta cta cta cta cta cta";
+  }
+}
+
+@media (max-width: 767px) {
+  .aboutSection {
+    border-radius: 16px;
+  }
+
+  .grid {
+    gap: 16px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "summaryKicker"
+      "summary"
+      "image"
+      "technical"
+      "education"
+      "workExperienceHeading"
+      "hdwebsoft"
+      "toyar"
+      "phase2"
+      "otherExperienceHeading"
+      "mindx"
+      "footerDivider"
+      "footerCv"
+      "footerSocial"
+      "cta";
+  }
+
+  .block {
+    padding: 16px;
+  }
+}

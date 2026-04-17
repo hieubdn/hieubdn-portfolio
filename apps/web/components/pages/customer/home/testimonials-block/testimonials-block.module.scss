@@ -1,0 +1,156 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  gap: 16px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.quote {
+  margin: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  border: none;
+  padding: 0;
+}
+
+.author {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  .nameLine,
+  .role {
+    color: #5c5c5b;
+    letter-spacing: 1.5px;
+    margin: 0;
+    font-family:
+      Open Sans,
+      sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .authorName {
+    color: #5c5c5b;
+    letter-spacing: 1.5px;
+    font-family:
+      Open Sans,
+      sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 600;
+    color: #5c5c5b;
+  }
+
+  .role {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 16px;
+    font-style: italic;
+    color: #a0a0a0;
+
+    svg {
+      width: 16px;
+      height: 16px;
+      fill: #a0a0a0;
+    }
+
+    @media (max-width: 500px) {
+      font-size: 14px;
+    }
+  }
+}
+
+.quoteContent {
+  display: flex;
+  flex-direction: column;
+
+  .quoteText {
+    min-height: 236px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 6px 0 6px 24px;
+    margin-left: 4px;
+    color: var(--color-home-text-heading);
+    font-size: 16px;
+    letter-spacing: 0.4px;
+    line-height: 1.75;
+    border-left: 1px solid #c5c5c5;
+    white-space: pre-line;
+  }
+
+  .element {
+    color: #6d6d6d;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+    line-height: 1.75;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  .feedback {
+    color: var(--color-home-text-subtle);
+    letter-spacing: 1.4px;
+    margin: 0;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.3;
+  }
+
+  .kicker {
+    color: var(--color-home-text-subtle);
+    letter-spacing: 2px;
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+:global(html[data-theme="dark"]) {
+  .root {
+    .author {
+      .nameLine,
+      .role {
+        color: var(--color-home-text-heading);
+      }
+
+      .authorName {
+        color: var(--color-home-text-heading);
+      }
+
+      .role {
+        color: var(--color-home-text-subtle);
+
+        svg {
+          fill: var(--color-home-text-subtle);
+        }
+      }
+    }
+
+    .quoteContent {
+      .quoteText {
+        border-left-color: var(--color-home-block-border);
+      }
+
+      .element {
+        color: var(--color-home-text-muted);
+      }
+    }
+  }
+}

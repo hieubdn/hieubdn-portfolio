@@ -1,0 +1,23 @@
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 0;
+  flex: 1;
+}
+
+.frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 4px solid #ffffff;
+  background: var(--color-home-image-placeholder);
+  box-shadow: 0 8px 24px var(--color-home-block-shadow);
+}
+
+.image {
+  object-fit: cover;
+}

@@ -1,0 +1,107 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  min-height: 0;
+  text-decoration: none;
+  color: inherit;
+  outline-offset: 2px;
+}
+
+.media {
+  position: relative;
+  flex: 1;
+  min-height: 120px;
+  width: 80%;
+  border-radius: 14px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.imageLayer {
+  position: absolute;
+  inset: 0;
+  transition: opacity 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: opacity;
+
+  .image {
+    object-fit: contain;
+    object-position: center center;
+  }
+}
+
+.layerVisible {
+  opacity: 1;
+  z-index: 1;
+}
+
+.layerHidden {
+  opacity: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.caption {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  font-family: "Open Sans", sans-serif;
+  
+  @media (max-width: 500px) {
+    margin-top: 32px;
+  }
+
+  .kicker {
+    color: var(--color-home-text-subtle);
+    letter-spacing: 1.4px;
+    margin: 0;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.3;
+    animation: captionFade 0.45s ease-out;
+  }
+
+  .title {
+    color: var(--color-home-text-subtle);
+    letter-spacing: 1.5px;
+    margin: 0;
+    font-family: Open Sans, sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+}
+
+@keyframes captionFade {
+  from {
+    opacity: 0.35;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .imageLayer {
+    transition-duration: 0.01ms;
+  }
+
+  .caption .kicker {
+    animation: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .caption {
+    .kicker {
+      font-size: 12px;
+    }
+
+    .title {
+      font-size: 14px;
+    }
+  }
+}
