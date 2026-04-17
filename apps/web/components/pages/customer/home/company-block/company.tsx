@@ -8,6 +8,7 @@ import hdwebsoftLogo from "@/assets/image/company/hdwebsoft.png";
 import fidovnLogo from "@/assets/image/company/fidovn.jpg";
 import phase2Logo from "@/assets/image/company/Phase2.png";
 import mindxLogo from "@/assets/image/company/mindx.png";
+import cavaLogo from "@/assets/image/company/cava.png";
 import styles from "./company.module.scss";
 
 const MARQUEE_DURATION_SEC = 10;
@@ -15,8 +16,9 @@ const MARQUEE_DURATION_SEC = 10;
 const COMPANIES = [
   { id: "hdwebsoft", label: "HDWEBSOFT", logo: hdwebsoftLogo },
   { id: "fidovn", label: "FidoVN", logo: fidovnLogo },
-  { id: "phase2", label: "Phase2", logo: phase2Logo },
   { id: "mindx", label: "MindX", logo: mindxLogo },
+  { id: "cava", label: "Cava", logo: cavaLogo },
+  { id: "phase2", label: "Phase2", logo: phase2Logo },
 ] as const;
 
 type CompanyId = (typeof COMPANIES)[number]["id"];
@@ -24,8 +26,9 @@ type CompanyId = (typeof COMPANIES)[number]["id"];
 const LOGO_CLASS = {
   hdwebsoft: styles.logoHdwebsoft,
   fidovn: styles.logoFidovn,
-  phase2: styles.logoPhase2,
   mindx: styles.logoMindx,
+  cava: styles.logoCava,
+  phase2: styles.logoPhase2,
 } as Record<CompanyId, string>;
 
 function CompanyMarqueeSegment() {
@@ -38,6 +41,7 @@ function CompanyMarqueeSegment() {
           alt={company.label}
           width={320}
           height={160}
+          unoptimized
           className={`${styles.logoCompany} ${LOGO_CLASS[company.id]}`}
         />
       ))}

@@ -1,15 +1,14 @@
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { cookies } from "next/headers";
 import {
-  APP_LOCALE_CODES,
+  DEFAULT_APP_LOCALE,
+  isAppLocaleCode,
   PROFILE_LOCALE_STORAGE_KEY,
 } from "@/components/layout/setting/translate/locale-constants";
-import { PROFILE_DARK_MODE_STORAGE_KEY } from "@/components/theme/theme-constants";
 import { AppShell } from "./app-shell";
 import { AppProviders } from "./providers";
 import "./globals.scss";
-
-const themeAndLocaleInitScript = `(function(){try{var dk=${JSON.stringify(PROFILE_DARK_MODE_STORAGE_KEY)};var v=localStorage.getItem(dk)||"off";var dark=v==="on"||(v==="automatic"&&window.matchMedia("(prefers-color-scheme: dark)").matches);document.documentElement.setAttribute("data-theme",dark?"dark":"light");var lk=${JSON.stringify(PROFILE_LOCALE_STORAGE_KEY)};var codes=${JSON.stringify([...APP_LOCALE_CODES])};var lr=localStorage.getItem(lk);if(lr&&codes.indexOf(lr)!==-1){document.documentElement.setAttribute("lang",lr);}}catch(e){}})();`;
 
 function resolveMetadataBaseUrl(): string {
   const site = process.env.NEXT_SITE_URL?.trim();
@@ -49,27 +48,28 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const cookieStore = await cookies();
+  const raw = cookieStore.get(PROFILE_LOCALE_STORAGE_KEY)?.value;
+  const initialLocale =
+    raw && isAppLocaleCode(raw) ? raw : DEFAULT_APP_LOCALE;
+
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={initialLocale} suppressHydrationWarning>
       <head>
-        <script
-          id="theme-and-locale-init"
-          dangerouslySetInnerHTML={{ __html: themeAndLocaleInitScript }}
-        />
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#5c5c5c" /> 
+        <meta name="theme-color" content="#5c5c5c" />
         <link rel="apple-touch-icon" href="/icons/icon-192.png" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="hieubdn" />
       </head>
       <body>
-        <AppProviders>
+        <AppProviders initialLocale={initialLocale}>
           <AppShell>{children}</AppShell>
         </AppProviders>
         <Analytics />

@@ -57,10 +57,18 @@ export function readStoredLocale(): AppLocaleCode {
   return DEFAULT_APP_LOCALE;
 }
 
+/** Mirrors locale to a cookie so the server can SSR the same locale as localStorage. */
+export function writeLocaleCookie(code: AppLocaleCode): void {
+  if (typeof document === "undefined") return;
+  const maxAge = 60 * 60 * 24 * 365;
+  document.cookie = `${PROFILE_LOCALE_STORAGE_KEY}=${encodeURIComponent(code)};path=/;max-age=${maxAge};samesite=lax`;
+}
+
 export function writeStoredLocale(code: AppLocaleCode): void {
   try {
     localStorage.setItem(PROFILE_LOCALE_STORAGE_KEY, code);
   } catch {
     /* preference still applies for this session */
   }
+  writeLocaleCookie(code);
 }

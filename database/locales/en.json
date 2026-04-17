@@ -24,6 +24,7 @@
   "about.page.heading": "About",
   "about.page.summary.kicker": "Self-summary",
   "about.page.summary.lead": "I've been working in software for over 05 years now. I enjoy solving problems (in general but mostly using software), making things, and growing teams. I've worked with many different software systems and really enjoy evolving them over time to meet changing needs. I've also done a lot of work on scaling - both increasing throughput and creating processes and automation to make changes safer as the user base grows.\nOutside of work, I have a passion for plants (especially bonsai) and crafting wooden furniture for my home.\n\n Whew, that’s a lot, but I’m genuinely excited to meet everyone and collaborate with new partners!",
+
   "about.page.contact.title": "Personal information",
   "about.page.contact.name": "Name",
   "about.page.contact.email": "Email",
@@ -44,7 +45,6 @@
   "about.page.contact.nationality1": "Vietnamese",
   "about.page.contact.languages1": "English, Vietnamese",
 
-
   "about.page.education.title": "Education",
   "about.page.education.fullstack": "Full-Stack Development Certificate",
   "about.page.education.issuedBy": "Issued by: MindX Technology School",
@@ -52,17 +52,67 @@
   "about.page.education.mobileapp": "Mobile App Development Certificate",
   "about.page.education.mobileapp.date": "Completed: 2020",
 
-
   "about.page.workExperience.heading": "Work experience",
   "about.page.otherExperience.heading": "Other experience",
-  "about.page.experience.hdwebsoft.title": "HDWEBSOFT",
-  "about.page.experience.hdwebsoft.body": "Software engineer — web products, delivery with the team, emphasis on quality and clarity.",
-  "about.page.experience.toyar.title": "Toyar",
-  "about.page.experience.toyar.body": "Engineering contribution — update with role, stack, and outcomes.",
-  "about.page.experience.phase2.title": "Phase 2",
-  "about.page.experience.phase2.body": "Project or engagement — update with scope and results.",
-  "about.page.experience.mindx.title": "MindX",
-  "about.page.experience.mindx.body": "Teaching, mentoring, or program work — update with your experience at MindX.",
+
+  "about.page.experience.hdwebsoft.company": "HDWEBSOFT TECHNOLOGY CO.,LTD",
+  "about.page.experience.hdwebsoft.durationValue": "Apr 2024 — Present",
+  "about.page.experience.hdwebsoft.positionValue": "Full-Stack Software Engineer",
+  "about.page.experience.hdwebsoft.locationValue": "Ho Chi Minh City, Vietnam",
+  "about.page.experience.hdwebsoft.responsibilities": "Responsibilities",
+  "about.page.experience.hdwebsoft.responsibility.0": "Developed and optimized scalable full-stack applications using React, Node.js, and AWS serverless infrastructure to support customer-facing platforms and internal business systems.",
+  "about.page.experience.hdwebsoft.responsibility.1": "Built scalable serverless backend services with NestJS on AWS Lambda, integrating AWS services including S3, DynamoDB, SQS, and API Gateway.",
+  "about.page.experience.hdwebsoft.responsibility.2": "Designed and implemented scalable RESTful APIs supporting high-traffic web platforms.",
+  "about.page.experience.hdwebsoft.responsibility.3": "Integrated multiple third-party services including Stripe, Plaid, and OpenAI APIs.",
+  "about.page.experience.hdwebsoft.responsibility.4": "Improved backend performance by optimizing PostgreSQL queries and database execution plans.",
+  "about.page.experience.hdwebsoft.responsibility.5": "Built modular frontend components to support scalable UI architecture across multiple products.",
+  "about.page.experience.hdwebsoft.responsibility.6": "Collaborated with cross-functional teams to deliver production-ready features, ensuring reliable deployments and system stability across multiple services.",
+  "about.page.experience.hdwebsoft.techStack": "Tech stack",
+  "about.page.experience.hdwebsoft.tech.frontend": "Frontend: React, Vue.js, Next.js, TypeScript",
+  "about.page.experience.hdwebsoft.tech.backend": "Backend: Node.js, Express.js, NestJS",
+  "about.page.experience.hdwebsoft.tech.cloud": "Cloud: AWS Lambda, S3, DynamoDB, SQS, API Gateway, Serverless",
+  "about.page.experience.hdwebsoft.tech.database": "Database: PostgreSQL, MySQL, TypeORM",
+  "about.page.experience.hdwebsoft.tech.integrations": "Integrations: Stripe, Plaid, SendGrid, OpenAI",
+  "about.page.experience.hdwebsoft.tech.devops": "DevOps: Docker, Kubernetes, CI/CD, Git",
+
+  "about.page.experience.toyar.company": "TOYAR INC CO.,LTD",
+  "about.page.experience.toyar.durationValue": "Jul 2023 — May 2025",
+  "about.page.experience.toyar.positionValue": "Full-Stack Software Engineer",
+  "about.page.experience.toyar.locationValue": "Remote",
+  "about.page.experience.toyar.responsibilities": "Responsibilities",
+  "about.page.experience.toyar.responsibility.0": "Led feature development for React Native mobile applications and ReactJS web platforms.",
+  "about.page.experience.toyar.responsibility.1": "Built scalable frontend architecture using ReactJS, Vite, and modern JavaScript frameworks.",
+  "about.page.experience.toyar.responsibility.2": "Developed backend services using Spring Boot and designed secure RESTful APIs.",
+  "about.page.experience.toyar.responsibility.3": "Contributed to the development of the FidoBox e-commerce platform and FidoVN classified ecosystem across web and mobile.",
+  "about.page.experience.toyar.responsibility.4": "Optimized PostgreSQL database performance through query tuning and execution plan analysis.",
+  "about.page.experience.toyar.responsibility.5": "Managed production infrastructure on AWS (EC2, RDS, S3, Lambda).",
+  "about.page.experience.toyar.responsibility.6": "Implemented CI/CD pipelines using Jenkins and Bitbucket to improve deployment reliability.",
+  "about.page.experience.toyar.responsibility.7": "Participated in architecture design, code reviews, and mentoring junior developers",
+  "about.page.experience.toyar.techStack": "Tech stack",
+  "about.page.experience.toyar.tech": "React.js, React Native, Vite, JavaScript, Spring Boot, REST APIs, PostgreSQL, AWS(EC2, RDS, S3, Lambda), Jenkins, Bitbucket, Datadog, CI/CD, Git.",
+
+  "about.page.experience.phase2.company": "PHASE2 TECHNOLOGY",
+  "about.page.experience.phase2.durationValue": "Jun 2020 – May 2023",
+  "about.page.experience.phase2.positionValue": "Programmer",
+  "about.page.experience.phase2.locationValue": "Remote",
+  "about.page.experience.phase2.responsibilities": "Responsibilities",
+  "about.page.experience.phase2.responsibility.0": "Developed web applications and business systems using JavaScript, PHP, Java and Drupal CMS.",
+  "about.page.experience.phase2.responsibility.1": "Built custom Drupal modules and implemented complex client requirements.",
+  "about.page.experience.phase2.responsibility.2": "Worked on multiple international projects including New York Stock Exchange and Associated Press platforms.",
+  "about.page.experience.phase2.responsibility.3": "Delivered scalable and maintainable code solutions across diverse industry domains.",
+  "about.page.experience.phase2.responsibility.4": "Collaborated with cross-functional teams to translate business requirements into technical implementations.",
+  "about.page.experience.phase2.techStack": "Tech stack",
+  "about.page.experience.phase2.tech": "JavaScript, PHP, Drupal, Java, HTML, CSS, REST APIs, CMS Development, Git.",
+
+  "about.page.experience.mindx.company": "MINDX TECHNOLOGY SCHOOL",
+  "about.page.experience.mindx.durationValue": "Oct 2020 – Mar 2024",
+  "about.page.experience.mindx.positionValue": "Technical Instructor & Instructor Management",
+  "about.page.experience.mindx.locationValue": "Ho Chi Minh City, Vietnam",
+  "about.page.experience.mindx.responsibilities": "Responsibilities",
+  "about.page.experience.mindx.responsibility.0": "Taught full-stack web development including HTML, CSS, JavaScript, React, and Node.js, guiding students through real-world software development practices.",
+  "about.page.experience.mindx.responsibility.1": "Mentored and trained 50+ instructors across multiple branches, contributing to curriculum design and improving training quality.",
+  "about.page.experience.mindx.responsibility.2": "Delivered technical workshops on React, Next.js, and React Native to support practical software development training.",
+
   "about.page.cv.kicker": "Download Resume",
   "about.page.cv.title": "Resume my",
 
@@ -130,14 +180,10 @@
   "stats.block.projects": "+79",
   "stats.block.totalProjects": "Total Projects",
 
-
   "call.action.content": "Let's",
   "call.action.work": "work",
   "call.action.together": "together.",
   "call.action.label": "Let's work together.",
-
-
-
 
   "notification.page.title": "Notification",
   "notification.page.no": "No notifications yet.",
@@ -168,5 +214,4 @@
   "setting.page.option.darkMode.automatic": "Automatic",
   "setting.page.option.darkMode.automatic.description": "We'll automatically adjust the display based on your device's system settings.",
   "setting.page.option.resetSettings": "Reset Settings"
-
 }

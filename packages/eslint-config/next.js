@@ -24,6 +24,8 @@ export const nextJsConfig = [
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // PWA/workbox bundles and small browser-only scripts are not linted as TS/ESM.
+    "public/**",
   ]),
   {
     ...pluginReact.configs.flat.recommended,

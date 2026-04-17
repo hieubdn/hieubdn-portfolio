@@ -7,7 +7,6 @@ import SocialBlock from "@/components/pages/customer/home/social-block/social-bl
 
 import DownloadCvBlock from "./download-cv-block/download-cv-block";
 import EducationBlock from "./education-block/education-block";
-import ExperienceBlock from "./experience-block/experience-block";
 import ImageBlock from "./image-block/image-block";
 import SectionHeading from "./section-heading/section-heading";
 import SummaryKickerBlock from "./summary-kicker-block/summary-kicker-block";
@@ -15,6 +14,10 @@ import SummaryBlock from "./summary-block/summary-block";
 import TechnicalBlock from "./contact-block/contact-block";
 import styles from "./about.module.scss";
 import CallToAction from "../home/callToAction-block/call-to-action";
+import HdwebsoftCompany from "./hdwebsoft-company/hdwebsoft-company";
+import ToyarCompany from "./toyar-company/toyar-company";
+import Phase2Company from "./phase2-company/phase2-company";
+import MindxCompany from "./mindx-company/mindx-company";
 
 const BLOCK_REVEAL_STAGGER_MS = 50;
 
@@ -115,38 +118,18 @@ export default function AboutSection() {
               <SectionHeading title={t("about.page.workExperience.heading")} />
             );
           } else if (block.id === "hdwebsoft") {
-            inner = (
-              <ExperienceBlock
-                title={t("about.page.experience.hdwebsoft.title")}
-                body={t("about.page.experience.hdwebsoft.body")}
-              />
-            );
+            inner = <HdwebsoftCompany />;
           } else if (block.id === "toyar") {
-            inner = (
-              <ExperienceBlock
-                title={t("about.page.experience.toyar.title")}
-                body={t("about.page.experience.toyar.body")}
-              />
-            );
+            inner = <ToyarCompany />;
           } else if (block.id === "phase2") {
-            inner = (
-              <ExperienceBlock
-                title={t("about.page.experience.phase2.title")}
-                body={t("about.page.experience.phase2.body")}
-              />
-            );
+            inner = <Phase2Company />;
           } else if (block.id === "otherExperienceHeading") {
             variant = "sectionHeading";
             inner = (
               <SectionHeading title={t("about.page.otherExperience.heading")} />
             );
           } else if (block.id === "mindx") {
-            inner = (
-              <ExperienceBlock
-                title={t("about.page.experience.mindx.title")}
-                body={t("about.page.experience.mindx.body")}
-              />
-            );
+            inner = <MindxCompany />;
           } else if (block.id === "footerDivider") {
             variant = "divider";
             inner = <hr className={styles.rule} />;
