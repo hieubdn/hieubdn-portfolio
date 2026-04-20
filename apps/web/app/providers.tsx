@@ -8,6 +8,7 @@ import { LocaleProvider } from "@/components/layout/setting/translate/locale-pro
 import type { AppLocaleCode } from "@/components/layout/setting/translate/locale-constants";
 import { AppToaster } from "@/components/layout/toast/app-toaster";
 import { OfflineBanner } from "@/components/pwa/offline-banner";
+import { StandaloneViewportLock } from "@/components/pwa/standalone-viewport-lock";
 import { ThemePreferenceProvider } from "@/components/theme/theme-preference-provider";
 import { ThemeInitScript } from "./theme-init-script";
 
@@ -21,6 +22,7 @@ export function AppProviders({
   return (
     <>
       <ThemeInitScript />
+      <StandaloneViewportLock />
       <ThemePreferenceProvider>
         <LocaleProvider initialLocale={initialLocale}>
           <OfflineBanner />

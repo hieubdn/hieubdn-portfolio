@@ -181,16 +181,10 @@ html {
   scroll-padding-bottom: max(12px, env(safe-area-inset-bottom));
 }
 
-html,
 body {
   background-color: var(--color-page-background);
-  touch-action: manipulation;
-  overscroll-behavior: none;
-  overflow-x: hidden;
-}
-
-body {
   font-family: "Open Sans", sans-serif;
+  overflow-x: clip;
 }
 
 button,
