@@ -115,7 +115,7 @@
 .settingMobileTitle {
   margin: 0;
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--shell-text-strong);
   display: flex;
   align-items: center;
@@ -132,7 +132,7 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 24px;
   padding: 24px;
   border-radius: 12px;
   background: var(--shell-surface-panel);
@@ -140,8 +140,8 @@
   color: var(--shell-text);
 
   .settingPanelTitle {
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 20px;
+    font-weight: 500;
     letter-spacing: 1.2px;
     line-height: 32px;
     font-family: "Open Sans", sans-serif;
@@ -151,8 +151,8 @@
     gap: 16px;
 
     svg {
-      width: 32px;
-      height: 32px;
+      width: 24px;
+      height: 24px;
       fill: var(--shell-text-panel-title);
     }
   }
