@@ -7,7 +7,6 @@ import styles from "./mindx-company.module.scss";
 const RESPONSIBILITY_KEYS = [
   "about.page.experience.mindx.responsibility.0",
   "about.page.experience.mindx.responsibility.1",
-  "about.page.experience.mindx.responsibility.2",
 ] as const;
 
 export default function MindxCompany() {

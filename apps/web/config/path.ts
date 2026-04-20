@@ -10,11 +10,7 @@ export const PATH_URL = {
 export const SOCIAL_LINKS = {
   GITHUB: "https://github.com/hieubdn",
   LINKEDIN: "https://www.linkedin.com/in/hieubdn/",
-  FACEBOOK: "https://www.facebook.com/hieubdn",
   INSTAGRAM: "https://www.instagram.com/_hiu.bdn/",
-  TIKTOK: "",
-  YOUTUBE: "",
-  TWITTER: "",
 } as const;
 
 /** Trang admin đã đăng nhập (không gồm /admin/login). */
