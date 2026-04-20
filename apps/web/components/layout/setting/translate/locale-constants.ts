@@ -1,10 +1,9 @@
 export const PROFILE_LOCALE_STORAGE_KEY = "profile-locale";
 
-export type AppLocaleCode = "vi" | "ja" | "zh-TW" | "zh-CN" | "ko" | "de" | "en" | "en-GB";
+export type AppLocaleCode = "vi" | "ja" | "zh-TW" | "zh-CN" | "ko" | "de" | "en";
 
 export const APP_LOCALE_CODES: readonly AppLocaleCode[] = [
   "en",
-  "en-GB",
   "vi",
   "ja",
   "zh-TW",
@@ -21,8 +20,7 @@ export const LOCALE_OPTIONS: readonly {
   labelInVietnamese: string;
 }[] = [
   { code: "vi", nativeLabel: "Tiếng Việt", labelInVietnamese: "Tiếng Việt" },
-  { code: "en", nativeLabel: "English (US)", labelInVietnamese: "Tiếng Anh (Mỹ)" },
-  { code: "en-GB", nativeLabel: "English (UK)", labelInVietnamese: "Tiếng Anh (Anh)" },
+  { code: "en", nativeLabel: "English (US)", labelInVietnamese: "Tiếng Anh" },
   { code: "ja", nativeLabel: "日本語", labelInVietnamese: "Tiếng Nhật" },
   {
     code: "zh-TW",
