@@ -1,27 +1,27 @@
 {
-  "name": "hieubdn",
+  "name": "hieubdn — Portfolio",
   "short_name": "hieubdn",
-  "description": "hieubdn portfolio",
+  "description": "Bùi Đỗ Ngọc Hiếu — Full Stack Developer portfolio",
   "id": "/",
-  "start_url": "/",
+  "start_url": "/?source=pwa",
   "scope": "/",
   "display": "standalone",
+  "display_override": ["standalone", "minimal-ui", "browser"],
+  "orientation": "portrait",
   "background_color": "#ffffff",
   "theme_color": "#000000",
-  "orientation": "portrait",
   "lang": "en",
+  "dir": "ltr",
+  "categories": ["portfolio", "personal", "productivity"],
+  "prefer_related_applications": false,
   "icons": [
-    {
-      "src": "/icons/icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "/icons/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
-    }
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "About", "short_name": "About", "url": "/about", "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Projects", "short_name": "Projects", "url": "/projects", "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Contact", "short_name": "Contact", "url": "/contact", "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }] }
   ]
 }

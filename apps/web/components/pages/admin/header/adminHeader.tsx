@@ -1,18 +1,29 @@
 "use client";
 
 import { useState } from "react";
+import { signOut } from "next-auth/react";
 import { AdminLogin } from "@/assets/svg";
 import { PATH_URL } from "@/config/path";
 import { GlobalActionsMenu } from "@/components/layout/global-actions/global-actions-menu";
-import { signOut } from "next-auth/react";
+import {
+  broadcastLogout,
+  purgeSensitiveCaches,
+  useAuthBroadcast,
+} from "@/hooks/use-auth-broadcast";
 import styles from "./styles.module.scss";
 
 export default function AdminHeader() {
   const [logoutError, setLogoutError] = useState<string | null>(null);
 
+  useAuthBroadcast(() => {
+    window.location.assign(PATH_URL.ADMIN_LOGIN);
+  });
+
   async function handleLogout() {
     setLogoutError(null);
     try {
+      await purgeSensitiveCaches();
+      broadcastLogout();
       await signOut({ callbackUrl: PATH_URL.ADMIN_LOGIN });
     } catch {
       setLogoutError("Could not sign out. Try again.");

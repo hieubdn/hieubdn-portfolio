@@ -9,7 +9,6 @@ import {
   type ReactNode,
 } from "react";
 import de from "../../../../../../database/locales/de.json";
-import enGb from "../../../../../../database/locales/en-GB.json";
 import en from "../../../../../../database/locales/en.json";
 import ja from "../../../../../../database/locales/ja.json";
 import ko from "../../../../../../database/locales/ko.json";
@@ -28,7 +27,6 @@ type LocaleMessages = Record<string, string>;
 
 const MESSAGES: Record<AppLocaleCode, LocaleMessages> = {
   en,
-  "en-GB": enGb,
   vi,
   ja,
   "zh-TW": zhTw,

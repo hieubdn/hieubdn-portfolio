@@ -7,7 +7,9 @@ import { NotificationProvider } from "@/components/layout/notification/notificat
 import { LocaleProvider } from "@/components/layout/setting/translate/locale-provider";
 import type { AppLocaleCode } from "@/components/layout/setting/translate/locale-constants";
 import { AppToaster } from "@/components/layout/toast/app-toaster";
+import { InstallPrompt } from "@/components/pwa/install-prompt";
 import { OfflineBanner } from "@/components/pwa/offline-banner";
+import { ServiceWorkerUpdateNotifier } from "@/components/pwa/sw-update-notifier";
 import { StandaloneViewportLock } from "@/components/pwa/standalone-viewport-lock";
 import { ThemePreferenceProvider } from "@/components/theme/theme-preference-provider";
 import { ThemeInitScript } from "./theme-init-script";
@@ -31,6 +33,8 @@ export function AppProviders({
               <MainScreenProvider>{children}</MainScreenProvider>
             </NotificationProvider>
           </NotificationFeedProvider>
+          <InstallPrompt />
+          <ServiceWorkerUpdateNotifier />
         </LocaleProvider>
         <AppToaster />
       </ThemePreferenceProvider>
