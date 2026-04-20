@@ -1,0 +1,131 @@
+.contactSection {
+  align-self: stretch;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  border-radius: 24px;
+  padding: 24px 0;
+  margin-top: 24px;
+  display: flex;
+  gap: 24px;
+}
+
+.socialsInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  .heading {
+    font-size: 18px;
+    color: var(--color-home-text-body);
+    letter-spacing: 1.5px;
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+  }
+}
+
+.iconRow {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  justify-content: space-evenly;
+
+  .iconButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: var(--color-home-icon-button-bg);
+    box-shadow: 0 2px 8px #0f172a3e;
+    transition:
+      transform 0.15s ease,
+      box-shadow 0.15s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 14px #0f172a7b;
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--color-home-focus-outline);
+      outline-offset: 2px;
+    }
+
+    @media (max-width: 1024px) {
+      width: 75px;
+      height: 75px;
+    }
+
+    .iconImage {
+      width: 28px;
+      height: 28px;
+      object-fit: contain;
+    }
+
+    .iconImageGithub {
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+    }
+
+    .iconImageFacebook {
+      width: 45px;
+      height: 45px;
+      object-fit: contain;
+    }
+
+    &.iconButtonFacebook:hover {
+      background: linear-gradient(
+        135deg,
+        #004063,
+        #0073b1 25%,
+        #00a2ff 50%,
+        #004b7c 75%,
+        #00364a
+      );
+    }
+
+    &.iconButtonLinkedin:hover,
+    &.iconButtonInstagram:hover,
+    &.iconButtonGithub:hover {
+      opacity: 0.8;
+      background-origin: border-box;
+      background-clip: padding-box, border-box;
+      background-size: 101% 101%;
+      background-position: 50%;
+    }
+
+    &.iconButtonLinkedin:hover {
+      background: linear-gradient(
+        135deg,
+        #004063,
+        #0073b1 25%,
+        #00a2ff 50%,
+        #004b7c 75%,
+        #00364a
+      );
+    }
+
+    &.iconButtonInstagram:hover {
+      background: linear-gradient(
+        -225deg,
+        #405de6,
+        #5851db 20%,
+        #833ab4 40%,
+        #c13584 60%,
+        #e1306c 70%,
+        #fd1d1d 80%,
+        #f56040 90%,
+        #fcaf45
+      );
+    }
+
+    &.iconButtonGithub:hover {
+      background: linear-gradient(90deg, #333, #6e5494);
+    }
+  }
+}
