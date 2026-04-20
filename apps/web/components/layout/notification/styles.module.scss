@@ -58,7 +58,7 @@ $duration: 320ms;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 24px;
+  padding: 16px 24px;
   border-bottom: 1px solid var(--shell-border);
 }
 
@@ -66,8 +66,7 @@ $duration: 320ms;
   margin: 0;
   font-family: "Open Sans", sans-serif;
   font-size: 24px;
-  font-weight: 600;
-  letter-spacing: 1.5px;
+  letter-spacing: 2px;
   line-height: 32px;
   color: var(--shell-text);
 }
@@ -100,7 +99,7 @@ $duration: 320ms;
 .panelBody {
   flex: 1;
   overflow: auto;
-  padding: 24px;
+  padding: 16px;
   color: var(--shell-text);
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
