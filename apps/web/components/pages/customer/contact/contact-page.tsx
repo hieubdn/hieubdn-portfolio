@@ -109,7 +109,17 @@ export default function ContactSection() {
         setErrors({});
         setIsSubmitting(true);
         try {
-            await new Promise((resolve) => setTimeout(resolve, 800));
+            const response = await fetch("/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    name: values.name.trim(),
+                    email: values.email.trim(),
+                    subject: values.subject.trim(),
+                    message: values.message.trim(),
+                }),
+            });
+            if (!response.ok) throw new Error("Request failed");
             toast.success(t("contact.page.form.toast.success"));
             setValues(INITIAL_FORM);
         } catch {
