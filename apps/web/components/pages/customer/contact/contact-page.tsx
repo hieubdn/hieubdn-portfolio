@@ -11,7 +11,6 @@ import linkedinGlyph from "@/assets/image/social-block/linkedin.png";
 import facebookGlyph from "@/assets/image/social-block/facebook.png";
 import locationGif from "@/assets/image/contact/location.gif";
 import jobGif from "@/assets/image/contact/job.gif";
-import starIcon from "@/assets/image/skill/star1.svg";
 import { SOCIAL_LINKS } from "@/config/path";
 import styles from "./contact-page.module.scss";
 import { useLocaleText } from "@/components/layout/setting/translate/locale-provider";
