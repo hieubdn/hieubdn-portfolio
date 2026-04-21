@@ -8,11 +8,6 @@ import { useLocaleText } from "@/components/layout/setting/translate/locale-prov
 import styles from "./styles.module.scss";
 
 export type GlobalActionsMenuProps = {
-  thirdItem: {
-    label: string;
-    icon: ReactNode;
-    onSelect: () => void;
-  };
   menuLeading?: (closeMenu: () => void) => ReactNode;
   installAction?: {
     label: string;
@@ -21,7 +16,6 @@ export type GlobalActionsMenuProps = {
 };
 
 export function GlobalActionsMenu({
-  thirdItem,
   menuLeading,
   installAction,
 }: GlobalActionsMenuProps) {
@@ -106,19 +100,6 @@ export function GlobalActionsMenu({
                   }}
                 >
                   <Setting /> {t("popover.setting")}
-                </button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  className={styles.popoverItem}
-                  onClick={() => {
-                    setOpen(false);
-                    thirdItem.onSelect();
-                  }}
-                >
-                  {thirdItem.icon}
-                  {thirdItem.label}
                 </button>
               </li>
             </ul>
