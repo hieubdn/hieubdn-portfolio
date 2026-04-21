@@ -237,5 +237,25 @@
   "setting.page.option.darkMode.off": "Tắt",
   "setting.page.option.darkMode.automatic": "Tự động",
   "setting.page.option.darkMode.automatic.description": "Giao diện sẽ tự động điều chỉnh theo cài đặt hệ thống trên thiết bị của bạn.",
-  "setting.page.option.resetSettings": "Đặt lại cài đặt"
+  "setting.page.option.resetSettings": "Đặt lại cài đặt",
+
+  "contact.page.info.title": "Thông tin liên hệ:",
+  "contact.page.info.from": "Quê quán",
+  "contact.page.info.from.value": "Đà Nẵng, Việt Nam",
+  "contact.page.info.liveIn": "Hiện sống tại",
+  "contact.page.info.liveIn.value": "TP. Hồ Chí Minh, Việt Nam",
+  "contact.page.socials.title": "Thông tin mạng xã hội:",
+
+  "contact.page.form.title": "Hãy kết nối",
+  "contact.page.form.title.accent": "với tôi.",
+  "contact.page.form.name": "Tên",
+  "contact.page.form.email": "Email",
+  "contact.page.form.subject": "Chủ đề",
+  "contact.page.form.message": "Nội dung",
+  "contact.page.form.send": "GỬI TIN NHẮN",
+  "contact.page.form.sending": "ĐANG GỬI...",
+  "contact.page.form.validation.required": "Trường này là bắt buộc",
+  "contact.page.form.validation.email": "Vui lòng nhập địa chỉ email hợp lệ",
+  "contact.page.form.toast.success": "Tin nhắn của bạn đã được gửi thành công.",
+  "contact.page.form.toast.error": "Đã xảy ra lỗi. Vui lòng thử lại."
 }

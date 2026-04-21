@@ -235,6 +235,25 @@
   "setting.page.option.darkMode.off": "オフ",
   "setting.page.option.darkMode.automatic": "自動",
   "setting.page.option.darkMode.automatic.description": "デバイスのシステム設定に基づいて自動的に表示を切り替えます。",
-  "setting.page.option.resetSettings": "設定をリセット"
+  "setting.page.option.resetSettings": "設定をリセット",
 
+  "contact.page.info.title": "連絡先情報：",
+  "contact.page.info.from": "出身",
+  "contact.page.info.from.value": "ベトナム・ダナン市",
+  "contact.page.info.liveIn": "居住地",
+  "contact.page.info.liveIn.value": "ベトナム・ホーチミン市",
+  "contact.page.socials.title": "ソーシャル情報：",
+
+  "contact.page.form.title": "お気軽に",
+  "contact.page.form.title.accent": "ご連絡ください。",
+  "contact.page.form.name": "お名前",
+  "contact.page.form.email": "メールアドレス",
+  "contact.page.form.subject": "件名",
+  "contact.page.form.message": "メッセージ",
+  "contact.page.form.send": "メッセージを送信",
+  "contact.page.form.sending": "送信中...",
+  "contact.page.form.validation.required": "この項目は必須です",
+  "contact.page.form.validation.email": "有効なメールアドレスを入力してください",
+  "contact.page.form.toast.success": "メッセージが正常に送信されました。",
+  "contact.page.form.toast.error": "エラーが発生しました。もう一度お試しください。"
 }

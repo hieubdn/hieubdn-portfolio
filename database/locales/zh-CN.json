@@ -236,6 +236,26 @@
   "setting.page.option.darkMode.off": "关闭",
   "setting.page.option.darkMode.automatic": "自动",
   "setting.page.option.darkMode.automatic.description": "将根据设备的系统设置自动调整显示。",
-  "setting.page.option.resetSettings": "重置设置"
+  "setting.page.option.resetSettings": "重置设置",
+
+  "contact.page.info.title": "联系信息：",
+  "contact.page.info.from": "来自",
+  "contact.page.info.from.value": "越南岘港市",
+  "contact.page.info.liveIn": "现居",
+  "contact.page.info.liveIn.value": "越南胡志明市",
+  "contact.page.socials.title": "社交信息：",
+
+  "contact.page.form.title": "欢迎与我",
+  "contact.page.form.title.accent": "取得联系。",
+  "contact.page.form.name": "姓名",
+  "contact.page.form.email": "电子邮箱",
+  "contact.page.form.subject": "主题",
+  "contact.page.form.message": "留言内容",
+  "contact.page.form.send": "发送消息",
+  "contact.page.form.sending": "发送中...",
+  "contact.page.form.validation.required": "此字段为必填项",
+  "contact.page.form.validation.email": "请输入有效的邮箱地址",
+  "contact.page.form.toast.success": "您的消息已成功发送。",
+  "contact.page.form.toast.error": "发生错误，请重试。"
 
 }
