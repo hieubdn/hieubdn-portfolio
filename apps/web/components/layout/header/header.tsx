@@ -3,7 +3,7 @@
 import Link from "next/link";
 import styles from "./styles.module.scss";
 import gaStyles from "@/components/layout/global-actions/styles.module.scss";
-import { AdminLogin, GitHub } from "@/assets/svg";
+import { GitHub } from "@/assets/svg";
 import { PATH_URL, SOCIAL_LINKS } from "@/config/path";
 import { GlobalActionsMenu } from "@/components/layout/global-actions/global-actions-menu";
 import { useMainScreen } from "@/components/layout/main-screen/main-screen-context";
@@ -12,14 +12,6 @@ import { useInstallPrompt } from "@/hooks/use-install-prompt";
 
 function openGitHubProfile() {
   window.open(SOCIAL_LINKS.GITHUB, "_blank", "noopener,noreferrer");
-}
-
-function openAdminLoginTab() {
-  window.open(
-    `${window.location.origin}${PATH_URL.ADMIN_LOGIN}`,
-    "_blank",
-    "noopener,noreferrer",
-  );
 }
 
 export default function Header() {
@@ -107,11 +99,6 @@ export default function Header() {
                 </li>
               </>
             )}
-            thirdItem={{
-              label: t("popover.adminLogin"),
-              icon: <AdminLogin />,
-              onSelect: openAdminLoginTab,
-            }}
           />
         </nav>
       </div>

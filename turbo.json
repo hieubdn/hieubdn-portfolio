@@ -3,10 +3,6 @@
   "ui": "tui",
   "globalEnv": [
     "NODE_ENV",
-    "AUTH_SECRET",
-    "AUTH_URL",
-    "ADMIN_USERNAME",
-    "ADMIN_PASSWORD",
     "NEXT_SITE_URL",
     "VERCEL_URL"
   ],

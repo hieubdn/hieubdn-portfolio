@@ -2,10 +2,8 @@
 
 import {
   createContext,
-  useCallback,
   useContext,
   useEffect,
-  useMemo,
   useState,
   type ReactNode,
 } from "react";
@@ -43,18 +41,8 @@ function isValidEntry(x: unknown): x is NotificationEntry {
   );
 }
 
-function writeStored(items: NotificationEntry[]): boolean {
-  try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
-    return true;
-  } catch {
-    return false;
-  }
-}
-
 type NotificationFeedContextValue = {
   items: NotificationEntry[];
-  addNotification: (title: string, body: string) => boolean;
 };
 
 const NotificationFeedContext = createContext<NotificationFeedContextValue | null>(
@@ -85,32 +73,8 @@ export function NotificationFeedProvider({ children }: { children: ReactNode }) 
     return () => window.removeEventListener("storage", onStorage);
   }, []);
 
-  const addNotification = useCallback((title: string, body: string): boolean => {
-    const trimmedTitle = title.trim();
-    const trimmedBody = body.trim();
-    if (!trimmedTitle && !trimmedBody) return false;
-    const entry: NotificationEntry = {
-      id: crypto.randomUUID(),
-      title: trimmedTitle || "(Không tiêu đề)",
-      body: trimmedBody,
-      createdAt: new Date().toISOString(),
-    };
-    let persisted = false;
-    setItems((prev) => {
-      const next = [entry, ...prev];
-      persisted = writeStored(next);
-      return persisted ? next : prev;
-    });
-    return persisted;
-  }, []);
-
-  const value = useMemo(
-    () => ({ items, addNotification }),
-    [items, addNotification],
-  );
-
   return (
-    <NotificationFeedContext.Provider value={value}>
+    <NotificationFeedContext.Provider value={{ items }}>
       {children}
     </NotificationFeedContext.Provider>
   );
