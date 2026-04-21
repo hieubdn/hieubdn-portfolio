@@ -237,5 +237,25 @@
   "setting.page.option.darkMode.off": "Off",
   "setting.page.option.darkMode.automatic": "Automatic",
   "setting.page.option.darkMode.automatic.description": "We'll automatically adjust the display based on your device's system settings.",
-  "setting.page.option.resetSettings": "Reset Settings"
+  "setting.page.option.resetSettings": "Reset Settings",
+
+  "contact.page.info.title": "Contact info:",
+  "contact.page.info.from": "From",
+  "contact.page.info.from.value": "Da Nang City, Viet Nam",
+  "contact.page.info.liveIn": "Live in",
+  "contact.page.info.liveIn.value": "Ho Chi Minh City, Viet Nam",
+  "contact.page.socials.title": "Socials info:",
+
+  "contact.page.form.title": "Let's get in",
+  "contact.page.form.title.accent": "touch.",
+  "contact.page.form.name": "Name",
+  "contact.page.form.email": "Email",
+  "contact.page.form.subject": "Your Subject",
+  "contact.page.form.message": "Your Message",
+  "contact.page.form.send": "SEND MESSAGE",
+  "contact.page.form.sending": "SENDING...",
+  "contact.page.form.validation.required": "This field is required",
+  "contact.page.form.validation.email": "Please enter a valid email address",
+  "contact.page.form.toast.success": "Your message has been sent successfully.",
+  "contact.page.form.toast.error": "Something went wrong. Please try again."
 }

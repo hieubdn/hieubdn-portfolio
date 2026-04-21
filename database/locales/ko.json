@@ -236,5 +236,25 @@
   "setting.page.option.darkMode.off": "끄기",
   "setting.page.option.darkMode.automatic": "자동",
   "setting.page.option.darkMode.automatic.description": "기기 시스템 설정에 따라 자동으로 화면이 조정됩니다.",
-  "setting.page.option.resetSettings": "설정 초기화"
+  "setting.page.option.resetSettings": "설정 초기화",
+
+  "contact.page.info.title": "연락처 정보:",
+  "contact.page.info.from": "출신",
+  "contact.page.info.from.value": "베트남 다낭시",
+  "contact.page.info.liveIn": "거주지",
+  "contact.page.info.liveIn.value": "베트남 호치민시",
+  "contact.page.socials.title": "소셜 정보:",
+
+  "contact.page.form.title": "언제든지",
+  "contact.page.form.title.accent": "연락해 주세요.",
+  "contact.page.form.name": "이름",
+  "contact.page.form.email": "이메일",
+  "contact.page.form.subject": "제목",
+  "contact.page.form.message": "메시지",
+  "contact.page.form.send": "메시지 보내기",
+  "contact.page.form.sending": "전송 중...",
+  "contact.page.form.validation.required": "이 필드는 필수입니다",
+  "contact.page.form.validation.email": "유효한 이메일 주소를 입력해 주세요",
+  "contact.page.form.toast.success": "메시지가 성공적으로 전송되었습니다.",
+  "contact.page.form.toast.error": "문제가 발생했습니다. 다시 시도해 주세요."
 }

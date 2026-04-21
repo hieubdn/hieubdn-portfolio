@@ -30,29 +30,29 @@
     letter-spacing: 1.5px;
     text-decoration: none;
     background: linear-gradient(
-        90deg,
-        #52525b 0%,
-        #d5d5d5 25%,
-        #a6a6a6 55%,
-        #cecece 80%,
-        #929292 100%
-      );
-      background-size: 200% 100%;
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      color: #7a7a7a;
-      animation: gradientShift 2s ease-in-out infinite;
+      90deg,
+      #52525b 0%,
+      #d5d5d5 25%,
+      #a6a6a6 55%,
+      #cecece 80%,
+      #929292 100%
+    );
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #7a7a7a;
+    animation: gradientShift 2s ease-in-out infinite;
 
-      @keyframes gradientShift {
-        0%,
-        100% {
-          background-position: 0% 50%;
-        }
-        50% {
-          background-position: 100% 50%;
-        }
+    @keyframes gradientShift {
+      0%,
+      100% {
+        background-position: 0% 50%;
       }
+      50% {
+        background-position: 100% 50%;
+      }
+    }
 
     @media (max-width: 919px) {
       font-size: 40px;
@@ -114,8 +114,6 @@
     &:hover {
       color: var(--shell-accent-hover);
     }
-
-    
   }
 
   .social {
