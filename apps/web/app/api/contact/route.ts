@@ -61,101 +61,7 @@ function formatSubmittedAt(date: Date): string {
   return `${time} ${day}`;
 }
 
-function renderBrandFooter(): string {
-  return `
-      <div
-        style="
-          padding: 32px 8px 8px 8px;
-          text-align: center;
-          color: #64748b;
-          font-size: 14px;
-          font-weight: 390;
-          line-height: 24px;
-          letter-spacing: 1.2px;
-        "
-      >
-        © 2026 - Powered by Bui Do Ngoc Hieu
-      </div>
-
-      <div
-        style="
-          padding: 0 8px 8px 8px;
-          text-align: center;
-          color: #64748b;
-          font-size: 14px;
-          font-weight: 390;
-          line-height: 24px;
-          letter-spacing: 1.2px;
-        "
-      >
-        Da Nang, Viet Nam
-      </div>
-
-      <div
-        style="
-          padding: 0 8px 8px 8px;
-          text-align: center;
-          color: #64748b;
-          font-size: 14px;
-          font-weight: 390;
-          line-height: 24px;
-          letter-spacing: 1.2px;
-        "
-      >
-        <a href="https://hieubdn.vercel.app/" style="text-decoration: none; margin: 0 6px;">
-          <img
-            src="${SITE_URL}/icons/website.png"
-            alt="Website"
-            width="24"
-            height="24"
-            style="border: 0; display: inline-block; vertical-align: middle;"
-          />
-        </a>
-
-        <a href="https://www.facebook.com/hieubdn" style="text-decoration: none; margin: 0 6px;">
-          <img
-            src="${SITE_URL}/icons/facebook.png"
-            alt="Facebook"
-            width="24"
-            height="24"
-            style="border: 0; display: inline-block; vertical-align: middle;"
-          />
-        </a>
-
-        <a href="https://github.com/hieubdn" style="text-decoration: none; margin: 0 6px;">
-          <img
-            src="${SITE_URL}/icons/github.png"
-            alt="GitHub"
-            width="24"
-            height="24"
-            style="border: 0; display: inline-block; vertical-align: middle;"
-          />
-        </a>
-
-        <a href="https://www.linkedin.com/in/hieubdn/" style="text-decoration: none; margin: 0 6px;">
-          <img
-            src="${SITE_URL}/icons/linkedin.png"
-            alt="LinkedIn"
-            width="24"
-            height="24"
-            style="border: 0; display: inline-block; vertical-align: middle;"
-          />
-        </a>
-
-        <a href="https://www.instagram.com/_hiu.bdn/" style="text-decoration: none; margin: 0 6px;">
-          <img
-            src="${SITE_URL}/icons/instagram.png"
-            alt="Instagram"
-            width="24"
-            height="24"
-            style="border: 0; display: inline-block; vertical-align: middle;"
-          />
-        </a>
-      </div>
-  `;
-}
-
-function renderAdminHtml(input: ContactInput, submittedAt: string): string {
+function renderHtml(input: ContactInput, submittedAt: string): string {
   const message = escapeHtml(input.message).replaceAll("\n", "<br/>");
   return `
 <!doctype html>
@@ -335,7 +241,95 @@ function renderAdminHtml(input: ContactInput, submittedAt: string): string {
         </div>
       </div>
 
-      ${renderBrandFooter()}
+      <div
+        style="
+          padding: 32px 8px 8px 8px;
+          text-align: center;
+          color: #64748b;
+          font-size: 14px;
+          font-weight: 390;
+          line-height: 24px;
+          letter-spacing: 1.2px;
+        "
+      >
+        © 2026 - Powered by Bui Do Ngoc Hieu
+      </div>
+
+      <div
+        style="
+          padding: 0 8px 8px 8px;
+          text-align: center;
+          color: #64748b;
+          font-size: 14px;
+          font-weight: 390;
+          line-height: 24px;
+          letter-spacing: 1.2px;
+        "
+      >
+        Da Nang, Viet Nam
+      </div>
+
+      <div
+        style="
+          padding: 0 8px 8px 8px;
+          text-align: center;
+          color: #64748b;
+          font-size: 14px;
+          font-weight: 390;
+          line-height: 24px;
+          letter-spacing: 1.2px;
+        "
+      >
+        <a href="https://hieubdn.vercel.app/" style="text-decoration: none; margin: 0 6px;">
+          <img
+            src="${SITE_URL}/icons/website.png"
+            alt="Website"
+            width="24"
+            height="24"
+            style="border: 0; display: inline-block; vertical-align: middle;"
+          />
+        </a>
+
+        <a href="https://www.facebook.com/hieubdn" style="text-decoration: none; margin: 0 6px;">
+          <img
+            src="${SITE_URL}/icons/facebook.png"
+            alt="Facebook"
+            width="24"
+            height="24"
+            style="border: 0; display: inline-block; vertical-align: middle;"
+          />
+        </a>
+
+        <a href="https://github.com/hieubdn" style="text-decoration: none; margin: 0 6px;">
+          <img
+            src="${SITE_URL}/icons/github.png"
+            alt="GitHub"
+            width="24"
+            height="24"
+            style="border: 0; display: inline-block; vertical-align: middle;"
+          />
+        </a>
+
+        <a href="https://www.linkedin.com/in/hieubdn/" style="text-decoration: none; margin: 0 6px;">
+          <img
+            src="${SITE_URL}/icons/linkedin.png"
+            alt="LinkedIn"
+            width="24"
+            height="24"
+            style="border: 0; display: inline-block; vertical-align: middle;"
+          />
+        </a>
+
+        <a href="https://www.instagram.com/_hiu.bdn/" style="text-decoration: none; margin: 0 6px;">
+          <img
+            src="${SITE_URL}/icons/instagram.png"
+            alt="Instagram"
+            width="24"
+            height="24"
+            style="border: 0; display: inline-block; vertical-align: middle;"
+          />
+        </a>
+      </div>
 
       <div
         style="
@@ -357,237 +351,8 @@ function renderAdminHtml(input: ContactInput, submittedAt: string): string {
     `;
 }
 
-function renderAdminText(input: ContactInput, submittedAt: string): string {
+function renderText(input: ContactInput, submittedAt: string): string {
   return `Name: ${input.name}\nEmail: ${input.email}\nSubject: ${input.subject}\nSubmitted at: ${submittedAt}\n\n${input.message}`;
-}
-
-function renderUserHtml(input: ContactInput, submittedAt: string): string {
-  const message = escapeHtml(input.message).replaceAll("\n", "<br/>");
-  const name = escapeHtml(input.name);
-  return `
-<!doctype html>
-<html>
-  <body
-    style="
-      font-family: &quot;Open Sans&quot;, sans-serif;
-      background: #f8fafc;
-      padding: 50px 12px;
-    "
-  >
-    <div
-      style="
-        max-width: 768px;
-        margin: 0 auto;
-        background: #fff;
-        border: 1px solid #e2e8f0;
-        border-radius: 12px;
-        overflow: hidden;
-      "
-    >
-      <div
-        style="
-          padding: 32px;
-          background: linear-gradient(
-            135deg,
-            #f8f9fa 0%,
-            #f3f4f6 50%,
-            #f0f0f0 100%
-          );
-        "
-      >
-        <div
-          style="
-            font-size: 24px;
-            font-weight: 600;
-            letter-spacing: 1.2px;
-            color: #0f172a;
-            text-align: center;
-          "
-        >
-          Thanks for contacting us!
-          <img
-            src="${SITE_URL}/icons/hands-clapping.png"
-            alt=""
-            width="28"
-            height="28"
-            style="vertical-align: middle; margin-left: 12px; border: 0; display: inline-block;"
-          />
-        </div>
-      </div>
-
-      <div style="padding: 12px 20px">
-        <div
-          style="
-            padding: 24px 20px 0 16px;
-            font-size: 15px;
-            font-family: &quot;Open Sans&quot;, sans-serif;
-            letter-spacing: 1.2px;
-            color: #52525b;
-          "
-        >
-          Hello
-          <span
-            style="
-              color: #64748b;
-              font-size: 15px;
-              font-family: &quot;Open Sans&quot;, sans-serif;
-              font-weight: 390;
-              letter-spacing: 1.2px;
-            "
-            >${name}</span
-          >,
-        </div>
-
-        <div
-          style="
-            padding: 16px 20px 0 16px;
-            font-size: 15px;
-            font-family: &quot;Open Sans&quot;, sans-serif;
-            letter-spacing: 1.2px;
-            color: #52525b;
-            line-height: 24px;
-          "
-        >
-          Thank you for reaching out. I have received your message and will get
-          back to you within 1–2 business days.
-        </div>
-
-        <div
-          style="
-            margin: 24px 16px 0 16px;
-            background-color: #f8fafc;
-            padding: 16px;
-            color: #52525b;
-            font-size: 15px;
-            font-family: &quot;Open Sans&quot;, sans-serif;
-            font-weight: 390;
-            letter-spacing: 1.2px;
-          "
-        >
-          <div>Your message:</div>
-          <div
-            style="
-              padding: 16px 0 0 0;
-              color: #64748b;
-              font-size: 15px;
-              font-family: &quot;Open Sans&quot;, sans-serif;
-              font-weight: 390;
-              letter-spacing: 1.2px;
-              line-height: 24px;
-            "
-          >
-            ${message}
-          </div>
-        </div>
-
-        <div
-          style="
-            padding: 24px 20px 0 16px;
-            font-size: 15px;
-            font-family: &quot;Open Sans&quot;, sans-serif;
-            letter-spacing: 1.2px;
-            color: #52525b;
-            line-height: 24px;
-          "
-        >
-          If your request is urgent, please contact me directly via phone at
-          0968 664 080 or through my social channels listed below.
-        </div>
-
-        <div
-          style="
-            padding: 24px 20px 0 16px;
-            font-size: 15px;
-            font-family: &quot;Open Sans&quot;, sans-serif;
-            letter-spacing: 1.2px;
-            color: #52525b;
-            line-height: 24px;
-          "
-        >
-          Best regards,
-        </div>
-        <div
-          style="
-            padding: 4px 20px 0 16px;
-            font-size: 15px;
-            font-family: &quot;Open Sans&quot;, sans-serif;
-            letter-spacing: 1.2px;
-            color: #52525b;
-            line-height: 24px;
-          "
-        >
-          Bui Do Ngoc Hieu
-        </div>
-
-        <div
-          style="
-            padding: 20px 20px 16px 20px;
-            border-top: 1px solid #e2e8f0;
-            margin-top: 24px;
-            color: #64748b;
-            font-size: 15px;
-            font-family: &quot;Open Sans&quot;, sans-serif;
-            font-weight: 390;
-            letter-spacing: 1.2px;
-          "
-        >
-          Submitted at:
-          <span style="color: #52525b; padding-left: 10px"
-            >${escapeHtml(submittedAt)}</span
-          >
-        </div>
-        <div
-          style="
-            padding: 0 20px 24px 20px;
-            color: #64748b;
-            font-size: 15px;
-            font-family: &quot;Open Sans&quot;, sans-serif;
-            font-weight: 390;
-            letter-spacing: 1.2px;
-          "
-        >
-          Được gửi từ:
-          <span style="color: #52525b; padding-left: 10px"
-            >${escapeHtml("hieubdn.vercel.app")}</span
-          >
-        </div>
-      </div>
-
-      ${renderBrandFooter()}
-
-      <div
-        style="
-          padding: 0 8px 32px 8px;
-          text-align: center;
-          color: #64748b;
-          font-size: 14px;
-          font-weight: 390;
-          line-height: 24px;
-          letter-spacing: 1.2px;
-        "
-      >
-        You are receiving this email because you submitted the contact form on
-        hieubdn.vercel.app.
-      </div>
-    </div>
-  </body>
-</html>
-    `;
-}
-
-function renderUserText(input: ContactInput, submittedAt: string): string {
-  return `Hello ${input.name},
-
-Thank you for reaching out. I have received your message and will get back to you within 1-2 business days.
-
-Your message:
-${input.message}
-
-Submitted at: ${submittedAt}
-Source: hieubdn.vercel.app
-
-Best regards,
-Bui Do Ngoc Hieu`;
 }
 
 export async function POST(request: NextRequest) {
@@ -621,38 +386,24 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  const resend = new Resend(apiKey);
   const submittedAt = formatSubmittedAt(new Date());
-  const sender = `Bùi Đỗ Ngọc Hiếu <${fromEmail}>`;
 
   try {
-    const adminResult = await resend.emails.send({
-      from: sender,
+    const { error } = await new Resend(apiKey).emails.send({
+      from: `Bùi Đỗ Ngọc Hiếu <${fromEmail}>`,
       to: [toEmail],
       replyTo: input.email,
       subject: `[hieubdn] ${input.subject}`,
-      html: renderAdminHtml(input, submittedAt),
-      text: renderAdminText(input, submittedAt),
+      html: renderHtml(input, submittedAt),
+      text: renderText(input, submittedAt),
     });
 
-    if (adminResult.error) {
-      console.error("[contact] Resend admin error:", adminResult.error);
+    if (error) {
+      console.error("[contact] Resend error:", error);
       return NextResponse.json(
         { ok: false, error: "Failed to send email." },
         { status: 502 },
       );
-    }
-
-    const userResult = await resend.emails.send({
-      from: sender,
-      to: [input.email],
-      subject: "Thanks for contacting Bui Do Ngoc Hieu",
-      html: renderUserHtml(input, submittedAt),
-      text: renderUserText(input, submittedAt),
-    });
-
-    if (userResult.error) {
-      console.warn("[contact] Resend user confirmation error:", userResult.error);
     }
 
     return NextResponse.json({ ok: true });
