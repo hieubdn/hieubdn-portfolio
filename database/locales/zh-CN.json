@@ -183,8 +183,23 @@
   "testimonials.block.items.6.body": "Hiếu，很高兴能认识你并与你共事。你不仅是一位才华出众的工程师和优秀的领导者，更是一位卓越的人。你对使命的专注和忠诚令人钦佩。我非常珍惜我们一起工作的时光，也期待未来继续保持联系。祝愿你在新的阶段一切顺利，并在未来不断取得成功。我始终感谢你带来的影响与支持。",
 
   "competencies.block.title": "核心能力",
+  "competencies.block.kicker": "打造可靠的软件解决方案",
+  "competencies.block.software": "软件",
+  "competencies.block.website": "网站",
+  "competencies.block.mobileApp": "移动应用",
+  "competencies.popup.close": "关闭",
+  "competencies.popup.software.title": "软件",
+  "competencies.popup.software.subtitle": "工程",
+  "competencies.popup.software.description": "专注于构建具备可扩展性、可维护性和高性能的软件系统，强调模块化设计和长期可持续性。具备解决复杂技术问题、优化系统性能，并在分布式环境中确保系统可靠性的丰富经验。",
+  "competencies.popup.website.title": "Web 应用",
+  "competencies.popup.website.subtitle": "工程",
+  "competencies.popup.website.description": "主导设计和开发高性能、可扩展的 Web 应用，重点关注模块化前端架构、高效数据流和流畅用户体验。具备构建高并发系统、整合复杂服务以及在大规模环境中保持性能和稳定性的经验。",
+  "competencies.popup.mobileApp.title": "移动应用",
+  "competencies.popup.mobileApp.subtitle": "工程",
+  "competencies.popup.mobileApp.description": "设计并交付跨平台移动应用，重点关注性能、扩展性和用户体验。具备构建可维护的移动架构、优化运行时性能，并在复杂生产环境中确保 iOS 与 Android 一致性的经验。",
 
   "quote.block.title": "工程理念",
+  "quote.block.kicker": "技术决策背后的思考",
   "quote.block.content": "技术是创造长期价值的手段，而不是最终目标",
   "quote.block.author": "Bui Do Ngoc Hieu",
 

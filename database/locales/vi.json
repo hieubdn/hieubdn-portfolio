@@ -184,8 +184,23 @@
   "testimonials.block.items.6.body": "Hiếu, thật sự rất vui khi được làm quen và làm việc cùng bạn. Bạn không chỉ là một kỹ sư tài năng và một nhà lãnh đạo vững vàng, mà còn là một con người tuyệt vời. Sự tập trung vào mục tiêu và lòng tận tâm của bạn thật đáng ngưỡng mộ. Tôi trân trọng khoảng thời gian chúng ta đã cùng nhau làm việc và mong sẽ tiếp tục giữ liên lạc. Chúc bạn mọi điều tốt đẹp nhất trong chặng đường mới đầy hứng khởi phía trước, và tiếp tục gặt hái nhiều thành công trong mọi hành trình sắp tới. Tôi luôn trân trọng những ảnh hưởng tích cực và sự hỗ trợ của bạn.",
 
   "competencies.block.title": "Năng lực cốt lõi",
+  "competencies.block.kicker": "Xây dựng giải pháp phần mềm đáng tin cậy",
+  "competencies.block.software": "Phần mềm",
+  "competencies.block.website": "Website",
+  "competencies.block.mobileApp": "Ứng dụng di động",
+  "competencies.popup.close": "Đóng",
+  "competencies.popup.software.title": "Phần mềm",
+  "competencies.popup.software.subtitle": "Kỹ thuật",
+  "competencies.popup.software.description": "Chuyên thiết kế và xây dựng các hệ thống phần mềm có khả năng mở rộng, dễ bảo trì và hiệu năng cao, với trọng tâm vào kiến trúc mô-đun và tính bền vững lâu dài. Có kinh nghiệm giải quyết các bài toán kỹ thuật phức tạp, tối ưu hiệu năng hệ thống và đảm bảo độ tin cậy trong các môi trường phân tán và постоянно thay đổi.",
+  "competencies.popup.website.title": "Ứng dụng Web",
+  "competencies.popup.website.subtitle": "Kỹ thuật",
+  "competencies.popup.website.description": "Dẫn dắt thiết kế và phát triển các ứng dụng web có khả năng mở rộng và hiệu năng cao, tập trung vào kiến trúc frontend mô-đun, luồng dữ liệu hiệu quả và trải nghiệm người dùng mượt mà. Có kinh nghiệm xây dựng hệ thống chịu tải lớn, tích hợp các dịch vụ phức tạp và duy trì hiệu năng, độ tin cậy ở quy mô lớn.",
+  "competencies.popup.mobileApp.title": "Ứng dụng di động",
+  "competencies.popup.mobileApp.subtitle": "Kỹ thuật",
+  "competencies.popup.mobileApp.description": "Thiết kế và phát triển các ứng dụng di động đa nền tảng với trọng tâm vào hiệu năng, khả năng mở rộng và trải nghiệm người dùng. Có kinh nghiệm xây dựng kiến trúc hệ thống di động dễ bảo trì, tối ưu hiệu năng runtime và đảm bảo tính nhất quán giữa iOS và Android trong các môi trường production phức tạp.",
 
   "quote.block.title": "Triết lý kỹ thuật",
+  "quote.block.kicker": "Tư duy đằng sau các quyết định kỹ thuật",
   "quote.block.content": "Công nghệ là phương tiện để tạo ra giá trị bền vững, không phải mục tiêu cuối cùng",
   "quote.block.author": "Bùi Đỗ Ngọc Hiếu",
 
