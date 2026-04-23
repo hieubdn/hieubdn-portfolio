@@ -8,11 +8,7 @@ export default function PrinciplesBlock() {
 
   return (
     <div className={styles.root}>
-      <div className={styles.meta}>
-        <p className={styles.principles}>{t("principles.block.principle.0")}</p>
-        <p className={styles.principles}>{t("principles.block.principle.1")}</p>
-      </div>
-      <p className={styles.footer}>{t("principles.block.title")}</p>
+      
     </div>
   );
 }

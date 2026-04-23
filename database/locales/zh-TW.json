@@ -183,8 +183,23 @@
   "testimonials.block.items.6.body": "Hiếu，很高興能認識你並與你共事。你不僅是一位才華橫溢的工程師和出色的領導者，更是一位優秀的人。你對使命的專注與投入令人敬佩。我很珍惜我們共事的時光，也期待未來保持聯繫。祝福你在接下來令人振奮的新階段一切順利，並在未來持續取得成功。我始終感謝你帶來的影響與支持。",
 
   "competencies.block.title": "核心能力",
+  "competencies.block.kicker": "打造可靠的軟體解決方案",
+  "competencies.block.software": "軟體",
+  "competencies.block.website": "網站",
+  "competencies.block.mobileApp": "行動應用",
+  "competencies.popup.close": "關閉",
+  "competencies.popup.software.title": "軟體",
+  "competencies.popup.software.subtitle": "工程",
+  "competencies.popup.software.description": "專注於設計具備可擴展性、可維護性與高效能的軟體系統，強調模組化架構與長期可持續發展。具備解決複雜技術問題、優化系統效能，以及在分散式環境中確保穩定性的經驗。",
+  "competencies.popup.website.title": "Web 應用",
+  "competencies.popup.website.subtitle": "工程",
+  "competencies.popup.website.description": "主導設計與開發高效能且可擴展的 Web 應用，專注於模組化前端架構、高效資料流與流暢的使用者體驗。具備處理高流量、整合複雜服務並在大規模環境中維持效能與穩定性的經驗。",
+  "competencies.popup.mobileApp.title": "行動應用",
+  "competencies.popup.mobileApp.subtitle": "工程",
+  "competencies.popup.mobileApp.description": "設計並交付跨平台行動應用，著重效能、擴展性與使用者體驗。擁有建立可維護架構、優化執行效能，以及在複雜生產環境中確保 iOS 與 Android 一致性的經驗。",
 
   "quote.block.title": "工程理念",
+  "quote.block.kicker": "技術決策背後的思考",
   "quote.block.content": "科技是創造長期價值的手段，而非最終目標",
   "quote.block.author": "Bui Do Ngoc Hieu",
 

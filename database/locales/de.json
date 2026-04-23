@@ -184,8 +184,23 @@
   "testimonials.block.items.6.body": "Hieu, es war mir eine große Freude, dich kennenzulernen und mit dir zusammenzuarbeiten. Du bist nicht nur ein talentierter Ingenieur und eine starke Führungspersönlichkeit, sondern auch ein außergewöhnlicher Mensch. Dein Fokus auf die Mission und deine Loyalität sind wirklich bewundernswert. Ich bin dankbar für die gemeinsame Zeit und freue mich darauf, in Kontakt zu bleiben. Für deinen nächsten spannenden Lebensabschnitt wünsche ich dir nur das Beste und weiterhin viel Erfolg bei allem, was du angehst. Vielen Dank für deinen Einfluss und deine Unterstützung.",
 
   "competencies.block.title": "Kernkompetenzen",
+  "competencies.block.kicker": "Zuverlässige Softwarelösungen entwickeln",
+  "competencies.block.software": "Software",
+  "competencies.block.website": "Website",
+  "competencies.block.mobileApp": "Mobile App",
+  "competencies.popup.close": "Schließen",
+  "competencies.popup.software.title": "Software",
+  "competencies.popup.software.subtitle": "Engineering",
+  "competencies.popup.software.description": "Spezialisiert auf die Entwicklung skalierbarer, wartbarer und leistungsstarker Softwaresysteme mit Fokus auf modulare Architektur und langfristige Nachhaltigkeit. Erfahrung in der Lösung komplexer technischer Herausforderungen, der Optimierung von Systemleistung und der Sicherstellung von Zuverlässigkeit in verteilten Umgebungen.",
+  "competencies.popup.website.title": "Webanwendung",
+  "competencies.popup.website.subtitle": "Engineering",
+  "competencies.popup.website.description": "Leitung der Entwicklung skalierbarer und leistungsstarker Webanwendungen mit Fokus auf modulare Frontend-Architektur, effiziente Datenflüsse und nahtlose Benutzererfahrung. Erfahrung im Aufbau robuster Systeme für hohe Lasten und komplexe Integrationen.",
+  "competencies.popup.mobileApp.title": "Mobile Anwendung",
+  "competencies.popup.mobileApp.subtitle": "Engineering",
+  "competencies.popup.mobileApp.description": "Entwicklung plattformübergreifender mobiler Anwendungen mit Schwerpunkt auf Performance, Skalierbarkeit und Benutzererlebnis. Erfahrung in der Architektur wartbarer Systeme, Performance-Optimierung und Konsistenz zwischen iOS und Android.",
 
   "quote.block.title": "Engineering-Philosophie",
+  "quote.block.kicker": "Gedanken hinter technischen Entscheidungen",
   "quote.block.content": "Technologie ist ein Mittel, um nachhaltigen Wert zu schaffen, nicht das eigentliche Ziel",
   "quote.block.author": "Bui Do Ngoc Hieu",
 
