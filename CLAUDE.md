@@ -99,7 +99,7 @@ apps/web/components/
 │   └── setting/
 │       ├── theme/           # Dark/light toggle
 │       └── translate/       # Language picker + LocaleProvider + locale-constants
-├── pages/customer/
+├── pages/
 │   ├── home/                # Composable "blocks" for the Home page (about, blog, callToAction,
 │   │                        # company, profile, project, quote, selected-work, social, stats, testimonials)
 │   ├── about/               # About page: summary, education, company blocks (hdwebsoft, cava,

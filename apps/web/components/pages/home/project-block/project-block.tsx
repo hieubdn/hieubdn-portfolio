@@ -7,7 +7,7 @@ import laptop from "@/assets/image/project/project.png";
 import { useLocaleText } from "@/components/layout/setting/translate/locale-provider";
 import { PATH_URL } from "@/config/path";
 
-import styles from "@/components/pages/customer/home/about-block/about-block.module.scss";
+import styles from "@/components/pages/home/about-block/about-block.module.scss";
 
 export default function ProjectBlock() {
   const { t } = useLocaleText();

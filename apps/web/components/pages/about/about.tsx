@@ -3,7 +3,7 @@
 import type { ReactNode } from "react";
 
 import { useLocaleText } from "@/components/layout/setting/translate/locale-provider";
-import SocialBlock from "@/components/pages/customer/home/social-block/social-block";
+import SocialBlock from "@/components/pages/home/social-block/social-block";
 
 import DownloadCvBlock from "./download-cv-block/download-cv-block";
 import EducationBlock from "./education-block/education-block";

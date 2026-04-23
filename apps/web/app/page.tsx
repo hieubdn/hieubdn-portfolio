@@ -1,5 +1,5 @@
 import styles from "./page.module.scss";
-import HomeSection from "@/components/pages/customer/home/home";
+import HomeSection from "@/components/pages/home/home";
 
 export default function HomePage() {
   return (

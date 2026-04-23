@@ -1,4 +1,4 @@
-{
+  {
   "navBar.home": "Home",
   "navBar.about": "About",
   "navBar.projects": "Projects",
@@ -182,10 +182,26 @@
   "testimonials.block.items.6.name": "Daniel Bailey",
   "testimonials.block.items.6.role": "Tech Strategist | US Army Veteran",
   "testimonials.block.items.6.body": "Hieu, it's been a real pleasure getting to know you and working alongside you. You're not only a talented engineer and strong leader, but also an exceptional person. Your mission focus and loyalty to the cause are truly admirable. I'm grateful for the time we've shared and look forward to staying connected. Wishing you all the best on this exciting new chapter ahead, and continued success in everything you pursue moving forward. I appreciate your impact and support always.",
- 
-  "hobby.block.title": "Hobby Block",
+  "competencies.block.title": "Core Competencies",
+  "competencies.block.kicker": "Delivering Reliable Software Solutions",
 
-  "quote.block.title": "Quote Block",
+  "competencies.block.software": "Software",
+  "competencies.block.website": "Website",
+  "competencies.block.mobileApp": "Mobile App",
+
+  "competencies.popup.close": "Close",
+  "competencies.popup.software.title": "Software",
+  "competencies.popup.software.subtitle": "Engineering",
+  "competencies.popup.software.description": "Specialized in architecting scalable, maintainable, and high-performance software systems with a strong focus on modular design and long-term sustainability. Experienced in solving complex technical challenges, optimizing system performance, and ensuring reliability across distributed and evolving environments.",
+  "competencies.popup.website.title": "Web Application",
+  "competencies.popup.website.subtitle": "Engineering",
+  "competencies.popup.website.description": "Led the design and development of scalable, high-performance web applications, focusing on modular frontend architecture, efficient data flow, and seamless user experience. Experienced in building resilient systems that handle high traffic, integrating complex services, and maintaining performance and reliability at scale.",
+  "competencies.popup.mobileApp.title": "Mobile Application",
+  "competencies.popup.mobileApp.subtitle": "Engineering",
+  "competencies.popup.mobileApp.description": "Designed and delivered cross-platform mobile applications with a strong emphasis on performance, scalability, and user experience. Experienced in architecting maintainable mobile systems, optimizing runtime performance, and ensuring consistency across iOS and Android in complex, production-grade environments.",
+
+  "quote.block.title": "Engineering Philosophy",
+  "quote.block.kicker": "Thoughts Behind My Technical Decisions",
   "quote.block.content": "Technology is a means to create lasting value, not the ultimate goal",
   "quote.block.author": "Bui Do Ngoc Hieu",
 
@@ -255,5 +271,9 @@
   "contact.page.form.validation.required": "This field is required",
   "contact.page.form.validation.email": "Please enter a valid email address",
   "contact.page.form.toast.success": "Your message has been sent successfully.",
-  "contact.page.form.toast.error": "Something went wrong. Please try again."
+  "contact.page.form.toast.error": "Something went wrong. Please try again.",
+
+  "principles.block.title": "How I Work",
+  "principles.block.principle.0": "I ask \"why\" before \"how.\"",
+  "principles.block.principle.1": "I read code more than I write it."
 }
