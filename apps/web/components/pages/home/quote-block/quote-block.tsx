@@ -12,7 +12,10 @@ export default function QuoteBlock() {
         <p className={styles.quote}>&quot;{t("quote.block.content")}&quot;</p>
         <p className={styles.author}>◦ {t("quote.block.author")} ◦</p>
       </div>
-      <p className={styles.footer}>{t("quote.block.title")}</p>
+      <div className={styles.caption}>
+        <p className={styles.kicker}>{t("quote.block.kicker")}</p>
+        <p className={styles.title}>{t("quote.block.title")}</p>
+      </div>
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import styles from "@/app/page.module.scss";
-import ProjectsSection from "@/components/pages/customer/projects/projects";
+import ProjectsSection from "@/components/pages/projects/projects";
 
 export default function ProjectsPage() {
   return (

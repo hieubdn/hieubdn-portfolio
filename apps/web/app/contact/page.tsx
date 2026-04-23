@@ -1,4 +1,4 @@
-import ContactSection from "@/components/pages/customer/contact/contact-page";
+import ContactSection from "@/components/pages/contact/contact-page";
 import styles from "@/app/page.module.scss";
 
 export default function ContactPage() {

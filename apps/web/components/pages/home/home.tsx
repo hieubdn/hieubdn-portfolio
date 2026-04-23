@@ -1,19 +1,20 @@
 import dynamic from "next/dynamic";
 import type { ReactNode } from "react";
 
-import AboutBlock from "@/components/pages/customer/home/about-block/about-block";
-import CallToAction from "@/components/pages/customer/home/callToAction-block/call-to-action";
-import ProfileBlock from "@/components/pages/customer/home/profile-block/profile-block";
-import ProjectBlock from "@/components/pages/customer/home/project-block/project-block";
-import QuoteBlock from "@/components/pages/customer/home/quote-block/quote-block";
-import SelectedWorkBlock from "@/components/pages/customer/home/selected-work-block/selected-work-block";
-import SocialBlock from "@/components/pages/customer/home/social-block/social-block";
-import StatsBlock from "@/components/pages/customer/home/stats-block/stats-block";
-import TestimonialsBlock from "@/components/pages/customer/home/testimonials-block/testimonials-block";
+import AboutBlock from "@/components/pages/home/about-block/about-block";
+import CallToAction from "@/components/pages/home/callToAction-block/call-to-action";
+import ProfileBlock from "@/components/pages/home/profile-block/profile-block";
+import ProjectBlock from "@/components/pages/home/project-block/project-block";
+import QuoteBlock from "@/components/pages/home/quote-block/quote-block";
+import SelectedWorkBlock from "@/components/pages/home/selected-work-block/selected-work-block";
+import SocialBlock from "@/components/pages/home/social-block/social-block";
+import StatsBlock from "@/components/pages/home/stats-block/stats-block";
+import TestimonialsBlock from "@/components/pages/home/testimonials-block/testimonials-block";
 import { Skeleton } from "@/components/ui/skeleton";
-import CompanyBlock from "@/components/pages/customer/home/company-block/company";
-import BlogBlock from "@/components/pages/customer/home/blog-block/blog-block";
+import CompanyBlock from "@/components/pages/home/company-block/company";
+import PrinciplesBlock from "@/components/pages/home/principles-block/principles-block";
 import styles from "./styles.module.scss";
+import CompetenciesBlock from "./competencies-block/competencies-block";
 
 const SkillSection = dynamic(
   () => import("@/components/sections/skill/skill"),
@@ -54,7 +55,7 @@ const HOME_BLOCKS: readonly HomeBlock[] = [
   { id: "about", label: "About block" },
   { id: "projects", label: "Projects block" },
   { id: "selectedWork", label: "Selected Work" },
-  { id: "hobby", label: "Hobby block" },
+  { id: "hobby", label: "Core Competencies" },
   { id: "quote", label: "Quote block" },
   { id: "testimonials", label: "Testimonials" },
   { id: "social", label: "My Social Profiles" },
@@ -80,6 +81,8 @@ export default function HomeSection() {
             inner = <ProjectBlock />;
           } else if (block.id === "selectedWork") {
             inner = <SelectedWorkBlock />;
+          } else if (block.id === "hobby") {
+            inner = <CompetenciesBlock />;
           } else if (block.id === "quote") {
             inner = <QuoteBlock />;
           } else if (block.id === "testimonials") {
@@ -91,7 +94,7 @@ export default function HomeSection() {
           } else if (block.id === "company") {
             inner = <CompanyBlock />;
           } else if (block.id === "blog") {
-            inner = <BlogBlock />;
+            inner = <PrinciplesBlock />;
           } else if (block.id === "cta") {
             inner = <CallToAction />;
           } else {
