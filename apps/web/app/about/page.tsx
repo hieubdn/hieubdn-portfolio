@@ -1,4 +1,4 @@
-import AboutSection from "@/components/pages/customer/about/about";
+import AboutSection from "@/components/pages/about/about";
 import styles from "@/app/page.module.scss";
 
 export default function AboutPage() {
