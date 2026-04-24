@@ -1,0 +1,62 @@
+.kicker {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 48px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: linear-gradient(
+    102deg,
+    #4a5f7a 0%,
+    #6d84c4 24%,
+    #b9a8d9 44%,
+    #e8a3b8 58%,
+    #6b9bd4 82%,
+    #4d6485 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-font-smoothing: antialiased;
+  color: var(--color-home-text-muted);
+
+  @media (max-width: 650px) {
+    font-size: 32px;
+    gap: 24px;
+    margin-bottom: 32px;
+  }
+
+  @media (max-width: 465px) {
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  @media (max-width: 440px) {
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  @media (max-width: 420px) {
+    font-size: 26px;
+  }
+}
+
+.kickerIcon {
+  width: 32px;
+  height: 32px;
+
+  @media (max-width: 440px) {
+    width: 24px;
+    height: 24px;
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
