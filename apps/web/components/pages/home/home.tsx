@@ -10,11 +10,14 @@ import SelectedWorkBlock from "@/components/pages/home/selected-work-block/selec
 import SocialBlock from "@/components/pages/home/social-block/social-block";
 import StatsBlock from "@/components/pages/home/stats-block/stats-block";
 import TestimonialsBlock from "@/components/pages/home/testimonials-block/testimonials-block";
-import { Skeleton } from "@/components/ui/skeleton";
 import CompanyBlock from "@/components/pages/home/company-block/company";
 import PrinciplesBlock from "@/components/pages/home/principles-block/principles-block";
-import styles from "./styles.module.scss";
+import { Skeleton } from "@/components/ui/skeleton";
+
 import CompetenciesBlock from "./competencies-block/competencies-block";
+import styles from "./styles.module.scss";
+
+const BLOCK_REVEAL_STAGGER_MS = 50;
 
 const SkillSection = dynamic(
   () => import("@/components/sections/skill/skill"),
@@ -26,8 +29,6 @@ const SkillSection = dynamic(
     ),
   },
 );
-
-const BLOCK_REVEAL_STAGGER_MS = 50;
 
 type HomeBlockId =
   | "profile"
@@ -47,72 +48,39 @@ type HomeBlockId =
 type HomeBlock = {
   id: HomeBlockId;
   label: string;
+  render: () => ReactNode;
 };
 
 const HOME_BLOCKS: readonly HomeBlock[] = [
-  { id: "profile", label: "Profile block" },
-  { id: "skills", label: "Skills strip" },
-  { id: "about", label: "About block" },
-  { id: "projects", label: "Projects block" },
-  { id: "selectedWork", label: "Selected Work" },
-  { id: "hobby", label: "Core Competencies" },
-  { id: "quote", label: "Quote block" },
-  { id: "testimonials", label: "Testimonials" },
-  { id: "social", label: "My Social Profiles" },
-  { id: "stats", label: "Stats block" },
-  { id: "company", label: "Company block" },
-  { id: "blog", label: "Blog block" },
-  { id: "cta", label: "Call to action block" },
+  { id: "profile", label: "Profile block", render: () => <ProfileBlock /> },
+  { id: "skills", label: "Skills strip", render: () => <SkillSection /> },
+  { id: "about", label: "About block", render: () => <AboutBlock /> },
+  { id: "projects", label: "Projects block", render: () => <ProjectBlock /> },
+  { id: "selectedWork", label: "Selected Work", render: () => <SelectedWorkBlock /> },
+  { id: "hobby", label: "Core Competencies", render: () => <CompetenciesBlock /> },
+  { id: "quote", label: "Quote block", render: () => <QuoteBlock /> },
+  { id: "testimonials", label: "Testimonials", render: () => <TestimonialsBlock /> },
+  { id: "social", label: "My Social Profiles", render: () => <SocialBlock /> },
+  { id: "stats", label: "Stats block", render: () => <StatsBlock /> },
+  { id: "company", label: "Company block", render: () => <CompanyBlock /> },
+  { id: "blog", label: "Blog block", render: () => <PrinciplesBlock /> },
+  { id: "cta", label: "Call to action block", render: () => <CallToAction /> },
 ] as const;
 
 export default function HomeSection() {
   return (
     <section className={styles.homeSection} aria-label="Home layout">
       <div className={styles.grid}>
-        {HOME_BLOCKS.map((block, index) => {
-          let inner: ReactNode;
-          if (block.id === "profile") {
-            inner = <ProfileBlock />;
-          } else if (block.id === "skills") {
-            inner = <SkillSection />;
-          } else if (block.id === "about") {
-            inner = <AboutBlock />;
-          } else if (block.id === "projects") {
-            inner = <ProjectBlock />;
-          } else if (block.id === "selectedWork") {
-            inner = <SelectedWorkBlock />;
-          } else if (block.id === "hobby") {
-            inner = <CompetenciesBlock />;
-          } else if (block.id === "quote") {
-            inner = <QuoteBlock />;
-          } else if (block.id === "testimonials") {
-            inner = <TestimonialsBlock />;
-          } else if (block.id === "social") {
-            inner = <SocialBlock />;
-          } else if (block.id === "stats") {
-            inner = <StatsBlock />;
-          } else if (block.id === "company") {
-            inner = <CompanyBlock />;
-          } else if (block.id === "blog") {
-            inner = <PrinciplesBlock />;
-          } else if (block.id === "cta") {
-            inner = <CallToAction />;
-          } else {
-            inner = (
-              <span className={styles.blockLabel}>{block.label}</span>
-            );
-          }
-          return (
-            <article
-              key={block.id}
-              className={`${styles.block} ${styles[block.id]}`}
-              style={{ animationDelay: `${index * BLOCK_REVEAL_STAGGER_MS}ms` }}
-              aria-label={block.label}
-            >
-              {inner}
-            </article>
-          );
-        })}
+        {HOME_BLOCKS.map((block, index) => (
+          <article
+            key={block.id}
+            className={`${styles.block} ${styles[block.id]}`}
+            style={{ animationDelay: `${index * BLOCK_REVEAL_STAGGER_MS}ms` }}
+            aria-label={block.label}
+          >
+            {block.render()}
+          </article>
+        ))}
       </div>
     </section>
   );
