@@ -75,7 +75,7 @@ apps/web/app/
 ├── about/page.tsx           # "/about"
 ├── projects/page.tsx        # "/projects"
 ├── contact/page.tsx         # "/contact"
-├── offline/                 # Offline fallback page (PWA)
+├── offline/                 # Offline fallback page (PWA): page.tsx + offline-page-client.tsx
 └── api/contact/route.ts     # POST endpoint that sends the contact-form email via Resend
 ```
 
@@ -100,13 +100,16 @@ apps/web/components/
 │       ├── theme/           # Dark/light toggle
 │       └── translate/       # Language picker + LocaleProvider + locale-constants
 ├── pages/
-│   ├── home/                # Composable "blocks" for the Home page (about, blog, callToAction,
-│   │                        # company, profile, project, quote, selected-work, social, stats, testimonials)
-│   ├── about/               # About page: summary, education, company blocks (hdwebsoft, cava,
-│   │                        # toyar, mindx, phase2), download CV, contact block, …
-│   ├── projects/            # Projects page
+│   ├── home/                # Composable blocks: profile, about, competencies, company,
+│   │                        # principles, selected-work, project, stats, testimonials,
+│   │                        # callToAction, quote, social
+│   ├── about/               # Blocks: image, summary, summary-kicker, section-heading,
+│   │                        # education, contact, download-cv; company blocks:
+│   │                        # hdwebsoft, cava, toyar, mindx, phase2
+│   ├── projects/            # title-block + per-project blocks: flight, granada, khora,
+│   │                        # studiomals, tapy, thought, travel, tryotel, walker
 │   └── contact/             # Contact page (form posting to /api/contact)
-├── sections/                # Reusable sections: about, profile, skill, social
+├── sections/                # Reusable sections: skill
 ├── theme/                   # ThemePreferenceProvider + theme-constants
 ├── pwa/                     # InstallPrompt, OfflineBanner, ServiceWorkerUpdateNotifier, StandaloneViewportLock
 └── ui/                      # Shared Skeleton / page-skeleton primitives
@@ -150,7 +153,7 @@ apps/web/components/
 ## 6. Shared packages
 
 - **`@repo/ui`** (`packages/ui/src`): exports `button.tsx`, `card.tsx`, `code.tsx`. Imported as `@repo/ui/...` from the apps.
-- **`@repo/eslint-config`**: three presets (`base`, `next`, `react-internal`).
+- **`@repo/eslint-config`**: three presets (`base`, `next-js`, `react-internal`).
 - **`@repo/typescript-config`**: `base.json`, `nextjs.json`, `react-library.json`.
 
 When adding a new package: place it under `packages/<name>/`, set `"name": "@repo/<name>"` in its `package.json`, then consume it from an app with `"@repo/<name>": "workspace:*"`.
