@@ -3,7 +3,6 @@
   "navBar.about": "概要",
   "navBar.projects": "プロジェクト",
   "navBar.contact": "お問い合わせ",
-
   "pwa.offlineBanner": "オフラインです。",
   "pwa.installApp": "アプリをインストール",
   "pwa.offlinePage.title": "オフライン",
@@ -17,7 +16,6 @@
   "pwa.install.later": "後で",
   "pwa.install.gotIt": "了解",
   "pwa.install.iosGuide": "共有アイコンをタップし、「ホーム画面に追加」を選択してインストールしてください。",
-
   "popover.home": "ホーム",
   "popover.about": "概要",
   "popover.projects": "プロジェクト",
@@ -25,14 +23,11 @@
   "popover.github": "GitHub",
   "popover.notification": "通知",
   "popover.setting": "設定",
-
   "profile.block.name": "Bui Do Ngoc Hieu",
   "profile.block.title": "ソフトウェアエンジニア",
   "profile.block.email": "hieubdn@gmail.com",
-
   "about.block.title": "自己紹介の詳細",
   "about.block.kicker": "資格",
-
   "about.page.heading": "概要",
   "about.page.summary.kicker": "自己紹介",
   "about.page.summary.lead": "ソフトウェア業界で5年以上働いてきました。問題解決（特にソフトウェアを使って）、ものづくり、チームの成長にやりがいを感じています。さまざまなソフトウェアシステムに携わり、変化するニーズに合わせて継続的に改善していくことを楽しんでいます。また、スケーリングの経験も豊富で、処理能力の向上だけでなく、ユーザー数の増加に伴う変更を安全に行うためのプロセスや自動化の構築にも取り組んできました。\n仕事以外では、植物（特に盆栽）や、自宅用の木製家具づくりに情熱を注いでいます。\n\n少し長くなりましたが、皆さんとお会いし、新しいパートナーと協力できることをとても楽しみにしています！",
@@ -55,17 +50,14 @@
   "about.page.contact.gender1": "男性",
   "about.page.contact.nationality1": "ベトナム人",
   "about.page.contact.languages1": "英語、ベトナム語",
-
   "about.page.education.title": "学歴",
   "about.page.education.fullstack": "フルスタック開発修了証",
   "about.page.education.issuedBy": "発行元：MindXテクノロジースクール",
   "about.page.education.fullstack.date": "修了：2019年",
   "about.page.education.mobileapp": "モバイルアプリ開発修了証",
   "about.page.education.mobileapp.date": "修了：2020年",
-
   "about.page.workExperience.heading": "職務経験",
   "about.page.otherExperience.heading": "その他の経験",
-
   "about.page.experience.hdwebsoft.company": "HDWEBSOFT TECHNOLOGY CO., LTD",
   "about.page.experience.hdwebsoft.durationValue": "2024年4月 - 現在",
   "about.page.experience.hdwebsoft.positionValue": "フルスタックソフトウェアエンジニア",
@@ -83,7 +75,6 @@
   "about.page.experience.hdwebsoft.tech.database": "データベース: PostgreSQL, MySQL, TypeORM",
   "about.page.experience.hdwebsoft.tech.integrations": "統合: Stripe, Plaid, SendGrid, OpenAI",
   "about.page.experience.hdwebsoft.tech.devops": "DevOps: Docker, Kubernetes, CI/CD, Git",
-
   "about.page.experience.toyar.company": "TOYAR INC CO., LTD",
   "about.page.experience.toyar.durationValue": "2023年7月 - 2025年5月",
   "about.page.experience.toyar.positionValue": "フルスタックソフトウェアエンジニア",
@@ -96,7 +87,6 @@
   "about.page.experience.toyar.responsibility.4": "アーキテクチャ設計の主導、コードレビューの実施、ジュニア開発者の指導を行い、コード品質とチームの生産性を維持。",
   "about.page.experience.toyar.techStack": "技術スタック",
   "about.page.experience.toyar.tech": "React.js, React Native, Vite, JavaScript, Spring Boot, REST APIs, PostgreSQL, AWS (EC2, RDS, S3, Lambda), Jenkins, Bitbucket, Datadog, CI/CD, Git.",
-
   "about.page.experience.cava.company": "Cava Group, Inc",
   "about.page.experience.cava.durationValue": "2020年6月 - 2023年5月",
   "about.page.experience.cava.positionValue": "フルスタックソフトウェアエンジニア",
@@ -109,7 +99,6 @@
   "about.page.experience.cava.responsibility.4": "クロスファンクショナルな関係者や外部パートナーと連携し、ビジネス目標に沿った開発を推進。App Storeのリリースサイクルおよび技術サポートを管理。",
   "about.page.experience.cava.techStack": "技術スタック",
   "about.page.experience.cava.tech": "React, React Native, TypeScript, Node.js, PostgreSQL, AWS (EC2, RDS, S3, Lambda), Datadog, CI/CD, Git.",
-
   "about.page.experience.phase2.company": "PHASE2 TECHNOLOGY",
   "about.page.experience.phase2.durationValue": "2019年11月 - 2022年6月",
   "about.page.experience.phase2.positionValue": "プログラマー",
@@ -122,7 +111,6 @@
   "about.page.experience.phase2.responsibility.4": "クロスファンクショナルチームと連携し、ビジネス要件を技術実装へ変換。",
   "about.page.experience.phase2.techStack": "技術スタック",
   "about.page.experience.phase2.tech": "JavaScript, PHP, Drupal, Java, HTML, CSS, REST APIs, CMS Development, Git.",
-
   "about.page.experience.mindx.company": "MINDX TECHNOLOGY SCHOOL",
   "about.page.experience.mindx.durationValue": "2020年10月 – 2024年3月",
   "about.page.experience.mindx.positionValue": "テクニカルインストラクター兼インストラクター管理",
@@ -130,16 +118,12 @@
   "about.page.experience.mindx.responsibilities": "担当業務",
   "about.page.experience.mindx.responsibility.0": "React、Node.js、Next.js、React Nativeを用いたフルスタックWeb開発を指導し、複数拠点で技術ワークショップを実施。",
   "about.page.experience.mindx.responsibility.1": "50名以上の講師を指導・管理し、カリキュラム設計や教育品質の向上に貢献。",
-
   "about.page.cv.kicker": "履歴書をダウンロード",
   "about.page.cv.title": "私の履歴書",
-
   "projects.block.kicker": "ショーケース",
   "projects.block.title": "プロジェクト",
-
   "selectedWork.block.title": "主な実績",
   "selectedWork.block.ariaLabel": "主な実績 — プロジェクト一覧",
-
   "testimonials.block.title": "推薦の声",
   "testimonials.block.footer": "これまで一緒に働いた方々からのフィードバックです。",
   "testimonials.block.element": "span",
@@ -147,7 +131,6 @@
   "testimonials.block.element2": ">",
   "testimonials.block.element1.end": "</",
   "testimonials.block.element2.end": ">",
-
   "testimonials.block.items.0.prefix": "氏",
   "testimonials.block.items.0.name": "Joshua Calducchi",
   "testimonials.block.items.0.role": "Poppy社 エンジニアリング担当VP",
@@ -156,32 +139,26 @@
   "testimonials.block.items.1.name": "Katherine Patton",
   "testimonials.block.items.1.role": "Poppy社 リードエンジニア",
   "testimonials.block.items.1.body": "ヒエウ氏は信頼できるエンジニアであり、常に明確さとインパクトをもたらします。前向きな姿勢と協調性により、チームを越えて円滑に連携できます。課題には解決志向で取り組み、高いデリバリー基準を維持しながら効率改善にも貢献しています。品質とスピードを両立する能力は重要なプロジェクトで大きな価値を発揮し、積極的なサポートはチームの成果にも良い影響を与えています。",
-
   "testimonials.block.items.2.prefix": "氏",
   "testimonials.block.items.2.name": "Dat Giang",
   "testimonials.block.items.2.role": "HDWEBSOFT Technology Co.,Ltd. CTO",
   "testimonials.block.items.2.body": "ヒエウ氏は高い当事者意識とプロフェッショナリズムを持ち、あらゆる業務に取り組んでいます。技術力に加え、主体的なコミュニケーションと他者を支援する姿勢が際立っています。プレッシャーの中でも落ち着いた建設的な雰囲気をチームにもたらし、常にビジネス目標に沿った成果を出しています。彼の貢献は製品の安定性とチーム文化の両方に大きな影響を与えています。また、問題を早期に解決するための主体性を持ち、チームメンバーをより良い結果へ導いています。",
-
   "testimonials.block.items.3.prefix": "氏",
   "testimonials.block.items.3.name": "Matthew Zhao",
   "testimonials.block.items.3.role": "Fidovn Company Limited CEO",
   "testimonials.block.items.3.body": "ヒエウ氏との仕事は非常にスムーズでした。レスポンスが早く、細部まで注意を払い、実行前に要件を確実に理解します。前向きで実行力のある姿勢がチームの推進力となっています。期待を満たすだけでなく、ユーザー体験や製品価値を高める改善提案も積極的に行います。また、ステークホルダーとのコミュニケーションも円滑で、チーム間の連携向上にも貢献しています。",
   "testimonials.block.items.4.prefix": "氏",
-
   "testimonials.block.items.4.name": "Benjamin Papillon",
   "testimonials.block.items.4.role": "Schematic 共同創業者/CTO",
   "testimonials.block.items.4.body": "ヒエウ氏は私が最初に採用したエンジニアであり、2021年夏に会社を設立してから数週間後には一緒に働く話を始めました。彼は最初のウェブサイトとその後の多くの重要なシステムを構築しました。\n彼は非常に柔軟で頼りになる同僚であり、パートナーであり、友人でもあります。彼なしで会社をプレレベニューからシリーズA後まで成長させることは想像できません。私たちは全国規模で事業を拡大し、多くの課題を乗り越えながらも、強いチーム文化を維持しつつ成果を出してきました。",
-
   "testimonials.block.items.5.prefix": "氏",
   "testimonials.block.items.5.name": "Nico Martinez",
   "testimonials.block.items.5.role": "フラクショナルCTO | テクノロジーエグゼクティブ",
   "testimonials.block.items.5.body": "ヒエウ氏は技術力と優れたチームスピリットを兼ね備えています。熱意があり、フィードバックにもオープンで、自身のスキルと担当システムの双方を継続的に改善しようと努めています。構造的な問題解決アプローチと細部への配慮により、堅牢で保守性の高いソリューションを実現しています。彼の貢献を高く評価しており、今後の取り組みでも再び協力できることを楽しみにしています。",
-
   "testimonials.block.items.6.prefix": "氏",
   "testimonials.block.items.6.name": "Daniel Bailey",
   "testimonials.block.items.6.role": "テックストラテジスト | 米陸軍退役軍人",
   "testimonials.block.items.6.body": "ヒエウさん、一緒に働き、あなたを知ることができて本当に光栄でした。あなたは優れたエンジニアであり、強いリーダーであるだけでなく、素晴らしい人物でもあります。使命への集中力と献身は本当に称賛に値します。共に過ごした時間に感謝し、今後もつながりを保てることを願っています。これからの新たなステージでのご活躍と、今後のさらなる成功を心よりお祈りしています。",
-
   "competencies.block.title": "コアスキル",
   "competencies.block.kicker": "信頼性の高いソフトウェアソリューションの提供",
   "competencies.block.software": "ソフトウェア",
@@ -197,30 +174,24 @@
   "competencies.popup.mobileApp.title": "モバイルアプリケーション",
   "competencies.popup.mobileApp.subtitle": "エンジニアリング",
   "competencies.popup.mobileApp.description": "パフォーマンス、拡張性、ユーザー体験を重視したクロスプラットフォームモバイルアプリを設計・開発しています。iOSとAndroid間の一貫性を保ちながら、保守性の高いアーキテクチャと実行時パフォーマンスの最適化を実現します。",
-
   "quote.block.title": "エンジニアリング哲学",
   "quote.block.kicker": "技術的意思決定の背景にある考え",
   "quote.block.content": "テクノロジーは持続的な価値を生み出すための手段であり、最終的な目的ではありません",
   "quote.block.author": "Bui Do Ngoc Hieu",
-
   "social.block.title": "ソーシャルプロフィール",
   "social.block.kicker": "つながりましょう",
-
   "company.block.footer": "導入実績",
   "company.block.ariaLabel": "企業およびパートナー",
-
   "stats.block.title": "実績",
   "stats.block.years": "~6",
   "stats.block.exp": "経験年数",
   "stats.block.madeWithLove": "情熱を込めて制作",
   "stats.block.projects": "+79",
   "stats.block.totalProjects": "総プロジェクト数",
-
   "call.action.content": "一緒に",
   "call.action.work": "働き",
   "call.action.together": "ましょう。",
   "call.action.label": "一緒に働きましょう。",
-
   "notification.page.title": "通知",
   "notification.page.no": "まだ通知はありません。",
   "setting.page.title": "設定",
@@ -249,14 +220,12 @@
   "setting.page.option.darkMode.automatic": "自動",
   "setting.page.option.darkMode.automatic.description": "デバイスのシステム設定に基づいて自動的に表示を切り替えます。",
   "setting.page.option.resetSettings": "設定をリセット",
-
   "contact.page.info.title": "連絡先情報：",
   "contact.page.info.from": "出身",
   "contact.page.info.from.value": "ベトナム・ダナン市",
   "contact.page.info.liveIn": "居住地",
   "contact.page.info.liveIn.value": "ベトナム・ホーチミン市",
   "contact.page.socials.title": "ソーシャル情報：",
-
   "contact.page.form.title": "お気軽に",
   "contact.page.form.title.accent": "ご連絡ください。",
   "contact.page.form.name": "お名前",
@@ -268,5 +237,24 @@
   "contact.page.form.validation.required": "この項目は必須です",
   "contact.page.form.validation.email": "有効なメールアドレスを入力してください",
   "contact.page.form.toast.success": "メッセージが正常に送信されました。",
-  "contact.page.form.toast.error": "エラーが発生しました。もう一度お試しください。"
+  "contact.page.form.toast.error": "エラーが発生しました。もう一度お試しください。",
+  "projects.page.title": "プロジェクト一覧",
+  "project.detail.label.design": "デザイン",
+  "project.detail.label.client": "クライアント",
+  "project.detail.label.openProject": "プロジェクトを開く",
+  "project.detail.label.showProject": "プロジェクトの日付を表示",
+  "project.walkerip.description": "Walker IPはオーストラリアの知的財産法律事務所のウェブサイトで、スタートアップ企業や大企業向けに特許、商標、工業デザインの登録サービスを提供しています。同社は、エンジニアリング、技術、バイオテクノロジー、および医療機器のイノベーションを専門としています。",
+  "project.flightlocal.description": "Flight Localは、旅行代理店向けに設計されたB 2 B旅行ポータルで、フライト、ホテル、ホリデーパッケージ、ビザの予約を可能にします。このプラットフォームは、予約キュー管理、支払い処理、マークアップ設定、およびリアルタイムレポートをサポートしています。",
+  "project.tapy.description": "Tapyは、既存の顧客にパーソナライズされたプロモーションを提供することで売上を増加させる、中小企業向けのモバイルマーケティングアプリケーションです。エンゲージメント率は、電子メールマーケティングよりも最大10倍、従来のソーシャルメディアチャネルよりも7.2倍高くなっています。",
+  "project.khora.description": "Khoraはスペインの都市コンサルティング会社です。発見、実験、スケーリングの創造的なプロセスを通じて都市開発の課題に取り組んでいます。その使命は、よりスマートで、より持続可能で、より良いコネクテッドシティを構築することです。",
+  "project.granada.description": "AI Lab GranadaはスペインのAIイノベーションハブであり、中規模および大規模企業がAIの人材、技術、および応用研究にアクセスして効率を向上させ、持続可能な成長を推進するのに役立つコラボレーションプラットフォームを提供しています。",
+  "project.travel.description": "Tryotelモバイルアプリは、モバイルデバイスで航空券、ホテル、ホリデーパッケージを検索して予約できるB 2 C旅行アプリケーションです。クリーンな素材デザインと多層ナビゲーションで作られており、若くて活発な旅行者向けに作られています。",
+  "project.tryotel.description": "Tryotelはバングラデシュに拠点を置くB 2 C旅行プラットフォームで、ユーザーは航空券、ホリデーパッケージ、ビザ、ホテルをオンラインで予約できます。このプラットフォームには、プロモーションキャンペーン、複数の支払い方法、クロスプラットフォームモバイルアプリケーションが統合されています。",
+  "project.thought.description": "A Higher Thoughtは、やる気を起こさせるビデオ、ミーム、記事、ポジティブな製品を提供するオンラインインスピレーションプラットフォームです。ユーザーはソーシャルメディア間でコンテンツを探索して共有し、コミュニティを励まし、向上させることができます。",
+  "project.poppy.description": "Poppyはウェディングフローラルサービスプラットフォームです。カップルが花の製品を閲覧したり、カスタムのウェディングフラワープロポーザルを作成したり、透明性の高い価格設定を受けたり、フルサービスの花のデザイン、配達、ウェディングイベントの準備を予約したりすることができます。",
+  "project.nav.hint": "トップへスクロール",
+  "project.nav.scrollTop": "スクロールトップ",
+  "project.nav.backProject": "このプロジェクトに戻る",
+  "project.nav.nextProject": "次のプロジェクト",
+  "project.fidovn.description": "Fido.vnは、求職者と雇用主を求人掲載とインテリジェントな履歴書検索システムでつなぐベトナムのオンライン採用プラットフォームです。これは、Z世代がプロの履歴書を自動的に作成するAI搭載のCVビルダーで適切なキャリア機会を見つけるのに役立ちます。"
 }

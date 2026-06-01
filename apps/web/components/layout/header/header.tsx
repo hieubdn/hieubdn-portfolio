@@ -22,6 +22,7 @@ export default function Header() {
     { href: PATH_URL.ROOT, label: t("navBar.home") },
     { href: PATH_URL.ABOUT, label: t("navBar.about") },
     { href: PATH_URL.PROJECTS, label: t("navBar.projects") },
+    { href: PATH_URL.NEWS, label: t("navBar.news") },
     { href: PATH_URL.CONTACT, label: t("navBar.contact") },
   ] as const;
 

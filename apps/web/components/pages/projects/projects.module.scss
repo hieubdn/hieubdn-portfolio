@@ -16,24 +16,22 @@
   width: 100%;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   grid-template-areas:
-    "tapy tapy tapy tapy title   title   title   title   title   title   title   title"
-    "tapy tapy tapy tapy khora khora khora khora tryotel tryotel tryotel tryotel"
-    "flight flight flight flight walker  walker  walker  walker thought thought thought thought"
-    "travel travel travel travel walker  walker  walker  walker granada granada granada granada"
-    "studiomals studiomals studiomals studiomals . . . . . . . .";
+    "walker walker walker walker title   title   title   title   title   title   title   title"
+    "walker walker walker walker khora khora khora khora tryotel tryotel tryotel tryotel"
+    "flight flight flight flight poppy  poppy  poppy  poppy thought thought thought thought"
+    "travel travel travel travel tapy  tapy  tapy  tapy granada granada granada granada"
+    "fidovn fidovn fidovn fidovn . . . . . . . .";
 }
 
 .block {
   box-sizing: border-box;
   height: 100%;
-  min-height: 24vh;
+  min-height: 35vh;
   min-width: 0;
   max-width: 100%;
   border-radius: 20px;
-  border: 1px solid var(--color-home-block-border);
-  background-color: var(--color-home-block-background);
+  background-color: #fff;
   box-shadow: 0 10px 24px var(--color-home-block-shadow);
-  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -100,8 +98,12 @@
   grid-area: travel;
 }
 
-.studiomals {
-  grid-area: studiomals;
+.poppy {
+  grid-area: poppy;
+}
+
+.fidovn {
+  grid-area: fidovn;
 }
 
 @keyframes reveal {
@@ -120,10 +122,10 @@
     gap: 18px;
     grid-template-areas:
       "title title title title title title title title title title title title"
-      "tapy tapy tapy tapy walker walker walker walker tryotel tryotel tryotel tryotel"
+      "poppy poppy poppy poppy walker walker walker walker tryotel tryotel tryotel tryotel"
       "flight flight flight flight flight flight thought thought thought thought thought thought"
       "khora khora khora khora khora khora granada granada granada granada granada granada"
-      "travel travel travel travel travel travel studiomals studiomals studiomals studiomals studiomals studiomals";
+      "travel travel travel travel travel travel tapy tapy tapy tapy tapy tapy";
   }
 }
 
@@ -136,7 +138,7 @@
       "walker walker walker tryotel tryotel tryotel"
       "flight flight flight thought thought thought"
       "khora khora khora granada granada granada"
-      "travel travel travel studiomals studiomals studiomals";
+      "travel travel travel poppy poppy poppy";
   }
 }
 
@@ -159,7 +161,7 @@
       "khora"
       "granada"
       "travel"
-      "studiomals";
+      "poppy";
   }
 
   .block {

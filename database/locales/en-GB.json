@@ -1,10 +1,8 @@
-  {
+{
   "navBar.home": "Home",
   "navBar.about": "About",
   "navBar.projects": "Projects",
-  "navBar.news": "News",
   "navBar.contact": "Contact",
-
   "pwa.offlineBanner": "You are offline.",
   "pwa.installApp": "Install app",
   "pwa.offlinePage.title": "Offline",
@@ -18,23 +16,18 @@
   "pwa.install.later": "Not now",
   "pwa.install.gotIt": "Got it",
   "pwa.install.iosGuide": "Tap the Share icon, then \"Add to Home Screen\" to install.",
-
   "popover.home": "Home",
   "popover.about": "About",
   "popover.projects": "Projects",
-  "popover.news": "News",
   "popover.contact": "Contact",
   "popover.github": "GitHub",
   "popover.notification": "Notification",
   "popover.setting": "Setting",
-
   "profile.block.name": "Bui Do Ngoc Hieu",
   "profile.block.title": "Software Engineer",
   "profile.block.email": "hieubdn@gmail.com",
-
   "about.block.title": "More About Me",
   "about.block.kicker": "Credentials",
-
   "about.page.heading": "About",
   "about.page.summary.kicker": "Self-summary",
   "about.page.summary.lead": "I've been working in software for over 05 years now. I enjoy solving problems (in general but mostly using software), making things, and growing teams. I've worked with many different software systems and really enjoy evolving them over time to meet changing needs. I've also done a lot of work on scaling - both increasing throughput and creating processes and automation to make changes safer as the user base grows.\nOutside of work, I have a passion for plants (especially bonsai) and crafting wooden furniture for my home.\n\n Whew, that’s a lot, but I’m genuinely excited to meet everyone and collaborate with new partners!",
@@ -57,17 +50,14 @@
   "about.page.contact.gender1": "Male",
   "about.page.contact.nationality1": "Vietnamese",
   "about.page.contact.languages1": "English, Vietnamese",
-
   "about.page.education.title": "Education",
   "about.page.education.fullstack": "Full-Stack Development Certificate",
   "about.page.education.issuedBy": "Issued by: MindX Technology School",
   "about.page.education.fullstack.date": "Completed: 2019",
   "about.page.education.mobileapp": "Mobile App Development Certificate",
   "about.page.education.mobileapp.date": "Completed: 2020",
-
   "about.page.workExperience.heading": "Work experience",
   "about.page.otherExperience.heading": "Other experience",
-
   "about.page.experience.hdwebsoft.company": "HDWEBSOFT TECHNOLOGY CO.,LTD",
   "about.page.experience.hdwebsoft.durationValue": "Apr 2024 - Present",
   "about.page.experience.hdwebsoft.positionValue": "Full-Stack Software Engineer",
@@ -85,7 +75,6 @@
   "about.page.experience.hdwebsoft.tech.database": "Database: PostgreSQL, MySQL, TypeORM",
   "about.page.experience.hdwebsoft.tech.integrations": "Integrations: Stripe, Plaid, SendGrid, OpenAI",
   "about.page.experience.hdwebsoft.tech.devops": "DevOps: Docker, Kubernetes, CI/CD, Git",
-
   "about.page.experience.toyar.company": "TOYAR INC CO.,LTD",
   "about.page.experience.toyar.durationValue": "Jul 2023 - May 2025",
   "about.page.experience.toyar.positionValue": "Full-Stack Software Engineer",
@@ -98,7 +87,6 @@
   "about.page.experience.toyar.responsibility.4": "Led architecture design sessions, conducted code reviews, and mentored junior developers to maintain codebase quality and team velocity",
   "about.page.experience.toyar.techStack": "Tech stack",
   "about.page.experience.toyar.tech": "React.js, React Native, Vite, JavaScript, Spring Boot, REST APIs, PostgreSQL, AWS(EC2, RDS, S3, Lambda), Jenkins, Bitbucket, Datadog, CI/CD, Git.",
- 
   "about.page.experience.cava.company": "Cava Group, Inc",
   "about.page.experience.cava.durationValue": "Jun 2020 - May 2023",
   "about.page.experience.cava.positionValue": "Full-Stack Software Engineer",
@@ -111,7 +99,6 @@
   "about.page.experience.cava.responsibility.4": " Coordinated cross-functional stakeholders, external partners, and vendors to align delivery with business goals; managed App Store release cycles and technical support programs.",
   "about.page.experience.cava.techStack": "Tech stack",
   "about.page.experience.cava.tech": "React, React Native, TypeScript, Node.js, PostgreSQL, AWS (EC2, RDS, S3, Lambda), Datadog, CI/CD, Git.",
-
   "about.page.experience.phase2.company": "PHASE2 TECHNOLOGY",
   "about.page.experience.phase2.durationValue": "Nov 2019 - Jun 2022",
   "about.page.experience.phase2.positionValue": "Programmer",
@@ -124,7 +111,6 @@
   "about.page.experience.phase2.responsibility.4": "Collaborated with cross-functional teams to translate business requirements into technical implementations.",
   "about.page.experience.phase2.techStack": "Tech stack",
   "about.page.experience.phase2.tech": "JavaScript, PHP, Drupal, Java, HTML, CSS, REST APIs, CMS Development, Git.",
-
   "about.page.experience.mindx.company": "MINDX TECHNOLOGY SCHOOL",
   "about.page.experience.mindx.durationValue": "Oct 2020 – Mar 2024",
   "about.page.experience.mindx.positionValue": "Technical Instructor & Instructor Management",
@@ -132,16 +118,12 @@
   "about.page.experience.mindx.responsibilities": "Roles & Responsibilities",
   "about.page.experience.mindx.responsibility.0": " Taught full-stack web development (React, Node.js, Next.js, React Native) to students and delivered technical workshops across multiple branches.",
   "about.page.experience.mindx.responsibility.1": "Mentored and managed 50+ instructors, contributing to curriculum design and training quality improvement.",
-
   "about.page.cv.kicker": "Download Resume",
   "about.page.cv.title": "Resume my",
-
   "projects.block.kicker": "Showcase",
   "projects.block.title": "My Projects",
-
   "selectedWork.block.title": "Selected Work",
   "selectedWork.block.ariaLabel": "Selected work — projects showcase",
-
   "testimonials.block.title": "Testimonials",
   "testimonials.block.footer": "Feedback from people I've worked with.",
   "testimonials.block.element": "span",
@@ -149,42 +131,34 @@
   "testimonials.block.element2": ">",
   "testimonials.block.element1.end": "</",
   "testimonials.block.element2.end": ">",
-
   "testimonials.block.items.0.prefix": "Mr.",
   "testimonials.block.items.0.name": "Joshua Calducchi",
   "testimonials.block.items.0.role": "VP of Engineering at Poppy",
   "testimonials.block.items.0.body": "Mr.Hieu is a reliable engineer who consistently delivers clear value throughout his work. He maintains strong performance, contributes positively to product quality, and has made a lasting impact on the team - even before I joined Poppy.\nI truly appreciate everything Hieu has contributed, especially his support during my early days on the team. I'd be happy to be a reference if that's ever helpful, and I look forward to the opportunity to collaborate with him again on future projects.",
-
   "testimonials.block.items.1.prefix": "Ms.",
   "testimonials.block.items.1.name": "Katherine Patton",
   "testimonials.block.items.1.role": "Lead Engineer at Poppy",
   "testimonials.block.items.1.body": "Mr. Hieu is a dependable engineer who consistently brings clarity and impact to his work. His positive attitude and collaborative mindset make him a pleasure to work with across teams. He approaches challenges with a solutions-first mindset, maintains strong delivery standards, and contributes to improving efficiency. His ability to balance quality and speed has been valuable on critical projects, and his proactive support has positively influenced both team performance and overall outcomes.",
-
   "testimonials.block.items.2.prefix": "Mr.",
   "testimonials.block.items.2.name": "Dat Giang",
   "testimonials.block.items.2.role": "CTO at HDWEBSOFT Technology Co.,Ltd.",
   "testimonials.block.items.2.body": "Hieu demonstrates a high level of ownership and professionalism in everything he does. Beyond his technical capabilities, his proactive communication and willingness to support others stand out. He brings a calm, constructive energy to the team, even under pressure, and consistently delivers results that align with business goals. His contributions have had a meaningful impact on both product stability and team culture. He also takes initiative in solving problems early and helps guide teammates toward better outcomes overall consistently.",
-
   "testimonials.block.items.3.prefix": "Mr.",
   "testimonials.block.items.3.name": "Matthew Zhao",
   "testimonials.block.items.3.role": "CEO at Fidovn Company Limited",
   "testimonials.block.items.3.body": "Working with Hieu has been a seamless experience. He is highly responsive, detail-oriented, and always ensures that requirements are clearly understood before execution. His positive and can-do attitude helps drive momentum within the team. He not only meets expectations but often goes the extra mile to suggest improvements that enhance user experience and product value. Additionally, he communicates effectively with stakeholders and contributes to smoother collaboration across teams consistently.",
-
   "testimonials.block.items.4.prefix": "Mr.",
   "testimonials.block.items.4.name": "Benjamin Papillon",
   "testimonials.block.items.4.role": "Co-founder/CTO at Schematic",
   "testimonials.block.items.4.body": "Hieu was my first engineering hire, and we began discussing working together just weeks after I incorporated the business in the summer of 2021. He built our first website and many critical systems that followed. \n He has been an incredibly adaptable colleague, partner, and friend. I cannot imagine taking the company from pre-revenue to post Series A without him. We have grown the business nationally and overcome countless challenges together and have delivered results while maintaining strong team culture.",
-
   "testimonials.block.items.5.prefix": "Mr.",
   "testimonials.block.items.5.name": "Nico Martinez",
   "testimonials.block.items.5.role": "Fractional CTO | Technology Executive",
   "testimonials.block.items.5.body": "Hieu combines technical competence with a great team spirit. He is enthusiastic, open to feedback, and continuously seeks ways to improve both his skills and the systems he works on. His structured approach to problem-solving and attention to detail help ensure robust and maintainable solutions. I truly value his contributions and look forward to collaborating with him again on future initiatives while continuing to grow together and deliver strong outcomes across diverse projects and evolving team environments over time.",
-
   "testimonials.block.items.6.prefix": "Mr.",
   "testimonials.block.items.6.name": "Daniel Bailey",
   "testimonials.block.items.6.role": "Tech Strategist | US Army Veteran",
   "testimonials.block.items.6.body": "Hieu, it's been a real pleasure getting to know you and working alongside you. You're not only a talented engineer and strong leader, but also an exceptional person. Your mission focus and loyalty to the cause are truly admirable. I'm grateful for the time we've shared and look forward to staying connected. Wishing you all the best on this exciting new chapter ahead, and continued success in everything you pursue moving forward. I appreciate your impact and support always.",
-  
   "competencies.block.title": "Core Competencies",
   "competencies.block.kicker": "Delivering Reliable Software Solutions",
   "competencies.block.software": "Software",
@@ -200,33 +174,26 @@
   "competencies.popup.mobileApp.title": "Mobile Application",
   "competencies.popup.mobileApp.subtitle": "Engineering",
   "competencies.popup.mobileApp.description": "Designed and delivered cross-platform mobile applications with a strong emphasis on performance, scalability, and user experience. Experienced in architecting maintainable mobile systems, optimizing runtime performance, and ensuring consistency across iOS and Android in complex, production-grade environments.",
-
   "quote.block.title": "Engineering Philosophy",
   "quote.block.kicker": "Thoughts Behind My Technical Decisions",
   "quote.block.content": "Technology is a means to create lasting value, not the ultimate goal",
   "quote.block.author": "Bui Do Ngoc Hieu",
-
   "social.block.title": "My Social Profiles",
   "social.block.kicker": "Let's Connect",
-
   "company.block.footer": "Trusted by",
   "company.block.ariaLabel": "Companies and partners",
-
   "stats.block.title": "Stats Block",
   "stats.block.years": "~6",
   "stats.block.exp": "Years Experience",
   "stats.block.madeWithLove": "Made With Love",
   "stats.block.projects": "+79",
   "stats.block.totalProjects": "Total Projects",
-
   "call.action.content": "Let's",
   "call.action.work": "work",
   "call.action.together": "together.",
   "call.action.label": "Let's work together.",
-
   "notification.page.title": "Notification",
   "notification.page.no": "No notifications yet.",
-
   "setting.page.title": "Settings",
   "setting.page.moveBackToHome": "Move Back to Home",
   "setting.page.option.languages": "Languages",
@@ -253,14 +220,12 @@
   "setting.page.option.darkMode.automatic": "Automatic",
   "setting.page.option.darkMode.automatic.description": "We'll automatically adjust the display based on your device's system settings.",
   "setting.page.option.resetSettings": "Reset Settings",
-
   "contact.page.info.title": "Contact info:",
   "contact.page.info.from": "From",
   "contact.page.info.from.value": "Da Nang City, Viet Nam",
   "contact.page.info.liveIn": "Live in",
   "contact.page.info.liveIn.value": "Ho Chi Minh City, Viet Nam",
   "contact.page.socials.title": "Socials info:",
-
   "contact.page.form.title": "Let's get in",
   "contact.page.form.title.accent": "touch.",
   "contact.page.form.name": "Name",
@@ -273,19 +238,15 @@
   "contact.page.form.validation.email": "Please enter a valid email address",
   "contact.page.form.toast.success": "Your message has been sent successfully.",
   "contact.page.form.toast.error": "Something went wrong. Please try again.",
-
   "projects.page.title": "All Projects",
-
   "project.nav.hint": "↑ Scroll to top",
   "project.nav.scrollTop": "Scroll TOP",
   "project.nav.backProject": "Back project",
   "project.nav.nextProject": "Next project",
-
   "project.detail.label.design": "Design",
   "project.detail.label.client": "Client",
   "project.detail.label.openProject": "Open Project",
   "project.detail.label.showProject": "Show project",
-
   "project.walkerip.description": "Walker IP is an Australian intellectual property law firm website that provides patent, trademark, and industrial design registration services for startups and large enterprises. The firm specializes in engineering, technology, biotechnology, and medical device innovations.",
   "project.flightlocal.description": "Flight Local is a B2B travel portal designed for travel agencies, enabling flight, hotel, holiday package, and visa bookings. The platform supports booking queue management, payment processing, markup configuration, and real-time reporting.",
   "project.tapy.description": "Tapy is a mobile marketing application for small businesses that increases sales by delivering personalized promotions to existing customers. It achieves engagement rates up to 10x higher than email marketing and 7.2x higher than traditional social media channels.",
