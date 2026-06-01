@@ -3,6 +3,7 @@ export const PATH_URL = {
   ABOUT: "/about",
   PROJECTS: "/projects",
   CONTACT: "/contact",
+  NEWS: "/news",
 } as const;
 
 export const SOCIAL_LINKS = {

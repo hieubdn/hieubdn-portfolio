@@ -1,22 +1,27 @@
 "use client";
 
-import type { ReactNode } from "react";
+import type { StaticImageData } from "next/image";
+
+import walkerPoster from "@/assets/image/projects-page/walker-project/poster.jpg";
+import tapyPoster from "@/assets/image/projects-page/tapy-project/poster.jpg";
+import khoraPoster from "@/assets/image/projects-page/khora-project/poster.jpg";
+import flightPoster from "@/assets/image/projects-page/flight-project/poster.jpg";
+import granadaPoster from "@/assets/image/projects-page/granada-project/poster.jpg";
+import travelPoster from "@/assets/image/projects-page/travel-project/poster.jpg";
+import tryotelPoster from "@/assets/image/projects-page/tryotel-project/poster.jpg";
+import thoughtPoster from "@/assets/image/projects-page/thought-project/poster.jpg";
+import poppytPoster from "@/assets/image/projects-page/poppy-project/poster.png";
+import fidovnPoster from "@/assets/image/projects-page/fidovn-project/poster.png";
 
 import styles from "./projects.module.scss";
 import TitleBlock from "./title-block/title-block";
-import TapyProject from "./tapy-project/tapy-project";
-import WalkerProject from "./walker-project/walker-project";
-import TryotelProject from "./tryotel-project/tryotel-project";
-import FlightProject from "./flight-project/flight-project";
-import ThoughtProject from "./thought-project/thought-project";
-import KhoraProject from "./khora-project/khora-project";
-import GranadaProject from "./granada-project/granada-project";
-import TravelProject from "./travel-project/travel-project";
-import StudiomalsProject from "./studiomals-project/studiomals-project";
+import ProjectCard from "./project-card/project-card";
 
 const BLOCK_REVEAL_STAGGER_MS = 50;
 
 type ProjectBlockId =
+  | "poppy"
+  | "fidovn"
   | "title"
   | "tapy"
   | "walker"
@@ -25,8 +30,7 @@ type ProjectBlockId =
   | "thought"
   | "khora"
   | "granada"
-  | "travel"
-  | "studiomals";
+  | "travel";
 
 type ProjectVariant = "card" | "static";
 
@@ -34,20 +38,93 @@ type ProjectBlock = {
   id: ProjectBlockId;
   label: string;
   variant: ProjectVariant;
-  render: () => ReactNode;
+  slug?: string;
+  category?: string;
+  image?: StaticImageData;
 };
 
 const PROJECT_BLOCKS: readonly ProjectBlock[] = [
-  { id: "tapy", label: "Tapy", variant: "card", render: () => <TapyProject /> },
-  { id: "title", label: "Projects heading", variant: "static", render: () => <TitleBlock /> },
-  { id: "walker", label: "Walker", variant: "card", render: () => <WalkerProject /> },
-  { id: "tryotel", label: "Tryotel", variant: "card", render: () => <TryotelProject /> },
-  { id: "flight", label: "Flight", variant: "card", render: () => <FlightProject /> },
-  { id: "thought", label: "Thought", variant: "card", render: () => <ThoughtProject /> },
-  { id: "khora", label: "Khora", variant: "card", render: () => <KhoraProject /> },
-  { id: "granada", label: "Granada", variant: "card", render: () => <GranadaProject /> },
-  { id: "travel", label: "Travel", variant: "card", render: () => <TravelProject /> },
-  { id: "studiomals", label: "Studiomals", variant: "card", render: () => <StudiomalsProject /> },
+  {
+    id: "poppy",
+    label: "Poppy Flowers",
+    variant: "card",
+    slug: "poppy",
+    category: "Web Development",
+    image: poppytPoster,
+  },
+  {
+    id: "fidovn",
+    label: "FidoVN - Employment Platform",
+    variant: "card",
+    slug: "fidovn",
+    category: "Web & App Development",
+    image: fidovnPoster,
+  },
+  {
+    id: "tapy",
+    label: "Tapy – Download. Connect.",
+    variant: "card",
+    slug: "tapy",
+    category: "Web & App Development",
+    image: tapyPoster,
+  },
+  { id: "title", label: "Projects heading", variant: "static" },
+  {
+    id: "walker",
+    label: "Walker IP Pty Ltd",
+    variant: "card",
+    slug: "walkerip",
+    category: "Web Development",
+    image: walkerPoster,
+  },
+  {
+    id: "tryotel",
+    label: "Tryotel Web (B2C)",
+    variant: "card",
+    slug: "tryotel",
+    category: "Web & App Development",
+    image: tryotelPoster,
+  },
+  {
+    id: "flight",
+    label: "Flight Local (B2B Travel Solution)",
+    variant: "card",
+    slug: "flightlocal",
+    category: "Web Development",
+    image: flightPoster,
+  },
+  {
+    id: "thought",
+    label: "Thought – Thinkers Platform",
+    variant: "card",
+    slug: "thought",
+    category: "Web Development",
+    image: thoughtPoster,
+  },
+  {
+    id: "khora",
+    label: "Khora – Urban Thinkers",
+    variant: "card",
+    slug: "khora",
+    category: "Web Development",
+    image: khoraPoster,
+  },
+  {
+    id: "granada",
+    label: "AI Lab Granada",
+    variant: "card",
+    slug: "granada",
+    category: "Web Development",
+    image: granadaPoster,
+  },
+  {
+    id: "travel",
+    label: "Tryotel – Cross-Platform Travel App",
+    variant: "card",
+    slug: "travel",
+    category: "Web & App Development",
+    image: travelPoster,
+  },
 ] as const;
 
 function articleClassName(block: ProjectBlock): string {
@@ -71,7 +148,16 @@ export default function ProjectsSection() {
             }
             aria-label={block.label}
           >
-            {block.render()}
+            {block.variant === "static" ? (
+              <TitleBlock />
+            ) : (
+              <ProjectCard
+                slug={block.slug!}
+                name={block.label}
+                category={block.category!}
+                image={block.image}
+              />
+            )}
           </article>
         ))}
       </div>

@@ -3,7 +3,6 @@
   "navBar.about": "關於",
   "navBar.projects": "專案",
   "navBar.contact": "聯絡我們",
-
   "pwa.offlineBanner": "您目前處於離線狀態。",
   "pwa.installApp": "安裝應用程式",
   "pwa.offlinePage.title": "離線",
@@ -17,7 +16,6 @@
   "pwa.install.later": "稍後",
   "pwa.install.gotIt": "知道了",
   "pwa.install.iosGuide": "點擊分享圖示，然後選擇「加入主畫面」即可安裝。",
-
   "popover.home": "首頁",
   "popover.about": "關於",
   "popover.projects": "專案",
@@ -25,14 +23,11 @@
   "popover.github": "GitHub",
   "popover.notification": "通知",
   "popover.setting": "設定",
-
   "profile.block.name": "Bui Do Ngoc Hieu",
   "profile.block.title": "軟體工程師",
   "profile.block.email": "hieubdn@gmail.com",
-
   "about.block.title": "更多關於我",
-  "about.block.kicker": "資歷", 
-
+  "about.block.kicker": "資歷",
   "about.page.heading": "關於",
   "about.page.summary.kicker": "自我簡介",
   "about.page.summary.lead": "我從事軟體工作已超過5年。我喜歡解決問題（尤其是透過軟體）、打造產品，以及培養團隊。我曾參與多種不同的軟體系統，並樂於隨著需求變化持續優化它們。我也有豐富的擴展經驗——不僅提升系統吞吐量，也建立流程與自動化，讓在用戶成長時進行變更更加安全。\n在工作之外，我熱愛植物（特別是盆栽）以及為自己的家製作木製家具。\n\n內容有點多，但我真的很期待認識大家，並與新的合作夥伴一起合作！",
@@ -55,17 +50,14 @@
   "about.page.contact.gender1": "男性",
   "about.page.contact.nationality1": "越南人",
   "about.page.contact.languages1": "英語、越南語",
-
   "about.page.education.title": "學歷",
   "about.page.education.fullstack": "全端開發證書",
   "about.page.education.issuedBy": "頒發單位：MindX 科技學校",
   "about.page.education.fullstack.date": "完成時間：2019",
   "about.page.education.mobileapp": "行動應用開發證書",
   "about.page.education.mobileapp.date": "完成時間：2020",
-
   "about.page.workExperience.heading": "工作經驗",
   "about.page.otherExperience.heading": "其他經驗",
-
   "about.page.experience.hdwebsoft.company": "HDWEBSOFT TECHNOLOGY CO., LTD",
   "about.page.experience.hdwebsoft.durationValue": "2024年4月 - 至今",
   "about.page.experience.hdwebsoft.positionValue": "全端軟體工程師",
@@ -83,7 +75,6 @@
   "about.page.experience.hdwebsoft.tech.database": "資料庫: PostgreSQL, MySQL, TypeORM",
   "about.page.experience.hdwebsoft.tech.integrations": "整合: Stripe, Plaid, SendGrid, OpenAI",
   "about.page.experience.hdwebsoft.tech.devops": "DevOps: Docker, Kubernetes, CI/CD, Git",
-
   "about.page.experience.toyar.company": "TOYAR INC CO., LTD",
   "about.page.experience.toyar.durationValue": "2023年7月 - 2025年5月",
   "about.page.experience.toyar.positionValue": "全端軟體工程師",
@@ -96,7 +87,6 @@
   "about.page.experience.toyar.responsibility.4": "主導系統架構設計會議、進行程式碼審查並指導初級工程師，以確保程式品質與團隊效率。",
   "about.page.experience.toyar.techStack": "技術棧",
   "about.page.experience.toyar.tech": "React.js, React Native, Vite, JavaScript, Spring Boot, REST APIs, PostgreSQL, AWS (EC2, RDS, S3, Lambda), Jenkins, Bitbucket, Datadog, CI/CD, Git.",
-
   "about.page.experience.cava.company": "Cava Group, Inc",
   "about.page.experience.cava.durationValue": "2020年6月 - 2023年5月",
   "about.page.experience.cava.positionValue": "全端軟體工程師",
@@ -109,7 +99,6 @@
   "about.page.experience.cava.responsibility.4": "協調跨部門團隊與外部合作夥伴，確保交付符合商業目標；管理 App Store 發布流程與技術支援。",
   "about.page.experience.cava.techStack": "技術棧",
   "about.page.experience.cava.tech": "React, React Native, TypeScript, Node.js, PostgreSQL, AWS (EC2, RDS, S3, Lambda), Datadog, CI/CD, Git.",
-
   "about.page.experience.phase2.company": "PHASE2 TECHNOLOGY",
   "about.page.experience.phase2.durationValue": "2019年11月 - 2022年6月",
   "about.page.experience.phase2.positionValue": "程式設計師",
@@ -122,7 +111,6 @@
   "about.page.experience.phase2.responsibility.4": "與跨職能團隊合作，將商業需求轉換為技術實現。",
   "about.page.experience.phase2.techStack": "技術棧",
   "about.page.experience.phase2.tech": "JavaScript, PHP, Drupal, Java, HTML, CSS, REST APIs, CMS Development, Git.",
-
   "about.page.experience.mindx.company": "MINDX TECHNOLOGY SCHOOL",
   "about.page.experience.mindx.durationValue": "2020年10月 – 2024年3月",
   "about.page.experience.mindx.positionValue": "技術講師兼講師管理",
@@ -130,16 +118,12 @@
   "about.page.experience.mindx.responsibilities": "職責",
   "about.page.experience.mindx.responsibility.0": "教授全端網頁開發（React、Node.js、Next.js、React Native），並於多個校區舉辦技術工作坊。",
   "about.page.experience.mindx.responsibility.1": "指導並管理超過50名講師，參與課程設計並提升教學品質。",
-
   "about.page.cv.kicker": "下載履歷",
   "about.page.cv.title": "我的履歷",
-
   "projects.block.kicker": "展示",
   "projects.block.title": "我的專案",
-
   "selectedWork.block.title": "精選作品",
   "selectedWork.block.ariaLabel": "精選作品 — 專案展示",
-
   "testimonials.block.title": "推薦評價",
   "testimonials.block.footer": "來自曾經與我合作過的人所提供的回饋。",
   "testimonials.block.element": "span",
@@ -147,7 +131,6 @@
   "testimonials.block.element2": ">",
   "testimonials.block.element1.end": "</",
   "testimonials.block.element2.end": ">",
-
   "testimonials.block.items.0.prefix": "先生",
   "testimonials.block.items.0.name": "Joshua Calducchi",
   "testimonials.block.items.0.role": "Poppy 工程副總裁",
@@ -156,32 +139,26 @@
   "testimonials.block.items.1.name": "Katherine Patton",
   "testimonials.block.items.1.role": "Poppy 首席工程師",
   "testimonials.block.items.1.body": "Hiếu 是一位值得信賴的工程師，總能為工作帶來清晰度與實際影響。他積極的態度與良好的協作精神，使跨團隊合作變得順暢。他以解決問題為導向，維持高品質交付標準並提升效率。在關鍵專案中，他能兼顧品質與速度的能力尤為重要，其主動支持也對團隊表現與整體成果帶來正面影響。",
-
   "testimonials.block.items.2.prefix": "先生",
   "testimonials.block.items.2.name": "Dat Giang",
   "testimonials.block.items.2.role": "HDWEBSOFT Technology Co.,Ltd. CTO",
   "testimonials.block.items.2.body": "Hiếu 在各方面都展現出高度的責任感與專業精神。除了技術能力外，他主動溝通與樂於協助他人的特質尤為突出。即使在壓力之下，他仍能為團隊帶來冷靜且具建設性的能量，並持續交付符合業務目標的成果。他的貢獻對產品穩定性與團隊文化都產生了深遠影響，同時也能主動及早解決問題並引導團隊朝更好的方向發展。",
-
   "testimonials.block.items.3.prefix": "先生",
   "testimonials.block.items.3.name": "Matthew Zhao",
   "testimonials.block.items.3.role": "Fidovn Company Limited CEO",
   "testimonials.block.items.3.body": "與 Hiếu 合作是一段非常順暢的經驗。他回應迅速、注重細節，並在執行前確保完全理解需求。他積極進取的態度有助於推動團隊前進。他不僅能達成預期，還經常主動提出改進建議，以提升使用者體驗與產品價值。此外，他能有效與利害關係人溝通，並促進跨團隊的順暢合作。",
-
   "testimonials.block.items.4.prefix": "先生",
   "testimonials.block.items.4.name": "Benjamin Papillon",
   "testimonials.block.items.4.role": "Schematic 共同創辦人/CTO",
   "testimonials.block.items.4.body": "Hiếu 是我第一位聘用的工程師，我們在 2021 年夏天公司成立後幾週內就開始討論合作。他建立了我們的第一個網站以及之後的多個關鍵系統。\n他是一位極具適應力的同事、夥伴與朋友。沒有他，我難以想像公司能從尚未有營收發展到完成 A 輪融資。我們共同將業務拓展至全國，克服無數挑戰，同時維持強大的團隊文化並持續交付成果。",
-
   "testimonials.block.items.5.prefix": "先生",
   "testimonials.block.items.5.name": "Nico Martinez",
   "testimonials.block.items.5.role": "兼任 CTO | 技術主管",
   "testimonials.block.items.5.body": "Hiếu 將技術能力與優秀的團隊精神結合在一起。他充滿熱情、樂於接受回饋，並持續尋求提升自身技能與所負責系統的方法。他在問題解決上的結構化思維與對細節的重視，確保了解決方案的穩健性與可維護性。我非常重視他的貢獻，並期待未來能再次合作，在不同專案與不斷演進的團隊環境中共同成長並持續創造優秀成果。",
-
   "testimonials.block.items.6.prefix": "先生",
   "testimonials.block.items.6.name": "Daniel Bailey",
   "testimonials.block.items.6.role": "科技策略師 | 美國陸軍退伍軍人",
   "testimonials.block.items.6.body": "Hiếu，很高興能認識你並與你共事。你不僅是一位才華橫溢的工程師和出色的領導者，更是一位優秀的人。你對使命的專注與投入令人敬佩。我很珍惜我們共事的時光，也期待未來保持聯繫。祝福你在接下來令人振奮的新階段一切順利，並在未來持續取得成功。我始終感謝你帶來的影響與支持。",
-
   "competencies.block.title": "核心能力",
   "competencies.block.kicker": "打造可靠的軟體解決方案",
   "competencies.block.software": "軟體",
@@ -197,33 +174,26 @@
   "competencies.popup.mobileApp.title": "行動應用",
   "competencies.popup.mobileApp.subtitle": "工程",
   "competencies.popup.mobileApp.description": "設計並交付跨平台行動應用，著重效能、擴展性與使用者體驗。擁有建立可維護架構、優化執行效能，以及在複雜生產環境中確保 iOS 與 Android 一致性的經驗。",
-
   "quote.block.title": "工程理念",
   "quote.block.kicker": "技術決策背後的思考",
   "quote.block.content": "科技是創造長期價值的手段，而非最終目標",
   "quote.block.author": "Bui Do Ngoc Hieu",
-
   "social.block.title": "我的社群",
   "social.block.kicker": "一起聯繫",
-
   "company.block.footer": "受信任的合作夥伴",
   "company.block.ariaLabel": "公司與合作夥伴",
-
   "stats.block.title": "數據",
   "stats.block.years": "~6",
   "stats.block.exp": "年經驗",
   "stats.block.madeWithLove": "用心打造",
   "stats.block.projects": "+79",
   "stats.block.totalProjects": "總專案數",
-
   "call.action.content": "讓我們",
   "call.action.work": "一起",
   "call.action.together": "合作。",
   "call.action.label": "讓我們一起合作。",
-
   "notification.page.title": "通知",
   "notification.page.no": "尚無通知。",
-
   "setting.page.title": "設定",
   "setting.page.moveBackToHome": "返回首頁",
   "setting.page.option.languages": "語言",
@@ -250,14 +220,12 @@
   "setting.page.option.darkMode.automatic": "自動",
   "setting.page.option.darkMode.automatic.description": "將依據您的裝置系統設定自動調整顯示。",
   "setting.page.option.resetSettings": "重設設定",
-
   "contact.page.info.title": "聯絡資訊：",
   "contact.page.info.from": "來自",
   "contact.page.info.from.value": "越南峴港市",
   "contact.page.info.liveIn": "現居",
   "contact.page.info.liveIn.value": "越南胡志明市",
   "contact.page.socials.title": "社群資訊：",
-
   "contact.page.form.title": "歡迎與我",
   "contact.page.form.title.accent": "聯繫。",
   "contact.page.form.name": "姓名",
@@ -269,5 +237,24 @@
   "contact.page.form.validation.required": "此欄位為必填",
   "contact.page.form.validation.email": "請輸入有效的電子郵件地址",
   "contact.page.form.toast.success": "您的訊息已成功送出。",
-  "contact.page.form.toast.error": "發生錯誤，請再試一次。"
+  "contact.page.form.toast.error": "發生錯誤，請再試一次。",
+  "projects.page.title": "全部專案",
+  "project.detail.label.design": "設計",
+  "project.detail.label.client": "客戶",
+  "project.detail.label.openProject": "打開專案",
+  "project.detail.label.showProject": "顯示專案",
+  "project.walkerip.description": "Walker IP是一家澳洲知識產權律師事務所網站，為初創企業和大型企業提供專利、商標和工業設計註冊服務。該公司專門從事工程、技術、生物技術和醫療設備創新。",
+  "project.flightlocal.description": "Flight Local是專為旅行社設計的B2B旅遊入口網站，提供機票、飯店、度假套餐和簽證預訂。該平臺支援預訂佇列管理、付款處理、標記設定和即時報告。",
+  "project.tapy.description": "Tapy是一款適用於小型企業的行動行銷應用程式，透過向現有客戶提供個人化促銷活動來增加銷售額。它的參與率比電子郵件行銷高出10倍，比傳統社交媒體渠道高出7.2倍。",
+  "project.khora.description": "Khora是一家西班牙城市諮詢公司，透過發現、實驗和擴展的創意過程來解決城市發展的挑戰。我們的使命是打造更智慧、更永續、更連通的城市。",
+  "project.granada.description": "AI Lab Granada是西班牙的AI創新中心，提供協作平臺，幫助大中型企業獲得AI人才、技術和應用研究，以提高效率並推動可持續增長。",
+  "project.travel.description": "Tryotel行動應用程式是一款B2C旅遊應用程式，可讓用戶在行動裝置上搜尋並預訂航班、飯店和度假套餐。它採用乾淨的材料設計和多層導航，專為年輕活躍的旅客量身定制。",
+  "project.tryotel.description": "Tryotel是一家位於孟加拉的B2C旅遊平臺，可讓用戶在線上預訂航班、度假套餐、簽證和飯店。該平臺整合了促銷活動、多種付款方式和跨平臺行動應用程式。",
+  "project.thought.description": "A Higher Thought是一個線上靈感平臺，提供動機影片、迷因、文章和正面產品。用戶可以在社交媒體上探索和分享內容，以傳播鼓勵和提升社區。",
+  "project.poppy.description": "Poppy是一個婚禮花卉服務平臺，讓情侶可以瀏覽花卉產品、建立自訂婚禮花卉提案、獲得透明的價格，並預訂婚禮活動的全方位服務花卉設計、交付和佈置。",
+  "project.nav.hint": "捲動至頂端",
+  "project.nav.scrollTop": "滾動頂部",
+  "project.nav.backProject": "回到專案",
+  "project.nav.nextProject": "下一個專案:",
+  "project.fidovn.description": "Fido.vn是一個越南在線招聘平臺，通過職位發布和智能簡歷搜索系統將求職者與僱主聯繫起來。它可以幫助Z世代找到合適的職業機會，使用AI驅動的簡歷生成器，自動創建專業簡歷。"
 }

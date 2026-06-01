@@ -3,7 +3,6 @@
   "navBar.about": "소개",
   "navBar.projects": "프로젝트",
   "navBar.contact": "문의",
-
   "pwa.offlineBanner": "현재 오프라인 상태입니다.",
   "pwa.installApp": "앱 설치",
   "pwa.offlinePage.title": "오프라인",
@@ -17,7 +16,6 @@
   "pwa.install.later": "나중에",
   "pwa.install.gotIt": "확인",
   "pwa.install.iosGuide": "공유 아이콘을 탭한 다음 \"홈 화면에 추가\"를 선택하여 설치하세요.",
-
   "popover.home": "홈",
   "popover.about": "소개",
   "popover.projects": "프로젝트",
@@ -25,14 +23,11 @@
   "popover.github": "GitHub",
   "popover.notification": "알림",
   "popover.setting": "설정",
-
   "profile.block.name": "Bui Do Ngoc Hieu",
   "profile.block.title": "소프트웨어 엔지니어",
   "profile.block.email": "hieubdn@gmail.com",
-
   "about.block.title": "나에 대해 더 알아보기",
   "about.block.kicker": "자격",
-
   "about.page.heading": "소개",
   "about.page.summary.kicker": "자기소개",
   "about.page.summary.lead": "저는 소프트웨어 분야에서 5년 이상 일해 왔습니다. 문제 해결(특히 소프트웨어를 활용한), 제품을 만드는 일, 그리고 팀을 성장시키는 것을 즐깁니다. 다양한 소프트웨어 시스템을 경험했고, 변화하는 요구에 맞춰 지속적으로 발전시키는 과정에 큰 흥미를 느낍니다. 또한 확장성 측면에서도 많은 경험을 쌓아, 처리량을 높이는 것뿐만 아니라 사용자 증가에 따라 안전하게 변경할 수 있도록 프로세스와 자동화를 구축해 왔습니다.\n업무 외에는 식물(특히 분재)과 집을 위한 목재 가구 제작에 큰 관심을 가지고 있습니다.\n\n조금 길었지만, 여러분을 만나고 새로운 파트너와 협력할 생각에 매우 기대하고 있습니다!",
@@ -55,17 +50,14 @@
   "about.page.contact.gender1": "남성",
   "about.page.contact.nationality1": "베트남인",
   "about.page.contact.languages1": "영어, 베트남어",
-
   "about.page.education.title": "학력",
   "about.page.education.fullstack": "풀스택 개발 수료증",
   "about.page.education.issuedBy": "발급 기관: MindX 테크놀로지 스쿨",
   "about.page.education.fullstack.date": "수료: 2019년",
   "about.page.education.mobileapp": "모바일 앱 개발 수료증",
   "about.page.education.mobileapp.date": "수료: 2020년",
-
   "about.page.workExperience.heading": "경력",
   "about.page.otherExperience.heading": "기타 경험",
-
   "about.page.experience.hdwebsoft.company": "HDWEBSOFT TECHNOLOGY CO., LTD",
   "about.page.experience.hdwebsoft.durationValue": "2024년 4월 - 현재",
   "about.page.experience.hdwebsoft.positionValue": "풀스택 소프트웨어 엔지니어",
@@ -83,7 +75,6 @@
   "about.page.experience.hdwebsoft.tech.database": "데이터베이스: PostgreSQL, MySQL, TypeORM",
   "about.page.experience.hdwebsoft.tech.integrations": "통합: Stripe, Plaid, SendGrid, OpenAI",
   "about.page.experience.hdwebsoft.tech.devops": "DevOps: Docker, Kubernetes, CI/CD, Git",
-
   "about.page.experience.toyar.company": "TOYAR INC CO., LTD",
   "about.page.experience.toyar.durationValue": "2023년 7월 - 2025년 5월",
   "about.page.experience.toyar.positionValue": "풀스택 소프트웨어 엔지니어",
@@ -96,7 +87,6 @@
   "about.page.experience.toyar.responsibility.4": "아키텍처 설계 주도, 코드 리뷰 수행 및 주니어 개발자 멘토링을 통해 코드 품질과 팀 생산성을 유지.",
   "about.page.experience.toyar.techStack": "기술 스택",
   "about.page.experience.toyar.tech": "React.js, React Native, Vite, JavaScript, Spring Boot, REST APIs, PostgreSQL, AWS (EC2, RDS, S3, Lambda), Jenkins, Bitbucket, Datadog, CI/CD, Git.",
-
   "about.page.experience.cava.company": "Cava Group, Inc",
   "about.page.experience.cava.durationValue": "2020년 6월 - 2023년 5월",
   "about.page.experience.cava.positionValue": "풀스택 소프트웨어 엔지니어",
@@ -109,7 +99,6 @@
   "about.page.experience.cava.responsibility.4": "크로스 기능 팀, 외부 파트너 및 공급업체와 협력하여 비즈니스 목표에 맞는 전달을 조율하고, App Store 릴리스 및 기술 지원 프로그램을 관리.",
   "about.page.experience.cava.techStack": "기술 스택",
   "about.page.experience.cava.tech": "React, React Native, TypeScript, Node.js, PostgreSQL, AWS (EC2, RDS, S3, Lambda), Datadog, CI/CD, Git.",
-
   "about.page.experience.phase2.company": "PHASE2 TECHNOLOGY",
   "about.page.experience.phase2.durationValue": "2019년 11월 - 2022년 6월",
   "about.page.experience.phase2.positionValue": "프로그래머",
@@ -122,7 +111,6 @@
   "about.page.experience.phase2.responsibility.4": "크로스 기능 팀과 협력하여 비즈니스 요구사항을 기술 구현으로 전환.",
   "about.page.experience.phase2.techStack": "기술 스택",
   "about.page.experience.phase2.tech": "JavaScript, PHP, Drupal, Java, HTML, CSS, REST APIs, CMS Development, Git.",
-
   "about.page.experience.mindx.company": "MINDX TECHNOLOGY SCHOOL",
   "about.page.experience.mindx.durationValue": "2020년 10월 – 2024년 3월",
   "about.page.experience.mindx.positionValue": "기술 강사 및 강사 관리",
@@ -130,16 +118,12 @@
   "about.page.experience.mindx.responsibilities": "주요 업무",
   "about.page.experience.mindx.responsibility.0": "React, Node.js, Next.js, React Native를 활용한 풀스택 웹 개발을 교육하고 여러 지점에서 기술 워크숍을 진행.",
   "about.page.experience.mindx.responsibility.1": "50명 이상의 강사를 멘토링 및 관리하며 커리큘럼 설계와 교육 품질 향상에 기여.",
-
   "about.page.cv.kicker": "이력서 다운로드",
   "about.page.cv.title": "내 이력서",
-
   "projects.block.kicker": "쇼케이스",
   "projects.block.title": "내 프로젝트",
-
   "selectedWork.block.title": "주요 작업",
   "selectedWork.block.ariaLabel": "주요 작업 — 프로젝트 모음",
-
   "testimonials.block.title": "추천 후기",
   "testimonials.block.footer": "함께 일했던 사람들의 피드백입니다.",
   "testimonials.block.element": "span",
@@ -147,7 +131,6 @@
   "testimonials.block.element2": ">",
   "testimonials.block.element1.end": "</",
   "testimonials.block.element2.end": ">",
-
   "testimonials.block.items.0.prefix": "Mr.",
   "testimonials.block.items.0.name": "Joshua Calducchi",
   "testimonials.block.items.0.role": "Poppy 엔지니어링 부사장",
@@ -156,32 +139,26 @@
   "testimonials.block.items.1.name": "Katherine Patton",
   "testimonials.block.items.1.role": "Poppy 리드 엔지니어",
   "testimonials.block.items.1.body": "히에우는 항상 명확성과 영향력을 가져오는 신뢰할 수 있는 엔지니어입니다. 긍정적인 태도와 협업 마인드는 여러 팀과 함께 일할 때 큰 장점이 됩니다. 문제 해결 중심의 접근 방식으로 높은 수준의 결과물을 유지하며 효율성 향상에도 기여합니다. 품질과 속도의 균형을 잘 맞추는 능력은 중요한 프로젝트에서 특히 가치 있으며, 그의 적극적인 지원은 팀 성과와 전체 결과에 긍정적인 영향을 미쳤습니다.",
-
   "testimonials.block.items.2.prefix": "Mr.",
   "testimonials.block.items.2.name": "Dat Giang",
   "testimonials.block.items.2.role": "HDWEBSOFT Technology Co.,Ltd. CTO",
   "testimonials.block.items.2.body": "히에우는 모든 업무에서 높은 책임감과 전문성을 보여줍니다. 기술 역량뿐만 아니라 적극적인 커뮤니케이션과 동료를 돕는 자세가 특히 돋보입니다. 그는 압박 속에서도 차분하고 건설적인 에너지를 팀에 전달하며, 비즈니스 목표에 부합하는 결과를 꾸준히 만들어냅니다. 그의 기여는 제품 안정성과 팀 문화 모두에 의미 있는 영향을 주었습니다. 또한 문제를 조기에 해결하려는 주도성과 팀원들을 더 나은 방향으로 이끄는 능력도 뛰어납니다.",
-
   "testimonials.block.items.3.prefix": "Mr.",
   "testimonials.block.items.3.name": "Matthew Zhao",
   "testimonials.block.items.3.role": "Fidovn Company Limited CEO",
   "testimonials.block.items.3.body": "히에우와 함께 일하는 경험은 매우 원활했습니다. 그는 응답이 빠르고 세부 사항에 강하며, 실행 전에 요구사항을 명확히 이해하도록 항상 신경 씁니다. 긍정적이고 적극적인 태도는 팀의 추진력을 높여줍니다. 기대를 충족하는 데 그치지 않고 사용자 경험과 제품 가치를 향상시키는 개선 제안을 자주 합니다. 또한 이해관계자와 효과적으로 소통하며 팀 간 협업을 더욱 원활하게 만듭니다.",
-
   "testimonials.block.items.4.prefix": "Mr.",
   "testimonials.block.items.4.name": "Benjamin Papillon",
   "testimonials.block.items.4.role": "Schematic 공동 창립자/CTO",
   "testimonials.block.items.4.body": "히에우는 제가 처음으로 채용한 엔지니어였으며, 2021년 여름 회사 설립 후 몇 주 만에 함께 일하기 시작했습니다. 그는 첫 번째 웹사이트와 이후의 핵심 시스템들을 구축했습니다.\n그는 매우 유연한 동료이자 파트너, 그리고 친구입니다. 그의 도움 없이는 회사를 초기 무매출 단계에서 시리즈 A 이후까지 성장시키는 것을 상상하기 어렵습니다. 우리는 함께 전국적으로 사업을 확장하고 수많은 도전을 극복했으며, 강한 팀 문화를 유지하면서도 지속적으로 성과를 만들어냈습니다.",
-
   "testimonials.block.items.5.prefix": "Mr.",
   "testimonials.block.items.5.name": "Nico Martinez",
   "testimonials.block.items.5.role": "파트타임 CTO | 기술 임원",
   "testimonials.block.items.5.body": "히에우는 뛰어난 기술 역량과 훌륭한 팀워크를 겸비한 엔지니어입니다. 그는 열정적이며 피드백에 열린 자세를 가지고 있고, 자신의 역량과 시스템을 지속적으로 개선하려 노력합니다. 구조적인 문제 해결 방식과 세심한 디테일은 안정적이고 유지보수가 쉬운 솔루션을 만드는 데 기여합니다. 그의 기여를 높이 평가하며, 앞으로도 다양한 프로젝트와 변화하는 팀 환경 속에서 함께 성장하고 다시 협업할 수 있기를 기대합니다.",
-
   "testimonials.block.items.6.prefix": "Mr.",
   "testimonials.block.items.6.name": "Daniel Bailey",
   "testimonials.block.items.6.role": "기술 전략가 | 미 육군 퇴역 군인",
   "testimonials.block.items.6.body": "히에우, 당신을 알게 되고 함께 일할 수 있어서 정말 기뻤습니다. 당신은 뛰어난 엔지니어이자 강한 리더일 뿐만 아니라 훌륭한 사람입니다. 목표에 대한 집중력과 헌신은 정말 인상적입니다. 함께한 시간을 소중히 여기며 앞으로도 계속 인연을 이어가길 바랍니다. 새로운 여정에서도 최고의 결과를 이루길 바라며, 앞으로도 계속 성공을 이어가길 기원합니다. 당신의 영향력과 지원에 항상 감사드립니다.",
-
   "competencies.block.title": "핵심 역량",
   "competencies.block.kicker": "신뢰할 수 있는 소프트웨어 솔루션 제공",
   "competencies.block.software": "소프트웨어",
@@ -197,33 +174,26 @@
   "competencies.popup.mobileApp.title": "모바일 애플리케이션",
   "competencies.popup.mobileApp.subtitle": "엔지니어링",
   "competencies.popup.mobileApp.description": "성능, 확장성, 사용자 경험을 중시한 크로스 플랫폼 모바일 애플리케이션을 설계 및 개발합니다. 유지보수 가능한 구조 설계와 런타임 성능 최적화, 그리고 iOS와 Android 간 일관성 확보에 대한 경험이 있습니다.",
-
   "quote.block.title": "엔지니어링 철학",
   "quote.block.kicker": "기술적 의사결정의 배경",
   "quote.block.content": "기술은 지속적인 가치를 창출하기 위한 수단이지 최종 목표가 아닙니다",
   "quote.block.author": "Bui Do Ngoc Hieu",
-
   "social.block.title": "소셜 프로필",
   "social.block.kicker": "함께 연결해요",
-
   "company.block.footer": "신뢰받는 파트너",
   "company.block.ariaLabel": "회사 및 파트너",
-
   "stats.block.title": "통계",
   "stats.block.years": "~6",
   "stats.block.exp": "경력 연수",
   "stats.block.madeWithLove": "열정을 담아 제작",
   "stats.block.projects": "+79",
   "stats.block.totalProjects": "총 프로젝트",
-
   "call.action.content": "함께",
   "call.action.work": "일해",
   "call.action.together": "봐요.",
   "call.action.label": "함께 일해봐요.",
-
   "notification.page.title": "알림",
   "notification.page.no": "아직 알림이 없습니다.",
-
   "setting.page.title": "설정",
   "setting.page.moveBackToHome": "홈으로 돌아가기",
   "setting.page.option.languages": "언어",
@@ -250,14 +220,12 @@
   "setting.page.option.darkMode.automatic": "자동",
   "setting.page.option.darkMode.automatic.description": "기기 시스템 설정에 따라 자동으로 화면이 조정됩니다.",
   "setting.page.option.resetSettings": "설정 초기화",
-
   "contact.page.info.title": "연락처 정보:",
   "contact.page.info.from": "출신",
   "contact.page.info.from.value": "베트남 다낭시",
   "contact.page.info.liveIn": "거주지",
   "contact.page.info.liveIn.value": "베트남 호치민시",
   "contact.page.socials.title": "소셜 정보:",
-
   "contact.page.form.title": "언제든지",
   "contact.page.form.title.accent": "연락해 주세요.",
   "contact.page.form.name": "이름",
@@ -269,5 +237,24 @@
   "contact.page.form.validation.required": "이 필드는 필수입니다",
   "contact.page.form.validation.email": "유효한 이메일 주소를 입력해 주세요",
   "contact.page.form.toast.success": "메시지가 성공적으로 전송되었습니다.",
-  "contact.page.form.toast.error": "문제가 발생했습니다. 다시 시도해 주세요."
+  "contact.page.form.toast.error": "문제가 발생했습니다. 다시 시도해 주세요.",
+  "projects.page.title": "모든 프로젝트",
+  "project.detail.label.design": "디자인",
+  "project.detail.label.client": "클라이언트",
+  "project.detail.label.openProject": "프로젝트 열기",
+  "project.detail.label.showProject": "프로젝트 표시",
+  "project.walkerip.description": "Walker IP는 스타트업 및 대기업을 위한 특허, 상표 및 산업 디자인 등록 서비스를 제공하는 호주 지적 재산권 법률 회사 웹사이트입니다. 이 회사는 엔지니어링, 기술, 생명 공학 및 의료 기기 혁신을 전문으로 합니다.",
+  "project.flightlocal.description": "Flight Local은 여행사를 위해 설계된 B2B 여행 포털로, 항공편, 호텔, 휴가 패키지 및 비자 예약을 지원합니다. 이 플랫폼은 예약 대기열 관리, 결제 처리, 마크업 구성 및 실시간 보고를 지원합니다.",
+  "project.tapy.description": "Tapy는 기존 고객에게 맞춤형 프로모션을 제공하여 매출을 높이는 중소기업용 모바일 마케팅 애플리케이션입니다. 이메일 마케팅보다 최대 10배, 기존 소셜 미디어 채널보다 7.2배 높은 참여율을 달성합니다.",
+  "project.khora.description": "Khora는 창의적인 발견, 실험 및 확장 과정을 통해 도시 개발 문제를 해결하는 스페인의 도시 컨설팅 회사입니다. 더 스마트하고, 더 지속 가능하며, 더 잘 연결된 도시를 건설하는 것이 우리의 사명입니다.",
+  "project.granada.description": "AI Lab Granada는 스페인의 AI 혁신 허브로, 중대형 기업이 AI 인재, 기술 및 응용 연구에 액세스하여 효율성을 개선하고 지속 가능한 성장을 추진할 수 있도록 지원하는 협업 플랫폼을 제공합니다.",
+  "project.travel.description": "Tryotel 모바일 앱은 사용자가 모바일 장치에서 항공편, 호텔 및 휴가 패키지를 검색하고 예약할 수 있는 B2C 여행 응용 프로그램입니다. 깔끔한 소재 디자인과 다층 내비게이션으로 제작되어 젊고 활동적인 여행객에게 적합합니다.",
+  "project.tryotel.description": "Tryotel은 사용자가 항공편, 휴가 패키지, 비자 및 호텔을 온라인으로 예약할 수 있는 방글라데시 기반의 B2C 여행 플랫폼입니다. 이 플랫폼은 프로모션 캠페인, 다양한 결제 수단 및 플랫폼 간 모바일 애플리케이션을 통합합니다.",
+  "project.thought.description": "A Higher Thought는 동기 부여 비디오, 밈, 기사 및 긍정적 인 제품을 제공하는 온라인 영감 플랫폼입니다. 사용자는 소셜 미디어를 통해 콘텐츠를 탐색하고 공유하여 격려를 전파하고 커뮤니티를 활성화할 수 있습니다.",
+  "project.poppy.description": "Poppy는 웨딩 꽃 서비스 플랫폼으로, 커플이 꽃 제품을 둘러보고, 맞춤형 웨딩 플라워 프로포즈를 구축하고, 투명한 가격을 받고, 결혼 행사를 위한 풀 서비스 꽃 디자인, 배달 및 설정을 예약할 수 있습니다.",
+  "project.nav.hint": "맨 위로 스크롤",
+  "project.nav.scrollTop": "맨 위로 스크롤",
+  "project.nav.backProject": "이 프로젝트 후원하기",
+  "project.nav.nextProject": "다음 프로젝트",
+  "project.fidovn.description": "Fido.vn은 채용 공고 및 지능형 이력서 검색 시스템을 통해 구직자와 고용주를 연결하는 베트남 온라인 채용 플랫폼입니다. 이는 Z세대가 자동으로 전문적인 이력서를 작성하는 인공지능 기반의 이력서 작성기로 적합한 경력 기회를 찾는 데 도움이 됩니다."
 }
