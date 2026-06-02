@@ -20,7 +20,7 @@ import styles from "./styles.module.scss";
 const BLOCK_REVEAL_STAGGER_MS = 50;
 
 const SkillSection = dynamic(
-  () => import("@/components/sections/skill/skill"),
+  () => import("@/components/pages/home/skill-block/skill"),
   {
     loading: () => (
       <div className={styles.skillDynamic} aria-hidden>

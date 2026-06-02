@@ -87,6 +87,7 @@
   --shell-theme-radio-inner: #ffffff;
   --shell-theme-radio-inner-mobile: #ffffff;
   --header-text: #52525b;
+  --background-projects-block: #ffffff;
 }
 
 html[data-theme="dark"] {
@@ -162,6 +163,8 @@ html[data-theme="dark"] {
   --shell-theme-radio-inner: #252728;
   --shell-theme-radio-inner-mobile: #252728;
   --header-text: #ffffff;
+
+  --background-projects-block: #252728;
 }
 
 * {

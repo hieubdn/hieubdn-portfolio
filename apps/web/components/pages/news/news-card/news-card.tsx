@@ -4,9 +4,13 @@ import styles from "./news-card.module.scss";
 
 const SOURCE_LABELS: Record<NewsSource, string> = {
   devto: "Dev.to",
-  hackernews: "Hacker News",
+  githubblog: "GitHub Blog",
   techcrunch: "TechCrunch",
   infoq: "InfoQ",
+  theverge: "The Verge",
+  arstechnica: "Ars Technica",
+  venturebeat: "VentureBeat",
+  wired: "Wired",
 };
 
 function formatDate(iso: string): string {
@@ -19,6 +23,9 @@ function formatDate(iso: string): string {
 }
 
 export default function NewsCard({ article }: { article: NewsArticle }) {
+  const hasStats =
+    article.points !== undefined || article.commentCount !== undefined;
+
   return (
     <a
       href={article.url}
@@ -35,13 +42,28 @@ export default function NewsCard({ article }: { article: NewsArticle }) {
           {formatDate(article.publishedAt)}
         </time>
       </div>
+
       <h3 className={styles.title}>{article.title}</h3>
-      {article.excerpt && (
-        <p className={styles.excerpt}>{article.excerpt}</p>
-      )}
-      {article.author && (
-        <p className={styles.author}>{article.author}</p>
-      )}
+
+      <p className={styles.excerpt}>
+        {article.excerpt || " "}
+      </p>
+
+      <div className={styles.footer}>
+        {hasStats && (
+          <span className={styles.stats}>
+            {article.points !== undefined && `${article.points} points`}
+            {article.points !== undefined &&
+              article.commentCount !== undefined &&
+              " · "}
+            {article.commentCount !== undefined &&
+              `${article.commentCount} comments`}
+          </span>
+        )}
+        {article.author && (
+          <span className={styles.author}>{article.author}</span>
+        )}
+      </div>
     </a>
   );
 }

@@ -1,4 +1,12 @@
-export type NewsSource = "devto" | "hackernews" | "techcrunch" | "infoq";
+export type NewsSource =
+  | "devto"
+  | "githubblog"
+  | "techcrunch"
+  | "infoq"
+  | "theverge"
+  | "arstechnica"
+  | "venturebeat"
+  | "wired";
 
 export interface NewsArticle {
   id: string;
@@ -9,4 +17,6 @@ export interface NewsArticle {
   excerpt: string;
   publishedAt: string;
   author?: string;
+  points?: number;
+  commentCount?: number;
 }

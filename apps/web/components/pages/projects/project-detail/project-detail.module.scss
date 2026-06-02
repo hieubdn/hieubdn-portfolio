@@ -40,7 +40,7 @@
   font-weight: 700;
   letter-spacing: 3px;
   line-height: 1.15;
-  color: #52525b;
+  color: var(--color-home-text-heading);
   margin: 0;
 }
 
@@ -87,7 +87,7 @@
     sans-serif;
   font-size: 16px;
   line-height: 1.4;
-  color: #52525b;
+  color: var(--color-home-text-subtle);
 }
 
 .description {
@@ -98,7 +98,7 @@
     sans-serif;
   font-size: 16px;
   line-height: 2;
-  color: #52525b;
+  color: var(--color-home-text-body);
   margin: 0;
 }
 
@@ -131,7 +131,7 @@
 }
 
 .metaLabel {
-  color: #52525b;
+  color: var(--color-home-text-body);
   letter-spacing: 1.5px;
   margin: 0;
   font-family:
@@ -162,7 +162,7 @@
   font-weight: 500;
   letter-spacing: 0.4px;
   padding: 16px 16px 0;
-  color: #52525b;
+  color: var(--color-home-text-body);
   text-decoration: none;
   transition: gap 0.2s ease;
 
@@ -176,7 +176,7 @@
     svg {
       width: 24px;
       height: 24px;
-      fill: #52525b;
+      fill: var(--color-home-text-body);
     }
   }
 }
@@ -222,7 +222,7 @@
 /* ── Responsive ── */
 @media (max-width: 768px) {
   .root {
-    padding: 32px 0 48px;
+    padding: 32px 0 0;
   }
 
   .header {
@@ -235,6 +235,10 @@
   }
 
   .title {
-    font-size: clamp(1.75rem, 8vw, 2.5rem);
+    font-size: clamp(1.75rem, 7vw, 2.5rem);
+  }
+
+  .metaItem {
+    padding: 12px;
   }
 }

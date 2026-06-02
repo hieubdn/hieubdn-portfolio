@@ -9,13 +9,7 @@ export default async function NewsSection() {
   return (
     <section className={styles.root} aria-label="Tech news">
       <header className={styles.header}>
-        <div>
-          <p className={styles.kicker}>Curated from Dev.to, Hacker News, TechCrunch &amp; InfoQ</p>
           <h1 className={styles.heading}>Tech News</h1>
-        </div>
-        <p className={styles.subtitle}>
-          Latest {articles.length} articles · refreshed every 15 min
-        </p>
       </header>
 
       {articles.length === 0 ? (

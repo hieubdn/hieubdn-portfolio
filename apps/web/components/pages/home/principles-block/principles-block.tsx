@@ -6,10 +6,14 @@ import { PATH_URL } from "@/config/path";
 import styles from "./principles-block.module.scss";
 
 const SOURCE_COLORS: Record<string, string> = {
-  devto: "#0a0a0a",
-  hackernews: "#ff6600",
-  techcrunch: "#0f9d58",
-  infoq: "#0072b8",
+  devto: "#3b49df",
+  githubblog: "#2ea44f",
+  techcrunch: "#00c853",
+  infoq: "#0288d1",
+  theverge: "#fa4522",
+  arstechnica: "#ff6d00",
+  venturebeat: "#7c4dff",
+  wired: "#e91e63",
 };
 
 function relativeTime(iso: string): string {
