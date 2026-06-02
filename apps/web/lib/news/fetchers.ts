@@ -57,7 +57,7 @@ function parseRSS(
     const title = decodeEntities(extractTag(block, "title"));
     const link =
       extractTag(block, "feedburner:origLink") || extractTag(block, "link");
-    const description = extractTag(block, "description");
+    const rawDescription = extractTag(block, "description");
     const pubDate = extractTag(block, "pubDate");
     const author =
       extractTag(block, "dc:creator") || extractTag(block, "author");
@@ -70,7 +70,7 @@ function parseRSS(
       sourceName,
       title,
       url: link,
-      excerpt: stripHTML(description).slice(0, 220),
+      excerpt: stripHTML(decodeEntities(rawDescription)).slice(0, 220),
       publishedAt: pubDate ? new Date(pubDate).toISOString() : new Date(0).toISOString(),
       author: author ? decodeEntities(author) : undefined,
     });
@@ -81,7 +81,7 @@ function parseRSS(
 
 export async function fetchDevTo(): Promise<NewsArticle[]> {
   const res = await fetch(
-    "https://dev.to/api/articles?top=1&per_page=5",
+    "https://dev.to/api/articles?top=1&per_page=10",
     FETCH_OPTS,
   );
   if (!res.ok) throw new Error(`Dev.to responded ${res.status}`);
@@ -105,56 +105,51 @@ export async function fetchDevTo(): Promise<NewsArticle[]> {
   }));
 }
 
-export async function fetchHackerNews(): Promise<NewsArticle[]> {
-  const idsRes = await fetch(
-    "https://hacker-news.firebaseio.com/v0/topstories.json",
-    FETCH_OPTS,
-  );
-  if (!idsRes.ok) throw new Error(`HN responded ${idsRes.status}`);
-  const ids = (await idsRes.json()) as number[];
-  const top5 = ids.slice(0, 5);
-
-  const stories = await Promise.all(
-    top5.map((id) =>
-      fetch(
-        `https://hacker-news.firebaseio.com/v0/item/${id}.json`,
-        FETCH_OPTS,
-      ).then((r) => r.json()),
-    ),
-  );
-
-  return (stories as Array<{
-    id: number;
-    title: string;
-    url?: string;
-    score: number;
-    descendants?: number;
-    time: number;
-    by: string;
-  }>)
-    .filter((s) => s?.url)
-    .map((s) => ({
-      id: `hn-${s.id}`,
-      source: "hackernews" as const,
-      sourceName: "Hacker News",
-      title: s.title,
-      url: s.url!,
-      excerpt: `${s.score} points · ${s.descendants ?? 0} comments`,
-      publishedAt: new Date(s.time * 1000).toISOString(),
-      author: s.by,
-    }));
+export async function fetchGitHubBlog(): Promise<NewsArticle[]> {
+  const res = await fetch("https://github.blog/feed/", FETCH_OPTS);
+  if (!res.ok) throw new Error(`GitHub Blog responded ${res.status}`);
+  const xml = await res.text();
+  return parseRSS(xml, "githubblog", "GitHub Blog", 10);
 }
 
 export async function fetchTechCrunch(): Promise<NewsArticle[]> {
   const res = await fetch("https://techcrunch.com/feed/", FETCH_OPTS);
   if (!res.ok) throw new Error(`TechCrunch responded ${res.status}`);
   const xml = await res.text();
-  return parseRSS(xml, "techcrunch", "TechCrunch");
+  return parseRSS(xml, "techcrunch", "TechCrunch", 10);
 }
 
 export async function fetchInfoQ(): Promise<NewsArticle[]> {
   const res = await fetch("https://feed.infoq.com/", FETCH_OPTS);
   if (!res.ok) throw new Error(`InfoQ responded ${res.status}`);
   const xml = await res.text();
-  return parseRSS(xml, "infoq", "InfoQ");
+  return parseRSS(xml, "infoq", "InfoQ", 10);
+}
+
+export async function fetchTheVerge(): Promise<NewsArticle[]> {
+  const res = await fetch("https://www.theverge.com/rss/index.xml", FETCH_OPTS);
+  if (!res.ok) throw new Error(`The Verge responded ${res.status}`);
+  const xml = await res.text();
+  return parseRSS(xml, "theverge", "The Verge", 10);
+}
+
+export async function fetchArsTechnica(): Promise<NewsArticle[]> {
+  const res = await fetch("https://feeds.arstechnica.com/arstechnica/index.rss", FETCH_OPTS);
+  if (!res.ok) throw new Error(`Ars Technica responded ${res.status}`);
+  const xml = await res.text();
+  return parseRSS(xml, "arstechnica", "Ars Technica", 10);
+}
+
+export async function fetchVentureBeat(): Promise<NewsArticle[]> {
+  const res = await fetch("https://venturebeat.com/feed/", FETCH_OPTS);
+  if (!res.ok) throw new Error(`VentureBeat responded ${res.status}`);
+  const xml = await res.text();
+  return parseRSS(xml, "venturebeat", "VentureBeat", 10);
+}
+
+export async function fetchWired(): Promise<NewsArticle[]> {
+  const res = await fetch("https://www.wired.com/feed/rss", FETCH_OPTS);
+  if (!res.ok) throw new Error(`Wired responded ${res.status}`);
+  const xml = await res.text();
+  return parseRSS(xml, "wired", "Wired", 10);
 }

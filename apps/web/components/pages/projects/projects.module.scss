@@ -30,7 +30,7 @@
   min-width: 0;
   max-width: 100%;
   border-radius: 20px;
-  background-color: #fff;
+  background-color: var(--background-projects-block);
   box-shadow: 0 10px 24px var(--color-home-block-shadow);
   display: flex;
   flex-direction: column;
@@ -122,10 +122,10 @@
     gap: 18px;
     grid-template-areas:
       "title title title title title title title title title title title title"
-      "poppy poppy poppy poppy walker walker walker walker tryotel tryotel tryotel tryotel"
-      "flight flight flight flight flight flight thought thought thought thought thought thought"
-      "khora khora khora khora khora khora granada granada granada granada granada granada"
-      "travel travel travel travel travel travel tapy tapy tapy tapy tapy tapy";
+      "walker walker walker walker khora khora khora khora tryotel tryotel tryotel tryotel"
+      "flight flight flight flight poppy  poppy  poppy  poppy thought thought thought thought"
+      "travel travel travel travel tapy  tapy  tapy  tapy granada granada granada granada"
+      "fidovn fidovn fidovn fidovn . . . . . . . .";
   }
 }
 
@@ -134,11 +134,11 @@
     grid-template-columns: repeat(6, minmax(0, 1fr));
     grid-template-areas:
       "title title title title title title"
-      "tapy tapy tapy tapy tapy tapy"
-      "walker walker walker tryotel tryotel tryotel"
-      "flight flight flight thought thought thought"
-      "khora khora khora granada granada granada"
-      "travel travel travel poppy poppy poppy";
+      "tapy tapy tapy walker walker walker"
+      "tryotel tryotel tryotel flight flight flight"
+      "thought thought thought khora khora khora"
+      "granada granada granada travel travel travel"
+      "poppy poppy poppy fidovn fidovn fidovn";
   }
 }
 
@@ -161,10 +161,7 @@
       "khora"
       "granada"
       "travel"
-      "poppy";
-  }
-
-  .block {
-    padding: 16px;
+      "poppy"
+      "fidovn";
   }
 }
