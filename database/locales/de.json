@@ -256,5 +256,9 @@
   "project.nav.scrollTop": "Nach oben scrollen",
   "project.nav.backProject": "Zurück zum Projekt",
   "project.nav.nextProject": "Nächstes Projekt",
-  "project.fidovn.description": "Fido.vn ist eine vietnamesische Online-Rekrutierungsplattform, die Arbeitssuchende über Stellenausschreibungen und intelligente CV-Suchsysteme mit Arbeitgebern verbindet. Es hilft der Generation Z, geeignete Karrieremöglichkeiten mit einem KI-gestützten Lebenslauf-Builder zu finden, der automatisch professionelle Lebensläufe erstellt."
+  "project.fidovn.description": "Fido.vn ist eine vietnamesische Online-Rekrutierungsplattform, die Arbeitssuchende über Stellenausschreibungen und intelligente CV-Suchsysteme mit Arbeitgebern verbindet. Es hilft der Generation Z, geeignete Karrieremöglichkeiten mit einem KI-gestützten Lebenslauf-Builder zu finden, der automatisch professionelle Lebensläufe erstellt.",
+  "navBar.news": "Aktuelles",
+  "popover.news": "Aktuelles",
+  "project.multiangle.description": "Multiangle AI ist eine hochmoderne Plattform für künstliche Intelligenz, die Unternehmen mit fortschrittlichen Analyse-, Automatisierungs- und maschinellen Lernfunktionen befähigt, Innovation und Wachstum voranzutreiben.",
+  "project.tattoo.description": "Die Website des professionellen Tätowierstudios bietet Tattoo-Services, Kunstsammlungen, Preisgestaltung, Tätowierprozesse, Kundenbewertungen und Online-Beratungsbuchungen für Kunden, die hochwertige individuelle Tattoo-Erlebnisse suchen."
 }

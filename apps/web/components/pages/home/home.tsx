@@ -16,6 +16,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 
 import CompetenciesBlock from "./competencies-block/competencies-block";
 import styles from "./styles.module.scss";
+import Atlas from "./atlas-block/atlas";
 
 const BLOCK_REVEAL_STAGGER_MS = 50;
 
@@ -43,7 +44,8 @@ type HomeBlockId =
   | "blog"
   | "social"
   | "stats"
-  | "cta";
+  | "cta"
+  | "atlas";
 
 type HomeBlock = {
   id: HomeBlockId;
@@ -65,6 +67,7 @@ const HOME_BLOCKS: readonly HomeBlock[] = [
   { id: "company", label: "Company block", render: () => <CompanyBlock /> },
   { id: "blog", label: "Blog block", render: () => <PrinciplesBlock /> },
   { id: "cta", label: "Call to action block", render: () => <CallToAction /> },
+  { id: "atlas", label: "Atlas block", render: () => <Atlas /> }
 ] as const;
 
 export default function HomeSection() {

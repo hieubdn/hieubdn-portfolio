@@ -242,7 +242,6 @@
   "project.nav.scrollTop": "Lên đầu trang",
   "project.nav.backProject": "Dự án trước",
   "project.nav.nextProject": "Dự án tiếp theo",
-
   "project.detail.label.design": "Thiết kế",
   "project.detail.label.client": "Khách hàng",
   "project.detail.label.openProject": "Xem dự án",
@@ -257,5 +256,9 @@
   "project.thought.description": "A Higher Thought là nền tảng truyền cảm hứng trực tuyến, cung cấp video, meme, bài viết và sản phẩm tích cực để người dùng khám phá, chia sẻ lên mạng xã hội nhằm lan tỏa động lực và nâng cao tinh thần cộng đồng.",
   "project.poppy.description": "Poppy là nền tảng dịch vụ hoa cưới cho phép các cặp đôi duyệt sản phẩm hoa, tạo đề xuất hoa cưới tùy chỉnh, nhận báo giá minh bạch và đặt dịch vụ thiết kế, giao hàng và trang trí hoa trọn gói cho sự kiện cưới.",
   "project.fidovn.description": "Fido.vn là nền tảng tuyển dụng trực tuyến Việt Nam, kết nối ứng viên với nhà tuyển dụng qua hệ thống đăng tin việc làm, tìm kiếm CV thông minh, hỗ trợ Gen Z tìm việc chuẩn với tính năng tạo CV AI tự động.",
-  "projects.page.title": "Tất cả dự án"
+  "projects.page.title": "Tất cả dự án",
+  "project.tattoo.description": "The Thế Trung Tattoo là website giới thiệu studio xăm nghệ thuật chuyên nghiệp, cung cấp thông tin về dịch vụ xăm, bộ sưu tập tác phẩm, bảng giá, quy trình thực hiện, đánh giá khách hàng và hỗ trợ đặt lịch tư vấn trực tuyến.",
+  "navBar.news": "Tin tức",
+  "popover.news": "Tin tức",
+  "project.multiangle.description": "Multiangle AI là một nền tảng trí tuệ nhân tạo tiên tiến cho phép các doanh nghiệp có khả năng phân tích, tự động hóa và học máy tiên tiến để thúc đẩy đổi mới và tăng trưởng."
 }

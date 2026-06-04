@@ -17,6 +17,9 @@ import travelPoster from "@/assets/image/projects-page/travel-project/poster.jpg
 import tryotelPoster from "@/assets/image/projects-page/tryotel-project/poster.jpg";
 import thoughtPoster from "@/assets/image/projects-page/thought-project/poster.jpg";
 import poppyPoster from "@/assets/image/projects-page/poppy-project/poster.png";
+import multianglePoster from "@/assets/image/projects-page/multiangle-project/poster.png";
+import fidovnPoster from "@/assets/image/projects-page/fidovn-project/poster.png";
+import tattooPoster from "@/assets/image/projects-page/tattoo/poster.png";
 
 import flightDetail1 from "@/assets/image/projects-page/flight-project/flight-detail(1).png";
 import flightDetail2 from "@/assets/image/projects-page/flight-project/flight-detail(2).jpg";
@@ -36,7 +39,14 @@ import walkerDetail4 from "@/assets/image/projects-page/walker-project/walkerIP-
 import walkerDetail5 from "@/assets/image/projects-page/walker-project/walkerIP-detail(5).png";
 import fidovnDetail1 from "@/assets/image/projects-page/fidovn-project/fidovn-detail1.png";
 import fidovnDetail2 from "@/assets/image/projects-page/fidovn-project/fidovn-detail2.png";
-import fidovnPoster from "@/assets/image/projects-page/fidovn-project/poster.png";
+import multiangleDetail from "@/assets/image/projects-page/multiangle-project/multiangle-detail.png";
+import tattooDetail1 from "@/assets/image/projects-page/tattoo/tattooDetail(1).png";
+import tattooDetail2 from "@/assets/image/projects-page/tattoo/tattooDetail(2).png";
+import tattooDetail3 from "@/assets/image/projects-page/tattoo/tattooDetail(3).png";
+import tattooDetail4 from "@/assets/image/projects-page/tattoo/tattooDetail(4).png";
+import tattooDetail5 from "@/assets/image/projects-page/tattoo/tattooDetail(5).png";
+import tattooDetail6 from "@/assets/image/projects-page/tattoo/tattooDetail(6).png";
+
 
 import SocialShare from "./social-share";
 import ProjectNav from "./project-nav";
@@ -53,6 +63,8 @@ const PROJECT_IMAGES: Record<string, StaticImageData> = {
   thought: thoughtPoster,
   poppy: poppyPoster,
   fidovn: fidovnPoster,
+  multiangle: multianglePoster,
+  tattoo: tattooPoster,
 };
 
 const PROJECT_DETAIL_IMAGES: Record<string, StaticImageData[]> = {
@@ -66,6 +78,8 @@ const PROJECT_DETAIL_IMAGES: Record<string, StaticImageData[]> = {
   travel: [travelDetail],
   tryotel: [tryotelDetail],
   fidovn: [fidovnDetail1, fidovnDetail2],
+  multiangle: [multiangleDetail],
+  tattoo: [tattooDetail1, tattooDetail2, tattooDetail3, tattooDetail4, tattooDetail5, tattooDetail6],
 };
 
 function MetaValue({ value }: { value: string | string[] }) {

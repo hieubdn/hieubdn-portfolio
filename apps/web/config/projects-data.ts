@@ -12,7 +12,7 @@ export type ProjectData = {
 // walker | khora | tryotel
 // flight | poppy | thought
 // travel | tapy  | granada
-// fidovn
+// fidovn | multiangle | tattoo
 export const PROJECTS_DATA: readonly ProjectData[] = [
   {
     slug: "walkerip",
@@ -113,6 +113,26 @@ export const PROJECTS_DATA: readonly ProjectData[] = [
     design: "FidoVN",
     client: "FidoVN",
     projectUrl: "https://www.fidovn.com/",
+  },
+  {
+    slug: "multiangle",
+    name: "Multiangle AI",
+    category: "Web Development",
+    description:
+      "AI Lab Granada is Spain’s AI innovation hub, providing a collaborative platform that helps medium and large enterprises access AI talent, technologies, and applied research to improve efficiency and drive sustainable growth.",
+    design: "Multiangle",
+    client: "Multiangle",
+    projectUrl: "https://www.multiangle.ai/",
+  },
+  {
+    slug: "tattoo",
+    name: "The Thế Trung Tattoo",
+    category: "Web Development",
+    description:
+      "The Thế Trung Tattoo is a professional tattoo studio website showcasing tattoo services, artwork collections, pricing, tattooing processes, customer reviews, and online consultation booking for clients seeking high-quality custom tattoo experiences.",
+    design: "Bùi Đỗ Ngọc Hiếu",
+    client: "The Thế Trung Tattoo",
+    projectUrl: "https://thetrunginked.web.app/",
   }
 ];
 

@@ -31,7 +31,8 @@
     "hobby hobby hobby hobby quote quote quote quote social social social social"
     "company company company company company company testimonials testimonials testimonials testimonials testimonials testimonials"
     "selectedWork selectedWork selectedWork blog blog blog testimonials testimonials testimonials testimonials testimonials testimonials"
-    "stats stats stats stats stats stats cta cta cta cta cta cta";
+    "atlas atlas atlas atlas atlas stats stats stats stats stats stats stats"
+    "atlas atlas atlas atlas atlas cta cta cta cta cta cta cta";
 }
 
 .block {
@@ -48,7 +49,9 @@
   align-items: flex-end;
   overflow-wrap: anywhere;
   word-break: break-word;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
   animation: reveal 0.28s ease both;
 }
 
@@ -161,6 +164,15 @@
   justify-content: flex-start;
 }
 
+.atlas {
+  grid-area: atlas;
+  align-items: stretch;
+  justify-content: flex-start;
+  min-height: 55vh;
+  max-height: 80vh;
+  padding: 0;
+}
+
 @keyframes reveal {
   from {
     opacity: 0;
@@ -179,11 +191,12 @@
     grid-template-areas:
       "profile profile profile profile profile skills skills skills skills skills skills"
       "profile profile profile profile profile about about about projects projects projects"
-      "hobby hobby hobby quote quote quote quote social social social social"
-      "company company company company company company company company blog blog blog "
+      "hobby hobby hobby hobby hobby hobby quote quote quote quote quote"
+      "company company company company company company company company company company company"
+      "social social social social social blog blog blog blog blog blog"
       "selectedWork selectedWork selectedWork selectedWork testimonials testimonials testimonials testimonials testimonials testimonials testimonials"
-
-      "stats stats stats stats stats stats cta cta cta cta cta";
+      "stats stats stats stats stats stats atlas atlas atlas atlas atlas"
+      "cta cta cta cta cta cta atlas atlas atlas atlas atlas";
   }
 }
 
@@ -195,9 +208,10 @@
       "skills skills skills skills skills skills"
       "about about about projects projects projects"
       "hobby hobby hobby quote quote quote"
-      "social social social social social social"
-      "blog blog blog selectedWork selectedWork selectedWork"
       "company company company company company company"
+      "blog blog blog atlas atlas atlas"
+      "selectedWork selectedWork selectedWork atlas atlas atlas"
+      "social social social social social social"
       "testimonials testimonials testimonials testimonials testimonials testimonials"
       "stats stats stats stats stats stats"
       "cta cta cta cta cta cta";
@@ -212,32 +226,56 @@
   .block {
     padding: 16px;
   }
+
+  .atlas {
+    padding: 0;
+  }
 }
 
 @media (max-width: 767px) {
   .grid {
-    gap: 16px;
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-template-areas:
-      "profile"
-      "skills"
-      "about"
-      "projects"
-      "selectedWork"
-      "hobby"
-      "quote"
-      "company"
-      "blog"
-      "social"
-      "stats"
-      "testimonials"
-
-      "cta";
+      "profile profile"
+      "skills skills"
+      "about projects"
+      "selectedWork selectedWork"
+      "hobby hobby"
+      "quote quote"
+      "company company"
+      "blog social"
+      "stats stats"
+      "testimonials testimonials"
+      "atlas atlas"
+      "cta cta";
   }
 }
 
 @media (max-width: 500px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+      "profile profile"
+      "skills skills"
+      "about about"
+      "projects projects"
+      "selectedWork selectedWork"
+      "hobby hobby"
+      "quote quote"
+      "company company"
+      "blog blog"
+      "social social"
+      "stats stats"
+      "testimonials testimonials"
+      "atlas atlas"
+      "cta cta";
+  }
+
   .block {
     padding: 16px;
+  }
+
+  .atlas {
+    padding: 0;
   }
 }

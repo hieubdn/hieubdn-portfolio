@@ -256,5 +256,9 @@
   "project.nav.scrollTop": "滾動頂部",
   "project.nav.backProject": "回到專案",
   "project.nav.nextProject": "下一個專案:",
-  "project.fidovn.description": "Fido.vn是一個越南在線招聘平臺，通過職位發布和智能簡歷搜索系統將求職者與僱主聯繫起來。它可以幫助Z世代找到合適的職業機會，使用AI驅動的簡歷生成器，自動創建專業簡歷。"
+  "project.fidovn.description": "Fido.vn是一個越南在線招聘平臺，通過職位發布和智能簡歷搜索系統將求職者與僱主聯繫起來。它可以幫助Z世代找到合適的職業機會，使用AI驅動的簡歷生成器，自動創建專業簡歷。",
+  "navBar.news": "新聞",
+  "popover.news": "新聞",
+  "project.multiangle.description": "Multiangle AI是一個尖端的人工智能平臺，可為企業提供先進的分析、自動化和機器學習功能，以推動創新和增長。",
+  "project.tattoo.description": "Thă Trung Tattoo是一個專業的紋身工作室網站，為尋求高品質定制紋身體驗的客戶展示紋身服務、藝術品收藏、定價、紋身過程、客戶評價和線上諮詢預訂。"
 }

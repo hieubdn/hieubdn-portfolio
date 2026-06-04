@@ -12,6 +12,8 @@ import tryotelPoster from "@/assets/image/projects-page/tryotel-project/poster.j
 import thoughtPoster from "@/assets/image/projects-page/thought-project/poster.jpg";
 import poppytPoster from "@/assets/image/projects-page/poppy-project/poster.png";
 import fidovnPoster from "@/assets/image/projects-page/fidovn-project/poster.png";
+import multianglePoster from "@/assets/image/projects-page/multiangle-project/poster.png";
+import tattooPoster from "@/assets/image/projects-page/tattoo/poster.png";
 
 import styles from "./projects.module.scss";
 import TitleBlock from "./title-block/title-block";
@@ -30,7 +32,9 @@ type ProjectBlockId =
   | "thought"
   | "khora"
   | "granada"
-  | "travel";
+  | "travel"
+  | "multiangle"
+  | "tattoo";
 
 type ProjectVariant = "card" | "static";
 
@@ -125,6 +129,22 @@ const PROJECT_BLOCKS: readonly ProjectBlock[] = [
     category: "Web & App Development",
     image: travelPoster,
   },
+  {
+    id: "multiangle",
+    label: "Multiangle AI",
+    variant: "card",
+    slug: "multiangle",
+    category: "Web Development",
+    image: multianglePoster,
+  },
+  {
+    id: "tattoo",
+    label: "The Trung Tattoo",
+    variant: "card",
+    slug: "tattoo",
+    category: "Web Development",
+    image: tattooPoster,
+  }
 ] as const;
 
 function articleClassName(block: ProjectBlock): string {
