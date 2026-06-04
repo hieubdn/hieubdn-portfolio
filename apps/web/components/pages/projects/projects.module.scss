@@ -20,7 +20,7 @@
     "walker walker walker walker khora khora khora khora tryotel tryotel tryotel tryotel"
     "flight flight flight flight poppy  poppy  poppy  poppy thought thought thought thought"
     "travel travel travel travel tapy  tapy  tapy  tapy granada granada granada granada"
-    "fidovn fidovn fidovn fidovn . . . . . . . .";
+    "fidovn fidovn fidovn fidovn multiangle multiangle multiangle multiangle tattoo tattoo tattoo tattoo";
 }
 
 .block {
@@ -106,6 +106,14 @@
   grid-area: fidovn;
 }
 
+.multiangle {
+  grid-area: multiangle;
+}
+
+.tattoo {
+  grid-area: tattoo;
+}
+
 @keyframes reveal {
   from {
     opacity: 0;
@@ -125,7 +133,7 @@
       "walker walker walker walker khora khora khora khora tryotel tryotel tryotel tryotel"
       "flight flight flight flight poppy  poppy  poppy  poppy thought thought thought thought"
       "travel travel travel travel tapy  tapy  tapy  tapy granada granada granada granada"
-      "fidovn fidovn fidovn fidovn . . . . . . . .";
+      "fidovn fidovn fidovn fidovn multiangle multiangle multiangle multiangle tattoo tattoo tattoo tattoo";
   }
 }
 
@@ -138,7 +146,8 @@
       "tryotel tryotel tryotel flight flight flight"
       "thought thought thought khora khora khora"
       "granada granada granada travel travel travel"
-      "poppy poppy poppy fidovn fidovn fidovn";
+      "poppy poppy poppy fidovn fidovn fidovn"
+      "multiangle multiangle multiangle tattoo tattoo tattoo";
   }
 }
 
@@ -162,6 +171,8 @@
       "granada"
       "travel"
       "poppy"
-      "fidovn";
+      "fidovn"
+      "multiangle"
+      "tattoo";
   }
 }

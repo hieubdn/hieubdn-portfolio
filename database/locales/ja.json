@@ -256,5 +256,9 @@
   "project.nav.scrollTop": "スクロールトップ",
   "project.nav.backProject": "このプロジェクトに戻る",
   "project.nav.nextProject": "次のプロジェクト",
-  "project.fidovn.description": "Fido.vnは、求職者と雇用主を求人掲載とインテリジェントな履歴書検索システムでつなぐベトナムのオンライン採用プラットフォームです。これは、Z世代がプロの履歴書を自動的に作成するAI搭載のCVビルダーで適切なキャリア機会を見つけるのに役立ちます。"
+  "project.fidovn.description": "Fido.vnは、求職者と雇用主を求人掲載とインテリジェントな履歴書検索システムでつなぐベトナムのオンライン採用プラットフォームです。これは、Z世代がプロの履歴書を自動的に作成するAI搭載のCVビルダーで適切なキャリア機会を見つけるのに役立ちます。",
+  "navBar.news": "ニュース",
+  "popover.news": "ニュース",
+  "project.multiangle.description": "Multiangle AIは、高度な分析、自動化、機械学習機能を備えた最先端の人工知能プラットフォームで、イノベーションと成長を促進します。",
+  "project.tattoo.description": "Thă Trung Tattooは、高品質のカスタムタトゥーエクスペリエンスを求めるクライアント向けに、タトゥーサービス、アートコレクション、価格設定、タトゥー加工、カスタマーレビュー、オンライン相談予約を紹介するプロフェッショナルなタトゥースタジオウェブサイトです。"
 }

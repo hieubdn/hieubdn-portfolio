@@ -14,8 +14,8 @@ import facebookGlyph from "@/assets/image/social-block/facebook.png";
 import githubGlyph from "@/assets/image/social-block/code.png";
 import instagramGlyph from "@/assets/image/social-block/instagram.png";
 import linkedinGlyph from "@/assets/image/social-block/linkedin.png";
-import jobGif from "@/assets/image/contact/job.gif";
-import locationGif from "@/assets/image/contact/location.gif";
+import jobGif from "@/assets/image/contact/factory.png";
+import locationGif from "@/assets/image/contact/home.png";
 import { useLocaleText } from "@/components/layout/setting/translate/locale-provider";
 import { SOCIAL_LINKS } from "@/config/path";
 

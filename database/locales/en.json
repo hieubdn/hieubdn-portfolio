@@ -1,4 +1,4 @@
-  {
+{
   "navBar.home": "Home",
   "navBar.about": "About",
   "navBar.projects": "Projects",
@@ -98,7 +98,7 @@
   "about.page.experience.toyar.responsibility.4": "Led architecture design sessions, conducted code reviews, and mentored junior developers to maintain codebase quality and team velocity",
   "about.page.experience.toyar.techStack": "Tech stack",
   "about.page.experience.toyar.tech": "React.js, React Native, Vite, JavaScript, Spring Boot, REST APIs, PostgreSQL, AWS(EC2, RDS, S3, Lambda), Jenkins, Bitbucket, Datadog, CI/CD, Git.",
- 
+
   "about.page.experience.cava.company": "Cava Group, Inc",
   "about.page.experience.cava.durationValue": "Jun 2020 - May 2023",
   "about.page.experience.cava.positionValue": "Full-Stack Software Engineer",
@@ -184,7 +184,7 @@
   "testimonials.block.items.6.name": "Daniel Bailey",
   "testimonials.block.items.6.role": "Tech Strategist | US Army Veteran",
   "testimonials.block.items.6.body": "Hieu, it's been a real pleasure getting to know you and working alongside you. You're not only a talented engineer and strong leader, but also an exceptional person. Your mission focus and loyalty to the cause are truly admirable. I'm grateful for the time we've shared and look forward to staying connected. Wishing you all the best on this exciting new chapter ahead, and continued success in everything you pursue moving forward. I appreciate your impact and support always.",
-  
+
   "competencies.block.title": "Core Competencies",
   "competencies.block.kicker": "Delivering Reliable Software Solutions",
   "competencies.block.software": "Software",
@@ -295,5 +295,7 @@
   "project.tryotel.description": "Tryotel is a Bangladesh-based B2C travel platform that enables users to book flights, holiday packages, visas, and hotels online. The platform integrates promotional campaigns, multiple payment methods, and cross-platform mobile applications.",
   "project.thought.description": "A Higher Thought is an online inspiration platform offering motivational videos, memes, articles, and positive products. Users can explore and share content across social media to spread encouragement and uplift communities.",
   "project.poppy.description": "Poppy is a wedding floral service platform that allows couples to browse floral products, build custom wedding flower proposals, receive transparent pricing, and book full-service floral design, delivery, and setup for their wedding events.",
-  "project.fidovn.description": "Fido.vn is a Vietnamese online recruitment platform that connects job seekers with employers through job posting and intelligent CV search systems. It helps Gen Z find suitable career opportunities with an AI-powered CV builder that automatically creates professional resumes."
+  "project.fidovn.description": "Fido.vn is a Vietnamese online recruitment platform that connects job seekers with employers through job posting and intelligent CV search systems. It helps Gen Z find suitable career opportunities with an AI-powered CV builder that automatically creates professional resumes.",
+  "project.multiangle.description": "Multiangle AI is a cutting-edge artificial intelligence platform that empowers businesses with advanced analytics, automation, and machine learning capabilities to drive innovation and growth.",
+  "project.tattoo.description": "The Thế Trung Tattoo is a professional tattoo studio website showcasing tattoo services, artwork collections, pricing, tattooing processes, customer reviews, and online consultation booking for clients seeking high-quality custom tattoo experiences."
 }
