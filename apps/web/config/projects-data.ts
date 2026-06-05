@@ -133,6 +133,46 @@ export const PROJECTS_DATA: readonly ProjectData[] = [
     design: "Bùi Đỗ Ngọc Hiếu",
     client: "The Thế Trung Tattoo",
     projectUrl: "https://thetrunginked.web.app/",
+  },
+  {
+    slug: "baby",
+    name: "BabyQuiq – Baby Care App",
+    category: "Web & App Development",
+    description:
+      "A baby gear rental platform connecting traveling families with local providers. Equipment is delivered to your stay, cleaned and safety-checked. Also offers party rentals and professional baby gear cleaning services.",
+    design: "BabyQuiq",
+    client: "BabyQuiq",
+    projectUrl: "https://www.babyquip.com/",
+  },
+  {
+    slug: "signinapp",
+    name: "Sign In App – Visitor Management System",
+    category: "Web & App Development",
+    description:
+      "A smart visitor and workplace management platform combining check-in, room booking, and emergency response in one system. Trusted by 25,000+ locations worldwide, certified ISO 27001, GDPR, and HIPAA compliant.",
+    design: "SignInApp",
+    client: "SignInApp",
+    projectUrl: "https://signinapp.com/",
+  },
+  {
+    slug: "singlekey",
+    name: "SingleKey – Smart Lock System",
+    category: "Web & App Development",
+    description:
+      "A rental risk management platform for Canadian landlords. Provides comprehensive tenant screening, automated rent collection, and income guarantee protection up to $60,000 in case of disputes or damages.",
+    design: "SingleKey",
+    client: "SingleKey",
+    projectUrl: "https://www.singlekey.com/en-us/",
+  },
+  {
+    slug: "swipedon",
+    name: "Swipedon",
+    category: "Web & App Development",
+    description:
+      "An employee and workspace management software for businesses. Tracks check-ins, supports hybrid work, enables desk and meeting room booking. Currently merging with Sign In App to build a next-generation platform.",
+    design: "Swipedon",
+    client: "Swipedon",
+    projectUrl: "https://www.swipedon.com/",
   }
 ];
 

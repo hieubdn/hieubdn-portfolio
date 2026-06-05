@@ -3,12 +3,13 @@
   gap: 12px;
   align-items: center;
   justify-content: center;
-  height: 50px;
+  min-height: 50px;
   margin: 0;
   font-family: "Open Sans", sans-serif;
   font-size: 48px;
   font-weight: 900;
   letter-spacing: 0.12em;
+  text-align: center;
   text-transform: uppercase;
   background: linear-gradient(
     102deg,
@@ -25,10 +26,9 @@
   -webkit-font-smoothing: antialiased;
   color: var(--color-home-text-muted);
 
-  @media (max-width: 650px) {
-    font-size: 32px;
-    gap: 24px;
-    margin-bottom: 32px;
+  @media (max-width: 919px) {
+    font-size: 28px;
+    gap: 10px;
   }
 
   @media (max-width: 465px) {

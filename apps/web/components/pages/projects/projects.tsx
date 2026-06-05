@@ -14,6 +14,13 @@ import poppytPoster from "@/assets/image/projects-page/poppy-project/poster.png"
 import fidovnPoster from "@/assets/image/projects-page/fidovn-project/poster.png";
 import multianglePoster from "@/assets/image/projects-page/multiangle-project/poster.png";
 import tattooPoster from "@/assets/image/projects-page/tattoo/poster.png";
+import babyPoster from "@/assets/image/projects-page/babyQuiq-project/poster.jpg";
+import signInAppPoster from "@/assets/image/projects-page/signinapp-project/poster.webp";
+import singleKeyPoster from "@/assets/image/projects-page/singlekey-project/Poster.webp";
+import swipedonePoster from "@/assets/image/projects-page/swipedon-project/poster.jpg";
+
+
+import { useLocaleText } from "@/components/layout/setting/translate/locale-provider";
 
 import styles from "./projects.module.scss";
 import TitleBlock from "./title-block/title-block";
@@ -34,7 +41,11 @@ type ProjectBlockId =
   | "granada"
   | "travel"
   | "multiangle"
-  | "tattoo";
+  | "tattoo"
+  | "baby"
+  | "signinapp"
+  | "singlekey"
+  | "swipedon";
 
 type ProjectVariant = "card" | "static";
 
@@ -144,7 +155,40 @@ const PROJECT_BLOCKS: readonly ProjectBlock[] = [
     slug: "tattoo",
     category: "Web Development",
     image: tattooPoster,
-  }
+  }, 
+  {
+    id: "baby",
+    label: "BabyQuiq – Baby Care App",
+    variant: "card",
+    slug: "baby",
+    category: "Web & App Development",
+    image: babyPoster,
+  },
+  {
+    id: "signinapp",
+    label: "Sign In App – Visitor Management",
+    variant: "card",
+    slug: "signinapp",
+    category: "Web & App Development",
+    image: signInAppPoster,
+  },
+  {
+    id: "singlekey",
+    label: "SingleKey – Smart Access Control",
+    variant: "card",
+    slug: "singlekey",
+    category: "Web & App Development",
+    image: singleKeyPoster,
+  },
+  {
+    id: "swipedon",
+    label: "SwipedOn – Visitor Management",
+    variant: "card",
+    slug: "swipedon",
+    category: "Web & App Development",
+    image: swipedonePoster,
+  },
+
 ] as const;
 
 function articleClassName(block: ProjectBlock): string {
@@ -154,6 +198,7 @@ function articleClassName(block: ProjectBlock): string {
 }
 
 export default function ProjectsSection() {
+  const { t } = useLocaleText();
   return (
     <section className={styles.projectSection} aria-labelledby="project-title">
       <div className={styles.grid}>
@@ -180,6 +225,14 @@ export default function ProjectsSection() {
             )}
           </article>
         ))}
+      </div>
+      <div className={styles.updatingBanner}>
+        <span>{t("projects.page.updating")}</span>
+        <span className={styles.dots}>
+          <span className={styles.dot}>.</span>
+          <span className={styles.dot}>.</span>
+          <span className={styles.dot}>.</span>
+        </span>
       </div>
     </section>
   );

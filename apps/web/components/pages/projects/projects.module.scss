@@ -9,61 +9,6 @@
   margin-top: 24px;
 }
 
-.grid {
-  display: grid;
-  gap: 24px;
-  min-width: 0;
-  width: 100%;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  grid-template-areas:
-    "walker walker walker walker title   title   title   title   title   title   title   title"
-    "walker walker walker walker khora khora khora khora tryotel tryotel tryotel tryotel"
-    "flight flight flight flight poppy  poppy  poppy  poppy thought thought thought thought"
-    "travel travel travel travel tapy  tapy  tapy  tapy granada granada granada granada"
-    "fidovn fidovn fidovn fidovn multiangle multiangle multiangle multiangle tattoo tattoo tattoo tattoo";
-}
-
-.block {
-  box-sizing: border-box;
-  height: 100%;
-  min-height: 35vh;
-  min-width: 0;
-  max-width: 100%;
-  border-radius: 20px;
-  background-color: var(--background-projects-block);
-  box-shadow: 0 10px 24px var(--color-home-block-shadow);
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: flex-end;
-  overflow-wrap: anywhere;
-  word-break: break-word;
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
-  animation: reveal 0.28s ease both;
-
-  &:hover {
-    box-shadow: 0 5px 14px var(--color-home-block-hover-shadow);
-  }
-}
-
-.kickerStrip {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 0;
-  padding: 0;
-  border: none;
-  background: transparent;
-  box-shadow: none;
-}
-
-.title {
-  grid-area: title;
-}
-
 .tapy {
   grid-area: tapy;
   align-items: center;
@@ -114,6 +59,126 @@
   grid-area: tattoo;
 }
 
+.baby {
+  grid-area: baby;
+}
+
+.signinapp {
+  grid-area: signinapp;
+}
+
+.swipedon {
+  grid-area: swipedon;
+}
+
+.singlekey {
+  grid-area: singlekey;
+}
+
+.grid {
+  display: grid;
+  gap: 24px;
+  min-width: 0;
+  width: 100%;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-areas:
+    "walker walker walker walker title   title   title   title   title   title   title   title"
+    "walker walker walker walker khora khora khora khora tryotel tryotel tryotel tryotel"
+    "flight flight flight flight poppy  poppy  poppy  poppy thought thought thought thought"
+    "swipedon swipedon swipedon swipedon tapy  tapy  tapy  tapy granada granada granada granada"
+    "fidovn fidovn fidovn fidovn baby baby baby baby tattoo tattoo tattoo tattoo"
+    "travel travel travel travel multiangle multiangle multiangle multiangle singlekey singlekey singlekey singlekey"
+    "signinapp signinapp signinapp signinapp . . . . . . . .";
+}
+
+.block {
+  box-sizing: border-box;
+  height: 100%;
+  min-height: 35vh;
+  min-width: 0;
+  max-width: 100%;
+  border-radius: 20px;
+  background-color: var(--background-projects-block);
+  box-shadow: 0 10px 24px var(--color-home-block-shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-end;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  animation: reveal 0.28s ease both;
+
+  &:hover {
+    box-shadow: 0 5px 14px var(--color-home-block-hover-shadow);
+  }
+}
+
+.kickerStrip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+}
+
+.title {
+  grid-area: title;
+}
+
+.updatingBanner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin-top: 32px;
+  font-size: 14px;
+  font-style: italic;
+  color: var(--color-home-text-subtle);
+  letter-spacing: 0.01em;
+}
+
+.dots {
+  display: inline-flex;
+  align-items: flex-end;
+}
+
+.dot {
+  display: inline-block;
+  font-size: 1.2em;
+  line-height: 1;
+  animation: dotBounce 1.2s ease-in-out infinite;
+
+  &:nth-child(1) {
+    animation-delay: 0s;
+  }
+
+  &:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+
+  &:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+}
+
+@keyframes dotBounce {
+  0%,
+  60%,
+  100% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-6px);
+  }
+}
+
 @keyframes reveal {
   from {
     opacity: 0;
@@ -129,11 +194,13 @@
   .grid {
     gap: 18px;
     grid-template-areas:
-      "title title title title title title title title title title title title"
+      "walker walker walker walker title   title   title   title   title   title   title   title"
       "walker walker walker walker khora khora khora khora tryotel tryotel tryotel tryotel"
       "flight flight flight flight poppy  poppy  poppy  poppy thought thought thought thought"
-      "travel travel travel travel tapy  tapy  tapy  tapy granada granada granada granada"
-      "fidovn fidovn fidovn fidovn multiangle multiangle multiangle multiangle tattoo tattoo tattoo tattoo";
+      "swipedon swipedon swipedon swipedon tapy  tapy  tapy  tapy granada granada granada granada"
+      "fidovn fidovn fidovn fidovn baby baby baby baby tattoo tattoo tattoo tattoo"
+      "travel travel travel travel multiangle multiangle multiangle multiangle singlekey singlekey singlekey singlekey"
+      "signinapp signinapp signinapp signinapp . . . . . . . .";
   }
 }
 
@@ -141,38 +208,38 @@
   .grid {
     grid-template-columns: repeat(6, minmax(0, 1fr));
     grid-template-areas:
-      "title title title title title title"
-      "tapy tapy tapy walker walker walker"
+      "walker walker walker title title title"
+      "walker walker walker khora khora khora"
       "tryotel tryotel tryotel flight flight flight"
-      "thought thought thought khora khora khora"
-      "granada granada granada travel travel travel"
-      "poppy poppy poppy fidovn fidovn fidovn"
-      "multiangle multiangle multiangle tattoo tattoo tattoo";
+      "poppy poppy poppy thought thought thought"
+      "swipedon swipedon swipedon tapy tapy tapy"
+      "granada granada granada fidovn fidovn fidovn"
+      "baby baby baby tattoo tattoo tattoo"
+      "travel travel travel multiangle multiangle multiangle"
+      "singlekey singlekey singlekey signinapp signinapp signinapp";
   }
 }
 
-@media (max-width: 767px) {
-  .projectSection {
-    border-radius: 16px;
-    padding-inline: 0;
-  }
-
+@media (max-width: 600px) {
   .grid {
-    gap: 16px;
     grid-template-columns: minmax(0, 1fr);
     grid-template-areas:
       "title"
-      "tapy"
       "walker"
+      "khora"
       "tryotel"
       "flight"
-      "thought"
-      "khora"
-      "granada"
-      "travel"
       "poppy"
+      "thought"
+      "swipedon"
+      "tapy"
+      "granada"
       "fidovn"
+      "baby"
+      "tattoo"
+      "travel"
       "multiangle"
-      "tattoo";
+      "singlekey"
+      "signinapp";
   }
 }
