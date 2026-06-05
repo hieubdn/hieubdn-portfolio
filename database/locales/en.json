@@ -275,6 +275,7 @@
   "contact.page.form.toast.error": "Something went wrong. Please try again.",
 
   "projects.page.title": "All Projects",
+  "projects.page.updating": "More projects coming soon",
 
   "project.nav.hint": "↑ Scroll to top",
   "project.nav.scrollTop": "Scroll TOP",
@@ -286,16 +287,35 @@
   "project.detail.label.openProject": "Open Project",
   "project.detail.label.showProject": "Show project",
 
-  "project.walkerip.description": "Walker IP is an Australian intellectual property law firm website that provides patent, trademark, and industrial design registration services for startups and large enterprises. The firm specializes in engineering, technology, biotechnology, and medical device innovations.",
-  "project.flightlocal.description": "Flight Local is a B2B travel portal designed for travel agencies, enabling flight, hotel, holiday package, and visa bookings. The platform supports booking queue management, payment processing, markup configuration, and real-time reporting.",
-  "project.tapy.description": "Tapy is a mobile marketing application for small businesses that increases sales by delivering personalized promotions to existing customers. It achieves engagement rates up to 10x higher than email marketing and 7.2x higher than traditional social media channels.",
-  "project.khora.description": "Khora is a Spanish urban consulting company that addresses city development challenges through a creative process of discovery, experimentation, and scaling. Its mission is to build smarter, more sustainable, and better-connected cities.",
-  "project.granada.description": "AI Lab Granada is Spain's AI innovation hub, providing a collaborative platform that helps medium and large enterprises access AI talent, technologies, and applied research to improve efficiency and drive sustainable growth.",
-  "project.travel.description": "Tryotel Mobile App is a B2C travel application that allows users to search and book flights, hotels, and holiday packages on mobile devices. Built with a clean material design and multi-layer navigation, it is tailored for young, active travelers.",
-  "project.tryotel.description": "Tryotel is a Bangladesh-based B2C travel platform that enables users to book flights, holiday packages, visas, and hotels online. The platform integrates promotional campaigns, multiple payment methods, and cross-platform mobile applications.",
-  "project.thought.description": "A Higher Thought is an online inspiration platform offering motivational videos, memes, articles, and positive products. Users can explore and share content across social media to spread encouragement and uplift communities.",
-  "project.poppy.description": "Poppy is a wedding floral service platform that allows couples to browse floral products, build custom wedding flower proposals, receive transparent pricing, and book full-service floral design, delivery, and setup for their wedding events.",
-  "project.fidovn.description": "Fido.vn is a Vietnamese online recruitment platform that connects job seekers with employers through job posting and intelligent CV search systems. It helps Gen Z find suitable career opportunities with an AI-powered CV builder that automatically creates professional resumes.",
-  "project.multiangle.description": "Multiangle AI is a cutting-edge artificial intelligence platform that empowers businesses with advanced analytics, automation, and machine learning capabilities to drive innovation and growth.",
-  "project.tattoo.description": "The Thế Trung Tattoo is a professional tattoo studio website showcasing tattoo services, artwork collections, pricing, tattooing processes, customer reviews, and online consultation booking for clients seeking high-quality custom tattoo experiences."
+  "project.walkerip.description": "Walker IP is an Australian intellectual property law firm providing patent, trademark, and industrial design registration services for startups and large enterprises. Specializing in engineering, technology, biotechnology, and medical device innovations, the firm guides clients through complex IP processes with expert legal counsel to protect and commercialize their innovations effectively.",
+
+  "project.flightlocal.description": "Flight Local is a B2B travel portal built exclusively for travel agencies, enabling seamless booking of flights, hotels, holiday packages, and visas. The platform features booking queue management, real-time reporting, payment processing, and markup configuration tools, helping agencies streamline operations and deliver faster, more efficient service to their customers.",
+
+  "project.tapy.description": "Tapy is a mobile marketing application designed for small businesses to boost sales through personalized promotions delivered directly to existing customers. Achieving engagement rates up to 10x higher than email and 7.2x higher than traditional social media, Tapy helps local businesses build loyalty, increase repeat purchases, and grow revenue with minimal marketing effort.",
+
+  "project.khora.description": "Khora is a Spanish urban consulting company tackling city development challenges through a creative process of discovery, experimentation, and scaling innovative solutions. With a mission to build smarter, more sustainable, and better-connected cities, Khora collaborates with governments and organizations to design urban strategies that improve quality of life for communities.",
+
+  "project.granada.description": "AI Lab Granada is Spain's premier AI innovation hub, offering a collaborative platform that connects medium and large enterprises with top AI talent, cutting-edge technologies, and applied research. The lab helps organizations improve operational efficiency, accelerate digital transformation, and drive sustainable growth through customized artificial intelligence solutions and innovation partnerships.",
+
+  "project.travel.description": "Tryotel Mobile App is a B2C travel application enabling users to search and book flights, hotels, and holiday packages directly from their mobile devices. Built with clean material design and intuitive multi-layer navigation, the app is tailored for young, active travelers seeking a fast, seamless, and visually engaging travel booking experience on the go.",
+
+  "project.tryotel.description": "Tryotel is a Bangladesh-based B2C travel platform enabling users to book flights, holiday packages, visas, and hotels online with ease. The platform integrates promotional campaigns, multiple payment methods, and cross-platform mobile applications, delivering a comprehensive and convenient travel planning experience for customers across Bangladesh and international destinations.",
+
+  "project.thought.description": "A Higher Thought is an online inspiration platform offering motivational videos, memes, articles, and positive lifestyle products to uplift and encourage its community. Users can freely explore, save, and share content across social media channels, spreading positivity and meaningful messages that inspire personal growth and bring encouragement to people around the world.",
+
+  "project.poppy.description": "Poppy is a wedding floral service platform that empowers couples to browse floral collections, build fully customized wedding flower proposals, and receive transparent pricing upfront. The platform handles end-to-end floral services including professional design consultation, delivery, and on-site setup, making the process of creating a beautiful, stress-free wedding floral experience simple and enjoyable.",
+
+  "project.fidovn.description": "Fido.vn is a Vietnamese online recruitment platform connecting job seekers with employers through intelligent job posting and CV search systems. Tailored for Gen Z professionals, it features an AI-powered CV builder that automatically generates polished, professional resumes, helping young candidates stand out and find suitable career opportunities faster in a competitive job market.",
+
+  "project.multiangle.description": "Multiangle AI is a cutting-edge artificial intelligence platform empowering businesses with advanced analytics, automation, and machine learning capabilities. Designed to accelerate innovation and sustainable growth, the platform provides organizations with intelligent tools and data-driven insights to streamline operations, uncover opportunities, and make smarter strategic decisions in an increasingly competitive digital landscape.",
+
+  "project.tattoo.description": "The Thế Trung Tattoo is a professional tattoo studio website showcasing custom tattoo services, detailed artwork collections, transparent pricing, and the complete tattooing process. Clients can explore the studio's portfolio, read genuine customer reviews, and conveniently book online consultations to discuss their ideas and receive high-quality, personalized tattoo experiences from skilled artists.",
+
+  "project.baby.description": "BabyQuip is a baby gear rental platform connecting traveling families with trusted local providers across thousands of locations. All equipment including cribs, strollers, and car seats is delivered to your accommodation, thoroughly cleaned, and safety-checked before every rental. The platform also offers party rentals and professional baby gear cleaning services for added convenience.",
+
+  "project.signinapp.description": "Sign In App is a smart visitor and workplace management platform that seamlessly combines visitor check-in, employee sign-in, room booking, and emergency response into one connected system. Trusted by over 25,000 locations worldwide and certified ISO 27001, GDPR, and HIPAA compliant, it helps organizations of all sizes manage access, safety, and workplace experience effortlessly.",
+
+  "project.singlekey.description": "SingleKey is a comprehensive rental risk management platform built for Canadian landlords. It provides thorough tenant screening with credit and background checks, automated monthly rent collection, and income guarantee protection covering up to $60,000 in unpaid rent, $10,000 in property damage, and $2,000 in eviction legal fees, giving landlords complete peace of mind.",
+
+  "project.swipedon.description": "SwipedOn is an employee and workspace management software trusted by over 9,000 workplaces globally. It tracks staff check-ins, supports hybrid work arrangements, and enables easy desk and meeting room bookings from any device. Currently merging with Sign In App, SwipedOn is evolving into a next-generation unified platform for smarter, safer workplace management."
 }
