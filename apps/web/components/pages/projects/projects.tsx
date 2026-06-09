@@ -14,7 +14,7 @@ import poppytPoster from "@/assets/image/projects-page/poppy-project/poster.png"
 import fidovnPoster from "@/assets/image/projects-page/fidovn-project/poster.png";
 import multianglePoster from "@/assets/image/projects-page/multiangle-project/poster.png";
 import tattooPoster from "@/assets/image/projects-page/tattoo/poster.png";
-import babyPoster from "@/assets/image/projects-page/babyQuiq-project/poster.jpg";
+import babyPoster from "@/assets/image/projects-page/BabyQuip-project/poster.jpg";
 import signInAppPoster from "@/assets/image/projects-page/signinapp-project/poster.webp";
 import singleKeyPoster from "@/assets/image/projects-page/singlekey-project/Poster.webp";
 import swipedonPoster from "@/assets/image/projects-page/swipedon-project/poster.jpg";
@@ -158,7 +158,7 @@ const PROJECT_BLOCKS: readonly ProjectBlock[] = [
   }, 
   {
     id: "baby",
-    label: "BabyQuiq – Baby Care App",
+    label: "BabyQuip – Baby Care App",
     variant: "card",
     slug: "baby",
     category: "Web & App Development",

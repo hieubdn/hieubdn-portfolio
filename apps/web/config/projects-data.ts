@@ -11,8 +11,11 @@ export type ProjectData = {
 // Order matches the visual grid reading order (left→right, top→bottom):
 // walker | khora | tryotel
 // flight | poppy | thought
-// travel | tapy  | granada
-// fidovn | multiangle | tattoo
+// swipedon | tapy  | granada
+// fidovn | baby | tattoo
+// travel | multiangle | singlekey
+// signinapp 
+
 export const PROJECTS_DATA: readonly ProjectData[] = [
   {
     slug: "walkerip",
@@ -136,12 +139,12 @@ export const PROJECTS_DATA: readonly ProjectData[] = [
   },
   {
     slug: "baby",
-    name: "BabyQuiq – Baby Care App",
+    name: "BabyQuip – Baby Care App",
     category: "Web & App Development",
     description:
       "A baby gear rental platform connecting traveling families with local providers. Equipment is delivered to your stay, cleaned and safety-checked. Also offers party rentals and professional baby gear cleaning services.",
-    design: "BabyQuiq",
-    client: "BabyQuiq",
+    design: "BabyQuip",
+    client: "BabyQuip",
     projectUrl: "https://www.babyquip.com/",
   },
   {
