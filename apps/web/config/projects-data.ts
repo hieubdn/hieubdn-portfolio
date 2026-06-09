@@ -11,8 +11,11 @@ export type ProjectData = {
 // Order matches the visual grid reading order (left→right, top→bottom):
 // walker | khora | tryotel
 // flight | poppy | thought
-// travel | tapy  | granada
-// fidovn | multiangle | tattoo
+// swipedon | tapy  | granada
+// fidovn | baby | tattoo
+// travel | multiangle | singlekey
+// signinapp 
+
 export const PROJECTS_DATA: readonly ProjectData[] = [
   {
     slug: "walkerip",
