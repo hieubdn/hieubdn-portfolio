@@ -17,7 +17,7 @@ import tattooPoster from "@/assets/image/projects-page/tattoo/poster.png";
 import babyPoster from "@/assets/image/projects-page/babyQuiq-project/poster.jpg";
 import signInAppPoster from "@/assets/image/projects-page/signinapp-project/poster.webp";
 import singleKeyPoster from "@/assets/image/projects-page/singlekey-project/Poster.webp";
-import swipedonePoster from "@/assets/image/projects-page/swipedon-project/poster.jpg";
+import swipedonPoster from "@/assets/image/projects-page/swipedon-project/poster.jpg";
 
 
 import { useLocaleText } from "@/components/layout/setting/translate/locale-provider";
@@ -186,7 +186,7 @@ const PROJECT_BLOCKS: readonly ProjectBlock[] = [
     variant: "card",
     slug: "swipedon",
     category: "Web & App Development",
-    image: swipedonePoster,
+    image: swipedonPoster,
   },
 
 ] as const;

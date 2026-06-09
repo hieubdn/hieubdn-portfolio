@@ -23,7 +23,7 @@ import tattooPoster from "@/assets/image/projects-page/tattoo/poster.png";
 import babyPoster from "@/assets/image/projects-page/babyQuiq-project/poster.jpg";
 import signInAppPoster from "@/assets/image/projects-page/signinapp-project/poster.webp";
 import singleKeyPoster from "@/assets/image/projects-page/singlekey-project/Poster.webp";
-import swipedonePoster from "@/assets/image/projects-page/swipedon-project/poster.jpg";
+import swipedonPoster from "@/assets/image/projects-page/swipedon-project/poster.jpg";
 
 import flightDetail1 from "@/assets/image/projects-page/flight-project/flight-detail(1).png";
 import flightDetail2 from "@/assets/image/projects-page/flight-project/flight-detail(2).jpg";
@@ -63,11 +63,11 @@ import signinappDetail4 from "@/assets/image/projects-page/signinapp-project/sig
 import signinappDetail5 from "@/assets/image/projects-page/signinapp-project/signInAppDetail(5).png";
 import signinappDetail6 from "@/assets/image/projects-page/signinapp-project/signInAppDetail(6).png";
 import signinappDetail7 from "@/assets/image/projects-page/signinapp-project/signInAppDetail(7).png";
-import singlekeyDetail1 from "@/assets/image/projects-page/singlekey-project/singleKeyDetail(1).png";
-import singlekeyDetail2 from "@/assets/image/projects-page/singlekey-project/singleKeyDetail(2).png";
-import singlekeyDetail3 from "@/assets/image/projects-page/singlekey-project/singleKeyDetail(3).png";
-import singlekeyDetail4 from "@/assets/image/projects-page/singlekey-project/singleKeyDetail(4).png";
-import singlekeyDetail5 from "@/assets/image/projects-page/singlekey-project/singleKeyDetail(5).png";
+import singlekeyDetail1 from "@/assets/image/projects-page/singlekey-project/singlekeyDetail(1).png";
+import singlekeyDetail2 from "@/assets/image/projects-page/singlekey-project/singlekeyDetail(2).png";
+import singlekeyDetail3 from "@/assets/image/projects-page/singlekey-project/singlekeyDetail(3).png";
+import singlekeyDetail4 from "@/assets/image/projects-page/singlekey-project/singlekeyDetail(4).png";
+import singlekeyDetail5 from "@/assets/image/projects-page/singlekey-project/singlekeyDetail(5).png";
 import swipedonDetail1 from "@/assets/image/projects-page/swipedon-project/swipedonDetail(1).png";
 import swipedonDetail2 from "@/assets/image/projects-page/swipedon-project/swipedonDetail(2).png";
 import swipedonDetail3 from "@/assets/image/projects-page/swipedon-project/swipedonDetail(3).png";
@@ -93,7 +93,7 @@ const PROJECT_IMAGES: Record<string, StaticImageData> = {
   baby: babyPoster,
   signinapp: signInAppPoster,
   singlekey: singleKeyPoster,
-  swipedon: swipedonePoster,
+  swipedon: swipedonPoster,
 };
 
 const PROJECT_DETAIL_IMAGES: Record<string, StaticImageData[]> = {
