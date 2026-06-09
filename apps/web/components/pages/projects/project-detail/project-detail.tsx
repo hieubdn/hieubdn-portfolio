@@ -23,7 +23,7 @@ import tattooPoster from "@/assets/image/projects-page/tattoo/poster.png";
 import babyPoster from "@/assets/image/projects-page/babyQuiq-project/poster.jpg";
 import signInAppPoster from "@/assets/image/projects-page/signinapp-project/poster.webp";
 import singleKeyPoster from "@/assets/image/projects-page/singlekey-project/Poster.webp";
-import swipedonePoster from "@/assets/image/projects-page/swipedon-project/poster.jpg";
+import swipedonPoster from "@/assets/image/projects-page/swipedon-project/poster.jpg";
 
 import flightDetail1 from "@/assets/image/projects-page/flight-project/flight-detail(1).png";
 import flightDetail2 from "@/assets/image/projects-page/flight-project/flight-detail(2).jpg";
