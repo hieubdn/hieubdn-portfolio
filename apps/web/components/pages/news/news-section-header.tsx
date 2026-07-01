@@ -10,7 +10,7 @@ export default function NewsSectionHeader() {
     <header className={styles.header}>
       <div className={styles.headingWrapper}>
         <h1 className={styles.heading}>{t("news.block.title")}</h1>
-        <div className={styles.divider} aria-hidden="true">//</div>
+        <div className={styles.divider} aria-hidden="true">{"//"}</div>
       </div>
       <p className={styles.subtitle}>{t("news.block.subtitle")}</p>
     </header>
