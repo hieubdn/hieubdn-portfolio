@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from "react";
+
 import Image from "next/image";
 
 import { useLocaleText } from "@/components/layout/setting/translate/locale-provider";
@@ -21,11 +23,23 @@ const TECH_LINE_KEYS = [
 
 export default function CavaCompany() {
   const { t } = useLocaleText();
+  const [expanded, setExpanded] = useState(false);
 
   return (
     <div className={styles.root}>
-      <div className={styles.meta}>
-        <div className={styles.logoWrapper}>
+      <div
+        className={styles.meta}
+        onClick={() => setExpanded((prev) => !prev)}
+        role="button"
+        aria-expanded={expanded}
+      >
+        <a
+          href="https://www.linkedin.com/company/cava-/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.logoWrapper}
+          onClick={(e) => e.stopPropagation()}
+        >
           <div className={styles.logoInner}>
             <Image
               src={cavaLogo}
@@ -35,45 +49,44 @@ export default function CavaCompany() {
               className={styles.logo}
             />
           </div>
-        </div>
+        </a>
         <div className={styles.metaInfo}>
-          <h3 className={styles.company}>
-            {t("about.page.experience.cava.company")}
-          </h3>
-          <span className={styles.positionValue}>
+          <h3 className={styles.positionValue}>
             {t("about.page.experience.cava.positionValue")}
+          </h3>
+          <span className={styles.company}>
+            {t("about.page.experience.cava.company")}
           </span>
-          <span className={styles.metaLine}>
-            <span className={styles.durationValue}>
-              {t("about.page.experience.cava.durationValue")}
-            </span>
-            ◦
-            <span className={styles.locationValue}>
-              {t("about.page.experience.cava.locationValue")}
-            </span>
+          <span className={styles.durationValue}>
+            {t("about.page.experience.cava.durationValue")} <span className={styles.metaLine}>◦</span> {t("about.page.experience.cava.locationValue")}
           </span>
         </div>
+        <span className={`${styles.chevron} ${expanded ? styles.chevronOpen : ""}`}>▾</span>
       </div>
-      <div className={styles.responsibilities}>
-        <span className={styles.subheading}>
-          {t("about.page.experience.cava.responsibilities")}:{" "}
-        </span>
-        <ul className={styles.bulletList}>
-          {RESPONSIBILITY_KEYS.map((key) => (
-            <li key={key}>{t(key)}</li>
-          ))}
-        </ul>
-      </div>
-      <div className={styles.techStack}>
-        <span className={styles.subheading}>
-          {t("about.page.experience.cava.techStack")}:
-        </span>
-        <ul className={styles.techList}>
-          {TECH_LINE_KEYS.map((key) => (
-            <li key={key}>{t(key)}</li>
-          ))}
-        </ul>
-      </div>
+      {expanded && (
+        <div className={styles.details}>
+          <div className={styles.responsibilities}>
+            <span className={styles.subheading}>
+              {t("about.page.experience.cava.responsibilities")}:{" "}
+            </span>
+            <ul className={styles.bulletList}>
+              {RESPONSIBILITY_KEYS.map((key) => (
+                <li key={key}>{t(key)}</li>
+              ))}
+            </ul>
+          </div>
+          <div className={styles.techStack}>
+            <span className={styles.subheading}>
+              {t("about.page.experience.cava.techStack")}:
+            </span>
+            <ul className={styles.techList}>
+              {TECH_LINE_KEYS.map((key) => (
+                <li key={key}>{t(key)}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
