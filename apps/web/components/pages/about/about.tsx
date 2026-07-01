@@ -13,7 +13,7 @@ import EducationBlock from "./education-block/education-block";
 import HdwebsoftCompany from "./hdwebsoft-company/hdwebsoft-company";
 import ImageBlock from "./image-block/image-block";
 import MindxCompany from "./mindx-company/mindx-company";
-import Phase2Company from "./phase2-company/phase2-company";
+// import Phase2Company from "./phase2-company/phase2-company";
 import SectionHeading from "./section-heading/section-heading";
 import SummaryBlock from "./summary-block/summary-block";
 import SummaryKickerBlock from "./summary-kicker-block/summary-kicker-block";
@@ -31,7 +31,6 @@ type AboutBlockId =
   | "workExperienceHeading"
   | "hdwebsoft"
   | "toyar"
-  | "phase2"
   | "cava"
   | "otherExperienceHeading"
   | "mindx"
@@ -79,7 +78,7 @@ export default function AboutSection() {
     },
     { id: "hdwebsoft", label: "HDWEBSOFT", variant: "card", render: () => <HdwebsoftCompany /> },
     { id: "toyar", label: "Toyar", variant: "card", render: () => <ToyarCompany /> },
-    { id: "phase2", label: "Phase 2", variant: "card", render: () => <Phase2Company /> },
+    // { id: "phase2", label: "Phase 2", variant: "card", render: () => <Phase2Company /> },
     { id: "cava", label: "Cava", variant: "card", render: () => <CavaCompany /> },
     {
       id: "otherExperienceHeading",

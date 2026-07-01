@@ -1,5 +1,6 @@
 import { getNews } from "@/lib/news";
 
+import NewsSectionHeader from "./news-section-header";
 import NewsCard from "./news-card/news-card";
 import styles from "./news-section.module.scss";
 
@@ -8,9 +9,7 @@ export default async function NewsSection() {
 
   return (
     <section className={styles.root} aria-label="Tech news">
-      <header className={styles.header}>
-          <h1 className={styles.heading}>Tech News</h1>
-      </header>
+      <NewsSectionHeader />
 
       {articles.length === 0 ? (
         <p className={styles.empty}>Unable to load articles right now.</p>

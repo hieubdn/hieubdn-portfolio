@@ -21,11 +21,12 @@
 
   .brand {
     display: inline-flex;
+    padding-bottom: 8px;
     align-items: center;
     gap: 8px;
     min-width: 0;
-    font-family: "Open Sans", sans-serif;
-    font-size: 48px;
+    font-family: "Verdana", sans-serif;
+    font-size: 32px;
     font-weight: 900;
     letter-spacing: 1.5px;
     text-decoration: none;
@@ -53,18 +54,6 @@
         background-position: 100% 50%;
       }
     }
-
-    @media (max-width: 919px) {
-      font-size: 40px;
-    }
-
-    @media (max-width: 425px) {
-      font-size: 42px;
-    }
-
-    @media (max-width: 400px) {
-      font-size: 32px;
-    }
   }
 
   .nav {
@@ -72,15 +61,15 @@
     flex-shrink: 0;
     align-items: center;
     gap: 32px;
-    font-family: "Open Sans", sans-serif;
-    font-size: 18px;
+    font-family: "Verdana", sans-serif;
+    font-size: 17px;
     font-weight: 500;
     letter-spacing: 1.2px;
     line-height: 32px;
     color: var(--header-text);
 
     @media (max-width: 919px) {
-      gap: 16px;
+      gap: 8px;
     }
   }
 
@@ -89,8 +78,12 @@
     align-items: center;
     gap: 32px;
 
+    @media (max-width: 1024px) {
+      gap: 12px;
+    }
+
     @media (max-width: 955px) {
-      gap: 16px;
+      gap: 8px;
     }
 
     @media (max-width: 900px) {

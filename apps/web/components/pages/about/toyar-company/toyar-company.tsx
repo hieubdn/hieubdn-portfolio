@@ -1,6 +1,9 @@
 "use client";
 
+import Image from "next/image";
+
 import { useLocaleText } from "@/components/layout/setting/translate/locale-provider";
+import toyarLogo from "@/assets/image/about/toyar_logo.jpg";
 
 import styles from "./toyar-company.module.scss";
 
@@ -20,21 +23,34 @@ export default function ToyarCompany() {
   return (
     <div className={styles.root}>
       <div className={styles.meta}>
-        <h3 className={styles.company}>
-          {t("about.page.experience.toyar.company")}
-        </h3>
-        <span className={styles.positionValue}>
-          {t("about.page.experience.toyar.positionValue")}
-        </span>
-        <span className={styles.metaLine}>
-          <span className={styles.durationValue}>
-            {t("about.page.experience.toyar.durationValue")}
+        <div className={styles.logoWrapper}>
+          <div className={styles.logoInner}>
+            <Image
+              src={toyarLogo}
+              alt="Toyar logo"
+              width={120}
+              height={120}
+              className={styles.logo}
+            />
+          </div>
+        </div>
+        <div className={styles.metaInfo}>
+          <h3 className={styles.company}>
+            {t("about.page.experience.toyar.company")}
+          </h3>
+          <span className={styles.positionValue}>
+            {t("about.page.experience.toyar.positionValue")}
           </span>
-          ◦
-          <span className={styles.locationValue}>
-            {t("about.page.experience.toyar.locationValue")}
+          <span className={styles.metaLine}>
+            <span className={styles.durationValue}>
+              {t("about.page.experience.toyar.durationValue")}
+            </span>
+            ◦
+            <span className={styles.locationValue}>
+              {t("about.page.experience.toyar.locationValue")}
+            </span>
           </span>
-        </span>
+        </div>
       </div>
       <div className={styles.responsibilities}>
         <span className={styles.subheading}>
