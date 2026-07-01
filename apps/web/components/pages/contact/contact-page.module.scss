@@ -29,7 +29,7 @@
     color: var(--color-home-text-body);
     letter-spacing: 1.5px;
     margin: 0;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Verdana", sans-serif;
   }
 
   .infoItem {
@@ -221,7 +221,7 @@
     line-height: 1.5;
     font-weight: 700;
     color: var(--color-home-text-heading, #ffffff);
-    font-family: "Open Sans", sans-serif;
+    font-family: "Verdana", sans-serif;
 
     @media (max-width: 768px) {
       font-size: 32px;
@@ -279,7 +279,7 @@
     background: #ffffff0a;
     color: var(--color-home-text-body);
     font-size: 16px;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Verdana", sans-serif;
     outline: none;
     transition:
       border-color 0.15s ease,
@@ -339,7 +339,7 @@
   color: var(--color-home-text-body, #e5e7eb);
   font-size: 16px;
   letter-spacing: 2px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Verdana", sans-serif;
   cursor: pointer;
   text-transform: uppercase;
   transition:

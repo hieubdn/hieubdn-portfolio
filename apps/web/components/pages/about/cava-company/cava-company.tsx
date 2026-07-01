@@ -1,6 +1,9 @@
 "use client";
 
+import Image from "next/image";
+
 import { useLocaleText } from "@/components/layout/setting/translate/locale-provider";
+import cavaLogo from "@/assets/image/about/cava_logo.jpg";
 
 import styles from "./cava-company.module.scss";
 
@@ -22,21 +25,34 @@ export default function CavaCompany() {
   return (
     <div className={styles.root}>
       <div className={styles.meta}>
-        <h3 className={styles.company}>
-          {t("about.page.experience.cava.company")}
-        </h3>
-        <span className={styles.positionValue}>
-          {t("about.page.experience.cava.positionValue")}
-        </span>
-        <span className={styles.metaLine}>
-          <span className={styles.durationValue}>
-            {t("about.page.experience.cava.durationValue")}
+        <div className={styles.logoWrapper}>
+          <div className={styles.logoInner}>
+            <Image
+              src={cavaLogo}
+              alt="CAVA logo"
+              width={120}
+              height={120}
+              className={styles.logo}
+            />
+          </div>
+        </div>
+        <div className={styles.metaInfo}>
+          <h3 className={styles.company}>
+            {t("about.page.experience.cava.company")}
+          </h3>
+          <span className={styles.positionValue}>
+            {t("about.page.experience.cava.positionValue")}
           </span>
-          ◦
-          <span className={styles.locationValue}>
-            {t("about.page.experience.cava.locationValue")}
+          <span className={styles.metaLine}>
+            <span className={styles.durationValue}>
+              {t("about.page.experience.cava.durationValue")}
+            </span>
+            ◦
+            <span className={styles.locationValue}>
+              {t("about.page.experience.cava.locationValue")}
+            </span>
           </span>
-        </span>
+        </div>
       </div>
       <div className={styles.responsibilities}>
         <span className={styles.subheading}>

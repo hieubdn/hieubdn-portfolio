@@ -1,6 +1,9 @@
 "use client";
 
+import Image from "next/image";
+
 import { useLocaleText } from "@/components/layout/setting/translate/locale-provider";
+import hdwebsoftLogo from "@/assets/image/about/hdwebsoft_logo.jpg";
 
 import styles from "./hdwebsoft-company.module.scss";
 
@@ -13,12 +16,7 @@ const RESPONSIBILITY_KEYS = [
 ] as const;
 
 const TECH_LINE_KEYS = [
-  "about.page.experience.hdwebsoft.tech.frontend",
-  "about.page.experience.hdwebsoft.tech.backend",
-  "about.page.experience.hdwebsoft.tech.cloud",
-  "about.page.experience.hdwebsoft.tech.database",
-  "about.page.experience.hdwebsoft.tech.integrations",
-  "about.page.experience.hdwebsoft.tech.devops",
+  "about.page.experience.hdwebsoft.tech.tech"
 ] as const;
 
 export default function HdwebsoftCompany() {
@@ -27,21 +25,34 @@ export default function HdwebsoftCompany() {
   return (
     <div className={styles.root}>
       <div className={styles.meta}>
-        <h3 className={styles.company}>
-          {t("about.page.experience.hdwebsoft.company")}
-        </h3>
-        <span className={styles.positionValue}>
-          {t("about.page.experience.hdwebsoft.positionValue")}
-        </span>
-        <span className={styles.metaLine}>
-          <span className={styles.durationValue}>
-            {t("about.page.experience.hdwebsoft.durationValue")}
+        <div className={styles.logoWrapper}>
+          <div className={styles.logoInner}>
+            <Image
+              src={hdwebsoftLogo}
+              alt="HDWEBSOFT logo"
+              width={120}
+              height={120}
+              className={styles.logo}
+            />
+          </div>
+        </div>
+        <div className={styles.metaInfo}>
+          <h3 className={styles.company}>
+            {t("about.page.experience.hdwebsoft.company")}
+          </h3>
+          <span className={styles.positionValue}>
+            {t("about.page.experience.hdwebsoft.positionValue")}
           </span>
-          ◦
-          <span className={styles.locationValue}>
-            {t("about.page.experience.hdwebsoft.locationValue")}
+          <span className={styles.metaLine}>
+            <span className={styles.durationValue}>
+              {t("about.page.experience.hdwebsoft.durationValue")}
+            </span>
+            ◦
+            <span className={styles.locationValue}>
+              {t("about.page.experience.hdwebsoft.locationValue")}
+            </span>
           </span>
-        </span>
+        </div>
       </div>
       <div className={styles.responsibilities}>
         <span className={styles.subheading}>
