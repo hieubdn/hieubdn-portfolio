@@ -22,6 +22,92 @@ $duration: 320ms;
   }
 }
 
+@keyframes bellRing {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  1% {
+    transform: translateY(-6px) rotate(0deg);
+  }
+
+  2% {
+    transform: translateY(-6px) rotate(20deg);
+  }
+
+  4% {
+    transform: translateY(-6px) rotate(-20deg);
+  }
+
+  6% {
+    transform: translateY(-6px) rotate(16deg);
+  }
+
+  7% {
+    transform: translateY(-6px) rotate(-16deg);
+  }
+
+  9% {
+    transform: translateY(-6px) rotate(12deg);
+  }
+
+  11% {
+    transform: translateY(-6px) rotate(-12deg);
+  }
+
+  13%,
+  44% {
+    transform: translateY(-6px) rotate(0deg);
+  }
+
+  46% {
+    transform: translateY(-6px) rotate(20deg);
+  }
+
+  48% {
+    transform: translateY(-6px) rotate(-20deg);
+  }
+
+  50% {
+    transform: translateY(-6px) rotate(16deg);
+  }
+
+  51% {
+    transform: translateY(-6px) rotate(-16deg);
+  }
+
+  53% {
+    transform: translateY(-6px) rotate(12deg);
+  }
+
+  55% {
+    transform: translateY(-6px) rotate(-12deg);
+  }
+
+  57% {
+    transform: translateY(-6px) rotate(0deg);
+  }
+
+  59% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+.panelTitleWrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--shell-text);
+    transform-origin: top center;
+    animation: bellRing 3s ease-in-out infinite;
+  }
+}
+
 .panel {
   position: fixed;
   top: 0;

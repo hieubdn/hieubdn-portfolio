@@ -1,6 +1,7 @@
 "use client";
 
 import { forwardRef, useEffect, useRef } from "react";
+import { Notification } from "@/assets/svg";
 import { useNotificationFeed } from "./notification-feed-context";
 import styles from "./styles.module.scss";
 
@@ -29,9 +30,12 @@ export const NotificationPanel = forwardRef<HTMLElement, NotificationPanelProps>
         aria-hidden={!open}
       >
         <div className={styles.panelHeader}>
-          <h2 id="notification-panel-title" className={styles.panelTitle}>
-            Notification
-          </h2>
+          <div className={styles.panelTitleWrapper}>
+            <Notification />
+            <h2 id="notification-panel-title" className={styles.panelTitle}>
+              Notification
+            </h2>
+          </div>
           <button
             ref={closeRef}
             type="button"

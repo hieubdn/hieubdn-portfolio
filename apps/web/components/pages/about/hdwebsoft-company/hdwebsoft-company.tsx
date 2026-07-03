@@ -9,12 +9,19 @@ import hdwebsoftLogo from "@/assets/image/about/hdwebsoft_logo.jpg";
 
 import styles from "./hdwebsoft-company.module.scss";
 
-const RESPONSIBILITY_KEYS = [
-  "about.page.experience.hdwebsoft.responsibility.0",
-  "about.page.experience.hdwebsoft.responsibility.1",
-  "about.page.experience.hdwebsoft.responsibility.2",
-  "about.page.experience.hdwebsoft.responsibility.3",
-  "about.page.experience.hdwebsoft.responsibility.4",
+const CONVOSO_KEYS = [
+  "about.page.experience.hdwebsoft.project.job.0",
+  "about.page.experience.hdwebsoft.project.job.1",
+  "about.page.experience.hdwebsoft.project.job.2",
+  "about.page.experience.hdwebsoft.project.job.3",
+] as const;
+
+const POPPY_KEYS = [
+  "about.page.experience.hdwebsoft.project.job.4",
+  "about.page.experience.hdwebsoft.project.job.5",
+  "about.page.experience.hdwebsoft.project.job.6",
+  "about.page.experience.hdwebsoft.project.job.7",
+  "about.page.experience.hdwebsoft.project.job.8",
 ] as const;
 
 const TECH_LINE_KEYS = [
@@ -69,10 +76,26 @@ export default function HdwebsoftCompany() {
             <span className={styles.subheading}>
               {t("about.page.experience.hdwebsoft.responsibilities")}:{" "}
             </span>
-            <ul className={styles.bulletList}>
-              {RESPONSIBILITY_KEYS.map((key) => (
-                <li key={key}>{t(key)}</li>
-              ))}
+            <ul className={styles.projectList}>
+              <li className={styles.projectHeading}>
+                {t("about.page.experience.hdwebsoft.project.0")}:
+                <ul className={styles.bulletList}>
+                  {CONVOSO_KEYS.map((key) => (
+                    <li key={key}>{t(key)}</li>
+                  ))}
+                </ul>
+              </li>
+              <li className={styles.projectHeading}>
+                {t("about.page.experience.hdwebsoft.project.1")}:
+                <ul className={styles.bulletList}>
+                  {POPPY_KEYS.map((key) => (
+                    <li key={key}>{t(key)}</li>
+                  ))}
+                </ul>
+              </li>
+              <li className={styles.projectHeading}>
+                {t("about.page.experience.hdwebsoft.project.2")}
+              </li>
             </ul>
           </div>
           <div className={styles.techStack}>

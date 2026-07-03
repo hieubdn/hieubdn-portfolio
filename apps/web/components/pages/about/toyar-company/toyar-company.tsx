@@ -9,12 +9,23 @@ import toyarLogo from "@/assets/image/about/toyar_logo.jpg";
 
 import styles from "./toyar-company.module.scss";
 
-const RESPONSIBILITY_KEYS = [
-  "about.page.experience.toyar.responsibility.0",
-  "about.page.experience.toyar.responsibility.1",
-  "about.page.experience.toyar.responsibility.2",
-  "about.page.experience.toyar.responsibility.3",
-  "about.page.experience.toyar.responsibility.4",
+const FIDOBOX_KEYS = [
+  "about.page.experience.toyar.project.job.0",
+  "about.page.experience.toyar.project.job.1",
+  "about.page.experience.toyar.project.job.2",
+  "about.page.experience.toyar.project.job.3",
+  "about.page.experience.toyar.project.job.4",
+  "about.page.experience.toyar.project.job.5",
+] as const;
+
+const FIDOVN_KEYS = [
+  "about.page.experience.toyar.project.job.6",
+  "about.page.experience.toyar.project.job.7",
+  "about.page.experience.toyar.project.job.8",
+  "about.page.experience.toyar.project.job.9",
+  "about.page.experience.toyar.project.job.10",
+  "about.page.experience.toyar.project.job.11",
+  "about.page.experience.toyar.project.job.12",
 ] as const;
 
 const TECH_LINE_KEYS = ["about.page.experience.toyar.tech"] as const;
@@ -67,10 +78,23 @@ export default function ToyarCompany() {
             <span className={styles.subheading}>
               {t("about.page.experience.toyar.responsibilities")}:{" "}
             </span>
-            <ul className={styles.bulletList}>
-              {RESPONSIBILITY_KEYS.map((key) => (
-                <li key={key}>{t(key)}</li>
-              ))}
+            <ul className={styles.projectList}>
+              <li className={styles.projectHeading}>
+                {t("about.page.experience.toyar.project.1")}:
+                <ul className={styles.bulletList}>
+                  {FIDOVN_KEYS.map((key) => (
+                    <li key={key}>{t(key)}</li>
+                  ))}
+                </ul>
+              </li>
+              <li className={styles.projectHeading}>
+                {t("about.page.experience.toyar.project.0")}:
+                <ul className={styles.bulletList}>
+                  {FIDOBOX_KEYS.map((key) => (
+                    <li key={key}>{t(key)}</li>
+                  ))}
+                </ul>
+              </li>
             </ul>
           </div>
           <div className={styles.techStack}>

@@ -5,7 +5,6 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 import profileImg1 from "@/assets/image/profile-block/hieubdn.jpg";
-import profileImg2 from "@/assets/image/profile-block/hiubdn.jpg";
 import { PATH_URL } from "@/config/path";
 import { useLocaleText } from "@/components/layout/setting/translate/locale-provider";
 
@@ -13,7 +12,6 @@ import styles from "./profile-block.module.scss";
 
 const PROFILE_IMAGES = [
   { src: profileImg1 },
-  { src: profileImg2, slideTweak: "hiubdn" as const },
 ] as const;
 
 const PROFILE_ROTATE_MS = 5000;
