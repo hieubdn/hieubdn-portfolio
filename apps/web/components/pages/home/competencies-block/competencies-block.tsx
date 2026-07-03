@@ -55,7 +55,6 @@ export default function CompetenciesBlock() {
             type="button"
             className={styles.item}
             onClick={() => open(key)}
-            aria-label={t(`competencies.popup.${key}.title`)}
           >
             <Icon />
             <span className={styles.text}>{t(`competencies.block.${key}`)}</span>

@@ -13,11 +13,7 @@ export default function AboutBlock() {
   const { t } = useLocaleText();
 
   return (
-    <Link
-      href={PATH_URL.ABOUT}
-      className={styles.root}
-      aria-label="Thông tin thêm — trang giới thiệu"
-    >
+    <Link href={PATH_URL.ABOUT} className={styles.root}>
       <div className={styles.media}>
         <Image
           src={signature}

@@ -11,11 +11,7 @@ import styles from "./call-to-action.module.scss";
 export default function CallToAction() {
   const { t } = useLocaleText();
   return (
-    <Link
-      href={PATH_URL.CONTACT}
-      className={styles.root}
-      aria-label={t("call.action.label")}
-    >
+    <Link href={PATH_URL.CONTACT} className={styles.root}>
       <span className={styles.icon} aria-hidden>
         <WorkTogetherStarsIcon />
       </span>

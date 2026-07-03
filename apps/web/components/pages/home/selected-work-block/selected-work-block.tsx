@@ -86,8 +86,6 @@ export default function SelectedWorkBlock() {
     SELECTED_PROJECTS[currentProjectIndex] ?? SELECTED_PROJECTS[0];
   const href = normalizeExternalHref(current.href);
 
-  const ariaLabel = `${t("selectedWork.block.ariaLabel")} — ${current.name}`;
-
   const idx0 = pair[0];
   const idx1 = pair[1];
   const p0 = SELECTED_PROJECTS[idx0] ?? SELECTED_PROJECTS[0];
@@ -100,7 +98,6 @@ export default function SelectedWorkBlock() {
       target="_blank"
       rel="noopener noreferrer"
       prefetch={false}
-      aria-label={ariaLabel}
     >
       <div className={styles.media}>
         {count <= 1 ? (

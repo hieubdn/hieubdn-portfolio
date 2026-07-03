@@ -13,11 +13,7 @@ export default function ProjectBlock() {
   const { t } = useLocaleText();
 
   return (
-    <Link
-      href={PATH_URL.PROJECTS}
-      className={styles.root}
-      aria-label="Dự án — trang showcase"
-    >
+    <Link href={PATH_URL.PROJECTS} className={styles.root}>
       <div className={styles.media}>
         <Image
           src={laptop}
