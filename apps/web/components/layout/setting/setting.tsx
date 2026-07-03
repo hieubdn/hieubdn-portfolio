@@ -6,7 +6,7 @@ import { useMainScreen } from "@/components/layout/main-screen/main-screen-conte
 import LanguageSettingPanel from "@/components/layout/setting/translate/language-setting";
 import { useLocaleText } from "@/components/layout/setting/translate/locale-provider";
 import ThemeSettingPanel from "@/components/layout/setting/theme/theme";
-import styles from "./styles.module.scss";
+import styles from "./setting.module.scss";
 
 const SETTINGS_STACK_MQ = "(max-width: 960px)";
 

@@ -29,7 +29,7 @@ export default function ThemeSettingPanel() {
         <Theme /> {t("setting.page.option.darkMode")}
       </h3>
 
-      <ul className={styles.optionList} role="radiogroup" aria-label="Dark mode preference">
+      <ul className={styles.optionList} role="radiogroup" aria-label={t("aria.theme.darkMode")}>
         {darkModeOptions.map((option) => {
           const selected = preference === option.preference;
           const isAutomatic = option.preference === "automatic";

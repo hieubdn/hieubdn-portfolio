@@ -5,14 +5,13 @@ import path from "path";
 
 const LOCALES_DIR = path.resolve(process.cwd(), "database/locales");
 const SOURCE_FILE = path.join(LOCALES_DIR, "en.json");
-const EMAIL = "hieubdn@gmail.com"; // tăng giới hạn lên 10k words/ngày
+const EMAIL = process.env.MYMEMORY_EMAIL ?? "hieubdn@gmail.com";
 
 const TARGET_LANGS = [
   "vi",    // Tiếng Việt
   "ja",    // Tiếng Nhật
   "zh-TW", // Tiếng Trung phồn thể
   "zh-CN", // Tiếng Trung giản thể
-  "en-GB", // Tiếng Anh (UK)
   "ko",    // Tiếng Hàn
   "de",    // Tiếng Đức
 ];
@@ -20,7 +19,10 @@ const TARGET_LANGS = [
 async function readJson(filePath: string): Promise<Record<string, string>> {
   try {
     return JSON.parse(await fs.readFile(filePath, "utf-8"));
-  } catch {
+  } catch (err) {
+    if ((err as NodeJS.ErrnoException).code !== "ENOENT") {
+      console.warn(`⚠ Could not parse ${filePath}, treating as empty:`, err);
+    }
     return {};
   }
 }
@@ -36,14 +38,9 @@ async function translateText(text: string, lang: string): Promise<string> {
 
 async function main() {
   const source = await readJson(SOURCE_FILE);
-
-  // en-GB giống en, copy thẳng không cần dịch
-  await fs.writeFile(
-    path.join(LOCALES_DIR, "en-GB.json"),
-    JSON.stringify(source, null, 2),
-    "utf-8"
-  );
-  console.log("✓ en-GB.json");
+  if (Object.keys(source).length === 0) {
+    throw new Error(`Source dictionary ${SOURCE_FILE} is empty or unreadable.`);
+  }
 
   for (const lang of TARGET_LANGS) {
     const targetPath = path.join(LOCALES_DIR, `${lang}.json`);
@@ -68,4 +65,7 @@ async function main() {
   }
 }
 
-main().catch(console.error);
+main().catch((err) => {
+  console.error(err);
+  process.exitCode = 1;
+});

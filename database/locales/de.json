@@ -280,5 +280,20 @@
   "about.page.experience.toyar.project.job.10": "Erstellung einer kartenbasierten Immobiliensuche mit einem verifizierten Inseratsabzeichen-System, In-App-Anrufen/-Nachrichten von Vermietern und Tools zur Verwaltung/Nachverfolgung von Inseraten für Eigentümer und Makler.",
   "about.page.experience.toyar.project.job.11": "Implementierte mehrsprachige (i18n) Unterstützung für Web und Mobilgeräte und integrierte Dienste von Drittanbietern wie SMS-Verifizierung und Karten-/Geolokalisierung in Kernkonto- und Suchworkflows.",
   "about.page.experience.toyar.project.job.12": "Auf beiden Plattformen wurden OOP-Prinzipien und Entwurfsmuster konsistent auf das Java/Spring Boot-Backend und das JavaScript/TypeScript-Frontend angewendet, wobei über Linux (Ubuntu) -Produktionsserver und Windows-Entwicklungsumgebungen hinweg gearbeitet wurde; Architekturdesign-Sitzungen wurden geleitet, Code-Reviews durchgeführt und Junior-Entwickler innerhalb eines Agile/Scrum-Workflows (Sprint-Planung, tägliche Standups, Retrospektiven) betreut, wobei Git und Jira für die Versionskontrolle und Aufgabenverfolgung verwendet wurden.",
-  "about.page.experience.cava.typeValue": "Vollzeit"
+  "about.page.experience.cava.typeValue": "Vollzeit",
+  "home.news.title": "Tech-News",
+  "home.news.empty": "Keine Artikel verfügbar.",
+  "home.news.viewAll": "Alle ansehen →",
+  "news.time.lessThanHour": "vor < 1 Std.",
+  "news.time.hoursAgo": "vor {h} Std.",
+  "news.time.daysAgo": "vor {d} Tagen",
+  "news.card.points": "{n} Punkte",
+  "news.card.comments": "{n} Kommentare",
+  "contact.page.form.toast.rateLimited": "Zu viele Nachrichten gesendet. Bitte versuchen Sie es in einigen Minuten erneut.",
+  "contact.page.form.toast.invalid": "Bitte überprüfen Sie Ihre Eingaben und versuchen Sie es erneut.",
+  "aria.header.nav": "Hauptnavigation",
+  "aria.header.github": "GitHub-Profil öffnen",
+  "aria.theme.darkMode": "Dunkelmodus-Einstellung",
+  "aria.globalActions": "Globale Aktionen",
+  "aria.languages.list": "Anzeigesprache"
 }

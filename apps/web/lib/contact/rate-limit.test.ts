@@ -1,0 +1,57 @@
+import { describe, expect, it } from "vitest";
+
+import { clientIpFromHeaders, createRateLimiter } from "./rate-limit";
+
+describe("createRateLimiter", () => {
+  it("allows up to the configured number of requests in a window", () => {
+    const check = createRateLimiter(3, 60_000);
+    const now = 1_000_000;
+    expect(check("ip", now).allowed).toBe(true);
+    expect(check("ip", now + 1).allowed).toBe(true);
+    expect(check("ip", now + 2).allowed).toBe(true);
+    expect(check("ip", now + 3).allowed).toBe(false);
+  });
+
+  it("reports a sensible Retry-After when blocked", () => {
+    const check = createRateLimiter(1, 60_000);
+    const now = 1_000_000;
+    check("ip", now);
+    const blocked = check("ip", now + 30_000);
+    expect(blocked.allowed).toBe(false);
+    expect(blocked.retryAfterSeconds).toBe(30);
+  });
+
+  it("resets after the window elapses", () => {
+    const check = createRateLimiter(1, 60_000);
+    const now = 1_000_000;
+    expect(check("ip", now).allowed).toBe(true);
+    expect(check("ip", now + 59_999).allowed).toBe(false);
+    expect(check("ip", now + 60_000).allowed).toBe(true);
+  });
+
+  it("tracks keys independently", () => {
+    const check = createRateLimiter(1, 60_000);
+    const now = 1_000_000;
+    expect(check("a", now).allowed).toBe(true);
+    expect(check("b", now).allowed).toBe(true);
+    expect(check("a", now + 1).allowed).toBe(false);
+  });
+});
+
+describe("clientIpFromHeaders", () => {
+  it("uses the first x-forwarded-for entry", () => {
+    const headers = new Headers({
+      "x-forwarded-for": "203.0.113.7, 10.0.0.1",
+    });
+    expect(clientIpFromHeaders(headers)).toBe("203.0.113.7");
+  });
+
+  it("falls back to x-real-ip", () => {
+    const headers = new Headers({ "x-real-ip": "203.0.113.9" });
+    expect(clientIpFromHeaders(headers)).toBe("203.0.113.9");
+  });
+
+  it("returns 'unknown' when no header is present", () => {
+    expect(clientIpFromHeaders(new Headers())).toBe("unknown");
+  });
+});

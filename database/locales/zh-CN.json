@@ -280,5 +280,20 @@
   "about.page.experience.toyar.project.job.10": "通过经过验证的房源徽章系统、应用内房东-租户通话/消息以及为业主和经纪人提供的房源管理/跟踪工具，构建了基于地图的房源搜索。",
   "about.page.experience.toyar.project.job.11": "在网络和移动设备上实现了多语言(I18N)支持，并将短信验证和地图/地理位置等第三方服务集成到核心帐户和搜索工作流程中。",
   "about.page.experience.toyar.project.job.12": "在两个平台上，在Java/Spring Boot后端和JavaScript/TypeScript前端一致地应用OOP原则和设计模式，跨Linux （ Ubuntu ）生产服务器和Windows开发环境工作；在敏捷/Scrum工作流（冲刺计划、日常站立、回顾）中领导架构设计会议，进行代码审查，并指导初级开发人员，使用Git和JIRA进行版本控制和任务跟踪。",
-  "about.page.experience.cava.typeValue": "全日制"
+  "about.page.experience.cava.typeValue": "全日制",
+  "home.news.title": "科技新闻",
+  "home.news.empty": "暂无文章。",
+  "home.news.viewAll": "查看全部 →",
+  "news.time.lessThanHour": "1小时内",
+  "news.time.hoursAgo": "{h}小时前",
+  "news.time.daysAgo": "{d}天前",
+  "news.card.points": "{n} 点",
+  "news.card.comments": "{n} 条评论",
+  "contact.page.form.toast.rateLimited": "消息发送过于频繁,请稍后再试。",
+  "contact.page.form.toast.invalid": "请检查输入内容后重试。",
+  "aria.header.nav": "主导航",
+  "aria.header.github": "打开 GitHub 个人主页",
+  "aria.theme.darkMode": "深色模式偏好",
+  "aria.globalActions": "全局操作",
+  "aria.languages.list": "显示语言"
 }

@@ -12,7 +12,7 @@ import singleKey from "@/assets/image/selected-work/singlekey.png";
 import swipedOn from "@/assets/image/selected-work/SwipedOn.png";
 import { useLocaleText } from "@/components/layout/setting/translate/locale-provider";
 
-import styles from "./selected.module.scss";
+import styles from "./selected-work-block.module.scss";
 
 const ROTATE_MS = 3000;
 

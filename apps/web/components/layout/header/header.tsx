@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import styles from "./styles.module.scss";
-import gaStyles from "@/components/layout/global-actions/styles.module.scss";
+import styles from "./header.module.scss";
+import gaStyles from "@/components/layout/global-actions/global-actions.module.scss";
 import { GitHub } from "@/assets/svg";
 import { PATH_URL, SOCIAL_LINKS } from "@/config/path";
 import { GlobalActionsMenu } from "@/components/layout/global-actions/global-actions-menu";
@@ -36,7 +36,7 @@ export default function Header() {
         >
           Hello World!
         </Link>
-        <nav className={styles.nav} aria-label="Main">
+        <nav className={styles.nav} aria-label={t("aria.header.nav")}>
           <div className={styles.navInline}>
             {nav.map((item) => (
               <Link
@@ -52,7 +52,7 @@ export default function Header() {
               type="button"
               className={styles.social}
               onClick={openGitHubProfile}
-              aria-label="Open GitHub profile"
+              aria-label={t("aria.header.github")}
             >
               <GitHub />
             </button>
@@ -92,7 +92,7 @@ export default function Header() {
                       closeMenu();
                       openGitHubProfile();
                     }}
-                    aria-label="Open GitHub profile"
+                    aria-label={t("aria.header.github")}
                   >
                     <GitHub />
                     {t("popover.github")}

@@ -1,3 +1,6 @@
+"use client";
+
+import { useLocaleText } from "@/components/layout/setting/translate/locale-provider";
 import type { NewsArticle, NewsSource } from "@/lib/news";
 
 import styles from "./news-card.module.scss";
@@ -13,9 +16,9 @@ const SOURCE_LABELS: Record<NewsSource, string> = {
   wired: "Wired",
 };
 
-function formatDate(iso: string): string {
+function formatDate(iso: string, locale: string): string {
   const d = new Date(iso);
-  return d.toLocaleDateString("en-US", {
+  return d.toLocaleDateString(locale, {
     month: "short",
     day: "numeric",
     year: "numeric",
@@ -23,6 +26,7 @@ function formatDate(iso: string): string {
 }
 
 export default function NewsCard({ article }: { article: NewsArticle }) {
+  const { t, locale } = useLocaleText();
   const hasStats =
     article.points !== undefined || article.commentCount !== undefined;
 
@@ -39,7 +43,7 @@ export default function NewsCard({ article }: { article: NewsArticle }) {
           {SOURCE_LABELS[article.source]}
         </span>
         <time className={styles.date} dateTime={article.publishedAt}>
-          {formatDate(article.publishedAt)}
+          {formatDate(article.publishedAt, locale)}
         </time>
       </div>
 
@@ -52,12 +56,16 @@ export default function NewsCard({ article }: { article: NewsArticle }) {
       <div className={styles.footer}>
         {hasStats && (
           <span className={styles.stats}>
-            {article.points !== undefined && `${article.points} points`}
+            {article.points !== undefined &&
+              t("news.card.points").replace("{n}", String(article.points))}
             {article.points !== undefined &&
               article.commentCount !== undefined &&
               " · "}
             {article.commentCount !== undefined &&
-              `${article.commentCount} comments`}
+              t("news.card.comments").replace(
+                "{n}",
+                String(article.commentCount),
+              )}
           </span>
         )}
         {article.author && (

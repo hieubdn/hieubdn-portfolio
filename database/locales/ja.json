@@ -280,5 +280,20 @@
   "about.page.experience.toyar.project.job.10": "認証済みのリスティングバッジシステム、アプリ内の家主とテナントの通話/メッセージング、オーナーとブローカー向けのリスティング管理/追跡ツールを備えた、地図ベースの宿泊施設検索を構築しました。",
   "about.page.experience.toyar.project.job.11": "Webおよびモバイル全体で多言語（ I 18 N ）サポートを実装し、SMS検証や地図/地理位置情報などのサードパーティサービスをコアアカウントおよび検索ワークフローに統合しました。",
   "about.page.experience.toyar.project.job.12": "両方のプラットフォームで、Java/Spring BootバックエンドとJavaScript/TypeScriptフロントエンドで一貫してOOPの原則と設計パターンを適用し、Linux （ Ubuntu ）本番サーバーとWindows開発環境で動作します。アーキテクチャ設計セッションを主導し、コードレビューを実施し、アジャイル/スクラムワークフロー（スプリント計画、毎日のスタンドアップ、振り返り）内でジュニア開発者を指導し、GitとJIRAを使用してバージョン管理とタスク追跡を行います。",
-  "about.page.experience.cava.typeValue": "フルタイム"
+  "about.page.experience.cava.typeValue": "フルタイム",
+  "home.news.title": "テックニュース",
+  "home.news.empty": "記事がありません。",
+  "home.news.viewAll": "すべて見る →",
+  "news.time.lessThanHour": "1時間以内",
+  "news.time.hoursAgo": "{h}時間前",
+  "news.time.daysAgo": "{d}日前",
+  "news.card.points": "{n}ポイント",
+  "news.card.comments": "{n}件のコメント",
+  "contact.page.form.toast.rateLimited": "送信回数が多すぎます。しばらくしてからもう一度お試しください。",
+  "contact.page.form.toast.invalid": "入力内容をご確認のうえ、もう一度お試しください。",
+  "aria.header.nav": "メインナビゲーション",
+  "aria.header.github": "GitHubプロフィールを開く",
+  "aria.theme.darkMode": "ダークモード設定",
+  "aria.globalActions": "グローバル操作",
+  "aria.languages.list": "表示言語"
 }

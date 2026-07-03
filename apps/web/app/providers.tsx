@@ -17,16 +17,21 @@ import { ThemeInitScript } from "./theme-init-script";
 export function AppProviders({
   children,
   initialLocale,
+  initialMessages,
 }: {
   children: ReactNode;
   initialLocale: AppLocaleCode;
+  initialMessages?: Record<string, string>;
 }) {
   return (
     <>
       <ThemeInitScript />
       <StandaloneViewportLock />
       <ThemePreferenceProvider>
-        <LocaleProvider initialLocale={initialLocale}>
+        <LocaleProvider
+          initialLocale={initialLocale}
+          initialMessages={initialMessages}
+        >
           <OfflineBanner />
           <NotificationFeedProvider>
             <NotificationProvider>
