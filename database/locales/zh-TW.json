@@ -280,5 +280,20 @@
   "about.page.experience.toyar.project.job.10": "透過經過驗證的房源徽章系統、應用程式內的房東租戶通話／訊息，以及為業主和經紀人提供的房源管理／追蹤工具，建立了基於地圖的房源搜尋功能。",
   "about.page.experience.toyar.project.job.11": "在網站和行動裝置上實施多語言(I18N)支援，並將SMS驗證和地圖/地理位置等第三方服務整合到核心帳戶和搜尋工作流程中。",
   "about.page.experience.toyar.project.job.12": "在兩個平臺上，在Java/Spring Boot後端和JavaScript/TypeScript前端一致地應用OOP原則和設計模式，在Linux （ Ubuntu ）生產伺服器和Windows開發環境中工作；使用Git和Jira進行版本控制和任務跟蹤，在敏捷/Scrum工作流程中領導架構設計會議、進行代碼審查並指導初級開發人員（衝刺計劃、每日站立、回顧）。",
-  "about.page.experience.cava.typeValue": "正式人員"
+  "about.page.experience.cava.typeValue": "正式人員",
+  "home.news.title": "科技新聞",
+  "home.news.empty": "暫無文章。",
+  "home.news.viewAll": "查看全部 →",
+  "news.time.lessThanHour": "1小時內",
+  "news.time.hoursAgo": "{h}小時前",
+  "news.time.daysAgo": "{d}天前",
+  "news.card.points": "{n} 點",
+  "news.card.comments": "{n} 則留言",
+  "contact.page.form.toast.rateLimited": "訊息發送過於頻繁,請稍後再試。",
+  "contact.page.form.toast.invalid": "請檢查輸入內容後再試一次。",
+  "aria.header.nav": "主導覽",
+  "aria.header.github": "開啟 GitHub 個人檔案",
+  "aria.theme.darkMode": "深色模式偏好",
+  "aria.globalActions": "全域操作",
+  "aria.languages.list": "顯示語言"
 }

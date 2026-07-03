@@ -39,7 +39,6 @@ export default function ProfileBlock() {
     <Link
       href={PATH_URL.ABOUT}
       className={styles.root}
-      aria-label={profile.name}
       suppressHydrationWarning
     >
       <div className={styles.body}>

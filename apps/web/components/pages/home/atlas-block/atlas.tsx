@@ -1,7 +1,7 @@
 import Image from "next/image";
-import mapImage from '@/assets/image/contact-info/img-map.png';
+import mapImage from '@/assets/image/contact-info/img-map.webp';
 import IconMap from '@/assets/image/contact-info/icon-map.svg';
-import styles from './styles.module.scss';
+import styles from './atlas.module.scss';
 import { StarIcon } from '@/assets/svg';
 
 const Atlas = () => {

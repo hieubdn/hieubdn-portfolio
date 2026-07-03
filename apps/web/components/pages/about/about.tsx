@@ -5,19 +5,16 @@ import type { ReactNode } from "react";
 import { useLocaleText } from "@/components/layout/setting/translate/locale-provider";
 import SocialBlock from "@/components/pages/home/social-block/social-block";
 
-import CallToAction from "../home/callToAction-block/call-to-action";
-import CavaCompany from "./cava-company/cava-company";
-import TechnicalBlock from "./contact-block/contact-block";
+import CallToAction from "../home/call-to-action-block/call-to-action";
+import CompanyExperience from "./company-experience/company-experience";
+import { COMPANY_EXPERIENCES } from "./company-experience/company-experience-data";
+import ContactBlock from "./contact-block/contact-block";
 import DownloadCvBlock from "./download-cv-block/download-cv-block";
 import EducationBlock from "./education-block/education-block";
-import HdwebsoftCompany from "./hdwebsoft-company/hdwebsoft-company";
 import ImageBlock from "./image-block/image-block";
-import MindxCompany from "./mindx-company/mindx-company";
-// import Phase2Company from "./phase2-company/phase2-company";
 import SectionHeading from "./section-heading/section-heading";
 import SummaryBlock from "./summary-block/summary-block";
 import SummaryKickerBlock from "./summary-kicker-block/summary-kicker-block";
-import ToyarCompany from "./toyar-company/toyar-company";
 import styles from "./about.module.scss";
 
 const BLOCK_REVEAL_STAGGER_MS = 50;
@@ -68,7 +65,7 @@ export default function AboutSection() {
     { id: "image", label: "Portrait", variant: "card", render: () => <ImageBlock /> },
     { id: "summaryKicker", label: "Self-summary heading", variant: "static", render: () => <SummaryKickerBlock /> },
     { id: "summary", label: "Self-summary", variant: "card", render: () => <SummaryBlock /> },
-    { id: "technical", label: "Technical skills", variant: "card", render: () => <TechnicalBlock /> },
+    { id: "technical", label: "Contact details", variant: "card", render: () => <ContactBlock /> },
     { id: "education", label: "Education", variant: "card", render: () => <EducationBlock /> },
     {
       id: "workExperienceHeading",
@@ -76,17 +73,16 @@ export default function AboutSection() {
       variant: "sectionHeading",
       render: () => <SectionHeading title={t("about.page.workExperience.heading")} />,
     },
-    { id: "hdwebsoft", label: "HDWEBSOFT", variant: "card", render: () => <HdwebsoftCompany /> },
-    { id: "toyar", label: "Toyar", variant: "card", render: () => <ToyarCompany /> },
-    // { id: "phase2", label: "Phase 2", variant: "card", render: () => <Phase2Company /> },
-    { id: "cava", label: "Cava", variant: "card", render: () => <CavaCompany /> },
+    { id: "hdwebsoft", label: "HDWEBSOFT", variant: "card", render: () => <CompanyExperience company={COMPANY_EXPERIENCES.hdwebsoft} /> },
+    { id: "toyar", label: "Toyar", variant: "card", render: () => <CompanyExperience company={COMPANY_EXPERIENCES.toyar} /> },
+    { id: "cava", label: "Cava", variant: "card", render: () => <CompanyExperience company={COMPANY_EXPERIENCES.cava} /> },
     {
       id: "otherExperienceHeading",
       label: "Other experience section",
       variant: "sectionHeading",
       render: () => <SectionHeading title={t("about.page.otherExperience.heading")} />,
     },
-    { id: "mindx", label: "MindX", variant: "card", render: () => <MindxCompany /> },
+    { id: "mindx", label: "MindX", variant: "card", render: () => <CompanyExperience company={COMPANY_EXPERIENCES.mindx} /> },
     { id: "footerDivider", label: "Section divider", variant: "divider", render: () => <hr className={styles.rule} /> },
     { id: "footerSocial", label: "Social profiles", variant: "card", render: () => <SocialBlock /> },
     { id: "cta", label: "Call to action", variant: "card", render: () => <CallToAction /> },

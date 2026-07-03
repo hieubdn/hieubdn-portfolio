@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { Overlay } from "./Overlay";
-import { NotificationPanel } from "./NotificationPanel";
+import { Overlay } from "./overlay";
+import { NotificationPanel } from "./notification-panel";
 
 type NotificationDrawerProps = {
   open: boolean;

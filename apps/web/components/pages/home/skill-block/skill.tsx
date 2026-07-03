@@ -23,7 +23,7 @@ import serverlessIcon from "@/assets/image/skill/serverless-icon.svg";
 import starIcon from "@/assets/image/skill/star1.svg";
 import tsIcon from "@/assets/image/skill/typescriptlang-icon.svg";
 
-import styles from "./styles.module.scss";
+import styles from "./skill.module.scss";
 
 const MARQUEE_DURATION_SEC = 48;
 

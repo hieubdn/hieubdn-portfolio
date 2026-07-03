@@ -2,7 +2,7 @@ import dynamic from "next/dynamic";
 import type { ReactNode } from "react";
 
 import AboutBlock from "@/components/pages/home/about-block/about-block";
-import CallToAction from "@/components/pages/home/callToAction-block/call-to-action";
+import CallToAction from "@/components/pages/home/call-to-action-block/call-to-action";
 import ProfileBlock from "@/components/pages/home/profile-block/profile-block";
 import ProjectBlock from "@/components/pages/home/project-block/project-block";
 import QuoteBlock from "@/components/pages/home/quote-block/quote-block";
@@ -15,7 +15,7 @@ import PrinciplesBlock from "@/components/pages/home/principles-block/principles
 import { Skeleton } from "@/components/ui/skeleton";
 
 import CompetenciesBlock from "./competencies-block/competencies-block";
-import styles from "./styles.module.scss";
+import styles from "./home.module.scss";
 import Atlas from "./atlas-block/atlas";
 
 const BLOCK_REVEAL_STAGGER_MS = 50;

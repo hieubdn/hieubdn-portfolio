@@ -32,15 +32,18 @@ export default function LanguageSettingPanel() {
   }, [committedLocale]);
 
   const applyLocale = useCallback(() => {
-    setLocale(draftLocale);
-    setCommittedLocale(draftLocale);
-    confirmRef.current?.close();
-    toast.success(
-      translateForLocale(
-        draftLocale,
-        "setting.page.option.languages.toast.success",
-      ),
-    );
+    // setLocale resolves after the target dictionary is loaded, so the toast
+    // below can translate into the new locale.
+    void setLocale(draftLocale).then(() => {
+      setCommittedLocale(draftLocale);
+      confirmRef.current?.close();
+      toast.success(
+        translateForLocale(
+          draftLocale,
+          "setting.page.option.languages.toast.success",
+        ),
+      );
+    });
   }, [draftLocale, setLocale]);
 
   useEffect(() => {
@@ -65,7 +68,7 @@ export default function LanguageSettingPanel() {
       <ul
         className={styles.optionList}
         role="radiogroup"
-        aria-label="Ngôn ngữ hiển thị"
+        aria-label={t("aria.languages.list")}
       >
         {LOCALE_OPTIONS.map((option) => {
           const selected = draftLocale === option.code;

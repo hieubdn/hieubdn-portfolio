@@ -24,11 +24,12 @@ Guidance document for AI assistants (Cursor, Claude Code, etc.) working inside t
 | Email | **Resend** (via `apps/web/app/api/contact/route.ts`) |
 | PWA | `@ducanh2912/next-pwa` + Workbox, manifest, service worker, offline fallback |
 | Analytics | `@vercel/analytics`, `@vercel/speed-insights` |
-| UI extras | `framer-motion`, `sonner` (toasts) |
+| UI extras | `sonner` (toasts); page/blocks animations are plain CSS |
 | Lint/Format | ESLint 9 (flat config) + Prettier 3, shared via `packages/eslint-config` |
 | TypeScript | TS `5.9.2`, shared configs in `packages/typescript-config` |
-| i18n | Static JSON dictionaries in `database/locales` (auto-filled by `scripts/generate-locales.ts`) |
-| CI | GitHub Actions (`.github/workflows/ci.yml`): install → lint → typecheck → test → build |
+| Testing | **Vitest** in `apps/web` (`lib/**/*.test.ts`), Jest scaffold in `apps/api` |
+| i18n | JSON dictionaries in `database/locales` (auto-filled by `scripts/generate-locales.ts`); only `en` is bundled client-side, other locales are lazy-loaded |
+| CI | GitHub Actions (`.github/workflows/ci.yml`): install → lint → typecheck → test → build, plus a non-blocking Lighthouse job |
 | Deploy | Vercel (web app) |
 
 ---
@@ -101,13 +102,14 @@ apps/web/components/
 │       └── translate/       # Language picker + LocaleProvider + locale-constants
 ├── pages/
 │   ├── home/                # Composable blocks: profile, about, competencies, company,
-│   │                        # principles, selected-work, project, stats, testimonials,
-│   │                        # callToAction, quote, social
+│   │                        # principles (tech-news preview), selected-work, project,
+│   │                        # stats, testimonials, call-to-action, quote, social, atlas, skill
 │   ├── about/               # Blocks: image, summary, summary-kicker, section-heading,
-│   │                        # education, contact, download-cv; company blocks:
-│   │                        # hdwebsoft, cava, toyar, mindx, phase2
-│   ├── projects/            # title-block + per-project blocks: flight, granada, khora,
-│   │                        # studiomals, tapy, thought, travel, tryotel, walker
+│   │                        # education, contact, download-cv; work experience is
+│   │                        # data-driven via company-experience/ (component + data config)
+│   ├── projects/            # Data-driven: project-card + project-detail + title-block,
+│   │                        # content in apps/web/config/projects-data.ts
+│   ├── news/                # Tech-news page: news-card, news-section (data from lib/news)
 │   └── contact/             # Contact page (form posting to /api/contact)
 ├── sections/                # Reusable sections: skill
 ├── theme/                   # ThemePreferenceProvider + theme-constants
@@ -134,10 +136,12 @@ apps/web/components/
 
 ### 4.6 `/api/contact` endpoint
 
-- Runtime: `nodejs`.
-- Validates `name`, `email`, `subject`, `message` with max-length and an email regex.
-- Escapes HTML in the rendered email body and sends via the **Resend SDK**.
-- Required env: `RESEND_API_KEY`, `CONTACT_TO_EMAIL`; optional: `CONTACT_FROM_EMAIL`.
+- Runtime: `nodejs`. Logic split into `apps/web/lib/contact/` (validation, rate-limit, admin-email template) — the route itself is thin orchestration.
+- Validates `name`, `email`, `subject`, `message` with max-length and an email regex (`lib/contact/validation.ts`, unit-tested).
+- **Rate limited**: 3 submissions / 10 minutes per IP (in-memory fixed window, per serverless instance). Returns 429 + `Retry-After`.
+- **Honeypot**: hidden `company` field in the form; if filled, the server returns a fake `{ ok: true }` and drops the submission.
+- Sends **one email to the admin only** (no confirmation email to the submitter — deliberate anti-abuse decision). HTML is escaped before rendering.
+- Required env: `RESEND_API_KEY`, `CONTACT_TO_EMAIL`; optional: `CONTACT_FROM_EMAIL`, `NEXT_SITE_URL` (icon URLs in the email).
 
 ---
 
@@ -164,6 +168,7 @@ When adding a new package: place it under `packages/<name>/`, set `"name": "@rep
 
 - **Source**: `database/locales/en.json` is the canonical dictionary.
 - **Supported locales**: `en`, `vi`, `ja`, `zh-CN`, `zh-TW`, `ko`, `de` (see `AppLocaleCode` in `apps/web/components/layout/setting/translate/locale-constants.ts`).
+- **Loading strategy**: only `en` (the fallback) is statically bundled into the client. The root layout loads the active locale's dictionary server-side (`apps/web/lib/i18n/load-messages.ts`) and passes it to `LocaleProvider` as `initialMessages`; other locales are dynamically imported when the user switches language. `setLocale` is async — it resolves after the target dictionary is loaded.
 - **Persistence**: a `profile-locale` cookie plus `localStorage` under the same key so that SSR and CSR agree on the active locale.
 - **Filling missing translations**: `pnpm generate:locales` (the script calls `https://api.mymemory.translated.net/` with the email `hieubdn@gmail.com` for a higher quota, waits 1 s between keys, and only translates missing keys).
 - **Provider**: `LocaleProvider` wraps the React tree inside `app/providers.tsx`.
@@ -202,7 +207,7 @@ At the repo root (executed via Turbo):
 | `pnpm build` | Runs the full build pipeline (`turbo run build`). |
 | `pnpm lint` | ESLint across all packages with `--max-warnings 0`. |
 | `pnpm check-types` | `next typegen && tsc --noEmit` for the web app plus typecheck elsewhere. |
-| `pnpm test` | Runs tests (currently mostly in `apps/api` via Jest). |
+| `pnpm test` | Runs tests: Vitest in `apps/web` (`lib/**/*.test.ts`) + Jest in `apps/api`. |
 | `pnpm format` | Prettier write for `**/*.{ts,tsx,md}`. |
 | `pnpm generate:locales` | Generates/fills locale files from `en.json`. |
 

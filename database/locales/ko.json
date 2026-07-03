@@ -280,5 +280,20 @@
   "about.page.experience.toyar.project.job.10": "검증된 숙소 배지 시스템, 인앱 임대인-임차인 전화/메시지, 소유주 및 중개인을 위한 숙소 관리/추적 도구를 통해 지도 기반 숙소 검색 기능을 구축했습니다.",
   "about.page.experience.toyar.project.job.11": "웹 및 모바일 전반에 걸쳐 다국어 (i18n) 지원을 구현하고 SMS 확인, 핵심 계정 및 검색 워크플로에 지도/지리적 위치와 같은 타사 서비스를 통합했습니다.",
   "about.page.experience.toyar.project.job.12": "두 플랫폼 모두에서 Java/Spring Boot 백엔드 및 JavaScript/TypeScript 프론트엔드에 OOP 원칙과 디자인 패턴을 일관되게 적용하여 Linux (Ubuntu) 프로덕션 서버 및 Windows 개발 환경에서 작업했습니다. 버전 관리 및 작업 추적을 위해 Git 및 Jira를 사용하여 애자일/스크럼 워크플로우 (스프린트 계획, 일일 스탠드업, 회고) 내에서 아키텍처 설계 세션을 이끌고 코드 검토를 수행하며 주니어 개발자를 멘토링했습니다.",
-  "about.page.experience.cava.typeValue": "풀 타임"
+  "about.page.experience.cava.typeValue": "풀 타임",
+  "home.news.title": "테크 뉴스",
+  "home.news.empty": "게시글이 없습니다.",
+  "home.news.viewAll": "전체 보기 →",
+  "news.time.lessThanHour": "1시간 이내",
+  "news.time.hoursAgo": "{h}시간 전",
+  "news.time.daysAgo": "{d}일 전",
+  "news.card.points": "{n} 포인트",
+  "news.card.comments": "댓글 {n}개",
+  "contact.page.form.toast.rateLimited": "메시지를 너무 많이 보냈습니다. 잠시 후 다시 시도해 주세요.",
+  "contact.page.form.toast.invalid": "입력 내용을 확인한 후 다시 시도해 주세요.",
+  "aria.header.nav": "메인 내비게이션",
+  "aria.header.github": "GitHub 프로필 열기",
+  "aria.theme.darkMode": "다크 모드 설정",
+  "aria.globalActions": "전역 작업",
+  "aria.languages.list": "표시 언어"
 }

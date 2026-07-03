@@ -10,10 +10,10 @@ import granadaPoster from "@/assets/image/projects-page/granada-project/poster.j
 import travelPoster from "@/assets/image/projects-page/travel-project/poster.jpg";
 import tryotelPoster from "@/assets/image/projects-page/tryotel-project/poster.jpg";
 import thoughtPoster from "@/assets/image/projects-page/thought-project/poster.jpg";
-import poppytPoster from "@/assets/image/projects-page/poppy-project/poster.png";
-import fidovnPoster from "@/assets/image/projects-page/fidovn-project/poster.png";
-import multianglePoster from "@/assets/image/projects-page/multiangle-project/poster.png";
-import tattooPoster from "@/assets/image/projects-page/tattoo/poster.png";
+import poppytPoster from "@/assets/image/projects-page/poppy-project/poster.webp";
+import fidovnPoster from "@/assets/image/projects-page/fidovn-project/poster.webp";
+import multianglePoster from "@/assets/image/projects-page/multiangle-project/poster.webp";
+import tattooPoster from "@/assets/image/projects-page/tattoo/poster.webp";
 import babyPoster from "@/assets/image/projects-page/BabyQuip-project/poster.jpg";
 import signInAppPoster from "@/assets/image/projects-page/signinapp-project/poster.webp";
 import singleKeyPoster from "@/assets/image/projects-page/singlekey-project/Poster.webp";

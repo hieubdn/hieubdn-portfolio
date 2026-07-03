@@ -25,7 +25,8 @@ function readStored(): NotificationEntry[] {
     const parsed = JSON.parse(raw) as unknown;
     if (!Array.isArray(parsed)) return [];
     return parsed.filter(isValidEntry);
-  } catch {
+  } catch (err) {
+    console.warn("[notifications] Discarding corrupt stored feed:", err);
     return [];
   }
 }

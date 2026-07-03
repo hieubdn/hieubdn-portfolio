@@ -7,6 +7,7 @@ import {
   isAppLocaleCode,
   PROFILE_LOCALE_STORAGE_KEY,
 } from "@/components/layout/setting/translate/locale-constants";
+import { loadLocaleMessages } from "@/lib/i18n/load-messages";
 import { AppShell } from "./app-shell";
 import { AppProviders } from "./providers";
 import "./globals.scss";
@@ -63,6 +64,12 @@ export default async function RootLayout({
   const raw = cookieStore.get(PROFILE_LOCALE_STORAGE_KEY)?.value;
   const initialLocale =
     raw && isAppLocaleCode(raw) ? raw : DEFAULT_APP_LOCALE;
+  // `en` is already in the client bundle as the fallback dictionary; only
+  // inline the dictionary for non-default locales.
+  const initialMessages =
+    initialLocale === DEFAULT_APP_LOCALE
+      ? undefined
+      : await loadLocaleMessages(initialLocale);
 
   return (
     <html lang={initialLocale} suppressHydrationWarning>
@@ -78,7 +85,10 @@ export default async function RootLayout({
         <meta name="apple-mobile-web-app-title" content="hieubdn" />
       </head>
       <body>
-        <AppProviders initialLocale={initialLocale}>
+        <AppProviders
+          initialLocale={initialLocale}
+          initialMessages={initialMessages}
+        >
           <AppShell>{children}</AppShell>
         </AppProviders>
         <Analytics />

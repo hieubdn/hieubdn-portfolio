@@ -18,6 +18,7 @@ import jobGif from "@/assets/image/contact/factory.png";
 import locationGif from "@/assets/image/contact/home.png";
 import { useLocaleText } from "@/components/layout/setting/translate/locale-provider";
 import { SOCIAL_LINKS } from "@/config/path";
+import { HONEYPOT_FIELD } from "@/lib/contact/validation";
 
 import styles from "./contact-page.module.scss";
 
@@ -137,6 +138,7 @@ export default function ContactSection() {
   const [values, setValues] = useState<ContactFormState>(INITIAL_FORM);
   const [errors, setErrors] = useState<ContactFormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [honeypot, setHoneypot] = useState("");
 
   const handleChange = (
     event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -170,9 +172,19 @@ export default function ContactSection() {
           email: values.email.trim(),
           subject: values.subject.trim(),
           message: values.message.trim(),
+          [HONEYPOT_FIELD]: honeypot,
         }),
       });
-      if (!response.ok) throw new Error("Request failed");
+      if (!response.ok) {
+        if (response.status === 429) {
+          toast.error(t("contact.page.form.toast.rateLimited"));
+        } else if (response.status === 400) {
+          toast.error(t("contact.page.form.toast.invalid"));
+        } else {
+          toast.error(t("contact.page.form.toast.error"));
+        }
+        return;
+      }
       toast.success(t("contact.page.form.toast.success"));
       setValues(INITIAL_FORM);
     } catch {
@@ -243,6 +255,16 @@ export default function ContactSection() {
         </div>
 
         <form className={styles.formBody} onSubmit={handleSubmit} noValidate>
+          <div className={styles.honeypotField} aria-hidden="true">
+            <input
+              type="text"
+              name={HONEYPOT_FIELD}
+              value={honeypot}
+              onChange={(event) => setHoneypot(event.target.value)}
+              tabIndex={-1}
+              autoComplete="off"
+            />
+          </div>
           {CONTACT_FIELDS.map((field) =>
             renderField({
               field,

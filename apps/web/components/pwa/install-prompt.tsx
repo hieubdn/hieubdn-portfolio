@@ -69,7 +69,12 @@ export function InstallPrompt() {
 
   if (canInstall) {
     return (
-      <div className={styles.card} role="dialog" aria-live="polite">
+      <div
+        className={styles.card}
+        role="dialog"
+        aria-label={t("pwa.installApp")}
+        aria-live="polite"
+      >
         <p className={styles.message}>{t("pwa.install.prompt")}</p>
         <div className={styles.actions}>
           <button type="button" className={styles.secondary} onClick={dismiss}>
@@ -85,7 +90,12 @@ export function InstallPrompt() {
 
   if (showIosGuide) {
     return (
-      <div className={styles.card} role="dialog" aria-live="polite">
+      <div
+        className={styles.card}
+        role="dialog"
+        aria-label={t("pwa.installApp")}
+        aria-live="polite"
+      >
         <p className={styles.message}>{t("pwa.install.iosGuide")}</p>
         <div className={styles.actions}>
           <button type="button" className={styles.primary} onClick={dismiss}>

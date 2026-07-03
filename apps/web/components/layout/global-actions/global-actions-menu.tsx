@@ -5,7 +5,7 @@ import { GlobalActions, Notification, Setting } from "@/assets/svg";
 import { useMainScreen } from "@/components/layout/main-screen/main-screen-context";
 import { useNotificationPanel } from "@/components/layout/notification/notification-context";
 import { useLocaleText } from "@/components/layout/setting/translate/locale-provider";
-import styles from "./styles.module.scss";
+import styles from "./global-actions.module.scss";
 
 export type GlobalActionsMenuProps = {
   menuLeading?: (closeMenu: () => void) => ReactNode;
@@ -52,7 +52,7 @@ export function GlobalActionsMenu({
       <button
         type="button"
         className={styles.globalActionsTrigger}
-        aria-label="Global actions"
+        aria-label={t("aria.globalActions")}
         aria-expanded={open}
         aria-haspopup="true"
         onClick={() => setOpen((v) => !v)}
@@ -60,7 +60,7 @@ export function GlobalActionsMenu({
         <GlobalActions />
       </button>
       {open ? (
-        <div className={styles.popover} aria-label="Global actions">
+        <div className={styles.popover} aria-label={t("aria.globalActions")}>
           <div className={styles.popoverInner}>
             <ul className={styles.popoverList}>
               {menuLeading ? menuLeading(() => setOpen(false)) : null}
