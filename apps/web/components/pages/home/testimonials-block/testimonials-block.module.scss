@@ -32,7 +32,7 @@
     letter-spacing: 1.5px;
     margin: 0;
     font-family:
-      Open Sans,
+      Verdana,
       sans-serif;
     font-size: 18px;
     line-height: 1.5;
@@ -42,11 +42,10 @@
     color: #52525b;
     letter-spacing: 1.5px;
     font-family:
-      Open Sans,
+      Verdana,
       sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.5;
-    font-weight: 600;
     color: #52525b;
   }
 
@@ -125,6 +124,7 @@
 :global(html[data-theme="dark"]) {
   .root {
     .author {
+
       .nameLine,
       .role {
         color: var(--color-home-text-heading);

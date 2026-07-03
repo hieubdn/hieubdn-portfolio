@@ -127,6 +127,10 @@
   flex-direction: column;
 }
 
+.responsibilities {
+  gap: 8px;
+}
+
 .subheading {
   margin: 0;
   color: #52525b;
@@ -134,9 +138,18 @@
   font-size: 17px;
 }
 
+.projectList {
+  margin: 0;
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 .bulletList,
 .techList {
   padding-left: 1.25rem;
+  margin-top: 4px;
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -152,3 +165,14 @@
     word-break: break-word;
   }
 }
+
+.projectHeading {
+    font-size: 16px;
+    font-family: "Verdana", sans-serif;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    line-height: 32px;
+    color: var(--color-home-text-body);
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }

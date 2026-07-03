@@ -4,7 +4,6 @@
   "navBar.projects": "项目",
   "navBar.news": "新闻",
   "navBar.contact": "联系",
-
   "pwa.offlineBanner": "您已离线。",
   "pwa.installApp": "安装应用",
   "pwa.offlinePage.title": "离线",
@@ -18,7 +17,6 @@
   "pwa.install.later": "暂不安装",
   "pwa.install.gotIt": "好的",
   "pwa.install.iosGuide": "点击分享图标，然后选择\"添加到主屏幕\"以安装。",
-
   "popover.home": "首页",
   "popover.about": "关于",
   "popover.projects": "项目",
@@ -27,14 +25,11 @@
   "popover.github": "GitHub",
   "popover.notification": "通知",
   "popover.setting": "设置",
-
   "profile.block.name": "Bui Do Ngoc Hieu",
   "profile.block.title": "软件工程师",
   "profile.block.email": "hieubdn@gmail.com",
-
   "about.block.title": "更多关于我",
   "about.block.kicker": "资质",
-
   "about.page.heading": "关于",
   "about.page.summary.kicker": "个人简介",
   "about.page.summary.lead": "我在软件行业工作了超过05年。我喜欢解决问题（通常情况下，但主要是通过软件），创造产品，以及培养团队。我与许多不同的软件系统合作过，并非常享受随时间推移不断演进它们以满足变化需求的过程。我也做了大量关于扩展性的工作——既包括提高吞吐量，也包括创建流程和自动化，以随着用户基础增长使变更更加安全。\n工作之外，我对植物（尤其是盆景）充满热情，并热衷于为家里制作木质家具。\n\n哇，这真是很多，但我真的很期待与大家见面并与新伙伴合作！",
@@ -57,17 +52,14 @@
   "about.page.contact.gender1": "男",
   "about.page.contact.nationality1": "越南",
   "about.page.contact.languages1": "英语、越南语",
-
   "about.page.education.title": "教育背景",
   "about.page.education.fullstack": "全栈开发证书",
   "about.page.education.issuedBy": "颁发机构：MindX 技术学校",
   "about.page.education.fullstack.date": "完成时间：2019年",
   "about.page.education.mobileapp": "移动应用开发证书",
   "about.page.education.mobileapp.date": "完成时间：2020年",
-
   "about.page.workExperience.heading": "工作经历",
   "about.page.otherExperience.heading": "其他经历",
-
   "about.page.experience.hdwebsoft.company": "HDWEBSOFT TECHNOLOGY CO.,LTD",
   "about.page.experience.hdwebsoft.durationValue": "2024年4月 - 至今",
   "about.page.experience.hdwebsoft.positionValue": "全栈软件工程师",
@@ -80,7 +72,6 @@
   "about.page.experience.hdwebsoft.responsibility.4": " 在两个技术栈中实施安全最佳实践：一侧进行PostgreSQL查询优化和索引调优，另一侧强制执行Salesforce CRUD/FLS并实现85%以上的Jest/Apex测试覆盖率；通过了Checkmarx SAST和Code Analyzer（PMD、ESLint）扫描。",
   "about.page.experience.hdwebsoft.techStack": "技术栈",
   "about.page.experience.hdwebsoft.tech.tech": "React、Vue.js、Next.js、TypeScript、Node.js、Express.js、NestJS、AWS（Lambda、S3、DynamoDB、SQS、API Gateway）、PostgreSQL、MySQL、TypeORM、Salesforce（Apex、LWC、Platform Events）、Stripe、Plaid、SendGrid、OpenAI、Docker、Kubernetes、CI/CD、Git",
-
   "about.page.experience.toyar.company": "TOYAR INC CO.,LTD",
   "about.page.experience.toyar.durationValue": "2023年7月 - 2025年5月",
   "about.page.experience.toyar.positionValue": "全栈软件工程师",
@@ -93,7 +84,6 @@
   "about.page.experience.toyar.responsibility.4": "主导架构设计会议，进行代码审查，并指导初级开发人员以维持代码库质量和团队效率",
   "about.page.experience.toyar.techStack": "技术栈",
   "about.page.experience.toyar.tech": "React.js、React Native、Flutter、Vite、JavaScript、Spring Boot、REST API、PostgreSQL、AWS（EC2、RDS、S3、Lambda）、Jenkins、Bitbucket、Datadog、CI/CD、Git。",
-
   "about.page.experience.cava.company": "Cava Group, Inc",
   "about.page.experience.cava.durationValue": "2020年6月 - 2023年5月",
   "about.page.experience.cava.positionValue": "全栈软件工程师",
@@ -106,7 +96,6 @@
   "about.page.experience.cava.responsibility.4": "使用JavaScript、PHP、Java和Drupal CMS为国际客户（包括纽约证券交易所和美联社的平台）提供可扩展解决方案。",
   "about.page.experience.cava.techStack": "技术栈",
   "about.page.experience.cava.tech": "React、React Native、TypeScript、Node.js、PostgreSQL、AWS（EC2、RDS、S3、Lambda）、Datadog、CI/CD、Git、JavaScript、PHP、Drupal、Java、HTML、CSS、REST API、CMS开发",
-
   "about.page.experience.mindx.company": "MINDX TECHNOLOGY SCHOOL",
   "about.page.experience.mindx.durationValue": "2020年10月 – 2024年3月",
   "about.page.experience.mindx.positionValue": "技术讲师及讲师管理",
@@ -114,16 +103,12 @@
   "about.page.experience.mindx.responsibilities": "职责与角色",
   "about.page.experience.mindx.responsibility.0": " 向学生教授全栈Web开发（React、Node.js、Next.js、React Native），并在多个分支机构开展技术研讨会。",
   "about.page.experience.mindx.responsibility.1": "指导和管理50余名讲师，参与课程设计和培训质量改进。",
-
   "about.page.cv.kicker": "下载简历",
   "about.page.cv.title": "我的简历",
-
   "projects.block.kicker": "展示",
   "projects.block.title": "我的项目",
-
   "selectedWork.block.title": "精选作品",
   "selectedWork.block.ariaLabel": "精选作品 — 项目展示",
-
   "testimonials.block.title": "推荐信",
   "testimonials.block.footer": "合作伙伴的反馈。",
   "testimonials.block.element": "span",
@@ -131,42 +116,34 @@
   "testimonials.block.element2": ">",
   "testimonials.block.element1.end": "</",
   "testimonials.block.element2.end": ">",
-
   "testimonials.block.items.0.prefix": "Mr.",
   "testimonials.block.items.0.name": "Joshua Calducchi",
   "testimonials.block.items.0.role": "Poppy工程副总裁",
   "testimonials.block.items.0.body": "Hieu先生是一位可靠的工程师，在整个工作中持续创造清晰的价值。他保持出色的表现，对产品质量做出积极贡献，甚至在我加入Poppy之前就已经对团队产生了持久的影响。\n我真诚地感谢Hieu的一切贡献，尤其是在我加入团队初期给予的支持。如果有需要，我很乐意为他提供推荐，也期待未来有机会再次与他合作。",
-
   "testimonials.block.items.1.prefix": "Ms.",
   "testimonials.block.items.1.name": "Katherine Patton",
   "testimonials.block.items.1.role": "Poppy首席工程师",
   "testimonials.block.items.1.body": "Hieu先生是一位可靠的工程师，始终以清晰和影响力来完成工作。他积极的态度和协作精神使他成为跨团队合作的愉快伙伴。他以解决方案优先的心态应对挑战，保持高交付标准，并致力于提高效率。他在关键项目中平衡质量与速度的能力非常宝贵，他积极主动的支持也对团队绩效和整体成果产生了积极影响。",
-
   "testimonials.block.items.2.prefix": "Mr.",
   "testimonials.block.items.2.name": "Dat Giang",
   "testimonials.block.items.2.role": "HDWEBSOFT Technology Co.,Ltd. 首席技术官",
   "testimonials.block.items.2.body": "Hieu在他所做的一切事情上都表现出高度的责任心和专业精神。除了技术能力之外，他主动的沟通方式和支持他人的意愿也十分突出。即使在压力下，他也能为团队带来冷静、建设性的能量，并持续交付与业务目标相符的成果。他的贡献对产品稳定性和团队文化都产生了深远影响。他还主动提前解决问题，帮助引导队友取得更好的整体成果。",
-
   "testimonials.block.items.3.prefix": "Mr.",
   "testimonials.block.items.3.name": "Matthew Zhao",
   "testimonials.block.items.3.role": "Fidovn Company Limited 首席执行官",
   "testimonials.block.items.3.body": "与Hieu合作是一次非常顺畅的体验。他响应迅速、注重细节，始终确保在执行前充分理解需求。他积极向上的态度有助于推动团队前进。他不仅达到预期，还经常主动提出改进建议，以提升用户体验和产品价值。此外，他与利益相关者的有效沟通有助于促进跨团队的顺畅协作。",
-
   "testimonials.block.items.4.prefix": "Mr.",
   "testimonials.block.items.4.name": "Benjamin Papillon",
   "testimonials.block.items.4.role": "Schematic 联合创始人/首席技术官",
   "testimonials.block.items.4.body": "Hieu是我招聘的第一位工程师，我们在2021年夏天我注册公司后几周就开始讨论合作事宜。他构建了我们的第一个网站以及随后许多关键系统。\n他是一位极具适应力的同事、合作伙伴和朋友。我无法想象没有他，公司如何能从创业阶段走到A轮融资后。我们共同在全国范围内发展了业务，克服了无数挑战，在保持强大团队文化的同时取得了优异成绩。",
-
   "testimonials.block.items.5.prefix": "Mr.",
   "testimonials.block.items.5.name": "Nico Martinez",
   "testimonials.block.items.5.role": "兼职首席技术官 | 技术高管",
   "testimonials.block.items.5.body": "Hieu将技术能力与出色的团队精神完美结合。他热情洋溢、善于接受反馈，并持续寻求提升自身技能和所维护系统的方法。他结构化的问题解决方法和对细节的关注有助于确保解决方案的健壮性和可维护性。我真诚地欣赏他的贡献，期待未来再次与他合作，共同在多样化的项目和不断演进的团队环境中持续成长并取得优秀成果。",
-
   "testimonials.block.items.6.prefix": "Mr.",
   "testimonials.block.items.6.name": "Daniel Bailey",
   "testimonials.block.items.6.role": "技术战略顾问 | 美国陆军退伍军人",
   "testimonials.block.items.6.body": "Hieu，很高兴认识你并与你共事。你不仅是一位才华横溢的工程师和强大的领导者，更是一个出色的人。你的使命感和对事业的忠诚令人钦佩。我很感激我们共度的时光，期待保持联系。祝你在这个激动人心的新篇章中一切顺利，并在未来所有追求中持续成功。感谢你的影响力和一贯的支持。",
-
   "competencies.block.title": "核心能力",
   "competencies.block.kicker": "提供可靠的软件解决方案",
   "competencies.block.software": "软件",
@@ -182,33 +159,26 @@
   "competencies.popup.mobileApp.title": "移动应用",
   "competencies.popup.mobileApp.subtitle": "工程",
   "competencies.popup.mobileApp.description": "设计并交付跨平台移动应用，注重性能、可扩展性和用户体验。具有设计可维护移动系统架构、优化运行时性能以及确保复杂生产级环境中iOS和Android一致性的丰富经验。",
-
   "quote.block.title": "工程哲学",
   "quote.block.kicker": "我技术决策背后的思考",
   "quote.block.content": "技术是创造持久价值的手段，而非终极目标",
   "quote.block.author": "Bui Do Ngoc Hieu",
-
   "social.block.title": "我的社交主页",
   "social.block.kicker": "让我们联系",
-
   "company.block.footer": "信任我们的公司",
   "company.block.ariaLabel": "公司和合作伙伴",
-
   "stats.block.title": "数据统计",
   "stats.block.years": "~6",
   "stats.block.exp": "年经验",
   "stats.block.madeWithLove": "用心制作",
   "stats.block.projects": "+79",
   "stats.block.totalProjects": "总项目数",
-
   "call.action.content": "让我们",
   "call.action.work": "合作",
   "call.action.together": "吧。",
   "call.action.label": "让我们一起合作。",
-
   "notification.page.title": "通知",
   "notification.page.no": "暂无通知。",
-
   "setting.page.title": "设置",
   "setting.page.moveBackToHome": "返回首页",
   "setting.page.option.languages": "语言",
@@ -235,14 +205,12 @@
   "setting.page.option.darkMode.automatic": "自动",
   "setting.page.option.darkMode.automatic.description": "我们将根据您的设备系统设置自动调整显示。",
   "setting.page.option.resetSettings": "重置设置",
-
   "contact.page.info.title": "联系方式：",
   "contact.page.info.from": "来自",
   "contact.page.info.from.value": "越南岘港市",
   "contact.page.info.liveIn": "居住地",
   "contact.page.info.liveIn.value": "越南胡志明市",
   "contact.page.socials.title": "社交媒体信息：",
-
   "contact.page.form.title": "让我们保持",
   "contact.page.form.title.accent": "联系。",
   "contact.page.form.name": "姓名",
@@ -255,52 +223,62 @@
   "contact.page.form.validation.email": "请输入有效的电子邮件地址",
   "contact.page.form.toast.success": "您的消息已成功发送。",
   "contact.page.form.toast.error": "出了点问题。请再试一次。",
-
   "projects.page.title": "所有项目",
   "projects.page.updating": "更多项目即将推出",
-
   "project.nav.hint": "↑ 滚动到顶部",
   "project.nav.scrollTop": "滚动到顶部",
   "project.nav.backProject": "上一个项目",
   "project.nav.nextProject": "下一个项目",
-
   "project.detail.label.design": "设计",
   "project.detail.label.client": "客户",
   "project.detail.label.openProject": "打开项目",
   "project.detail.label.showProject": "查看项目",
-
   "project.walkerip.description": "Walker IP是一家澳大利亚知识产权律师事务所，为初创企业和大型企业提供专利、商标和工业设计注册服务。该公司专注于工程、技术、生物技术和医疗器械创新领域，通过专业法律顾问指导客户完成复杂的知识产权流程，以有效保护和商业化其创新成果。",
-
   "project.flightlocal.description": "Flight Local是一个专为旅行社构建的B2B旅游门户，支持无缝预订机票、酒店、度假套餐和签证。该平台具备预订队列管理、实时报告、支付处理和加价配置工具，帮助旅行社简化运营并为客户提供更快、更高效的服务。",
-
   "project.tapy.description": "Tapy是一款面向小型企业的移动营销应用，通过向现有客户直接推送个性化促销活动来提升销量。其参与率比电子邮件高达10倍，比传统社交媒体高7.2倍，帮助本地企业以最少的营销投入建立客户忠诚度、增加回购率并增长收入。",
-
   "project.khora.description": "Khora是一家西班牙城市咨询公司，通过发现、实验和扩展创新解决方案的创意流程来应对城市发展挑战。以建设更智慧、更可持续、更互联城市为使命，Khora与政府和组织合作，设计能改善社区生活质量的城市战略。",
-
   "project.granada.description": "AI Lab Granada是西班牙顶级AI创新中心，提供连接中大型企业与顶尖AI人才、前沿技术和应用研究的协作平台。该实验室通过定制化人工智能解决方案和创新合作伙伴关系，帮助组织提高运营效率、加速数字化转型并推动可持续增长。",
-
   "project.travel.description": "Tryotel移动应用是一款面向消费者的旅行应用，让用户能够直接在移动设备上搜索和预订机票、酒店和度假套餐。采用清晰的Material Design和直观的多层导航，该应用专为年轻、活跃的旅行者打造，提供快速、无缝、视觉吸引力强的在途旅行预订体验。",
-
   "project.tryotel.description": "Tryotel是一家孟加拉国B2C旅行平台，让用户能够轻松在线预订机票、度假套餐、签证和酒店。该平台整合了促销活动、多种支付方式和跨平台移动应用，为孟加拉国及国际目的地的客户提供全面便捷的旅行规划体验。",
-
   "project.thought.description": "A Higher Thought是一个在线灵感平台，提供励志视频、表情包、文章和积极生活方式产品，以振奋和鼓励其社区成员。用户可以在社交媒体频道上自由探索、保存和分享内容，传播积极正向的信息，激励个人成长并为世界各地的人们带来鼓励。",
-
   "project.poppy.description": "Poppy是一个婚礼花卉服务平台，让情侣能够浏览花卉系列、制定完全定制化的婚礼花卉方案，并提前获得透明的价格。该平台提供端到端花卉服务，包括专业设计咨询、配送和现场布置，使创造美丽、无压力的婚礼花卉体验变得简单愉悦。",
-
   "project.fidovn.description": "Fido.vn是越南在线招聘平台，通过智能职位发布和简历搜索系统连接求职者与雇主。专为Z世代专业人士设计，配备AI驱动的简历生成器，可自动生成精致的专业简历，帮助年轻候选人在竞争激烈的就业市场中脱颖而出，更快找到合适的职业机会。",
-
   "project.multiangle.description": "Multiangle AI是一个前沿人工智能平台，为企业提供高级分析、自动化和机器学习能力。专为加速创新和可持续增长而设计，该平台为组织提供智能工具和数据驱动的洞察，以简化运营、发现机会，并在日益竞争激烈的数字环境中做出更明智的战略决策。",
-
   "project.tattoo.description": "The Thế Trung Tattoo是一个专业纹身工作室网站，展示定制纹身服务、详细艺术作品集、透明定价和完整纹身流程。客户可以浏览工作室作品集、阅读真实客户评价，并方便地在线预约咨询，与技艺精湛的艺术家讨论想法，享受高质量的个性化纹身体验。",
-
   "project.baby.description": "BabyQuip是一个婴儿用品租赁平台，连接旅行家庭与数千个地点的可信赖本地服务提供商。所有设备（包括婴儿床、婴儿车和汽车座椅）均送达您的住所，每次出租前都经过彻底清洁和安全检查。该平台还提供派对租赁和专业婴儿用品清洁服务，带来额外便利。",
-
   "project.signinapp.description": "Sign In App是一个智能访客和工作场所管理平台，将访客登记、员工签到、会议室预订和紧急响应无缝集成到一个系统中。受全球25,000多个地点信赖，并通过ISO 27001、GDPR和HIPAA合规认证，帮助各规模组织轻松管理访问权限、安全和工作场所体验。",
-
   "project.singlekey.description": "SingleKey是一个专为加拿大房东打造的综合租赁风险管理平台。它提供全面的租户筛查（包括信用和背景调查）、自动化月租收取以及收入保障保护，涵盖最高60,000加元的未付租金、10,000加元的财产损失和2,000加元的驱逐法律费用，让房东完全安心。",
-
   "project.swipedon.description": "SwipedOn是一款受全球9,000多个工作场所信赖的员工和工作场所管理软件。它跟踪员工签到、支持混合工作安排，并支持从任何设备轻松预订工位和会议室。目前正在与Sign In App合并，SwipedOn正在演进为下一代统一工作场所管理平台，实现更智慧、更安全的工作场所管理。",
-
   "news.block.title": "科技新闻",
-  "news.block.subtitle": "与现代软件工程的脉搏保持联系。我们精心整理来自全球顶级开发者社区的最有价值文章、开源突破和技术见解——让您减少搜索时间，专注于打造卓越产品。"
+  "news.block.subtitle": "与现代软件工程的脉搏保持联系。我们精心整理来自全球顶级开发者社区的最有价值文章、开源突破和技术见解——让您减少搜索时间，专注于打造卓越产品。",
+  "about.page.experience.hdwebsoft.typeValue": "全日制",
+  "about.page.experience.hdwebsoft.project.0": "ConvosoCTIAdapter （ Salesforce CTI托管包—适用于Convoso ）",
+  "about.page.experience.hdwebsoft.project.job.0": "开发和维护了ConvosoCTIAdapter ，这是一款生产级Salesforce第二代托管软件包(2GP) ，通过400多个Apex课程将Convoso的电话系统与Salesforce CRM集成在一起。",
+  "about.page.experience.hdwebsoft.project.job.1": "设计和实施具有作业锁定机制的可排队/计划Apex作业，以防止重复执行，以及通过平台事件和Apex触发器实时同步电话事件的发布/订阅机制。",
+  "about.page.experience.hdwebsoft.project.job.2": "构建了69个Lightning Web组件，包括集成到Salesforce实用程序栏中的多选项卡软件电话小部件，使用Lightning Message Service进行跨组件通信，并使用OAuth 2.0/Named凭据进行外部系统集成。",
+  "about.page.experience.hdwebsoft.project.job.3": "强制安全最佳实践： CRUD/FLS强制、通过Checkmarx SAST和代码分析器（ PMD、ESLint ）扫描。",
+  "about.page.experience.hdwebsoft.project.1": "Poppy （婚礼花卉市场平台）",
+  "about.page.experience.hdwebsoft.project.job.4": "拥有Poppy的全栈开发， Poppy是一个高流量市场平台，使用React.js和Node.js构建，将情侣与当地花卉设计师连接起来进行婚礼策划，后端逐步迁移到NestJS ，包括AWS无服务器组件和PostgreSQL。",
+  "about.page.experience.hdwebsoft.project.job.5": "使用AWS无服务器（ Lambda、S3、DynamoDB、SQS、API网关）构建和实施RESTful API和异步后端服务；通过后端缓存策略和基于SQS的服务解耦处理高并发场景，以实现异步后台处理。",
+  "about.page.experience.hdwebsoft.project.job.6": "随着数据量的扩展，优化了TypeORM/Prisma查询和PostgreSQL索引，从而提高了系统性能和响应时间。",
+  "about.page.experience.hdwebsoft.project.job.7": "构建和维护跨产品的共享、可重用的React组件库，提高UI一致性和可重用性；通过集成Zustand、Redux和Immer ，简化复杂的前端状态管理。",
+  "about.page.experience.hdwebsoft.project.job.8": "将第三方服务（ Stripe、Plaid、SendGrid、OpenAI ）集成到核心市场工作流程中（例如，付款、通知和设计匹配功能） ，减少手动处理开销。",
+  "about.page.experience.hdwebsoft.project.2": "还在敏捷/Scrum团队结构中使用Vue.js和Next.js为几个较小的内部项目做出了贡献。",
+  "about.page.experience.toyar.typeValue": "全日制",
+  "about.page.experience.toyar.project.0": "FidoBox （电子商务平台）",
+  "about.page.experience.toyar.project.job.0": "拥有FidoBox的全栈开发，这是一款电子商务市场应用程序，在推出后5个月内在越南下载量排名前5的购物应用程序，在Web上使用React （ Vite ）构建，在移动设备上使用React Native/Flutter构建，并由Spring Boot REST API提供支持。",
+  "about.page.experience.toyar.project.job.1": "设计和实施核心商务服务—产品发现/搜索、带有评级/评论的产品详细信息、购物车/结帐、订单管理和忠诚度积分/优惠券系统—同时通过执行计划分析和随着交易量扩展而进行有针对性的索引优化PostgreSQL性能。",
+  "about.page.experience.toyar.project.job.2": "构建了游戏化的保留功能，包括促销寻宝迷你游戏和优惠券流，以及应用内聊天和通知系统，将买家与卖家和支持联系起来。",
+  "about.page.experience.toyar.project.job.3": "实施支持多品牌市场（包括小米、三星、任天堂、华硕等合作伙伴）的供应商/供应商和关联公司（ CTV ）入职工作流程，以及跨境订购和产品真实性验证逻辑。",
+  "about.page.experience.toyar.project.job.4": "重构了旧购物车/结账模块，以提高性能，并随着平台扩展而减少生产缺陷。",
+  "about.page.experience.toyar.project.job.5": "在AWS （ EC2、RDS、S3、Lambda ）上管理和优化生产基础设施，通过Jenkins和Bitbucket建立CI/CD管道，集成安全支付网关，并通过PostgreSQL数据层上的CRUD/数据访问控制实施RESTful API设计。",
+  "about.page.experience.toyar.project.1": "FidoVN （人工智能驱动的工作和房地产超级应用）",
+  "about.page.experience.toyar.project.job.6": "拥有FidoVN的全栈开发， FidoVN是一个将人工智能/大数据驱动的招聘与房地产搜索相结合的双垂直平台，在推出后的8个月内覆盖了12万多名用户、1万多家企业和2000多家经纪人。",
+  "about.page.experience.toyar.project.job.7": "构建面向候选人和雇主的就业市场流程（搜索、职位发布管理、应用程序跟踪） ，以及人工智能辅助简历生成器和大数据驱动的工作推荐源。",
+  "about.page.experience.toyar.project.job.8": "在求职者和招聘人员之间实施应用内视频面试安排和通话，并为职业技能发展建立知识库中心（课程和播客）。",
+  "about.page.experience.toyar.project.job.9": "实施交互式物业贷款/抵押贷款估算工具，实时计算权益、本金、利息和月付款，并集成360° VR查看器进行远程物业演练。",
+  "about.page.experience.toyar.project.job.10": "通过经过验证的房源徽章系统、应用内房东-租户通话/消息以及为业主和经纪人提供的房源管理/跟踪工具，构建了基于地图的房源搜索。",
+  "about.page.experience.toyar.project.job.11": "在网络和移动设备上实现了多语言(I18N)支持，并将短信验证和地图/地理位置等第三方服务集成到核心帐户和搜索工作流程中。",
+  "about.page.experience.toyar.project.job.12": "在两个平台上，在Java/Spring Boot后端和JavaScript/TypeScript前端一致地应用OOP原则和设计模式，跨Linux （ Ubuntu ）生产服务器和Windows开发环境工作；在敏捷/Scrum工作流（冲刺计划、日常站立、回顾）中领导架构设计会议，进行代码审查，并指导初级开发人员，使用Git和JIRA进行版本控制和任务跟踪。",
+  "about.page.experience.cava.typeValue": "全日制"
 }
