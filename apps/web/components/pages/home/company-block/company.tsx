@@ -7,7 +7,7 @@ import hdwebsoftLogo from "@/assets/image/company/hdwebsoft.png";
 import fidovnLogo from "@/assets/image/company/fidovn.jpg";
 import phase2Logo from "@/assets/image/company/Phase2.png";
 import mindxLogo from "@/assets/image/company/mindx.png";
-import cavaLogo from "@/assets/image/company/cava.png";
+import optoroLogo from "@/assets/image/company/optoro.jpg";
 import styles from "./company.module.scss";
 
 const MARQUEE_DURATION_SEC = 10;
@@ -16,7 +16,7 @@ const COMPANIES = [
   { id: "hdwebsoft", label: "HDWEBSOFT", logo: hdwebsoftLogo },
   { id: "fidovn", label: "FidoVN", logo: fidovnLogo },
   { id: "mindx", label: "MindX", logo: mindxLogo },
-  { id: "cava", label: "Cava", logo: cavaLogo },
+  { id: "optoro", label: "Optoro", logo: optoroLogo },
   { id: "phase2", label: "Phase2", logo: phase2Logo },
 ] as const;
 
@@ -26,7 +26,7 @@ const LOGO_CLASS = {
   hdwebsoft: styles.logoHdwebsoft,
   fidovn: styles.logoFidovn,
   mindx: styles.logoMindx,
-  cava: styles.logoCava,
+  optoro: styles.logoOptoro,
   phase2: styles.logoPhase2,
 } as Record<CompanyId, string>;
 

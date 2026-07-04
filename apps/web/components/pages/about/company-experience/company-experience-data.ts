@@ -1,6 +1,6 @@
 import type { StaticImageData } from "next/image";
 
-import cavaLogo from "@/assets/image/about/cava_logo.jpg";
+import optoroLogo from "@/assets/image/about/optoro_logo.jpg";
 import hdwebsoftLogo from "@/assets/image/about/hdwebsoft_logo.jpg";
 import toyarLogo from "@/assets/image/about/toyar_logo.jpg";
 
@@ -104,20 +104,19 @@ export const COMPANY_EXPERIENCES = {
     ],
     techLineKeys: ["about.page.experience.toyar.tech"],
   },
-  cava: {
+  optoro: {
     variant: "detailed",
-    keyPrefix: "about.page.experience.cava",
-    logo: cavaLogo,
-    logoAlt: "CAVA logo",
-    linkUrl: "https://www.linkedin.com/company/cava-/",
+    keyPrefix: "about.page.experience.optoro",
+    logo: optoroLogo,
+    logoAlt: "optoro logo",
+    linkUrl: "https://www.linkedin.com/company/optoro-/",
     responsibilityKeys: [
-      "about.page.experience.cava.responsibility.0",
-      "about.page.experience.cava.responsibility.1",
-      "about.page.experience.cava.responsibility.2",
-      "about.page.experience.cava.responsibility.3",
-      "about.page.experience.cava.responsibility.4",
+      "about.page.experience.optoro.responsibility.0",
+      "about.page.experience.optoro.responsibility.1",
+      "about.page.experience.optoro.responsibility.2",
+      "about.page.experience.optoro.responsibility.3",
     ],
-    techLineKeys: ["about.page.experience.cava.tech"],
+    techLineKeys: ["about.page.experience.optoro.tech"],
   },
   mindx: {
     variant: "simple",
