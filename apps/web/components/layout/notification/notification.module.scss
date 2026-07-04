@@ -100,8 +100,8 @@ $duration: 320ms;
   gap: 16px;
 
   svg {
-    width: 24px;
-    height: 24px;
+    width: 18px;
+    height: 18px;
     fill: var(--shell-text);
     transform-origin: top center;
     animation: bellRing 3s ease-in-out infinite;
@@ -151,7 +151,7 @@ $duration: 320ms;
 .panelTitle {
   margin: 0;
   font-family: "Verdana", sans-serif;
-  font-size: 24px;
+  font-size: 18px;
   letter-spacing: 2px;
   line-height: 32px;
   color: var(--shell-text);

@@ -28,7 +28,7 @@ type AboutBlockId =
   | "workExperienceHeading"
   | "hdwebsoft"
   | "toyar"
-  | "cava"
+  | "optoro"
   | "otherExperienceHeading"
   | "mindx"
   | "footerDivider"
@@ -75,7 +75,7 @@ export default function AboutSection() {
     },
     { id: "hdwebsoft", label: "HDWEBSOFT", variant: "card", render: () => <CompanyExperience company={COMPANY_EXPERIENCES.hdwebsoft} /> },
     { id: "toyar", label: "Toyar", variant: "card", render: () => <CompanyExperience company={COMPANY_EXPERIENCES.toyar} /> },
-    { id: "cava", label: "Cava", variant: "card", render: () => <CompanyExperience company={COMPANY_EXPERIENCES.cava} /> },
+    { id: "optoro", label: "optoro", variant: "card", render: () => <CompanyExperience company={COMPANY_EXPERIENCES.optoro} /> },
     {
       id: "otherExperienceHeading",
       label: "Other experience section",
