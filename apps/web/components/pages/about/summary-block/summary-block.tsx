@@ -1,6 +1,7 @@
 "use client";
 
 import { useLocaleText } from "@/components/layout/setting/translate/locale-provider";
+import { Reveal } from "@/components/ui/reveal";
 
 import styles from "./summary-block.module.scss";
 
@@ -13,12 +14,14 @@ export default function SummaryBlock() {
 
   return (
     <div className={styles.root}>
-      <p className={styles.name}>{t("profile.block.name")}</p>
+      <Reveal as="p" className={styles.name}>
+        {t("profile.block.name")}
+      </Reveal>
       <div className={styles.leadWrap}>
         {leadParagraphs.map((paragraph, i) => (
-          <p key={i} className={styles.lead}>
+          <Reveal as="p" key={i} delayMs={80 + i * 70} className={styles.lead}>
             {paragraph}
-          </p>
+          </Reveal>
         ))}
       </div>
     </div>

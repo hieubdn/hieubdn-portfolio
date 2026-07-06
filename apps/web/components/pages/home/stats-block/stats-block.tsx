@@ -2,6 +2,7 @@
 
 import { HeartIcon } from "@/assets/svg";
 import { useLocaleText } from "@/components/layout/setting/translate/locale-provider";
+import { Reveal } from "@/components/ui/reveal";
 
 import styles from "./stats-block.module.scss";
 
@@ -16,8 +17,14 @@ export default function StatsBlock() {
   return (
     <div className={styles.root}>
       <div className={styles.cards}>
-        {stats.map((item) => (
-          <div key={item.label} className={styles.card}>
+        {stats.map((item, index) => (
+          <Reveal
+            as="div"
+            key={item.label}
+            variant="scale"
+            delayMs={index * 90}
+            className={styles.card}
+          >
             {item.value ? (
               <>
                 <p className={styles.value}>{item.value}</p>
@@ -31,7 +38,7 @@ export default function StatsBlock() {
                 <p className={styles.cardLabel}>{item.label}</p>
               </>
             )}
-          </div>
+          </Reveal>
         ))}
       </div>
     </div>

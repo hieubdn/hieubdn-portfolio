@@ -12,6 +12,7 @@ import {
   Phone,
 } from "@/assets/svg";
 import { useLocaleText } from "@/components/layout/setting/translate/locale-provider";
+import { Reveal } from "@/components/ui/reveal";
 
 import styles from "./contact-block.module.scss";
 
@@ -40,17 +41,19 @@ export default function ContactBlock() {
 
   return (
     <div className={styles.root}>
-      <h3 className={styles.headingBlock}>{t("about.page.contact.title")}</h3>
+      <Reveal as="h3" className={styles.headingBlock}>
+        {t("about.page.contact.title")}
+      </Reveal>
 
       <ul className={styles.list}>
-        {CONTACT_ROWS.map(({ Icon, labelKey, valueKey }) => (
-          <li key={labelKey}>
+        {CONTACT_ROWS.map(({ Icon, labelKey, valueKey }, index) => (
+          <Reveal as="li" key={labelKey} delayMs={60 + index * 40}>
             <span className={styles.head}>
               <Icon />
               {t(labelKey)}:
             </span>
             <span className={styles.body}>{t(valueKey)}</span>
-          </li>
+          </Reveal>
         ))}
       </ul>
     </div>

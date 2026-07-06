@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 
 import { useLocaleText } from "@/components/layout/setting/translate/locale-provider";
 import { Briefcase } from "@/assets/svg";
+import { Reveal } from "@/components/ui/reveal";
 
 import styles from "./testimonials-block.module.scss";
 
@@ -29,7 +30,9 @@ export default function TestimonialsBlock() {
 
   return (
     <div className={styles.root} aria-label={t("testimonials.block.title")}>
-      <blockquote
+      <Reveal
+        as="blockquote"
+        variant="fade"
         className={styles.quote}
         aria-live="polite"
         aria-atomic="true"
@@ -64,11 +67,11 @@ export default function TestimonialsBlock() {
             {t("testimonials.block.element2.end")}
           </span>
         </div>
-      </blockquote>
-      <div className={styles.footer}>
+      </Reveal>
+      <Reveal as="div" delayMs={100} className={styles.footer}>
         <p className={styles.feedback}>{t("testimonials.block.footer")}</p>
         <p className={styles.kicker}>{t("testimonials.block.title")}</p>
-      </div>
+      </Reveal>
     </div>
   );
 }

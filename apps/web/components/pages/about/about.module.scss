@@ -57,7 +57,6 @@
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
-  animation: reveal 0.28s ease both;
 
   &:hover {
     box-shadow: 0 5px 14px var(--color-home-block-hover-shadow);
@@ -72,7 +71,6 @@
   border: none;
   background: transparent;
   box-shadow: none;
-  animation: reveal 0.28s ease both;
 }
 
 .dividerRow {
@@ -83,7 +81,6 @@
   border: none;
   background: transparent;
   box-shadow: none;
-  animation: reveal 0.28s ease both;
 }
 
 .rule {
@@ -99,7 +96,6 @@
   background: transparent;
   box-shadow: none;
   pointer-events: none;
-  animation: reveal 0.28s ease both;
 }
 
 .kickerStrip {
@@ -206,17 +202,6 @@
   grid-area: footerCv;
   align-items: stretch;
   justify-content: flex-start;
-}
-
-@keyframes reveal {
-  from {
-    opacity: 0;
-    transform: translateY(2px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 @media (max-width: 1024px) {

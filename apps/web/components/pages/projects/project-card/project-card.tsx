@@ -4,6 +4,7 @@ import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
 
 import { useLocaleText } from "@/components/layout/setting/translate/locale-provider";
+import { Reveal } from "@/components/ui/reveal";
 import styles from "./project-card.module.scss";
 
 type Props = {
@@ -17,7 +18,7 @@ export default function ProjectCard({ slug, name, category, image }: Props) {
   const { t } = useLocaleText();
   return (
     <Link href={`/projects/${slug}`} className={styles.root} aria-label={name}>
-      <div className={styles.imageWrapper}>
+      <Reveal as="div" variant="scale" className={styles.imageWrapper}>
         {image ? (
           <Image
             src={image}
@@ -29,14 +30,14 @@ export default function ProjectCard({ slug, name, category, image }: Props) {
         ) : (
           <div className={styles.placeholder} />
         )}
-      </div>
-      <div className={styles.info}>
+      </Reveal>
+      <Reveal as="div" delayMs={80} className={styles.info}>
         <p className={styles.name}>{name}</p>
         <div className={styles.categoryWrapper} aria-hidden="true">
           <span className={styles.category}>{category}</span>
           <span className={styles.showProject}>{t("project.detail.label.showProject")}</span>
         </div>
-      </div>
+      </Reveal>
     </Link>
   );
 }

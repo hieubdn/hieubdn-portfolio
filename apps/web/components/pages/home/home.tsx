@@ -17,6 +17,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import CompetenciesBlock from "./competencies-block/competencies-block";
 import styles from "./home.module.scss";
 import Atlas from "./atlas-block/atlas";
+import { Reveal } from "@/components/ui/reveal";
 
 const BLOCK_REVEAL_STAGGER_MS = 50;
 
@@ -75,14 +76,15 @@ export default function HomeSection() {
     <section className={styles.homeSection} aria-label="Home layout">
       <div className={styles.grid}>
         {HOME_BLOCKS.map((block, index) => (
-          <article
+          <Reveal
+            as="article"
             key={block.id}
             className={`${styles.block} ${styles[block.id]}`}
-            style={{ animationDelay: `${index * BLOCK_REVEAL_STAGGER_MS}ms` }}
+            delayMs={(index % 6) * BLOCK_REVEAL_STAGGER_MS}
             aria-label={block.label}
           >
             {block.render()}
-          </article>
+          </Reveal>
         ))}
       </div>
     </section>

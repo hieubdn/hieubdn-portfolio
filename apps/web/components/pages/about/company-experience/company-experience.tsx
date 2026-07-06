@@ -7,6 +7,7 @@ import Image from "next/image";
 import { useLocaleText } from "@/components/layout/setting/translate/locale-provider";
 
 import type { CompanyExperienceEntry } from "./company-experience-data";
+import { Reveal } from "@/components/ui/reveal";
 import styles from "./company-experience.module.scss";
 
 type CompanyExperienceProps = {
@@ -20,7 +21,7 @@ export default function CompanyExperience({ company }: CompanyExperienceProps) {
   if (company.variant === "simple") {
     return (
       <div className={styles.root}>
-        <div className={styles.metaSimple}>
+        <Reveal as="div" className={styles.metaSimple}>
           <h3 className={styles.company}>
             {t(`${company.keyPrefix}.company`)}
           </h3>
@@ -36,8 +37,8 @@ export default function CompanyExperience({ company }: CompanyExperienceProps) {
               {t(`${company.keyPrefix}.locationValue`)}
             </span>
           </span>
-        </div>
-        <div className={styles.responsibilities}>
+        </Reveal>
+        <Reveal as="div" delayMs={90} className={styles.responsibilities}>
           <span className={styles.subheading}>
             {t(`${company.keyPrefix}.responsibilities`)}:{" "}
           </span>
@@ -46,7 +47,7 @@ export default function CompanyExperience({ company }: CompanyExperienceProps) {
               <li key={key}>{t(key)}</li>
             ))}
           </ul>
-        </div>
+        </Reveal>
       </div>
     );
   }
@@ -57,7 +58,8 @@ export default function CompanyExperience({ company }: CompanyExperienceProps) {
         company.noRootGap ? `${styles.root} ${styles.rootNoGap}` : styles.root
       }
     >
-      <div
+      <Reveal
+        as="div"
         className={styles.meta}
         onClick={() => setExpanded((prev) => !prev)}
         role="button"
@@ -92,7 +94,7 @@ export default function CompanyExperience({ company }: CompanyExperienceProps) {
           </span>
         </div>
         <span className={`${styles.chevron} ${expanded ? styles.chevronOpen : ""}`}>▾</span>
-      </div>
+      </Reveal>
       {expanded && (
         <div
           className={

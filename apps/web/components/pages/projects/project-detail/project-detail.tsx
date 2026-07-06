@@ -75,6 +75,7 @@ import swipedonDetail3 from "@/assets/image/projects-page/swipedon-project/swipe
 
 import SocialShare from "./social-share";
 import ProjectNav from "./project-nav";
+import { Reveal } from "@/components/ui/reveal";
 import styles from "./project-detail.module.scss";
 
 const PROJECT_IMAGES: Record<string, StaticImageData> = {
@@ -137,10 +138,10 @@ export default function ProjectDetail({ project }: Props) {
   return (
     <>
       <article className={styles.root}>
-        <div className={styles.intro}>
+        <Reveal as="div" className={styles.intro}>
           <span className={styles.category}>{project.category} &#x2022;</span>
           <h1 className={styles.title}>{project.name}</h1>
-        </div>
+        </Reveal>
         <nav aria-label="Breadcrumb" className={styles.breadcrumb}>
           <Link href={PATH_URL.ROOT} className={styles.breadcrumbLink}>Home</Link>
           <span className={styles.breadcrumbSep}>›</span>
@@ -149,11 +150,11 @@ export default function ProjectDetail({ project }: Props) {
           <span className={styles.breadcrumbCurrent}>{project.name}</span>
         </nav>
         <div className={styles.header}>
-          <div className={styles.left}>
+          <Reveal as="div" variant="left" delayMs={60} className={styles.left}>
             <p className={styles.description}>{description}</p>
-          </div>
+          </Reveal>
 
-          <div className={styles.right}>
+          <Reveal as="div" variant="right" delayMs={100} className={styles.right}>
             <div className={styles.meta}>
               <div className={styles.metaItem}>
                 <span className={styles.metaLabel}>{t("project.detail.label.design")}</span>
@@ -174,11 +175,11 @@ export default function ProjectDetail({ project }: Props) {
                 {t("project.detail.label.openProject")} <span aria-hidden="true"><Right /></span>
               </a>
             )}
-          </div>
+          </Reveal>
         </div>
 
         {poster && (
-          <div className={styles.imageSection}>
+          <Reveal as="div" variant="scale" className={styles.imageSection}>
             <SocialShare title={project.name} />
             <Image
               src={poster}
@@ -187,13 +188,19 @@ export default function ProjectDetail({ project }: Props) {
               sizes="100vw"
               priority
             />
-          </div>
+          </Reveal>
         )}
 
         {detailImages.length > 0 && (
           <div className={styles.detailGrid}>
             {detailImages.map((img, i) => (
-              <div key={i} className={styles.detailImageWrapper}>
+              <Reveal
+                as="div"
+                key={i}
+                variant="scale"
+                delayMs={(i % 4) * 70}
+                className={styles.detailImageWrapper}
+              >
                 <Image
                   src={img}
                   alt={`${project.name} detail ${i + 1}`}
@@ -201,7 +208,7 @@ export default function ProjectDetail({ project }: Props) {
                   style={{ width: "100%", height: "auto" }}
                   sizes="100vw"
                 />
-              </div>
+              </Reveal>
             ))}
           </div>
         )}

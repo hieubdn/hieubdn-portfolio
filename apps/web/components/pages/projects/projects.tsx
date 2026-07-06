@@ -25,6 +25,7 @@ import { useLocaleText } from "@/components/layout/setting/translate/locale-prov
 import styles from "./projects.module.scss";
 import TitleBlock from "./title-block/title-block";
 import ProjectCard from "./project-card/project-card";
+import { Reveal } from "@/components/ui/reveal";
 
 const BLOCK_REVEAL_STAGGER_MS = 50;
 
@@ -203,14 +204,11 @@ export default function ProjectsSection() {
     <section className={styles.projectSection} aria-labelledby="project-title">
       <div className={styles.grid}>
         {PROJECT_BLOCKS.map((block, index) => (
-          <article
+          <Reveal
+            as="article"
             key={block.id}
             className={articleClassName(block)}
-            style={
-              block.variant === "static"
-                ? undefined
-                : { animationDelay: `${index * BLOCK_REVEAL_STAGGER_MS}ms` }
-            }
+            delayMs={(index % 6) * BLOCK_REVEAL_STAGGER_MS}
             aria-label={block.label}
           >
             {block.variant === "static" ? (
@@ -223,7 +221,7 @@ export default function ProjectsSection() {
                 image={block.image}
               />
             )}
-          </article>
+          </Reveal>
         ))}
       </div>
       <div className={styles.updatingBanner}>

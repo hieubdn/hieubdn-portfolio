@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import profileImg1 from "@/assets/image/profile-block/hieubdn.jpg";
 import { PATH_URL } from "@/config/path";
 import { useLocaleText } from "@/components/layout/setting/translate/locale-provider";
+import { Reveal } from "@/components/ui/reveal";
 
 import styles from "./profile-block.module.scss";
 
@@ -42,7 +43,7 @@ export default function ProfileBlock() {
       suppressHydrationWarning
     >
       <div className={styles.body}>
-        <div className={styles.imageWrap}>
+        <Reveal as="div" variant="scale" className={styles.imageWrap}>
           <div className={styles.slideStack} aria-hidden>
             {PROFILE_IMAGES.map((item, i) => (
               <Image
@@ -64,20 +65,22 @@ export default function ProfileBlock() {
               />
             ))}
           </div>
-        </div>
+        </Reveal>
         <div className={styles.info}>
-          <p className={styles.name} suppressHydrationWarning>
+          <Reveal as="p" delayMs={80} className={styles.name} suppressHydrationWarning>
             {profile.name}
-          </p>
-          <p className={styles.title} suppressHydrationWarning>
+          </Reveal>
+          <Reveal as="p" delayMs={140} className={styles.title} suppressHydrationWarning>
             {profile.title}
-          </p>
-          <p
+          </Reveal>
+          <Reveal
+            as="p"
+            delayMs={200}
             className={`${styles.contact} ${styles.email}`}
             suppressHydrationWarning
           >
             {profile.email}
-          </p>
+          </Reveal>
         </div>
       </div>
     </Link>
