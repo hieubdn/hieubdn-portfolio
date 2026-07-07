@@ -67,6 +67,7 @@ $border: #dde5ea;
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  height: 44px;
   padding: 6px 12px;
   border: none;
   background: transparent;
@@ -101,7 +102,8 @@ $border: #dde5ea;
 .feedbackButton {
   display: inline-flex;
   align-items: center;
-  padding: 8px 16px;
+  padding: 12px 24px;
+  height: 44px;
   border: none;
   border-radius: 999px;
   background: $teal;
@@ -391,6 +393,11 @@ $border: #dde5ea;
 .summaryTitle {
   @include acadify-font(16px, 600);
   color: #4f3b20;
+}
+
+.closingCta {
+  display: flex;
+  justify-content: center;
 }
 
 .closing {

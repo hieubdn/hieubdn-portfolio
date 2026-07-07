@@ -231,7 +231,7 @@ export const ACADIFY_CONTENT: Record<AcadifyLang, AcadifyContent> = {
     },
     closing:
       "Đây là bản ý tưởng ban đầu, mọi góp ý (kể cả phản biện) đều rất quý với Acadify ở giai đoạn này. Cảm ơn quý thầy cô đã dành thời gian đọc và đồng hành cùng dự án.",
-    surveyCta: "Đề xuất & góp ý",
+    surveyCta: "Đề xuất & góp ý với Acadify",
   },
   en: {
     langToggleLabel: "Switch language",
@@ -407,6 +407,6 @@ export const ACADIFY_CONTENT: Record<AcadifyLang, AcadifyContent> = {
     },
     closing:
       "This is an early draft of the idea — every comment (including critical ones) is invaluable to Acadify at this stage. Thank you for taking the time to read and for supporting the project.",
-    surveyCta: "Suggestions & feedback",
+    surveyCta: "Suggestions & feedback with Acadify",
   },
 };

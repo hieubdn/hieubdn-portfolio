@@ -215,6 +215,15 @@ export default function Acadify() {
           </section>
 
           <p className={styles.closing}>{content.closing}</p>
+
+          <div className={styles.closingCta}>
+            <Link
+              href={PATH_URL.ACADIFY_SURVEY}
+              className={styles.feedbackButton}
+            >
+              {content.surveyCta}
+            </Link>
+          </div>
         </div>
       </article>
 
