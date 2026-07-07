@@ -4,6 +4,8 @@ export const PATH_URL = {
   PROJECTS: "/projects",
   CONTACT: "/contact",
   NEWS: "/news",
+  ACADIFY: "/acadify",
+  ACADIFY_SURVEY: "/acadify/survey",
 } as const;
 
 export const SOCIAL_LINKS = {

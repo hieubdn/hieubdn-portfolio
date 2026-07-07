@@ -6,10 +6,9 @@
   font-family: "Verdana", sans-serif;
   font-size: 16px;
   letter-spacing: 1.5px;
-  padding-left: 16px;
-  width: 500px;
+  padding-left: 24px;
 
-  svg {
+  [data-icon] svg {
     width: 24px;
     height: 24px;
   }

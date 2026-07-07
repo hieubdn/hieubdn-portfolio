@@ -1,6 +1,11 @@
 "use client";
 
-import { useLayoutEffect, useMemo, useState } from "react";
+import {
+  useLayoutEffect,
+  useMemo,
+  useState,
+  type CSSProperties,
+} from "react";
 import { Toaster } from "sonner";
 
 import type { DarkModePreference } from "@/components/theme/theme-constants";
@@ -43,6 +48,7 @@ export function AppToaster() {
       richColors
       closeButton
       duration={5000}
+      style={{ "--width": "min(500px, calc(100vw - 32px))" } as CSSProperties}
       toastOptions={{
         classNames: {
           toast: styles.toast,

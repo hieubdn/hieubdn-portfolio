@@ -1,0 +1,406 @@
+// Acadify is a self-contained document page: the "paper" keeps its own light
+// palette in both app themes, mirroring the original PDF layout.
+$paper: #ffffff;
+$ink: #243b48;
+$ink-soft: #44606f;
+$teal-deep: #1d4354;
+$teal: #17808d;
+$teal-soft: #e9f5f6;
+$border: #dde5ea;
+
+// Unified typography: body text (390), emphasis titles (600), all ≥ 16px.
+@mixin acadify-font($size: 16px, $weight: 390) {
+  font-size: $size;
+  font-family: "Verdana", sans-serif;
+  font-weight: $weight;
+  letter-spacing: 0px;
+  line-height: 32px;
+}
+
+.acadify {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 24px 0 64px;
+  font-family: "Verdana", sans-serif;
+}
+
+.topBar {
+  width: 100%;
+  max-width: 920px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.brand {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.topBarActions {
+  width: 100%;
+  justify-content: flex-end;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+
+.langToggle {
+  display: inline-flex;
+  border: 1px solid $border;
+  border-radius: 999px;
+  overflow: hidden;
+  background: $paper;
+}
+
+.langOption {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border: none;
+  background: transparent;
+  color: $ink-soft;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+
+  &:hover {
+    background: $teal-soft;
+  }
+}
+
+.langOptionActive {
+  background: $teal-deep;
+  color: #ffffff;
+
+  &:hover {
+    background: $teal-deep;
+  }
+}
+
+.flag {
+  width: 22px;
+  height: 15px;
+  border-radius: 2px;
+  display: block;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.12);
+}
+
+.feedbackButton {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 999px;
+  background: $teal;
+  color: #ffffff;
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.15s ease;
+
+  &:hover {
+    background: #126b76;
+    transform: translateY(-1px);
+  }
+}
+
+.document {
+  width: 100%;
+  max-width: 920px;
+  background: $paper;
+  color: $ink;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(6, 24, 34, 0.35);
+}
+
+.hero {
+  background: $teal-deep;
+  color: #ffffff;
+  padding: 56px 56px 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @media (max-width: 640px) {
+    padding: 36px 24px 44px;
+  }
+}
+
+.heroKicker {
+  font-size: 13px;
+  font-family: "Verdana", sans-serif;
+  font-weight: 390;
+  letter-spacing: 0px;
+  line-height: 32px;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.heroTitle {
+  @include acadify-font(26px, 600);
+  letter-spacing: 2px;
+
+  @media (max-width: 640px) {
+    font-size: 24px;
+  }
+}
+
+.heroSubtitle {
+  @include acadify-font(16px, 390);
+  color: #cfe3ea;
+}
+
+.heroMeta {
+  font-size: 13px;
+  font-family: "Verdana", sans-serif;
+  font-weight: 390;
+  letter-spacing: 0px;
+  line-height: 32px;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.body {
+  @include acadify-font(16px, 390);
+  padding: 44px 24px 56px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+
+  @media (max-width: 640px) {
+    padding: 28px 16px 36px;
+  }
+}
+
+.intro {
+  color: $ink-soft;
+  padding-bottom: 28px;
+  border-bottom: 1px solid $border;
+  letter-spacing: 0px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sectionHeading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sectionNumber {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 6px;
+  background: $teal;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.sectionTitle {
+  @include acadify-font(18px, 600);
+  color: $ink;
+}
+
+.lead {
+  @include acadify-font(16px, 390);
+  color: $ink-soft;
+}
+
+.bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 4px;
+
+  li {
+    @include acadify-font(16px, 390);
+    position: relative;
+    padding-left: 18px;
+    color: $ink-soft;
+
+    &::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: $teal;
+      font-weight: 600;
+    }
+  }
+}
+
+.steps {
+  list-style: none;
+  border: 1px solid $border;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.step {
+  display: grid;
+  grid-template-columns: 32px 130px 1fr;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 10px;
+
+  &:nth-child(even) {
+    background: #f7fafb;
+  }
+
+  &+& {
+    border-top: 1px solid $border;
+  }
+
+  @media (max-width: 640px) {
+    grid-template-columns: 40px 1fr;
+
+    .stepDescription {
+      grid-column: 2;
+    }
+  }
+}
+
+.stepNumber {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: $teal-soft;
+  color: $teal;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.stepActor {
+  @include acadify-font(16px, 600);
+  color: $ink;
+}
+
+.stepDescription {
+  @include acadify-font(16px, 390);
+  color: $ink-soft;
+}
+
+.subHeading {
+  @include acadify-font(16px, 600);
+  color: $teal;
+  margin-top: 8px;
+}
+
+.tableWrap {
+  overflow-x: auto;
+  border-radius: 10px;
+  border: 1px solid $border;
+}
+
+.table {
+  width: 100%;
+  min-width: 640px;
+  border-collapse: collapse;
+
+  th {
+    @include acadify-font(16px, 600);
+    background: $teal-deep;
+    color: #ffffff;
+    text-align: left;
+    padding: 12px 14px;
+  }
+
+  td {
+    @include acadify-font(16px, 390);
+    padding: 12px 14px;
+    color: $ink-soft;
+    vertical-align: top;
+    border-top: 1px solid $border;
+  }
+
+  tbody tr:nth-child(even) {
+    background: #f7fafb;
+  }
+}
+
+.tableLeadCell {
+  font-weight: 600;
+  color: $ink;
+}
+
+.phaseBox {
+  border: 1px solid #a9d6dc;
+  border-left: 4px solid $teal;
+  background: $teal-soft;
+  border-radius: 8px;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: $ink-soft;
+
+  p {
+    letter-spacing: 0px;
+  }
+}
+
+.phaseTitle {
+  @include acadify-font(16px, 600);
+  color: $ink;
+  letter-spacing: 0px;
+
+}
+
+.summaryBox {
+  border: 1px solid #f0c48c;
+  border-left: 4px solid #e8963f;
+  background: #fdf3e3;
+  border-radius: 8px;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #6b5233;
+
+  p {
+    letter-spacing: 0px;
+  }
+}
+
+.summaryTitle {
+  @include acadify-font(16px, 600);
+  color: #4f3b20;
+}
+
+.closing {
+  font-size: 14px;
+  font-family: "Verdana", sans-serif;
+  font-weight: 390;
+  letter-spacing: 0px;
+  line-height: 32px;
+  padding-top: 24px;
+  border-top: 1px solid $border;
+  font-style: italic;
+  color: #7b8d98;
+}

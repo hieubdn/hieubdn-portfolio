@@ -28,7 +28,7 @@
     gap: 16px;
   }
 
-  span {
+  .link {
     font-family: "Verdana", sans-serif;
     font-size: 16px;
     font-weight: 390;
@@ -36,6 +36,12 @@
     line-height: 32px;
     color: var(--shell-text);
     text-transform: uppercase;
+    text-decoration: none;
+    transition: opacity 0.15s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
   }
 }
 
