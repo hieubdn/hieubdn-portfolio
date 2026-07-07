@@ -11,6 +11,7 @@ import poppy from "@/assets/image/selected-work/poppy.png";
 import singleKey from "@/assets/image/selected-work/singlekey.png";
 import swipedOn from "@/assets/image/selected-work/SwipedOn.png";
 import { useLocaleText } from "@/components/layout/setting/translate/locale-provider";
+import { Reveal } from "@/components/ui/reveal";
 
 import styles from "./selected-work-block.module.scss";
 
@@ -99,7 +100,7 @@ export default function SelectedWorkBlock() {
       rel="noopener noreferrer"
       prefetch={false}
     >
-      <div className={styles.media}>
+      <Reveal as="div" variant="scale" className={styles.media}>
         {count <= 1 ? (
           <div className={`${styles.imageLayer} ${styles.layerVisible}`} aria-hidden>
             <ProjectImage
@@ -128,13 +129,13 @@ export default function SelectedWorkBlock() {
             </div>
           </>
         )}
-      </div>
-      <div className={styles.caption}>
+      </Reveal>
+      <Reveal as="div" delayMs={80} className={styles.caption}>
         <p className={styles.kicker} key={current.name}>
           Project: {current.name}
         </p>
         <p className={styles.title}>{t("selectedWork.block.title")}</p>
-      </div>
+      </Reveal>
     </Link>
   );
 }

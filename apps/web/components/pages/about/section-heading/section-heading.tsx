@@ -1,4 +1,5 @@
 import styles from "./section-heading.module.scss";
+import { Reveal } from "@/components/ui/reveal";
 
 type Props = {
   title: string;
@@ -6,8 +7,8 @@ type Props = {
 
 export default function SectionHeading({ title }: Props) {
   return (
-    <h2 className={styles.root}>
+    <Reveal as="h2" variant="left" className={styles.root}>
       <span className={styles.inner}>{title}</span>
-    </h2>
+    </Reveal>
   );
 }

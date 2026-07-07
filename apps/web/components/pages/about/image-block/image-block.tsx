@@ -1,13 +1,14 @@
 import Image from "next/image";
 
 import profileImg from "@/assets/image/profile-block/hieubdn.jpg";
+import { Reveal } from "@/components/ui/reveal";
 
 import styles from "./image-block.module.scss";
 
 export default function ImageBlock() {
   return (
     <div className={styles.root}>
-      <div className={styles.frame}>
+      <Reveal as="div" variant="scale" className={styles.frame}>
         <Image
           src={profileImg}
           alt=""
@@ -16,7 +17,7 @@ export default function ImageBlock() {
           className={styles.image}
           priority
         />
-      </div>
+      </Reveal>
     </div>
   );
 }

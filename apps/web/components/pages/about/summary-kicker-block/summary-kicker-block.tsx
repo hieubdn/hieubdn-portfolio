@@ -4,12 +4,13 @@ import { useLocaleText } from "@/components/layout/setting/translate/locale-prov
 
 import styles from "./summary-kicker-block.module.scss";
 import { Star } from "@/assets/svg";
+import { Reveal } from "@/components/ui/reveal";
 
 export default function SummaryKickerBlock() {
   const { t } = useLocaleText();
 
   return (
-    <p className={styles.kicker}>
+    <Reveal as="p" className={styles.kicker}>
       <span className={styles.kickerIcon} aria-hidden>
         <Star gradientId="about-summary-kicker-star-a" />
       </span>{" "}
@@ -17,6 +18,6 @@ export default function SummaryKickerBlock() {
       <span className={styles.kickerIcon} aria-hidden>
         <Star gradientId="about-summary-kicker-star-b" />
       </span>
-    </p>
+    </Reveal>
   );
 }

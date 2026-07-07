@@ -3,20 +3,21 @@ import mapImage from '@/assets/image/contact-info/img-map.webp';
 import IconMap from '@/assets/image/contact-info/icon-map.svg';
 import styles from './atlas.module.scss';
 import { StarIcon } from '@/assets/svg';
+import { Reveal } from '@/components/ui/reveal';
 
 const Atlas = () => {
     return (
         <div className={styles.root}>
-                <div className={styles.mapImage}>
+                <Reveal as="div" variant="scale" className={styles.mapImage}>
                     <Image src={mapImage} alt="map" className={styles.mapImg} />
-                </div>
-                <div className={styles.starIcon}> <StarIcon /></div>
-                <div className={styles.infoImageItem}>
+                </Reveal>
+                <Reveal as="div" delayMs={120} className={styles.starIcon}> <StarIcon /></Reveal>
+                <Reveal as="div" delayMs={180} className={styles.infoImageItem}>
                     <Image src={IconMap} alt="icon-map" />
                     <span>Đà Nẵng</span>
-                </div>
-                <div className={styles.hoangSa}>QĐ Hoàng Sa</div>
-                <div className={styles.truongSa}>QĐ Trường Sa</div>
+                </Reveal>
+                <Reveal as="div" delayMs={240} className={styles.hoangSa}>QĐ Hoàng Sa</Reveal>
+                <Reveal as="div" delayMs={300} className={styles.truongSa}>QĐ Trường Sa</Reveal>
         </div>
     );
 };

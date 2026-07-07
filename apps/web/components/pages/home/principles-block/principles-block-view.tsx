@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useLocaleText } from "@/components/layout/setting/translate/locale-provider";
 import type { NewsArticle } from "@/lib/news";
 import { PATH_URL } from "@/config/path";
+import { Reveal } from "@/components/ui/reveal";
 
 import styles from "./principles-block.module.scss";
 
@@ -37,16 +38,16 @@ export default function PrinciplesBlockView({
 
   return (
     <div className={styles.root}>
-      <div className={styles.header}>
+      <Reveal as="div" className={styles.header}>
         <span className={styles.label}>{t("home.news.title")}</span>
-      </div>
+      </Reveal>
 
       <ul className={styles.list} role="list">
         {articles.length === 0 && (
           <li className={styles.empty}>{t("home.news.empty")}</li>
         )}
-        {articles.map((article) => (
-          <li key={article.id} className={styles.item}>
+        {articles.map((article, index) => (
+          <Reveal as="li" key={article.id} delayMs={index * 60} className={styles.item}>
             <a
               href={article.url}
               target="_blank"
@@ -63,13 +64,13 @@ export default function PrinciplesBlockView({
                 {relativeTime(article.publishedAt, t)}
               </span>
             </a>
-          </li>
+          </Reveal>
         ))}
       </ul>
 
-      <Link href={PATH_URL.NEWS} className={styles.viewAll} prefetch={false}>
+      <Reveal as={Link} href={PATH_URL.NEWS} className={styles.viewAll} prefetch={false}>
         {t("home.news.viewAll")}
-      </Link>
+      </Reveal>
     </div>
   );
 }

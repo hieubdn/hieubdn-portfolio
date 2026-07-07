@@ -14,6 +14,7 @@ import {
   SoftwareEngineer,
   WebDevelopment,
 } from "@/assets/svg";
+import { Reveal } from "@/components/ui/reveal";
 import styles from "./competencies.module.scss";
 
 type CompetencyKey = "software" | "website" | "mobileApp";
@@ -49,21 +50,28 @@ export default function CompetenciesBlock() {
   return (
     <div className={styles.root} aria-label={t("competencies.block.title")}>
       <div className={styles.meta}>
-        {COMPETENCIES.map(({ key, Icon }) => (
-          <button
+        {COMPETENCIES.map(({ key, Icon }, index) => (
+          <Reveal
+            as="button"
             key={key}
             type="button"
+            variant="scale"
+            delayMs={index * 70}
             className={styles.item}
             onClick={() => open(key)}
           >
             <Icon />
             <span className={styles.text}>{t(`competencies.block.${key}`)}</span>
-          </button>
+          </Reveal>
         ))}
       </div>
       <div className={styles.caption}>
-        <p className={styles.kicker}>{t("competencies.block.kicker")}</p>
-        <p className={styles.title}>{t("competencies.block.title")}</p>
+        <Reveal as="p" delayMs={210} className={styles.kicker}>
+          {t("competencies.block.kicker")}
+        </Reveal>
+        <Reveal as="p" delayMs={280} className={styles.title}>
+          {t("competencies.block.title")}
+        </Reveal>
       </div>
 
       <dialog

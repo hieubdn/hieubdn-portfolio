@@ -6,6 +6,7 @@ import styles from "./download-cv-block.module.scss";
 import Image from "next/image";
 import Cv from "@/assets/image/CV/profile.png";
 import CvPdf from "@/assets/image/CV/BuiDoNgocHieu.pdf";
+import { Reveal } from "@/components/ui/reveal";
 
 export default function DownloadCvBlock() {
   const { t } = useLocaleText();
@@ -16,13 +17,13 @@ export default function DownloadCvBlock() {
       href={CvPdf}
       download="BuiDoNgocHieu.pdf"
     >
-      <div className={styles.meta}>
+      <Reveal as="div" variant="scale" className={styles.meta}>
         <Image src={Cv} alt="CV" width={100} height={100} />
-      </div>
-      <div className={styles.footer}>
+      </Reveal>
+      <Reveal as="div" delayMs={90} className={styles.footer}>
         <p className={styles.kicker}>{t("about.page.cv.kicker")}</p>
         <p className={styles.title}>{t("about.page.cv.title")}</p>
-      </div>
+      </Reveal>
     </a>
   );
 }

@@ -8,6 +8,7 @@ import fidovnLogo from "@/assets/image/company/fidovn.jpg";
 import phase2Logo from "@/assets/image/company/Phase2.png";
 import mindxLogo from "@/assets/image/company/mindx.png";
 import optoroLogo from "@/assets/image/company/optoro.jpg";
+import { Reveal } from "@/components/ui/reveal";
 import styles from "./company.module.scss";
 
 const MARQUEE_DURATION_SEC = 10;
@@ -109,15 +110,17 @@ export default function CompanyBlock() {
 
   return (
     <div className={styles.root} aria-label={t("company.block.ariaLabel")}>
-      <section className={styles.marqueeSection}>
+      <Reveal as="section" variant="fade" className={styles.marqueeSection}>
         <div className={styles.viewport} aria-hidden>
           <div ref={trackRef} className={styles.track}>
             <CompanyMarqueeSegment repeatIndex={0} />
             <CompanyMarqueeSegment repeatIndex={1} />
           </div>
         </div>
-      </section>
-      <p className={styles.footer}>{t("company.block.footer")}</p>
+      </Reveal>
+      <Reveal as="p" delayMs={100} className={styles.footer}>
+        {t("company.block.footer")}
+      </Reveal>
     </div>
   );
 }

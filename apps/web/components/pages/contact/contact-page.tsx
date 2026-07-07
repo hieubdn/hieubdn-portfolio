@@ -19,6 +19,7 @@ import locationGif from "@/assets/image/contact/home.png";
 import { useLocaleText } from "@/components/layout/setting/translate/locale-provider";
 import { SOCIAL_LINKS } from "@/config/path";
 import { HONEYPOT_FIELD } from "@/lib/contact/validation";
+import { Reveal } from "@/components/ui/reveal";
 
 import styles from "./contact-page.module.scss";
 
@@ -196,11 +197,11 @@ export default function ContactSection() {
 
   return (
     <section className={styles.contactSection} data-page="contact">
-      <div className={styles.info}>
+      <Reveal as="div" variant="left" className={styles.info}>
         <div className={styles.infoContainer}>
           <span className={styles.heading}>{t("contact.page.info.title")}</span>
-          {INFO_ROWS.map((row) => (
-            <div key={row.valueKey} className={styles.infoItem}>
+          {INFO_ROWS.map((row, index) => (
+            <Reveal as="div" key={row.valueKey} delayMs={80 + index * 70} className={styles.infoItem}>
               <div className={styles.imgaeIcon}>
                 <Image
                   src={row.icon}
@@ -215,16 +216,19 @@ export default function ContactSection() {
                 <span className={styles.infoLabel}>{t(row.labelKey)}</span>
                 <span className={styles.infoValue}>{t(row.valueKey)}</span>
               </div>
-            </div>
+            </Reveal>
           ))}
         </div>
 
         <div className={styles.socialsInfo}>
           <span className={styles.heading}>{t("contact.page.socials.title")}</span>
           <div className={styles.iconRow}>
-            {SOCIAL_ITEMS.map((item) => (
-              <Link
+            {SOCIAL_ITEMS.map((item, index) => (
+              <Reveal
+                as={Link}
                 key={item.href}
+                variant="scale"
+                delayMs={index * 60}
                 href={item.href}
                 className={`${styles.iconButton} ${item.buttonClass}`}
                 target="_blank"
@@ -238,13 +242,13 @@ export default function ContactSection() {
                   height={item.size}
                   className={item.imageClass}
                 />
-              </Link>
+              </Reveal>
             ))}
           </div>
         </div>
-      </div>
+      </Reveal>
 
-      <div className={styles.form}>
+      <Reveal as="div" variant="right" delayMs={100} className={styles.form}>
         <div className={styles.formHeader}>
           <h2 className={styles.formTitle}>
             {t("contact.page.form.title")}{" "}
@@ -286,7 +290,7 @@ export default function ContactSection() {
               : t("contact.page.form.send")}
           </button>
         </form>
-      </div>
+      </Reveal>
     </section>
   );
 }

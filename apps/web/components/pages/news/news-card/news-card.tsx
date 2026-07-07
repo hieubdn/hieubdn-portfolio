@@ -2,6 +2,7 @@
 
 import { useLocaleText } from "@/components/layout/setting/translate/locale-provider";
 import type { NewsArticle, NewsSource } from "@/lib/news";
+import { Reveal } from "@/components/ui/reveal";
 
 import styles from "./news-card.module.scss";
 
@@ -38,20 +39,22 @@ export default function NewsCard({ article }: { article: NewsArticle }) {
       className={styles.card}
       aria-label={article.title}
     >
-      <div className={styles.meta}>
+      <Reveal as="div" variant="fade" className={styles.meta}>
         <span className={`${styles.badge} ${styles[article.source]}`}>
           {SOURCE_LABELS[article.source]}
         </span>
         <time className={styles.date} dateTime={article.publishedAt}>
           {formatDate(article.publishedAt, locale)}
         </time>
-      </div>
+      </Reveal>
 
-      <h3 className={styles.title}>{article.title}</h3>
+      <Reveal as="h3" delayMs={60} className={styles.title}>
+        {article.title}
+      </Reveal>
 
-      <p className={styles.excerpt}>
+      <Reveal as="p" delayMs={110} className={styles.excerpt}>
         {article.excerpt || " "}
-      </p>
+      </Reveal>
 
       <div className={styles.footer}>
         {hasStats && (

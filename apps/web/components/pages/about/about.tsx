@@ -15,6 +15,7 @@ import ImageBlock from "./image-block/image-block";
 import SectionHeading from "./section-heading/section-heading";
 import SummaryBlock from "./summary-block/summary-block";
 import SummaryKickerBlock from "./summary-kicker-block/summary-kicker-block";
+import { Reveal } from "@/components/ui/reveal";
 import styles from "./about.module.scss";
 
 const BLOCK_REVEAL_STAGGER_MS = 50;
@@ -93,18 +94,15 @@ export default function AboutSection() {
     <section className={styles.aboutSection} aria-labelledby="about-title">
       <div className={styles.grid}>
         {blocks.map((block, index) => (
-          <article
+          <Reveal
+            as="article"
             key={block.id}
             className={`${variantBaseClass(block.variant)} ${styles[block.id]}`}
-            style={
-              block.variant === "static"
-                ? undefined
-                : { animationDelay: `${index * BLOCK_REVEAL_STAGGER_MS}ms` }
-            }
+            delayMs={(index % 5) * BLOCK_REVEAL_STAGGER_MS}
             aria-label={block.label}
           >
             {block.render()}
-          </article>
+          </Reveal>
         ))}
       </div>
     </section>

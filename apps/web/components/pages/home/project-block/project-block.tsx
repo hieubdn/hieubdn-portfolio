@@ -6,6 +6,7 @@ import Link from "next/link";
 import laptop from "@/assets/image/project/project.png";
 import { useLocaleText } from "@/components/layout/setting/translate/locale-provider";
 import { PATH_URL } from "@/config/path";
+import { Reveal } from "@/components/ui/reveal";
 
 import styles from "@/components/pages/home/about-block/about-block.module.scss";
 
@@ -14,7 +15,7 @@ export default function ProjectBlock() {
 
   return (
     <Link href={PATH_URL.PROJECTS} className={styles.root}>
-      <div className={styles.media}>
+      <Reveal as="div" variant="scale" className={styles.media}>
         <Image
           src={laptop}
           alt=""
@@ -22,10 +23,14 @@ export default function ProjectBlock() {
           sizes="(max-width: 768px) 100vw, 28vw"
           className={styles.image}
         />
-      </div>
+      </Reveal>
       <div className={styles.caption}>
-        <p className={styles.kicker}>{t("projects.block.kicker")}</p>
-        <p className={styles.title}>{t("projects.block.title")}</p>
+        <Reveal as="p" className={styles.kicker}>
+          {t("projects.block.kicker")}
+        </Reveal>
+        <Reveal as="p" delayMs={80} className={styles.title}>
+          {t("projects.block.title")}
+        </Reveal>
       </div>
     </Link>
   );
