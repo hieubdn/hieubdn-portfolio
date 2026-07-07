@@ -1,0 +1,370 @@
+$paper: #ffffff;
+$ink: #243b48;
+$ink-soft: #44606f;
+$teal-deep: #1d4354;
+$teal: #17808d;
+$teal-soft: #e9f5f6;
+$border: #dde5ea;
+
+@mixin acadify-font($size: 16px, $weight: 390) {
+  font-size: $size;
+  font-family: "Verdana", sans-serif;
+  font-weight: $weight;
+  letter-spacing: 0px;
+  line-height: 32px;
+}
+
+.survey {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 24px 0 64px;
+  font-family: "Verdana", sans-serif;
+}
+
+.topBar {
+  width: 100%;
+  max-width: 920px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: 1px solid $border;
+  border-radius: 999px;
+  background: $paper;
+  color: $teal-deep;
+  font-size: 16px;
+  text-decoration: none;
+  transition: background 0.15s ease, transform 0.15s ease;
+
+  &:hover {
+    background: $teal-soft;
+    transform: translateY(-1px);
+  }
+}
+
+.document {
+  width: 100%;
+  max-width: 920px;
+  background: $paper;
+  color: $ink;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(6, 24, 34, 0.35);
+}
+
+.hero {
+  background: $teal-deep;
+  color: #ffffff;
+  padding: 44px 56px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: center;
+
+  @media (max-width: 640px) {
+    padding: 32px 20px 36px;
+  }
+}
+
+.heroTitle {
+  @include acadify-font(24px, 500);
+  letter-spacing: 1px;
+
+  @media (max-width: 640px) {
+    font-size: 20px;
+  }
+}
+
+.heroSubtitle {
+  @include acadify-font(16px, 390);
+  color: #cfe3ea;
+}
+
+.heroNote {
+  font-size: 13px;
+  font-family: "Verdana", sans-serif;
+  font-weight: 390;
+  line-height: 24px;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.form {
+  padding: 36px 24px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+
+  @media (max-width: 640px) {
+    padding: 24px 16px 32px;
+  }
+}
+
+.honeypotField {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.sectionBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.sectionBar {
+  @include acadify-font(16px, 600);
+  background: $teal-deep;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.sectionNote {
+  @include acadify-font(14px, 390);
+  font-style: italic;
+  color: $ink-soft;
+}
+
+.question {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  scroll-margin-top: 90px;
+}
+
+.questionTitle {
+  @include acadify-font(16px, 600);
+  color: $ink;
+}
+
+.questionHint {
+  font-size: 13px;
+  line-height: 20px;
+  font-style: italic;
+  color: #7b8d98;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.option {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  @include acadify-font(16px, 390);
+  color: $ink-soft;
+  cursor: pointer;
+
+  input {
+    margin-top: 9px;
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    accent-color: $teal;
+    cursor: pointer;
+  }
+}
+
+.optionDisabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+
+  input {
+    cursor: not-allowed;
+  }
+}
+
+.inlineInputWrap {
+  margin: 4px 0 8px 26px;
+}
+
+.textInput {
+  width: 100%;
+  max-width: 520px;
+  padding: 10px 14px;
+  border: 1px solid $border;
+  border-radius: 8px;
+  background: #fbfdfe;
+  color: $ink;
+  font-size: 16px;
+  font-family: inherit;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+
+  &::placeholder {
+    color: #93a5af;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $teal;
+    box-shadow: 0 0 0 3px rgba(23, 128, 141, 0.15);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+  }
+}
+
+.textarea {
+  max-width: 100%;
+  min-height: 140px;
+  resize: vertical;
+  line-height: 26px;
+}
+
+.scaleControl {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-width: 520px;
+  padding-top: 4px;
+}
+
+.scaleValue {
+  align-self: flex-start;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: $teal-soft;
+  color: $teal;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 26px;
+}
+
+.scaleSlider {
+  width: 100%;
+  accent-color: $teal;
+  cursor: pointer;
+
+  &:disabled {
+    cursor: default;
+    opacity: 0.6;
+  }
+}
+
+.scaleTicks {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5px;
+
+  span {
+    width: 20px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+    color: #93a5af;
+  }
+
+  .scaleTickActive {
+    color: $teal;
+    font-weight: 600;
+  }
+}
+
+.scaleEnds {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  line-height: 20px;
+  font-style: italic;
+  color: #7b8d98;
+}
+
+.errorText {
+  font-size: 14px;
+  line-height: 22px;
+  color: #d64545;
+}
+
+.submit {
+  padding: 14px 16px;
+  border: none;
+  border-radius: 8px;
+  background: $teal-deep;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s ease;
+
+  &:hover:not(:disabled) {
+    background: #275a70;
+  }
+
+  &:disabled {
+    opacity: 0.7;
+    cursor: default;
+  }
+}
+
+.closing {
+  @include acadify-font(14px, 390);
+  padding-top: 20px;
+  border-top: 1px solid $border;
+  font-style: italic;
+  text-align: center;
+  color: #7b8d98;
+}
+
+.success {
+  padding: 64px 24px 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.successIcon {
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: $teal-soft;
+  color: $teal;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.successTitle {
+  @include acadify-font(20px, 600);
+  color: $ink;
+}
+
+.successBody {
+  @include acadify-font(16px, 390);
+  color: $ink-soft;
+  max-width: 560px;
+}
+
+.successLink {
+  margin-top: 8px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  background: $teal-deep;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.15s ease;
+
+  &:hover {
+    background: #275a70;
+  }
+}
