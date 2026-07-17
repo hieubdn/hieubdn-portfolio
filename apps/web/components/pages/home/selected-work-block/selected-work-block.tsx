@@ -134,7 +134,7 @@ export default function SelectedWorkBlock() {
         <p className={styles.kicker} key={current.name}>
           Project: {current.name}
         </p>
-        <p className={styles.title}>{t("selectedWork.block.title")}</p>
+        <h2 className={styles.title}>{t("selectedWork.block.title")}</h2>
       </Reveal>
     </Link>
   );

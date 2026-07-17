@@ -28,7 +28,7 @@ export default function AboutBlock() {
         <Reveal as="p" className={styles.kicker}>
           {t("about.block.kicker")}
         </Reveal>
-        <Reveal as="p" delayMs={80} className={styles.title}>
+        <Reveal as="h2" delayMs={80} className={styles.title}>
           {t("about.block.title")}
         </Reveal>
       </div>
