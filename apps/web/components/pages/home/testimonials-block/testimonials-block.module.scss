@@ -15,7 +15,7 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   gap: 12px;
   border: none;
   padding: 0;
@@ -74,7 +74,7 @@
   flex-direction: column;
 
   .quoteText {
-    min-height: 236px;
+    min-height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -84,12 +84,12 @@
     font-size: 16px;
     letter-spacing: 0.4px;
     line-height: 1.75;
-    border-left: 1px solid #c5c5c5;
+    border-left: 1px solid #b9b9b9d3;
     white-space: pre-line;
   }
 
   .element {
-    color: #6d6d6d;
+    color: #b9b9b9;
     font-size: 16px;
     font-weight: 500;
     letter-spacing: 0.4px;

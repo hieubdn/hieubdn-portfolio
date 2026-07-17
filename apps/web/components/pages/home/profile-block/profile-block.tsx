@@ -67,7 +67,7 @@ export default function ProfileBlock() {
           </div>
         </Reveal>
         <div className={styles.info}>
-          <Reveal as="p" delayMs={80} className={styles.name} suppressHydrationWarning>
+          <Reveal as="h1" delayMs={80} className={styles.name} suppressHydrationWarning>
             {profile.name}
           </Reveal>
           <Reveal as="p" delayMs={140} className={styles.title} suppressHydrationWarning>

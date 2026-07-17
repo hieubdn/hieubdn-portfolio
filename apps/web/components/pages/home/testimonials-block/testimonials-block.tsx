@@ -70,7 +70,7 @@ export default function TestimonialsBlock() {
       </Reveal>
       <Reveal as="div" delayMs={100} className={styles.footer}>
         <p className={styles.feedback}>{t("testimonials.block.footer")}</p>
-        <p className={styles.kicker}>{t("testimonials.block.title")}</p>
+        <h2 className={styles.kicker}>{t("testimonials.block.title")}</h2>
       </Reveal>
     </div>
   );

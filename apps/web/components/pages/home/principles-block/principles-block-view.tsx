@@ -39,7 +39,7 @@ export default function PrinciplesBlockView({
   return (
     <div className={styles.root}>
       <Reveal as="div" className={styles.header}>
-        <span className={styles.label}>{t("home.news.title")}</span>
+        <h2 className={styles.label}>{t("home.news.title")}</h2>
       </Reveal>
 
       <ul className={styles.list} role="list">

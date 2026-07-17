@@ -28,7 +28,7 @@ export default function ProjectBlock() {
         <Reveal as="p" className={styles.kicker}>
           {t("projects.block.kicker")}
         </Reveal>
-        <Reveal as="p" delayMs={80} className={styles.title}>
+        <Reveal as="h2" delayMs={80} className={styles.title}>
           {t("projects.block.title")}
         </Reveal>
       </div>

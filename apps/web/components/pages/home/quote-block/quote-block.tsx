@@ -17,7 +17,7 @@ export default function QuoteBlock() {
         <Reveal as="p" delayMs={100} className={styles.kicker}>
           {t("quote.block.kicker")}
         </Reveal>
-        <Reveal as="p" delayMs={170} className={styles.title}>
+        <Reveal as="h2" delayMs={170} className={styles.title}>
           {t("quote.block.title")}
         </Reveal>
       </div>

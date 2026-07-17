@@ -69,7 +69,7 @@ export default function CompetenciesBlock() {
         <Reveal as="p" delayMs={210} className={styles.kicker}>
           {t("competencies.block.kicker")}
         </Reveal>
-        <Reveal as="p" delayMs={280} className={styles.title}>
+        <Reveal as="h2" delayMs={280} className={styles.title}>
           {t("competencies.block.title")}
         </Reveal>
       </div>

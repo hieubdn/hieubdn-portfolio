@@ -8,20 +8,11 @@ import {
   PROFILE_LOCALE_STORAGE_KEY,
 } from "@/components/layout/setting/translate/locale-constants";
 import { loadLocaleMessages } from "@/lib/i18n/load-messages";
+import { getSiteUrl } from "@/lib/site-url";
+import { SOCIAL_LINKS } from "@/config/path";
 import { AppShell } from "./app-shell";
 import { AppProviders } from "./providers";
 import "./globals.scss";
-
-function resolveMetadataBaseUrl(): string {
-  const site = process.env.NEXT_SITE_URL?.trim();
-  if (site) {
-    return /^https?:\/\//i.test(site) ? site : `https://${site}`;
-  }
-  if (process.env.VERCEL_URL != null) {
-    return `https://${process.env.VERCEL_URL}`;
-  }
-  return "http://localhost:3000";
-}
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -29,7 +20,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata = {
-  metadataBase: new URL(resolveMetadataBaseUrl()),
+  metadataBase: new URL(getSiteUrl()),
   title: 'hieubdn - Portfolio',
   description: 'Bùi Đỗ Ngọc Hiếu portfolio - Full Stack Developer',
   openGraph: {
@@ -71,6 +62,27 @@ export default async function RootLayout({
       ? undefined
       : await loadLocaleMessages(initialLocale);
 
+  const personJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Bùi Đỗ Ngọc Hiếu",
+    alternateName: "hieubdn",
+    jobTitle: "Software Engineer",
+    url: getSiteUrl(),
+    email: "mailto:hieubdn@gmail.com",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Da Nang",
+      addressCountry: "VN",
+    },
+    sameAs: [
+      SOCIAL_LINKS.GITHUB,
+      SOCIAL_LINKS.LINKEDIN,
+      SOCIAL_LINKS.INSTAGRAM,
+      SOCIAL_LINKS.FACEBOOK,
+    ],
+  };
+
   return (
     <html lang={initialLocale} suppressHydrationWarning>
       <head>
@@ -83,6 +95,10 @@ export default async function RootLayout({
           content="black-translucent"
         />
         <meta name="apple-mobile-web-app-title" content="hieubdn" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
       </head>
       <body>
         <AppProviders
