@@ -38,4 +38,5 @@ yarn-error.log*
 *.pem
 
 # claude local data and config files
-.claude/
+.claude/rule.md 
+.claude/settings.local.json 
