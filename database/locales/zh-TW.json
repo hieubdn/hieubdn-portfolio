@@ -295,5 +295,9 @@
   "aria.header.github": "開啟 GitHub 個人檔案",
   "aria.theme.darkMode": "深色模式偏好",
   "aria.globalActions": "全域操作",
-  "aria.languages.list": "顯示語言"
+  "aria.languages.list": "顯示語言",
+  "intro.location": "越南峴港",
+  "intro.scrollCue": "捲動以探索",
+  "intro.placeholder": "章節",
+  "intro.fallingBanner": "超過24種技術和工具"
 }
