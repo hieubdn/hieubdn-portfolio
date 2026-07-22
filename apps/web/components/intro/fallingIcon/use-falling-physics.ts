@@ -139,7 +139,13 @@ export function useFallingPhysics({
       const render = Render.create({
         element: canvasHost,
         engine,
-        options: { width, height, background: "transparent", wireframes: false },
+        options: {
+          width,
+          height,
+          background: "transparent",
+          wireframes: false,
+          pixelRatio: window.devicePixelRatio || 1,
+        },
       });
       // Matter sizes the canvas element to the `options` snapshot above and
       // never touches it again; stretch it to the host div's current box so
@@ -205,12 +211,68 @@ export function useFallingPhysics({
       const mouseEvents = mouse as unknown as {
         element: HTMLElement;
         mousewheel: EventListenerOrEventListenerObject;
+        mousedown: (event: Event) => void;
+        mousemove: (event: Event) => void;
+        mouseup: (event: Event) => void;
       };
       mouseEvents.element.removeEventListener("wheel", mouseEvents.mousewheel);
       mouseEvents.element.removeEventListener(
         "DOMMouseScroll",
         mouseEvents.mousewheel,
       );
+
+      // matter-js's own touch handlers call preventDefault() on *every* touch
+      // inside the stage, so a finger that lands on the icon grid while just
+      // trying to scroll past this section gets swallowed. iOS Safari is far
+      // less forgiving of that than desktop/Android: with a scrollable
+      // ancestor in play it either locks the whole gesture up (nothing moves,
+      // no drag, no scroll) instead of falling back to a native scroll. Swap
+      // the library's touch listeners for a version that only takes over the
+      // gesture — and only flips `touch-action` to `none` — when the finger
+      // actually lands on a chip; every other touch is left alone so the
+      // section keeps scrolling normally.
+      mouseEvents.element.removeEventListener("touchstart", mouseEvents.mousedown);
+      mouseEvents.element.removeEventListener("touchmove", mouseEvents.mousemove);
+      mouseEvents.element.removeEventListener("touchend", mouseEvents.mouseup);
+
+      let touchCaptured = false;
+      const hitTestPoint = (touch: Touch) => {
+        const stageRect = stage.getBoundingClientRect();
+        const point = {
+          x: touch.clientX - stageRect.left,
+          y: touch.clientY - stageRect.top,
+        };
+        return Matter.Query.point(
+          bodies.map((b) => b.body),
+          point,
+        ).length > 0;
+      };
+      const onTouchStart = (event: TouchEvent) => {
+        const touch = event.touches[0];
+        touchCaptured = touch !== undefined && hitTestPoint(touch);
+        stage.style.touchAction = touchCaptured ? "none" : "";
+        if (touchCaptured) {
+          event.preventDefault();
+          mouseEvents.mousedown(event);
+        }
+      };
+      const onTouchMove = (event: TouchEvent) => {
+        if (!touchCaptured) return;
+        event.preventDefault();
+        mouseEvents.mousemove(event);
+      };
+      const onTouchEnd = (event: TouchEvent) => {
+        if (!touchCaptured) return;
+        touchCaptured = false;
+        stage.style.touchAction = "";
+        event.preventDefault();
+        mouseEvents.mouseup(event);
+      };
+      stage.addEventListener("touchstart", onTouchStart, { passive: false });
+      stage.addEventListener("touchmove", onTouchMove, { passive: false });
+      stage.addEventListener("touchend", onTouchEnd, { passive: false });
+      stage.addEventListener("touchcancel", onTouchEnd, { passive: false });
+
       const mouseConstraint = MouseConstraint.create(engine, {
         mouse,
         constraint: { stiffness, render: { visible: false } },
@@ -253,6 +315,11 @@ export function useFallingPhysics({
         render.textures = {};
         World.clear(engine.world, false);
         Engine.clear(engine);
+        stage.removeEventListener("touchstart", onTouchStart);
+        stage.removeEventListener("touchmove", onTouchMove);
+        stage.removeEventListener("touchend", onTouchEnd);
+        stage.removeEventListener("touchcancel", onTouchEnd);
+        stage.style.touchAction = "";
 
         // Reset chips back to their plain server-rendered layout and hide
         // the banner again, so the next `buildWorld()` (next time this
@@ -295,22 +362,70 @@ export function useFallingPhysics({
       })();
     };
 
+    const isStageVisible = () => {
+      const r = stage.getBoundingClientRect();
+      return (
+        r.width > 0 &&
+        r.height > 0 &&
+        r.top < window.innerHeight * 0.55 &&
+        r.bottom > 0
+      );
+    };
+
+    // This stage lives inside a `position: fixed` overlay panel that is
+    // itself CSS-transformed into view, then scrolled internally. Some iOS
+    // Safari versions delay or altogether skip IntersectionObserver callbacks
+    // for targets nested that way, which otherwise leaves the whole widget
+    // looking permanently frozen on first view. A plain `scroll` listener on
+    // the actual scrolling ancestor doesn't share that failure mode, so it
+    // backs up the observer instead of replacing it.
+    const scrollAncestor = (() => {
+      let node = stage.parentElement;
+      while (node) {
+        if (node.scrollHeight > node.clientHeight + 1) return node;
+        node = node.parentElement;
+      }
+      return null;
+    })();
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry?.isIntersecting) {
           start();
-          observer.disconnect();
+          stopWatchingVisibility();
         }
       },
       // Fire once the stage has scrolled up into roughly the top half of the
       // viewport, not the moment it peeks in from the bottom.
       { threshold: 0, rootMargin: "0px 0px -45% 0px" },
     );
+
+    const onManualCheck = () => {
+      if (isStageVisible()) {
+        start();
+        stopWatchingVisibility();
+      }
+    };
+
+    const stopWatchingVisibility = () => {
+      observer.disconnect();
+      scrollAncestor?.removeEventListener("scroll", onManualCheck);
+      window.removeEventListener("scroll", onManualCheck);
+    };
+
     observer.observe(stage);
+    scrollAncestor?.addEventListener("scroll", onManualCheck, {
+      passive: true,
+    });
+    window.addEventListener("scroll", onManualCheck, { passive: true });
+    // Covers the case where the stage is already in view the instant this
+    // effect runs (e.g. an instant/very fast transition), before any scroll
+    // or intersection callback would otherwise fire.
+    requestAnimationFrame(onManualCheck);
 
     return () => {
       disposed = true;
-      observer.disconnect();
+      stopWatchingVisibility();
       window.removeEventListener("resize", onResize);
       window.clearTimeout(resizeTimer);
       removeDragListeners?.();
