@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Permanent_Marker } from "next/font/google";
+import localFont from "next/font/local";
 
 import { useLocaleText } from "@/components/layout/setting/translate/locale-provider";
 
@@ -9,9 +9,8 @@ import { FALLING_ICON_SKILLS } from "./falling-icon-data";
 import { useFallingPhysics } from "./use-falling-physics";
 import styles from "./falling-icon-stage.module.scss";
 
-const marker = Permanent_Marker({
-  weight: "400",
-  subsets: ["latin"],
+const marker = localFont({
+  src: "../../../assets/font/hltfap4e.ttf",
   display: "swap",
 });
 
