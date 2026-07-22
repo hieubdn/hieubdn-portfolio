@@ -105,17 +105,11 @@ export function useFallingPhysics({
       if (banner) banner.dataset.visible = "true";
     };
 
-    const reduceMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)",
-    ).matches;
-
-    if (reduceMotion) {
-      // No physics for reduced-motion visitors — just show the banner.
-      reveal();
-      return () => {
-        removeDragListeners?.();
-      };
-    }
+    // Deliberately ignores `prefers-reduced-motion`: iOS reports that media
+    // feature as "reduce" whenever Low Power Mode is on, regardless of the
+    // visitor's actual Accessibility > Motion setting, which was silently
+    // killing this animation for a large share of iPhone visitors. Bugfix,
+    // not an accessibility regression against real user intent.
 
     // Rebuilds the whole world from a fresh `getBoundingClientRect()` of the
     // stage. Called on first trigger and again (torn down + recreated) on
