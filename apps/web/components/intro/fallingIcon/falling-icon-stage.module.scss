@@ -4,6 +4,11 @@
   height: clamp(450px, 65vh, 450px);
   overflow: hidden;
   cursor: grab;
+  // Default to normal vertical scrolling; JS flips this to `none` only while
+  // a finger is actually dragging a chip, so a touch that just passes
+  // through the icon grid keeps scrolling the section on iOS Safari.
+  touch-action: pan-y;
+  -webkit-touch-callout: none;
 
   @media (max-width: 768px) {
     width: 100%;
