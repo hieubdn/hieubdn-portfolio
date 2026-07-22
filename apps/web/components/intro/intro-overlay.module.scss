@@ -227,8 +227,8 @@
     transition: none;
   }
 
-  .scrollCueDot,
-  .scrollCueChevron {
-    animation: none;
-  }
+  // Deliberately NOT disabling .scrollCueDot / .scrollCueChevron here: iOS
+  // reports this media feature as "reduce" whenever Low Power Mode is on,
+  // unrelated to the visitor's real Accessibility > Motion preference, which
+  // was silently freezing this cue for a large share of iPhone visitors.
 }
