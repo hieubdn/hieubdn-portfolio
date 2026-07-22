@@ -295,5 +295,9 @@
   "aria.header.github": "GitHub 프로필 열기",
   "aria.theme.darkMode": "다크 모드 설정",
   "aria.globalActions": "전역 작업",
-  "aria.languages.list": "표시 언어"
+  "aria.languages.list": "표시 언어",
+  "intro.location": "베트남 다낭",
+  "intro.scrollCue": "스크롤하여 둘러보기",
+  "intro.placeholder": "섹션",
+  "intro.fallingBanner": "24개 이상의 기술 및 도구"
 }

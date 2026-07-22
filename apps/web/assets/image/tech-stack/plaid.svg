@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24">
+  <!-- icon-creator: topic="plaid" purpose="tech-stack-skill-icon" reuse-key="plaid-fintech-monogram" -->
+  <rect x="6" y="3" width="4" height="18" rx="2" fill="#006BFF"/>
+  <path d="M10 3 H13.5 A5 5 0 0 1 13.5 13 H10 Z" fill="#006BFF"/>
+</svg>

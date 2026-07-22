@@ -295,5 +295,9 @@
   "aria.header.github": "GitHub-Profil öffnen",
   "aria.theme.darkMode": "Dunkelmodus-Einstellung",
   "aria.globalActions": "Globale Aktionen",
-  "aria.languages.list": "Anzeigesprache"
+  "aria.languages.list": "Anzeigesprache",
+  "intro.location": "Da Nang, Vietnam",
+  "intro.scrollCue": "Zum Erkunden scrollen",
+  "intro.placeholder": "Bereich",
+  "intro.fallingBanner": "Technologies & Tools"
 }

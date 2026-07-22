@@ -295,5 +295,9 @@
   "aria.header.github": "Mở trang GitHub",
   "aria.theme.darkMode": "Tùy chọn chế độ tối",
   "aria.globalActions": "Thao tác nhanh",
-  "aria.languages.list": "Ngôn ngữ hiển thị"
+  "aria.languages.list": "Ngôn ngữ hiển thị",
+  "intro.location": "Đà Nẵng, Việt Nam",
+  "intro.scrollCue": "Cuộn để khám phá",
+  "intro.placeholder": "Phần",
+  "intro.fallingBanner": "24+ Công nghệ & Công cụ"
 }

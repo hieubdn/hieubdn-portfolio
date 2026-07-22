@@ -295,5 +295,9 @@
   "aria.header.github": "GitHubプロフィールを開く",
   "aria.theme.darkMode": "ダークモード設定",
   "aria.globalActions": "グローバル操作",
-  "aria.languages.list": "表示言語"
+  "aria.languages.list": "表示言語",
+  "intro.location": "ダナン、ベトナム",
+  "intro.scrollCue": "スクロールして探索",
+  "intro.placeholder": "<bpt i=\"1000001\" type=\"formatting\" x=\"1000001\">{b></bpt>セクション<ept i=\"1000001\"><b}</ept>",
+  "intro.fallingBanner": "24以上のテクノロジーとツール"
 }
