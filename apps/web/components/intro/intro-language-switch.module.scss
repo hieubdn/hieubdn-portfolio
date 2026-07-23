@@ -1,0 +1,117 @@
+.root {
+  position: relative;
+}
+
+.trigger {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 999px;
+  background: var(--color-page-background);
+  color: var(--color-home-text-heading);
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: 2px solid #09c469;
+    outline-offset: 2px;
+  }
+}
+
+.flagWrap {
+  display: inline-flex;
+  width: 22px;
+  height: 15px;
+  border-radius: 3px;
+  overflow: hidden;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 1px rgb(0 0 0 / 12%) inset;
+}
+
+.flag {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.shortLabel {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.chevron {
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid currentColor;
+  transition: transform 0.2s ease;
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+.menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 10;
+  list-style: none;
+  margin: 0;
+  padding: 6px;
+  min-width: 200px;
+  max-height: min(360px, 70vh);
+  overflow-y: auto;
+  border-radius: 12px;
+  background: var(--shell-surface-panel);
+  box-shadow: var(--shell-shadow-popover);
+  border: 1px solid var(--shell-border);
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--color-home-text-heading);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+
+  &:hover {
+    background: var(--shell-surface-hover);
+  }
+
+  &:focus-visible {
+    outline: 2px solid #09c469;
+    outline-offset: 2px;
+  }
+}
+
+.optionActive {
+  background: var(--shell-surface-active);
+  color: var(--color-home-text-primary);
+  font-weight: 600;
+}
+
+.optionLabel {
+  font-size: 14px;
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 500px) {
+  .shortLabel {
+    display: none;
+  }
+
+  .trigger {
+    padding: 6px 8px;
+  }
+}

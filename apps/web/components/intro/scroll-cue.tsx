@@ -19,6 +19,9 @@ export function ScrollCue({ label, onClick, className = "" }: ScrollCueProps) {
       <span className={styles.scrollCueMouse} aria-hidden="true">
         <span className={styles.scrollCueDot} />
       </span>
+      <span className={styles.scrollCueLabel} suppressHydrationWarning>
+        {label}
+      </span>
       <span className={styles.scrollCueChevron} aria-hidden="true" />
     </button>
   );

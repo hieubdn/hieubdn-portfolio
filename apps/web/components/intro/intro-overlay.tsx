@@ -1,5 +1,6 @@
 "use client";
 
+import { IntroLanguageSwitch } from "./intro-language-switch";
 import { IntroPanelOne } from "./intro-panel-one";
 import { IntroPanelTwo } from "./intro-panel-two";
 import { useIntroSequence } from "./use-intro-sequence";
@@ -27,6 +28,9 @@ export function IntroOverlay() {
       aria-label="Intro"
       tabIndex={-1}
     >
+      <div className={styles.langSwitchPosition}>
+        <IntroLanguageSwitch />
+      </div>
       <div
         ref={t1Ref}
         className={`${styles.panel} ${styles.panelT1} ${

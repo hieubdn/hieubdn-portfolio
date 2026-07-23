@@ -299,5 +299,7 @@
   "intro.location": "越南岘港",
   "intro.scrollCue": "滚动浏览 <i class=\"icon ion-ios-arrow-dropdown\"></i>",
   "intro.placeholder": "Section",
-  "intro.fallingBanner": "24 +技术和工具"
+  "intro.fallingBanner": "24 +技术和工具",
+  "intro.testimonialGlobe.title": "为全球客户设计和建造了超过79个项目",
+  "intro.testimonialGlobe.subtitle": "与初创公司和企业合作，为全球市场构建软件并推出可扩展的数字产品。"
 }
