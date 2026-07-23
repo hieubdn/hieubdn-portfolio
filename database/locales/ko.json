@@ -299,5 +299,7 @@
   "intro.location": "베트남 다낭",
   "intro.scrollCue": "스크롤하여 둘러보기",
   "intro.placeholder": "섹션",
-  "intro.fallingBanner": "24개 이상의 기술 및 도구"
+  "intro.fallingBanner": "24개 이상의 기술 및 도구",
+  "intro.testimonialGlobe.title": "79개 이상의 프로젝트가 전 세계 고객을 위해 설계 및 구축되었습니다.",
+  "intro.testimonialGlobe.subtitle": "스타트업 및 기업과 협력하여 소프트웨어를 구축하고 글로벌 시장을 위한 확장 가능한 디지털 제품을 출시합니다."
 }

@@ -6,6 +6,7 @@ import { useLocaleText } from "@/components/layout/setting/translate/locale-prov
 
 import { FallingIconStage } from "./fallingIcon/falling-icon-stage";
 import { ScrollCue } from "./scroll-cue";
+import { TestimonialGlobeSection } from "./testimonialGlobe/testimonial-globe-section";
 import styles from "./intro-overlay.module.scss";
 
 type IntroPanelTwoProps = {
@@ -40,17 +41,11 @@ export function IntroPanelTwo({ scrollRef, onFinish, active }: IntroPanelTwoProp
         <FallingIconStage active={active} />
       </section>
 
-      <section
-        className={`${styles.t2Section} ${styles.placeholderSection}`}
-        aria-label={`${t("intro.placeholder")} 03`}
-      >
-        <div
-          className={`${styles.placeholderBox} ${styles.placeholderBoxAlt}`}
-        >
-          <span className={styles.placeholderLabel}>
-            {t("intro.placeholder")} 03
-          </span>
-        </div>
+      <section className={`${styles.t2Section} ${styles.placeholderSection}`}>
+        <TestimonialGlobeSection
+          title={t("intro.testimonialGlobe.title")}
+          subtitle={t("intro.testimonialGlobe.subtitle")}
+        />
       </section>
 
       <section className={`${styles.t2Section} ${styles.lastSection}`}>

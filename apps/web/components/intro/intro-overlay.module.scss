@@ -12,6 +12,13 @@
   transform: translateY(-100%);
 }
 
+.langSwitchPosition {
+  position: absolute;
+  top: max(16px, env(safe-area-inset-top));
+  right: max(32px, env(safe-area-inset-right));
+  z-index: 10;
+}
+
 .panel {
   position: absolute;
   inset: 0;
@@ -55,14 +62,14 @@
   height: 100%;
   width: 100%;
   max-width: 1280px;
-  padding: 50px 16px;
+  padding: 70px 16px;
   margin: 0 auto;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   overscroll-behavior: contain;
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 70px;
 }
 
 .t2Section {
@@ -119,28 +126,6 @@
   }
 }
 
-.placeholderBox {
-  width: 100%;
-  height: min(320px, 46vh);
-  border: 2px dashed #6d84c4;
-  border-radius: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.placeholderBoxAlt {
-  border-color: #e8a3b8;
-  margin-top: 50px;
-}
-
-.placeholderLabel {
-  font-size: 14px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--color-home-text-subtle);
-}
-
 .cuePosition {
   position: absolute;
   bottom: max(55px, env(safe-area-inset-bottom));
@@ -178,6 +163,12 @@
   background: currentColor;
   transform: translateX(-50%);
   animation: scroll-cue-dot 1.6s infinite;
+}
+
+.scrollCueLabel {
+  font-size: 14px;
+  color: var(--color-home-text-subtle);
+  letter-spacing: 0.05em;
 }
 
 .scrollCueChevron {
