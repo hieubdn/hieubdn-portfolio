@@ -124,28 +124,10 @@ export function useFallingPhysics({
       const height = rect.height;
       if (width <= 0 || height <= 0) return;
 
-      const { Engine, Render, World, Bodies, Runner, Mouse, MouseConstraint, Body } =
-        Matter;
+      const { Engine, World, Bodies, Runner, Mouse, MouseConstraint, Body } = Matter;
 
       const engine = Engine.create();
       engine.world.gravity.y = gravity;
-
-      const render = Render.create({
-        element: canvasHost,
-        engine,
-        options: {
-          width,
-          height,
-          background: "transparent",
-          wireframes: false,
-          pixelRatio: window.devicePixelRatio || 1,
-        },
-      });
-      // Matter sizes the canvas element to the `options` snapshot above and
-      // never touches it again; stretch it to the host div's current box so
-      // it can never drift shorter/taller than `.fallingStage` itself.
-      render.canvas.style.width = "100%";
-      render.canvas.style.height = "100%";
 
       const wall = { isStatic: true, render: { fillStyle: "transparent" } };
       const floor = Bodies.rectangle(
@@ -271,7 +253,6 @@ export function useFallingPhysics({
         mouse,
         constraint: { stiffness, render: { visible: false } },
       });
-      render.mouse = mouse;
 
       World.add(engine.world, [
         floor,
@@ -284,7 +265,6 @@ export function useFallingPhysics({
 
       const runner = Runner.create();
       Runner.run(runner, engine);
-      Render.run(render);
 
       // Fades in the moment the icons start dropping — no waiting for the
       // pile to settle.
@@ -304,9 +284,6 @@ export function useFallingPhysics({
       cleanupPhysics = () => {
         cancelAnimationFrame(rafId);
         Runner.stop(runner);
-        Render.stop(render);
-        render.canvas.remove();
-        render.textures = {};
         World.clear(engine.world, false);
         Engine.clear(engine);
         stage.removeEventListener("touchstart", onTouchStart);

@@ -36,6 +36,18 @@ describe("createRateLimiter", () => {
     expect(check("b", now).allowed).toBe(true);
     expect(check("a", now + 1).allowed).toBe(false);
   });
+
+  it("evicts only as needed under the tracked-key cap instead of wiping everything", () => {
+    const check = createRateLimiter(1, 60_000);
+    const now = 1_000_000;
+
+    const FLOOD_COUNT = 50_001;
+    for (let i = 0; i < FLOOD_COUNT; i += 1) {
+      check(`flood-${i}`, now);
+    }
+
+    expect(check(`flood-${FLOOD_COUNT - 2}`, now + 1).allowed).toBe(false);
+  });
 });
 
 describe("clientIpFromHeaders", () => {
