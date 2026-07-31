@@ -301,5 +301,7 @@
   "intro.placeholder": "<bpt i=\"1000001\" type=\"formatting\" x=\"1000001\">{b></bpt>セクション<ept i=\"1000001\"><b}</ept>",
   "intro.fallingBanner": "24以上のテクノロジーとツール",
   "intro.testimonialGlobe.title": "世界中のクライアントのために79以上のプロジェクトが設計され、構築されています",
-  "intro.testimonialGlobe.subtitle": "スタートアップや企業と提携して、ソフトウェアを構築し、世界市場向けのスケーラブルなデジタル製品を発売します。"
+  "intro.testimonialGlobe.subtitle": "スタートアップや企業と提携して、ソフトウェアを構築し、世界市場向けのスケーラブルなデジタル製品を発売します。",
+  "about.page.workExperience.detail.back": "詳細に戻る",
+  "about.page.workExperience.detail.comingSoon": "まもなく全文が掲載されます。"
 }

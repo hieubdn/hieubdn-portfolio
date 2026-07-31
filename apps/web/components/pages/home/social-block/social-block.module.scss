@@ -35,7 +35,7 @@
     width: 75px;
     height: 75px;
     border-radius: 50%;
-    background: var(--color-home-icon-button-bg);
+    background: var(--color-icon-button-background);
     box-shadow: 0 2px 8px #0f172a3e;
     transition:
       transform 0.15s ease,
@@ -56,21 +56,31 @@
       height: 75px;
     }
 
-      @media (max-width: 500px) {
-        width: 65px;
-        height: 65px;
-      }
+    @media (max-width: 500px) {
+      width: 65px;
+      height: 65px;
+    }
 
     .iconImage {
+      display: flex;
       width: 28px;
       height: 28px;
-      object-fit: contain;
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
     }
 
     .iconImageGithub {
+      display: flex;
       width: 50px;
       height: 50px;
-      object-fit: contain;
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 
@@ -128,7 +138,7 @@
 }
 
 .kicker {
-  color: var(--color-home-text-subtle);
+  color: var(--color-text-subtle);
   letter-spacing: 1.4px;
   margin: 0;
   font-size: 14px;
@@ -138,7 +148,7 @@
 }
 
 .title {
-  color: var(--color-home-text-subtle);
+  color: var(--color-text);
   letter-spacing: 1.5px;
   margin: 0;
   font-family:
@@ -156,9 +166,5 @@
   .iconImageGithub {
     width: 55px;
     height: 55px;
-  }
-
-  .kicker {
-    font-size: 12px;
   }
 }

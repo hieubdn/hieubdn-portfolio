@@ -1,10 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import type { KeyboardEvent } from "react";
 
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 import { useLocaleText } from "@/components/layout/setting/translate/locale-provider";
+import { PATH_URL } from "@/config/path";
 
 import type { CompanyExperienceEntry } from "./company-experience-data";
 import { Reveal } from "@/components/ui/reveal";
@@ -16,7 +18,7 @@ type CompanyExperienceProps = {
 
 export default function CompanyExperience({ company }: CompanyExperienceProps) {
   const { t } = useLocaleText();
-  const [expanded, setExpanded] = useState(false);
+  const router = useRouter();
 
   if (company.variant === "simple") {
     return (
@@ -52,6 +54,14 @@ export default function CompanyExperience({ company }: CompanyExperienceProps) {
     );
   }
 
+  const goToDetail = () => router.push(`${PATH_URL.WORK_EXPERIENCE}/${company.slug}`);
+  const handleKeyDown = (e: KeyboardEvent<HTMLDivElement>) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      goToDetail();
+    }
+  };
+
   return (
     <div
       className={
@@ -61,9 +71,10 @@ export default function CompanyExperience({ company }: CompanyExperienceProps) {
       <Reveal
         as="div"
         className={styles.meta}
-        onClick={() => setExpanded((prev) => !prev)}
-        role="button"
-        aria-expanded={expanded}
+        onClick={goToDetail}
+        onKeyDown={handleKeyDown}
+        role="link"
+        tabIndex={0}
       >
         <a
           href={company.linkUrl}
@@ -89,63 +100,15 @@ export default function CompanyExperience({ company }: CompanyExperienceProps) {
           <span className={styles.company}>
             {t(`${company.keyPrefix}.company`)}
           </span>
-          <span className={styles.durationValue}>
-            {t(`${company.keyPrefix}.durationValue`)} <span className={styles.metaLine}>◦</span> {t(`${company.keyPrefix}.locationValue`)}
+          {/* <span className={styles.durationValue}>
+            {t(`${company.keyPrefix}.durationValue`)}
           </span>
+          <span className={styles.durationValue}>
+            {t(`${company.keyPrefix}.locationValue`)}
+          </span> */}
+
         </div>
-        <span className={`${styles.chevron} ${expanded ? styles.chevronOpen : ""}`}>▾</span>
       </Reveal>
-      {expanded && (
-        <div
-          className={
-            company.projects
-              ? `${styles.details} ${styles.detailsWithProjects}`
-              : styles.details
-          }
-        >
-          <div className={styles.responsibilities}>
-            <span className={styles.subheading}>
-              {t(`${company.keyPrefix}.responsibilities`)}:{" "}
-            </span>
-            {company.projects ? (
-              <ul className={styles.projectList}>
-                {company.projects.map((project) => (
-                  <li key={project.headingKey} className={styles.projectHeading}>
-                    {project.jobKeys.length > 0 ? (
-                      <>
-                        {t(project.headingKey)}:
-                        <ul className={styles.bulletList}>
-                          {project.jobKeys.map((key) => (
-                            <li key={key}>{t(key)}</li>
-                          ))}
-                        </ul>
-                      </>
-                    ) : (
-                      t(project.headingKey)
-                    )}
-                  </li>
-                ))}
-              </ul>
-            ) : (
-              <ul className={styles.bulletList}>
-                {company.responsibilityKeys.map((key) => (
-                  <li key={key}>{t(key)}</li>
-                ))}
-              </ul>
-            )}
-          </div>
-          <div className={styles.techStack}>
-            <span className={styles.subheading}>
-              {t(`${company.keyPrefix}.techStack`)}:
-            </span>
-            <ul className={styles.techList}>
-              {company.techLineKeys.map((key) => (
-                <li key={key}>{t(key)}</li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      )}
     </div>
   );
 }

@@ -99,7 +99,6 @@
   max-width: 100%;
   border-radius: 20px;
   background-color: var(--background-projects-block);
-  box-shadow: 0 10px 24px var(--color-home-block-shadow);
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -139,7 +138,7 @@
   margin-top: 32px;
   font-size: 14px;
   font-style: italic;
-  color: var(--color-home-text-subtle);
+  color: var(--color-text-subtle);
   letter-spacing: 0.01em;
 }
 

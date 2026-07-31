@@ -56,7 +56,7 @@ export default function CompetenciesBlock() {
             key={key}
             type="button"
             variant="scale"
-            delayMs={index * 70}
+            delayMs={index * 30}
             className={styles.item}
             onClick={() => open(key)}
           >
@@ -66,9 +66,6 @@ export default function CompetenciesBlock() {
         ))}
       </div>
       <div className={styles.caption}>
-        <Reveal as="p" delayMs={210} className={styles.kicker}>
-          {t("competencies.block.kicker")}
-        </Reveal>
         <Reveal as="h2" delayMs={280} className={styles.title}>
           {t("competencies.block.title")}
         </Reveal>

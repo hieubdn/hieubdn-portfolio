@@ -1,11 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 
-import githubGlyph from "@/assets/image/social-block/code.png";
-import instagramGlyph from "@/assets/image/social-block/instagram.png";
-import linkedinGlyph from "@/assets/image/social-block/linkedin.png";
+import { GithubGlyph, InstagramGlyph, LinkedinGlyph } from "@/assets/svg";
 import { useLocaleText } from "@/components/layout/setting/translate/locale-provider";
 import { SOCIAL_LINKS } from "@/config/path";
 import { Reveal } from "@/components/ui/reveal";
@@ -15,21 +12,24 @@ import styles from "./social-block.module.scss";
 const SOCIAL_ITEMS = [
   {
     href: SOCIAL_LINKS.LINKEDIN,
-    src: linkedinGlyph,
+    Glyph: LinkedinGlyph,
     label: "LinkedIn",
     variant: "linkedin",
+    iconClassName: styles.iconImage,
   },
   {
     href: SOCIAL_LINKS.INSTAGRAM,
-    src: instagramGlyph,
+    Glyph: InstagramGlyph,
     label: "Instagram",
     variant: "instagram",
+    iconClassName: styles.iconImage,
   },
   {
     href: SOCIAL_LINKS.GITHUB,
-    src: githubGlyph,
+    Glyph: GithubGlyph,
     label: "GitHub",
     variant: "github",
+    iconClassName: styles.iconImageGithub,
   },
 ] as const;
 
@@ -46,38 +46,26 @@ export default function SocialBlock() {
     <div className={styles.root}>
       <div className={styles.iconsBand}>
         <div className={styles.iconRow}>
-          {SOCIAL_ITEMS.map((item, index) => {
-            const isGithub = item.label === "GitHub";
-            return (
-              <Reveal
-                as={Link}
-                key={item.href}
-                variant="scale"
-                delayMs={index * 70}
-                href={item.href}
-                className={`${styles.iconButton} ${VARIANT_CLASS[item.variant]}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={item.label}
-              >
-                <Image
-                  src={item.src}
-                  alt=""
-                  width={isGithub ? 55 : 32}
-                  height={isGithub ? 55 : 32}
-                  className={
-                    isGithub ? styles.iconImageGithub : styles.iconImage
-                  }
-                />
-              </Reveal>
-            );
-          })}
+          {SOCIAL_ITEMS.map((item, index) => (
+            <Reveal
+              as={Link}
+              key={item.href}
+              variant="scale"
+              delayMs={index * 70}
+              href={item.href}
+              className={`${styles.iconButton} ${VARIANT_CLASS[item.variant]}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={item.label}
+            >
+              <span className={item.iconClassName} aria-hidden>
+                <item.Glyph />
+              </span>
+            </Reveal>
+          ))}
         </div>
       </div>
       <div className={styles.caption}>
-        <Reveal as="p" delayMs={210} className={styles.kicker}>
-          {t("social.block.kicker")}
-        </Reveal>
         <Reveal as="h2" delayMs={280} className={styles.title}>
           {t("social.block.title")}
         </Reveal>

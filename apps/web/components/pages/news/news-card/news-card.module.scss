@@ -4,8 +4,8 @@
   gap: 10px;
   padding: 20px;
   border-radius: 16px;
-  border: 1.5px solid var(--color-home-block-border);
-  background: var(--color-home-block-background);
+  border: 1.5px solid var(--color-block-border);
+  background: var(--color-block-background);
   text-decoration: none;
   color: inherit;
   height: 100%;
@@ -87,7 +87,7 @@
 
 .date {
   font-size: 16px;
-  color: var(--color-home-text-subtle);
+  color: var(--color-text-subtle);
   letter-spacing: 1.5px;
   line-height: 1.75;
 }
@@ -95,7 +95,7 @@
 .title {
   margin: 0;
   font-size: 16px;
-  color: var(--color-home-text-primary);
+  color: var(--color-text);
   line-height: 1.75;
   letter-spacing: 1.5px;
   display: -webkit-box;
@@ -110,7 +110,7 @@
 .excerpt {
   margin: 0;
   font-size: 16px;
-  color: var(--color-home-text-subtle);
+  color: var(--color-text-subtle);
   line-height: 1.75;
   letter-spacing: 1.5px;
   display: -webkit-box;
@@ -136,7 +136,7 @@
 
 .stats {
   font-size: 16px;
-  color: var(--color-home-text-subtle);
+  color: var(--color-text-subtle);
   letter-spacing: 1.5px;
   line-height: 1.75;
 }

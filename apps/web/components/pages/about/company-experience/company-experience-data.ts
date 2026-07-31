@@ -11,6 +11,10 @@ export type CompanyProject = {
 
 type DetailedCompanyExperienceBase = {
   variant: "detailed";
+  /** URL segment for /about/work-experience/{slug}. */
+  slug: string;
+  /** Plain (non-localized) name used in route metadata. */
+  displayName: string;
   keyPrefix: string;
   logo: StaticImageData;
   logoAlt: string;
@@ -39,6 +43,8 @@ export type CompanyExperienceEntry =
 export const COMPANY_EXPERIENCES = {
   hdwebsoft: {
     variant: "detailed",
+    slug: "hdwebsoft",
+    displayName: "HDWEBSOFT",
     keyPrefix: "about.page.experience.hdwebsoft",
     logo: hdwebsoftLogo,
     logoAlt: "HDWEBSOFT logo",
@@ -73,6 +79,8 @@ export const COMPANY_EXPERIENCES = {
   },
   toyar: {
     variant: "detailed",
+    slug: "toyar",
+    displayName: "Toyar",
     keyPrefix: "about.page.experience.toyar",
     logo: toyarLogo,
     logoAlt: "Toyar logo",
@@ -106,6 +114,8 @@ export const COMPANY_EXPERIENCES = {
   },
   optoro: {
     variant: "detailed",
+    slug: "optoro",
+    displayName: "optoro",
     keyPrefix: "about.page.experience.optoro",
     logo: optoroLogo,
     logoAlt: "optoro logo",
@@ -127,3 +137,14 @@ export const COMPANY_EXPERIENCES = {
     ],
   },
 } as const satisfies Record<string, CompanyExperienceEntry>;
+
+export const DETAILED_COMPANY_EXPERIENCES: readonly DetailedCompanyExperience[] =
+  (Object.values(COMPANY_EXPERIENCES) as CompanyExperienceEntry[]).filter(
+    (entry): entry is DetailedCompanyExperience => entry.variant === "detailed",
+  );
+
+export function getCompanyExperienceBySlug(
+  slug: string,
+): DetailedCompanyExperience | undefined {
+  return DETAILED_COMPANY_EXPERIENCES.find((entry) => entry.slug === slug);
+}

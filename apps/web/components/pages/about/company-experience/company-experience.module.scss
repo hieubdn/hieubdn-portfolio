@@ -107,7 +107,7 @@
     font-family: "Verdana", sans-serif;
     font-size: 17px;
     font-weight: 500;
-    color: var(--color-home-text-body);
+    color: var(--color-text);
     text-transform: uppercase;
   }
 
@@ -138,7 +138,7 @@
     margin: 0;
     font-family: "Verdana", sans-serif;
     font-size: 20px;
-    color: var(--color-home-text-body);
+    color: var(--color-text);
     text-transform: uppercase;
   }
 
@@ -199,7 +199,7 @@
     font-weight: 400;
     letter-spacing: 1.5px;
     line-height: 32px;
-    color: var(--color-home-text-body);
+    color: var(--color-text);
     overflow-wrap: anywhere;
     word-break: break-word;
   }
@@ -211,7 +211,7 @@
   font-weight: 400;
   letter-spacing: 1.5px;
   line-height: 32px;
-  color: var(--color-home-text-body);
+  color: var(--color-text);
   overflow-wrap: anywhere;
   word-break: break-word;
 }

@@ -21,7 +21,6 @@ export default function DownloadCvBlock() {
         <Image src={Cv} alt="CV" width={100} height={100} />
       </Reveal>
       <Reveal as="div" delayMs={90} className={styles.footer}>
-        <p className={styles.kicker}>{t("about.page.cv.kicker")}</p>
         <p className={styles.title}>{t("about.page.cv.title")}</p>
       </Reveal>
     </a>

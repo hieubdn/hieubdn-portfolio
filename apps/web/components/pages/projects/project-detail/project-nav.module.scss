@@ -12,7 +12,7 @@
 .panel {
   display: flex;
   flex-direction: column;
-  background: var(--color-home-block-background, rgba(255,255,255,0.85));
+  background: var(--color-block-background, rgba(255,255,255,0.85));
   border-radius: 16px;
   overflow: hidden;
   backdrop-filter: blur(16px);
@@ -124,7 +124,7 @@
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  background: var(--color-home-block-background, rgba(255,255,255,0.85));
+  background: var(--color-block-background, rgba(255,255,255,0.85));
   border: none;
   backdrop-filter: blur(16px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);

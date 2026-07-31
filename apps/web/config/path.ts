@@ -1,6 +1,7 @@
 export const PATH_URL = {
   ROOT: "/",
   ABOUT: "/about",
+  WORK_EXPERIENCE: "/about/work-experience",
   PROJECTS: "/projects",
   CONTACT: "/contact",
   NEWS: "/news",

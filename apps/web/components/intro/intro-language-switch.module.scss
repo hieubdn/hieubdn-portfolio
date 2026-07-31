@@ -9,8 +9,8 @@
   padding: 6px 10px;
   border: none;
   border-radius: 999px;
-  background: var(--color-page-background);
-  color: var(--color-home-text-heading);
+  background: var(--color-main-background);
+  color: var(--color-text);
   cursor: pointer;
 
   &:focus-visible {
@@ -80,7 +80,7 @@
   border: none;
   border-radius: 8px;
   background: transparent;
-  color: var(--color-home-text-heading);
+  color: var(--color-text);
   font: inherit;
   text-align: left;
   cursor: pointer;

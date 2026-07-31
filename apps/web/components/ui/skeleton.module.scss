@@ -2,9 +2,9 @@
   border-radius: 8px;
   background: linear-gradient(
     90deg,
-    var(--color-home-image-placeholder) 0%,
-    var(--color-home-block-border) 50%,
-    var(--color-home-image-placeholder) 100%
+    var(--color-block-background) 0%,
+    var(--color-circle-background) 50%,
+    var(--color-block-background) 100%
   );
   background-size: 200% 100%;
   animation: skeletonShimmer 1.2s ease-in-out infinite;

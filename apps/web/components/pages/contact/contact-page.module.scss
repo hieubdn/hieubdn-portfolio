@@ -26,7 +26,7 @@
 
   .heading {
     font-size: 16px;
-    color: var(--color-home-text-body);
+    color: var(--color-text);
     letter-spacing: 1.5px;
     margin: 0;
     font-family: "Verdana", sans-serif;
@@ -88,7 +88,7 @@
         width: 70px;
         height: 70px;
         border-radius: 50%;
-        background: var(--color-home-icon-button-bg);
+        background: var(--color-icon-button-background);
         box-shadow: 0 2px 8px #0f172a3e;
         transition:
           transform 0.15s ease,
@@ -188,8 +188,8 @@
   flex-direction: column;
   gap: 24px;
   padding: 16px 32px;
-  border: 2px solid var(--color-home-block-border);
-  background-color: var(--color-home-block-background);
+  border: 2px solid var(--color-block-border);
+  background-color: var(--color-block-background);
   border-radius: 20px;
   transition:
     transform 0.2s ease,
@@ -217,7 +217,7 @@
     font-size: 32px;
     line-height: 1.5;
     font-weight: 700;
-    color: var(--color-home-text-heading, #ffffff);
+    color: var(--color-text, #ffffff);
     font-family: "Verdana", sans-serif;
 
     @media (max-width: 768px) {
@@ -274,7 +274,7 @@
     border: 1px solid #a0a0a060; 
     border-radius: 12px;
     background: #ffffff0a;
-    color: var(--color-home-text-body);
+    color: var(--color-text);
     font-size: 16px;
     font-family: "Verdana", sans-serif;
     outline: none;
@@ -333,7 +333,7 @@
   border: none;
   border-radius: 12px;
   background: #ffffff0f;
-  color: var(--color-home-text-body, #e5e7eb);
+  color: var(--color-text, #e5e7eb);
   font-size: 16px;
   letter-spacing: 2px;
   font-family: "Verdana", sans-serif;
@@ -345,7 +345,7 @@
     transform 0.15s ease;
 
     &:hover:not(:disabled) {
-      background: var(--color-home-icon-button-bg);
+      background: var(--color-icon-button-background);
       border:none;
   }
 

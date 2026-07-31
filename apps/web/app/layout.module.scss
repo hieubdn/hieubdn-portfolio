@@ -8,10 +8,10 @@
 .shell {
   background-image: radial-gradient(
     circle,
-    var(--color-home-background) 1px,
+    var(--color-circle-background) 1px,
     transparent 1px
   );
-  background-size: 10px 10px;
+  background-size: 25px 25px;
   position: relative;
   z-index: 1;
   isolation: isolate;
