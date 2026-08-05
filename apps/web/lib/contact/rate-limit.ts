@@ -17,17 +17,28 @@ export type RateLimitResult = {
   retryAfterSeconds: number;
 };
 
-const MAX_TRACKED_KEYS = 10_000;
+const MAX_TRACKED_KEYS = 50_000;
 
 export function createRateLimiter(maxRequests: number, windowMs: number) {
   const entries = new Map<string, WindowEntry>();
+
+  const evictIfNeeded = (nowMs: number) => {
+    if (entries.size < MAX_TRACKED_KEYS) return;
+    for (const [trackedKey, trackedEntry] of entries) {
+      if (nowMs - trackedEntry.windowStartMs >= windowMs) entries.delete(trackedKey);
+    }
+    while (entries.size >= MAX_TRACKED_KEYS) {
+      const oldestKey = entries.keys().next().value;
+      if (oldestKey === undefined) break;
+      entries.delete(oldestKey);
+    }
+  };
 
   return function check(key: string, nowMs = Date.now()): RateLimitResult {
     const entry = entries.get(key);
 
     if (!entry || nowMs - entry.windowStartMs >= windowMs) {
-      // Cap memory: drop the whole map rather than tracking eviction order.
-      if (entries.size >= MAX_TRACKED_KEYS) entries.clear();
+      evictIfNeeded(nowMs);
       entries.set(key, { count: 1, windowStartMs: nowMs });
       return { allowed: true, retryAfterSeconds: 0 };
     }

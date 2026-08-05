@@ -36,6 +36,7 @@ export function useTestimonialGlobe({ markers }: UseTestimonialGlobeOptions) {
     let reduceMotion = reducedMotionQuery.matches;
     const onMotionChange = (e: MediaQueryListEvent) => {
       reduceMotion = e.matches;
+      if (!reduceMotion) startLoop();
     };
     reducedMotionQuery.addEventListener("change", onMotionChange);
 
@@ -44,9 +45,14 @@ export function useTestimonialGlobe({ markers }: UseTestimonialGlobeOptions) {
       cancelAnimationFrame(rafId);
       rafId = 0;
     };
-
+    
     const render = () => {
-      if (!reduceMotion) phi += PHI_STEP;
+      if (reduceMotion) {
+        globe?.update({ phi, width, height: width });
+        rafId = 0;
+        return;
+      }
+      phi += PHI_STEP;
       globe?.update({ phi, width, height: width });
       rafId = requestAnimationFrame(render);
     };
