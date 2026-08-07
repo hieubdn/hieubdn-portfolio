@@ -199,11 +199,6 @@
   "setting.page.option.languages.popup.button.confirm": "확인",
   "setting.page.option.languages.popup.button.cancel": "취소",
   "setting.page.option.languages.toast.success": "언어가 성공적으로 업데이트되었습니다.",
-  "setting.page.option.darkMode": "다크 모드",
-  "setting.page.option.darkMode.on": "켜기",
-  "setting.page.option.darkMode.off": "끄기",
-  "setting.page.option.darkMode.automatic": "자동",
-  "setting.page.option.darkMode.automatic.description": "기기의 시스템 설정에 따라 자동으로 화면을 조정합니다.",
   "setting.page.option.resetSettings": "설정 초기화",
   "contact.page.info.title": "연락처 정보:",
   "contact.page.info.from": "출신",
@@ -293,7 +288,6 @@
   "contact.page.form.toast.invalid": "입력 내용을 확인한 후 다시 시도해 주세요.",
   "aria.header.nav": "메인 내비게이션",
   "aria.header.github": "GitHub 프로필 열기",
-  "aria.theme.darkMode": "다크 모드 설정",
   "aria.globalActions": "전역 작업",
   "aria.languages.list": "표시 언어",
   "intro.location": "베트남 다낭",
@@ -301,5 +295,7 @@
   "intro.placeholder": "섹션",
   "intro.fallingBanner": "24개 이상의 기술 및 도구",
   "intro.testimonialGlobe.title": "79개 이상의 프로젝트가 전 세계 고객을 위해 설계 및 구축되었습니다.",
-  "intro.testimonialGlobe.subtitle": "스타트업 및 기업과 협력하여 소프트웨어를 구축하고 글로벌 시장을 위한 확장 가능한 디지털 제품을 출시합니다."
+  "intro.testimonialGlobe.subtitle": "스타트업 및 기업과 협력하여 소프트웨어를 구축하고 글로벌 시장을 위한 확장 가능한 디지털 제품을 출시합니다.",
+  "about.page.workExperience.detail.viewLinkedIn": "LinkedIn에서 보기",
+  "about.page.workExperience.detail.backToAbout": "정보로 돌아가기"
 }

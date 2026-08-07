@@ -6,6 +6,10 @@ export const PATH_URL = {
   NEWS: "/news",
   ACADIFY: "/acadify",
   ACADIFY_SURVEY: "/acadify/survey",
+  ABOUT_WORK_EXPERIENCE_HDWEBSOFT: "/about/work-experience/hdwebsoft",
+  ABOUT_WORK_EXPERIENCE_TOYAR: "/about/work-experience/toyar",
+  ABOUT_WORK_EXPERIENCE_OPTORO: "/about/work-experience/optoro",
+  ABOUT_OTHER_EXPERIENCE_MINDX: "/about/other-experience/mindx",
 } as const;
 
 export const SOCIAL_LINKS = {

@@ -199,11 +199,6 @@
   "setting.page.option.languages.popup.button.confirm": "确认",
   "setting.page.option.languages.popup.button.cancel": "取消",
   "setting.page.option.languages.toast.success": "语言更新成功。",
-  "setting.page.option.darkMode": "深色模式",
-  "setting.page.option.darkMode.on": "开",
-  "setting.page.option.darkMode.off": "关",
-  "setting.page.option.darkMode.automatic": "自动",
-  "setting.page.option.darkMode.automatic.description": "我们将根据您的设备系统设置自动调整显示。",
   "setting.page.option.resetSettings": "重置设置",
   "contact.page.info.title": "联系方式：",
   "contact.page.info.from": "来自",
@@ -293,7 +288,6 @@
   "contact.page.form.toast.invalid": "请检查输入内容后重试。",
   "aria.header.nav": "主导航",
   "aria.header.github": "打开 GitHub 个人主页",
-  "aria.theme.darkMode": "深色模式偏好",
   "aria.globalActions": "全局操作",
   "aria.languages.list": "显示语言",
   "intro.location": "越南岘港",
@@ -301,5 +295,7 @@
   "intro.placeholder": "Section",
   "intro.fallingBanner": "24 +技术和工具",
   "intro.testimonialGlobe.title": "为全球客户设计和建造了超过79个项目",
-  "intro.testimonialGlobe.subtitle": "与初创公司和企业合作，为全球市场构建软件并推出可扩展的数字产品。"
+  "intro.testimonialGlobe.subtitle": "与初创公司和企业合作，为全球市场构建软件并推出可扩展的数字产品。",
+  "about.page.workExperience.detail.viewLinkedIn": " 在 Linkedin",
+  "about.page.workExperience.detail.backToAbout": "返回“关于”"
 }

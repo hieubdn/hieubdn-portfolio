@@ -15,6 +15,7 @@ import ImageBlock from "./image-block/image-block";
 import SectionHeading from "./section-heading/section-heading";
 import SummaryBlock from "./summary-block/summary-block";
 import SummaryKickerBlock from "./summary-kicker-block/summary-kicker-block";
+import WorkExperienceTimeline from "./work-experience-timeline/work-experience-timeline";
 import { Reveal } from "@/components/ui/reveal";
 import styles from "./about.module.scss";
 
@@ -27,9 +28,7 @@ type AboutBlockId =
   | "technical"
   | "education"
   | "workExperienceHeading"
-  | "hdwebsoft"
-  | "toyar"
-  | "optoro"
+  | "workExperienceTimeline"
   | "otherExperienceHeading"
   | "mindx"
   | "footerDivider"
@@ -37,7 +36,7 @@ type AboutBlockId =
   | "cta"
   | "footerCv";
 
-type AboutVariant = "card" | "static" | "sectionHeading" | "divider";
+type AboutVariant = "card" | "static" | "sectionHeading" | "divider" | "timeline";
 
 type AboutBlock = {
   id: AboutBlockId;
@@ -56,6 +55,8 @@ function variantBaseClass(variant: AboutVariant): string | undefined {
       return styles.sectionHeadingRow;
     case "divider":
       return styles.dividerRow;
+    case "timeline":
+      return styles.timelineRow;
   }
 }
 
@@ -74,9 +75,20 @@ export default function AboutSection() {
       variant: "sectionHeading",
       render: () => <SectionHeading title={t("about.page.workExperience.heading")} />,
     },
-    { id: "hdwebsoft", label: "HDWEBSOFT", variant: "card", render: () => <CompanyExperience company={COMPANY_EXPERIENCES.hdwebsoft} /> },
-    { id: "toyar", label: "Toyar", variant: "card", render: () => <CompanyExperience company={COMPANY_EXPERIENCES.toyar} /> },
-    { id: "optoro", label: "optoro", variant: "card", render: () => <CompanyExperience company={COMPANY_EXPERIENCES.optoro} /> },
+    {
+      id: "workExperienceTimeline",
+      label: "Work experience timeline",
+      variant: "timeline",
+      render: () => (
+        <WorkExperienceTimeline
+          companies={[
+            COMPANY_EXPERIENCES.hdwebsoft,
+            COMPANY_EXPERIENCES.toyar,
+            COMPANY_EXPERIENCES.optoro,
+          ]}
+        />
+      ),
+    },
     {
       id: "otherExperienceHeading",
       label: "Other experience section",

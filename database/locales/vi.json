@@ -199,11 +199,6 @@
   "setting.page.option.languages.popup.button.confirm": "Xác nhận",
   "setting.page.option.languages.popup.button.cancel": "Hủy",
   "setting.page.option.languages.toast.success": "Ngôn ngữ đã cập nhật",
-  "setting.page.option.darkMode": "Chế độ tối",
-  "setting.page.option.darkMode.on": "Bật",
-  "setting.page.option.darkMode.off": "Tắt",
-  "setting.page.option.darkMode.automatic": "Tự động",
-  "setting.page.option.darkMode.automatic.description": "Chúng tôi sẽ tự động điều chỉnh màn hình dựa trên cài đặt hệ thống trên thiết bị của bạn.",
   "setting.page.option.resetSettings": "Đặt lại cài đặt",
   "contact.page.info.title": "Thông tin liên hệ:",
   "contact.page.info.from": "Quê quán",
@@ -293,7 +288,6 @@
   "contact.page.form.toast.invalid": "Vui lòng kiểm tra lại thông tin và thử lại.",
   "aria.header.nav": "Điều hướng chính",
   "aria.header.github": "Mở trang GitHub",
-  "aria.theme.darkMode": "Tùy chọn chế độ tối",
   "aria.globalActions": "Thao tác nhanh",
   "aria.languages.list": "Ngôn ngữ hiển thị",
   "intro.location": "Đà Nẵng, Việt Nam",
@@ -301,5 +295,7 @@
   "intro.placeholder": "Phần",
   "intro.fallingBanner": "24+ Công nghệ & Công cụ",
   "intro.testimonialGlobe.title": "Hơn 79 dự án đã được thiết kế và xây dựng cho khách hàng trên toàn thế giới",
-  "intro.testimonialGlobe.subtitle": "Hợp tác với các công ty khởi nghiệp và doanh nghiệp để xây dựng phần mềm và ra mắt các sản phẩm kỹ thuật số có thể mở rộng cho thị trường toàn cầu."
+  "intro.testimonialGlobe.subtitle": "Hợp tác với các công ty khởi nghiệp và doanh nghiệp để xây dựng phần mềm và ra mắt các sản phẩm kỹ thuật số có thể mở rộng cho thị trường toàn cầu.",
+  "about.page.workExperience.detail.viewLinkedIn": "Xem %s trên LinkedIn",
+  "about.page.workExperience.detail.backToAbout": "Quay lại phần Giới thiệu"
 }

@@ -14,10 +14,10 @@ export default function QuoteBlock() {
         <p className={styles.author}>◦ {t("quote.block.author")} ◦</p>
       </Reveal>
       <div className={styles.caption}>
-        <Reveal as="p" delayMs={100} className={styles.kicker}>
+        <Reveal as="p" delayMs={100} className={styles.sectionSubtitle}>
           {t("quote.block.kicker")}
         </Reveal>
-        <Reveal as="h2" delayMs={170} className={styles.title}>
+        <Reveal as="h2" delayMs={170} className={styles.sectionTitle}>
           {t("quote.block.title")}
         </Reveal>
       </div>

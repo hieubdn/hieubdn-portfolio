@@ -14,7 +14,7 @@
 }
 
 .label {
-  color: var(--color-home-text-subtle);
+  color: var(--color-subtitle);
   letter-spacing: 1.5px;
   margin: 0;
   font-family:
@@ -29,7 +29,7 @@
   align-items: center;
   justify-content: flex-end;
   font-size: 16px;
-  color: var(--color-home-text-subtle);
+  color: var(--color-text);
   text-decoration: none;
   letter-spacing: 0.4px;
   transition: color 0.15s ease;
@@ -94,7 +94,7 @@
 
 .time {
   font-size: 16px;
-  color: var(--color-home-text-subtle);
+  color: var(--color-subtitle);
   white-space: nowrap;
   margin-top: 2px;
   letter-spacing: 0.2px;
@@ -102,12 +102,12 @@
 
 .empty {
   font-size: 13px;
-  color: var(--color-home-text-subtle);
+  color: var(--color-subtitle);
 }
 
 .footer {
   font-size: 11px;
-  color: var(--color-home-text-subtle);
+  color: var(--color-subtitle);
   letter-spacing: 0.8px;
   text-decoration: none;
   line-height: 1.5;

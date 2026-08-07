@@ -66,6 +66,8 @@
   "about.page.education.mobileapp.date": "Completed: 2020",
   "about.page.workExperience.heading": "Work experience",
   "about.page.otherExperience.heading": "Other experience",
+  "about.page.workExperience.detail.viewLinkedIn": "View on LinkedIn",
+  "about.page.workExperience.detail.backToAbout": "Back to About",
   "about.page.experience.hdwebsoft.company": "HDWEBSOFT TECHNOLOGY CO.,LTD",
   "about.page.experience.hdwebsoft.durationValue": "Apr 2024 - Present",
   "about.page.experience.hdwebsoft.positionValue": "Full-Stack Software Engineer",
@@ -224,11 +226,6 @@
   "setting.page.option.languages.popup.button.confirm": "Confirm",
   "setting.page.option.languages.popup.button.cancel": "Cancel",
   "setting.page.option.languages.toast.success": "Language updated successfully.",
-  "setting.page.option.darkMode": "Dark Mode",
-  "setting.page.option.darkMode.on": "On",
-  "setting.page.option.darkMode.off": "Off",
-  "setting.page.option.darkMode.automatic": "Automatic",
-  "setting.page.option.darkMode.automatic.description": "We'll automatically adjust the display based on your device's system settings.",
   "setting.page.option.resetSettings": "Reset Settings",
   "contact.page.info.title": "Contact info:",
   "contact.page.info.from": "From",
@@ -288,7 +285,6 @@
   "contact.page.form.toast.invalid": "Please check your input and try again.",
   "aria.header.nav": "Main",
   "aria.header.github": "Open GitHub profile",
-  "aria.theme.darkMode": "Dark mode preference",
   "aria.globalActions": "Global actions",
   "aria.languages.list": "Display language"
 }

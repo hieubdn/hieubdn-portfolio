@@ -75,10 +75,10 @@ export default function SocialBlock() {
         </div>
       </div>
       <div className={styles.caption}>
-        <Reveal as="p" delayMs={210} className={styles.kicker}>
+        <Reveal as="p" delayMs={210} className={styles.sectionSubtitle}>
           {t("social.block.kicker")}
         </Reveal>
-        <Reveal as="h2" delayMs={280} className={styles.title}>
+        <Reveal as="h2" delayMs={280} className={styles.sectionTitle}>
           {t("social.block.title")}
         </Reveal>
       </div>

@@ -5,135 +5,18 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --color-home-background: #00000010;
-  --color-page-background: #f8f9fa;
-  --color-home-block-background: #ffffff30;
-  --color-home-block-border: #e6e6e6;
-  --color-home-block-shadow: #f8f9fa33;
-  --color-home-block-default-shadow: #0000001a;
-  --color-home-text-primary: #18181b;
-  --color-home-text-heading: #52525b;
-  --color-home-text-body: #52525b;
-  --color-home-text-muted: #6b7280;
-  --color-home-text-subtle: #a0a0a0;
-  --color-home-text-accent: #3f3f46;
-  --color-home-text-cta-muted: #475569;
-  --color-home-media-background: #ffffff;
-  --color-home-image-placeholder: #f3f4f6;
-  --color-home-icons-band: linear-gradient(
-    135deg,
-    #f8f9fa 0%,
-    #f3f4f6 50%,
-    #f0f0f0 100%
-  );
-  --color-home-star-color: linear-gradient(
-    102deg,
-    #4a5f7a 0%,
-    #6d84c4 24%,
-    #b9a8d9 44%,
-    #e8a3b8 58%,
-    #6b9bd4 82%,
-    #4d6485 100%
-  );
-  --color-home-icon-button-bg: linear-gradient(
-    135deg,
-    #f8f9fa 0%,
-    #f2f2f2 60%,
-    #eaeaea 100%
-  );
-  --color-home-stat-card-border: #d4d4d8;
-  --color-home-stat-card-bg: linear-gradient(
-    135deg,
-    #f8f9fa 0%,
-    #f3f4f6 50%,
-    #f0f0f0 100%
-  );
-  --color-home-focus-outline: #181818;
-
-  --shell-border: #e4e4e7;
-  --shell-text: #52525b;
-  --shell-text-strong: #52525b;
-  --shell-text-panel-title: #52525b;
-  --shell-text-muted: #a0a0a0;
-  --shell-text-description: #a0a0a0;
-  --shell-text-placeholder: #a1a1aa;
-  --shell-accent-hover: #dc2626;
-  --shell-surface-panel: #ffffff;
-  --shell-surface-popover: #f5f5f5;
-  --shell-surface-hover: linear-gradient(
-    135deg,
-    #d5d5d5 0%,
-    #f3f4f6 50%,
-    #cecece 100%
-  );
-  --shell-surface-active: linear-gradient(
-    135deg,
-    #f8f9fa 0%,
-    #f3f4f6 50%,
-    #f0f0f0 100%
-  );
-  --shell-shadow-panel: 0 5px 14px #52525b28;
-  --shell-shadow-popover: 0 4px 12px rgba(0, 0, 0, 0.08);
-  --shell-footer-bg: #fafafa;
-  --shell-close-hover-bg: #f4f4f5;
-  --shell-input-bg: #ffffff;
-  --shell-input-focus-ring: rgba(24, 24, 27, 0.08);
-  --shell-list-title: #18181b;
-  --shell-login-card-shadow: 0 10px 40px #00000063;
-  --shell-login-card-border: transparent;
-  --shell-notification-drawer-shadow: -8px 0 32px rgba(0, 0, 0, 0.12);
-  --shell-theme-option-muted: #8d8d8d;
-  --shell-theme-radio-border: #5f5f5f;
-  --shell-theme-radio-inner: #ffffff;
-  --shell-theme-radio-inner-mobile: #ffffff;
-  --header-text: #52525b;
-  --background-projects-block: #ffffff;
-}
-
-html[data-theme="dark"] {
-  --color-home-background: #ffffff0f;
-  --color-page-background: #1c1c1d;
-  --color-home-block-background: #30303030;
-  --color-home-block-border: #3d4044;
-  --color-home-block-shadow: rgba(0, 0, 0, 0.22);
-  --color-home-block-hover-shadow: #00000073;
-  --color-home-text-primary: #fff;
-  --color-home-text-heading: #e2e5e9;
-  --color-home-text-body: #e2e5e9;
-  --color-home-text-muted: #b8bcc4;
-  --color-home-text-subtle: #8b9099;
-  --color-home-text-accent: #e2e5e9;
-  --color-home-text-cta-muted: #b8bcc4;
+  /* Backgrounds */
+  --color-main-background: radial-gradient(circle at 13% -3%,rgb(37 219 255 / 12%),transparent 31rem),radial-gradient(circle at 94% 9%,rgb(139 109 255 / 15%),transparent 29rem),linear-gradient(180deg, #030713, #07101f 50%,#040a16);
+  --color-block-background: linear-gradient(145deg, #0a182cc7, #050e1c9e);
   --color-home-media-background: #30303030;
   --color-home-image-placeholder: #2a2c2e;
-  --color-home-icons-band: linear-gradient(
-    135deg,
-    #2a2c2e 0%,
-    #252728 50%,
-    #1f2122 100%
-  );
+  --color-band-background: radial-gradient(circle at 13% -3%,rgb(37 219 255 / 12%),transparent 31rem),radial-gradient(circle at 94% 9%,rgb(139 109 255 / 15%),transparent 29rem),linear-gradient(180deg, #030713, #07101f 50%,#040a16);
   --color-home-icon-button-bg: linear-gradient(
     120deg,
     rgba(255, 255, 255, 0.5),
     rgba(255, 255, 255, 0.1)
   );
-  --color-home-stat-card-border: #3d4044;
-  --color-home-stat-card-bg: linear-gradient(
-    135deg,
-    #2e3032 0%,
-    #2a2c2e 50%,
-    #252728 100%
-  );
-  --color-home-focus-outline: #e2e5e9;
-
-  --shell-border: #3d4044;
-  --shell-text: #e2e5e9;
-  --shell-text-strong: #e2e5e9;
-  --shell-text-panel-title: #e2e5e9;
-  --shell-text-muted: #8b9099;
-  --shell-text-description: #8b9099;
-  --shell-text-placeholder: #8b9099;
-  --shell-accent-hover: #f87171;
+  --background-projects-block: #252728;
   --shell-surface-panel: #252728;
   --shell-surface-popover: #2a2c2e;
   --shell-surface-hover: linear-gradient(
@@ -148,23 +31,59 @@ html[data-theme="dark"] {
     #2a2c2e 50%,
     #252728 100%
   );
-  --shell-shadow-panel: 0 5px 24px rgba(0, 0, 0, 0.45);
-  --shell-shadow-popover: 0 4px 20px rgba(0, 0, 0, 0.4);
   --shell-footer-bg: #1c1c1d;
   --shell-close-hover-bg: #323436;
   --shell-input-bg: #1c1c1d;
-  --shell-input-focus-ring: rgba(226, 229, 233, 0.12);
-  --shell-list-title: #e2e5e9;
-  --shell-login-card-shadow: 0 10px 40px rgba(0, 0, 0, 0.55);
-  --shell-login-card-border: var(--shell-border);
-  --shell-notification-drawer-shadow: -8px 0 40px rgba(0, 0, 0, 0.55);
-  --shell-theme-option-muted: #8b9099;
-  --shell-theme-radio-border: #8b9099;
   --shell-theme-radio-inner: #252728;
   --shell-theme-radio-inner-mobile: #252728;
-  --header-text: #ffffff;
 
-  --background-projects-block: #252728;
+  /* Text colors */
+  --color-home-text-primary: #fff;
+  --color-home-text-heading: #e2e5e9;
+  --color-home-text-body: #e2e5e9;
+  --color-home-text-muted: #b8bcc4;
+  --color-text: #ffffff;
+  --color-subtitle: #aec2dc;
+  --color-home-text-accent: #e2e5e9;
+  --color-home-text-cta-muted: #b8bcc4;
+  --shell-text: #e2e5e9;
+  --shell-text-strong: #e2e5e9;
+  --shell-text-panel-title: #e2e5e9;
+  --shell-text-muted: #8b9099;
+  --shell-text-description: #8b9099;
+  --shell-text-placeholder: #8b9099;
+  --shell-list-title: #e2e5e9;
+  --shell-accent-hover: #f87171;
+  --shell-theme-option-muted: #8b9099;
+
+  /* Borders & outlines */
+  --color-home-block-border: #1b314b;
+  --color-home-stat-card-border: #3d4044;
+  --color-home-focus-outline: #e2e5e9;
+  --shell-border: #3d4044;
+  --shell-login-card-border: var(--shell-border);
+  --shell-theme-radio-border: #8b9099;
+  --shell-input-focus-ring: rgba(226, 229, 233, 0.12);
+
+  /* Shadows */
+  --color-home-block-shadow: rgba(0, 0, 0, 0.22);
+  --color-home-block-default-shadow: #0000001a;
+  --color-home-block-hover-shadow: #00000073;
+  --shell-shadow-panel: 0 5px 24px rgba(0, 0, 0, 0.45);
+  --shell-shadow-popover: 0 4px 20px rgba(0, 0, 0, 0.4);
+  --shell-login-card-shadow: 0 10px 40px rgba(0, 0, 0, 0.55);
+  --shell-notification-drawer-shadow: -8px 0 40px rgba(0, 0, 0, 0.55);
+
+  /* Decorative gradients */
+  --color-home-star-color: linear-gradient(
+    102deg,
+    #4a5f7a 0%,
+    #6d84c4 24%,
+    #b9a8d9 44%,
+    #e8a3b8 58%,
+    #6b9bd4 82%,
+    #4d6485 100%
+  );
 }
 
 * {
@@ -185,7 +104,7 @@ html {
 }
 
 body {
-  background-color: var(--color-page-background);
+  background: var(--color-main-background);
   font-family: "Verdana", sans-serif;
   overflow-x: clip;
 }

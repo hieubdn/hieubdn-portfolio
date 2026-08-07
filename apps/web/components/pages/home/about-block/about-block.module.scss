@@ -31,18 +31,18 @@
   gap: 8px;
   font-family: "Verdana", sans-serif;
 
-  .kicker {
+  .sectionSubtitle {
     margin: 0;
     font-size: 14px;
     font-style: italic;
     font-weight: 400;
-    color: var(--color-home-text-subtle);
+    color: var(--color-subtitle);
     letter-spacing: 1.4px;
     line-height: 1.3;
   }
 
-  .title {
-    color: var(--color-home-text-subtle);
+  .sectionTitle {
+    color: var(--color-text);
     letter-spacing: 1.2px;
     margin: 0;
     font-family:
@@ -54,11 +54,11 @@
 }
 
 @media (max-width: 500px) {
-  .kicker {
+  .sectionSubtitle {
     font-size: 12px;
   }
 
-  .title {
+  .sectionTitle {
     font-size: 14px;
   }
 }

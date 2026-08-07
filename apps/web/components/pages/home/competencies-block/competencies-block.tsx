@@ -66,10 +66,10 @@ export default function CompetenciesBlock() {
         ))}
       </div>
       <div className={styles.caption}>
-        <Reveal as="p" delayMs={210} className={styles.kicker}>
+        <Reveal as="p" delayMs={210} className={styles.sectionSubtitle}>
           {t("competencies.block.kicker")}
         </Reveal>
-        <Reveal as="h2" delayMs={280} className={styles.title}>
+        <Reveal as="h2" delayMs={280} className={styles.sectionTitle}>
           {t("competencies.block.title")}
         </Reveal>
       </div>

@@ -46,8 +46,8 @@
   gap: 8px;
   font-family: "Verdana", sans-serif;
 
-  .kicker {
-    color: var(--color-home-text-subtle);
+  .sectionSubtitle {
+    color: var(--color-subtitle);
     letter-spacing: 1.4px;
     margin: 0;
     font-size: 14px;
@@ -56,8 +56,8 @@
     line-height: 1.3;
   }
 
-  .title {
-    color: var(--color-home-text-subtle);
+  .sectionTitle {
+    color: var(--color-text);
     letter-spacing: 1.5px;
     margin: 0;
     font-family:

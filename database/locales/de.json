@@ -199,11 +199,6 @@
   "setting.page.option.languages.popup.button.confirm": "Bestätigen",
   "setting.page.option.languages.popup.button.cancel": "Abbrechen",
   "setting.page.option.languages.toast.success": "Sprache erfolgreich aktualisiert.",
-  "setting.page.option.darkMode": "Dunkelmodus",
-  "setting.page.option.darkMode.on": "An",
-  "setting.page.option.darkMode.off": "Aus",
-  "setting.page.option.darkMode.automatic": "Automatisch",
-  "setting.page.option.darkMode.automatic.description": "Die Anzeige wird automatisch basierend auf den Systemeinstellungen Ihres Geräts angepasst.",
   "setting.page.option.resetSettings": "Einstellungen zurücksetzen",
   "contact.page.info.title": "Kontaktinformationen:",
   "contact.page.info.from": "Aus",
@@ -293,7 +288,6 @@
   "contact.page.form.toast.invalid": "Bitte überprüfen Sie Ihre Eingaben und versuchen Sie es erneut.",
   "aria.header.nav": "Hauptnavigation",
   "aria.header.github": "GitHub-Profil öffnen",
-  "aria.theme.darkMode": "Dunkelmodus-Einstellung",
   "aria.globalActions": "Globale Aktionen",
   "aria.languages.list": "Anzeigesprache",
   "intro.location": "Da Nang, Vietnam",
@@ -301,5 +295,7 @@
   "intro.placeholder": "Bereich",
   "intro.fallingBanner": "Technologies & Tools",
   "intro.testimonialGlobe.title": "Mehr als 79 Projekte wurden für Kunden weltweit entworfen und gebaut",
-  "intro.testimonialGlobe.subtitle": "Partnerschaft mit Start-ups und Unternehmen, um Software zu entwickeln und skalierbare digitale Produkte für globale Märkte auf den Markt zu bringen."
+  "intro.testimonialGlobe.subtitle": "Partnerschaft mit Start-ups und Unternehmen, um Software zu entwickeln und skalierbare digitale Produkte für globale Märkte auf den Markt zu bringen.",
+  "about.page.workExperience.detail.viewLinkedIn": "Auf LinkedIn anzeigen",
+  "about.page.workExperience.detail.backToAbout": "Zurück"
 }

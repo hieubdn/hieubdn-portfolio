@@ -29,9 +29,8 @@
     "image image image image summary summary summary summary summary summary summary summary"
     "technical technical technical technical technical technical education education education education education education"
     "workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading"
-    "hdwebsoft hdwebsoft hdwebsoft hdwebsoft hdwebsoft hdwebsoft hdwebsoft hdwebsoft hdwebsoft hdwebsoft hdwebsoft hdwebsoft"
-    "toyar toyar toyar toyar toyar toyar toyar toyar toyar toyar toyar toyar"
-    "optoro optoro optoro optoro optoro optoro optoro optoro optoro optoro optoro optoro"
+    
+    "workExperienceTimeline workExperienceTimeline workExperienceTimeline workExperienceTimeline workExperienceTimeline workExperienceTimeline workExperienceTimeline workExperienceTimeline workExperienceTimeline workExperienceTimeline workExperienceTimeline workExperienceTimeline"
     "otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading"
     "mindx mindx mindx mindx mindx mindx . . . . . ."
     "footerDivider footerDivider footerDivider footerDivider footerDivider footerDivider footerDivider footerDivider footerDivider footerDivider footerDivider footerDivider"
@@ -45,7 +44,7 @@
   max-width: 100%;
   border-radius: 20px;
   border: 1px solid var(--color-home-block-border);
-  background-color: var(--color-home-block-background);
+  background-color: var(--color-block-background);
   box-shadow: 0 10px 24px var(--color-home-block-shadow);
   padding: 20px;
   display: flex;
@@ -76,6 +75,15 @@
 .dividerRow {
   display: flex;
   align-items: center;
+  min-height: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+}
+
+.timelineRow {
+  display: flex;
   min-height: 0;
   padding: 0;
   border: none;
@@ -143,32 +151,14 @@
   grid-area: workExperienceHeading;
 }
 
-.hdwebsoft {
-  grid-area: hdwebsoft;
-  align-items: stretch;
-  justify-content: flex-start;
-}
-
-.toyar {
-  grid-area: toyar;
-  align-items: stretch;
-  justify-content: flex-start;
-}
-
-.phase2 {
-  grid-area: phase2;
+.workExperienceTimeline {
+  grid-area: workExperienceTimeline;
   align-items: stretch;
   justify-content: flex-start;
 }
 
 .otherExperienceHeading {
   grid-area: otherExperienceHeading;
-}
-
-.optoro {
-  grid-area: optoro;
-  align-items: stretch;
-  justify-content: flex-start;
 }
 
 .mindx {
@@ -213,9 +203,7 @@
       "image image image image summary summary summary summary summary summary summary summary"
       "technical technical technical technical technical technical education education education education education education"
       "workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading"
-      "hdwebsoft hdwebsoft hdwebsoft hdwebsoft hdwebsoft hdwebsoft hdwebsoft hdwebsoft hdwebsoft hdwebsoft hdwebsoft hdwebsoft"
-      "toyar toyar toyar toyar toyar toyar toyar toyar toyar toyar toyar toyar"
-      "optoro optoro optoro optoro optoro optoro optoro optoro optoro optoro optoro optoro"
+      "workExperienceTimeline workExperienceTimeline workExperienceTimeline workExperienceTimeline workExperienceTimeline workExperienceTimeline workExperienceTimeline workExperienceTimeline workExperienceTimeline workExperienceTimeline workExperienceTimeline workExperienceTimeline"
       "otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading"
       "mindx mindx mindx mindx mindx mindx mindx mindx mindx mindx mindx mindx"
       "footerDivider footerDivider footerDivider footerDivider footerDivider footerDivider footerDivider footerDivider footerDivider footerDivider footerDivider footerDivider"
@@ -232,9 +220,7 @@
       "image image image technical technical technical"
       "education education education education education education"
       "workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading workExperienceHeading"
-      "hdwebsoft hdwebsoft hdwebsoft hdwebsoft hdwebsoft hdwebsoft"
-      "toyar toyar toyar toyar toyar toyar"
-      "optoro optoro optoro optoro optoro optoro"
+      "workExperienceTimeline workExperienceTimeline workExperienceTimeline workExperienceTimeline workExperienceTimeline workExperienceTimeline"
       "otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading otherExperienceHeading"
       "mindx mindx mindx mindx mindx mindx"
       "footerDivider footerDivider footerDivider footerDivider footerDivider footerDivider"
@@ -259,9 +245,7 @@
       "technical"
       "education"
       "workExperienceHeading"
-      "hdwebsoft"
-      "toyar"
-      "optoro"
+      "workExperienceTimeline"
       "otherExperienceHeading"
       "mindx"
       "footerDivider"

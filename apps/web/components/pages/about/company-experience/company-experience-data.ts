@@ -1,5 +1,6 @@
 import type { StaticImageData } from "next/image";
 
+import { PATH_URL } from "@/config/path";
 import optoroLogo from "@/assets/image/about/optoro_logo.jpg";
 import hdwebsoftLogo from "@/assets/image/about/hdwebsoft_logo.jpg";
 import toyarLogo from "@/assets/image/about/toyar_logo.jpg";
@@ -16,8 +17,7 @@ type DetailedCompanyExperienceBase = {
   logoAlt: string;
   linkUrl: string;
   techLineKeys: readonly string[];
-  /** hdwebsoft intentionally renders without the 16px root gap. */
-  noRootGap?: boolean;
+  detailUrl: string;
 };
 
 export type DetailedCompanyExperience = DetailedCompanyExperienceBase &
@@ -30,6 +30,7 @@ export type SimpleCompanyExperience = {
   variant: "simple";
   keyPrefix: string;
   responsibilityKeys: readonly string[];
+  detailUrl: string;
 };
 
 export type CompanyExperienceEntry =
@@ -43,7 +44,7 @@ export const COMPANY_EXPERIENCES = {
     logo: hdwebsoftLogo,
     logoAlt: "HDWEBSOFT logo",
     linkUrl: "https://www.linkedin.com/company/hdwebsoft/",
-    noRootGap: true,
+    detailUrl: PATH_URL.ABOUT_WORK_EXPERIENCE_HDWEBSOFT,
     projects: [
       {
         headingKey: "about.page.experience.hdwebsoft.project.0",
@@ -77,6 +78,7 @@ export const COMPANY_EXPERIENCES = {
     logo: toyarLogo,
     logoAlt: "Toyar logo",
     linkUrl: "https://www.linkedin.com/company/toyarinc/",
+    detailUrl: PATH_URL.ABOUT_WORK_EXPERIENCE_TOYAR,
     projects: [
       {
         headingKey: "about.page.experience.toyar.project.1",
@@ -110,6 +112,7 @@ export const COMPANY_EXPERIENCES = {
     logo: optoroLogo,
     logoAlt: "optoro logo",
     linkUrl: "https://www.linkedin.com/company/optoro-/",
+    detailUrl: PATH_URL.ABOUT_WORK_EXPERIENCE_OPTORO,
     responsibilityKeys: [
       "about.page.experience.optoro.responsibility.0",
       "about.page.experience.optoro.responsibility.1",
@@ -121,9 +124,25 @@ export const COMPANY_EXPERIENCES = {
   mindx: {
     variant: "simple",
     keyPrefix: "about.page.experience.mindx",
+    detailUrl: PATH_URL.ABOUT_OTHER_EXPERIENCE_MINDX,
     responsibilityKeys: [
       "about.page.experience.mindx.responsibility.0",
       "about.page.experience.mindx.responsibility.1",
     ],
   },
 } as const satisfies Record<string, CompanyExperienceEntry>;
+
+export function getCompanyExperienceBySlug(
+  basePath: string,
+  slug: string,
+): CompanyExperienceEntry | undefined {
+  return Object.values(COMPANY_EXPERIENCES).find(
+    (company) => company.detailUrl === `${basePath}/${slug}`,
+  );
+}
+
+export function getCompanyExperienceSlugsFor(basePath: string): string[] {
+  return Object.values(COMPANY_EXPERIENCES)
+    .filter((company) => company.detailUrl.startsWith(`${basePath}/`))
+    .map((company) => company.detailUrl.slice(basePath.length + 1));
+}
