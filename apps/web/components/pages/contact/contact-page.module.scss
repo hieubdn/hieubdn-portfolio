@@ -29,7 +29,7 @@
     color: var(--color-home-text-body);
     letter-spacing: 1.5px;
     margin: 0;
-    font-family: "Verdana", sans-serif;
+    font-family: "Inter", sans-serif;
   }
 
   .infoItem {
@@ -88,7 +88,7 @@
         width: 70px;
         height: 70px;
         border-radius: 50%;
-        background: var(--color-home-icon-button-bg);
+        background: var(--color-button-background);
         box-shadow: 0 2px 8px #0f172a3e;
         transition:
           transform 0.15s ease,
@@ -218,7 +218,7 @@
     line-height: 1.5;
     font-weight: 700;
     color: var(--color-home-text-heading, #ffffff);
-    font-family: "Verdana", sans-serif;
+    font-family: "Inter", sans-serif;
 
     @media (max-width: 768px) {
       font-size: 32px;
@@ -276,7 +276,7 @@
     background: #ffffff0a;
     color: var(--color-home-text-body);
     font-size: 16px;
-    font-family: "Verdana", sans-serif;
+    font-family: "Inter", sans-serif;
     outline: none;
     transition:
       border-color 0.15s ease,
@@ -336,7 +336,7 @@
   color: var(--color-home-text-body, #e5e7eb);
   font-size: 16px;
   letter-spacing: 2px;
-  font-family: "Verdana", sans-serif;
+  font-family: "Inter", sans-serif;
   cursor: pointer;
   text-transform: uppercase;
   transition:
@@ -345,7 +345,7 @@
     transform 0.15s ease;
 
     &:hover:not(:disabled) {
-      background: var(--color-home-icon-button-bg);
+      background: var(--color-button-background);
       border:none;
   }
 

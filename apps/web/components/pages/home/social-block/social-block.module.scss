@@ -35,7 +35,7 @@
     width: 75px;
     height: 75px;
     border-radius: 50%;
-    background: var(--color-home-icon-button-bg);
+    background: var(--color-button-background);
     box-shadow: 0 2px 8px #0f172a3e;
     transition:
       transform 0.15s ease,
@@ -124,7 +124,7 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 8px;
-  font-family: "Verdana", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .sectionSubtitle {

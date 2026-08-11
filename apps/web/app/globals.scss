@@ -1,36 +1,29 @@
 :root {
-  font-family: "Verdana", sans-serif;
+  font-family: "Inter", sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
   /* Backgrounds */
-  --color-main-background: radial-gradient(circle at 13% -3%,rgb(37 219 255 / 12%),transparent 31rem),radial-gradient(circle at 94% 9%,rgb(139 109 255 / 15%),transparent 29rem),linear-gradient(180deg, #030713, #07101f 50%,#040a16);
+  --color-main-background: radial-gradient(circle at 13% -3%, rgb(37 219 255 / 12%), transparent 31rem), radial-gradient(circle at 94% 9%, rgb(139 109 255 / 15%), transparent 29rem), linear-gradient(180deg, #030713, #07101f 50%, #040a16);
   --color-block-background: linear-gradient(145deg, #0a182cc7, #050e1c9e);
-  --color-home-media-background: #30303030;
   --color-home-image-placeholder: #2a2c2e;
-  --color-band-background: radial-gradient(circle at 13% -3%,rgb(37 219 255 / 12%),transparent 31rem),radial-gradient(circle at 94% 9%,rgb(139 109 255 / 15%),transparent 29rem),linear-gradient(180deg, #030713, #07101f 50%,#040a16);
-  --color-home-icon-button-bg: linear-gradient(
-    120deg,
-    rgba(255, 255, 255, 0.5),
-    rgba(255, 255, 255, 0.1)
-  );
+  --color-band-background: radial-gradient(circle at 13% -3%, rgb(37 219 255 / 12%), transparent 31rem), radial-gradient(circle at 94% 9%, rgb(139 109 255 / 15%), transparent 29rem), linear-gradient(180deg, #030713, #07101f 50%, #040a16);
+  --color-button-background: linear-gradient(120deg,
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.1));
   --background-projects-block: #252728;
   --shell-surface-panel: #252728;
   --shell-surface-popover: #2a2c2e;
-  --shell-surface-hover: linear-gradient(
-    135deg,
-    #3a3d40 0%,
-    #2e3032 50%,
-    #2a2c2e 100%
-  );
-  --shell-surface-active: linear-gradient(
-    135deg,
-    #323436 0%,
-    #2a2c2e 50%,
-    #252728 100%
-  );
+  --shell-surface-hover: linear-gradient(135deg,
+      #3a3d40 0%,
+      #2e3032 50%,
+      #2a2c2e 100%);
+  --shell-surface-active: linear-gradient(135deg,
+      #323436 0%,
+      #2a2c2e 50%,
+      #252728 100%);
   --shell-footer-bg: #1c1c1d;
   --shell-close-hover-bg: #323436;
   --shell-input-bg: #1c1c1d;
@@ -38,12 +31,12 @@
   --shell-theme-radio-inner-mobile: #252728;
 
   /* Text colors */
+  --color-text: #ffffff;
+  --color-subtitle: #aec2dc;
+  --color-supporting: #e7f1ff;
   --color-home-text-primary: #fff;
   --color-home-text-heading: #e2e5e9;
   --color-home-text-body: #e2e5e9;
-  --color-home-text-muted: #b8bcc4;
-  --color-text: #ffffff;
-  --color-subtitle: #aec2dc;
   --color-home-text-accent: #e2e5e9;
   --color-home-text-cta-muted: #b8bcc4;
   --shell-text: #e2e5e9;
@@ -75,15 +68,13 @@
   --shell-notification-drawer-shadow: -8px 0 40px rgba(0, 0, 0, 0.55);
 
   /* Decorative gradients */
-  --color-home-star-color: linear-gradient(
-    102deg,
-    #4a5f7a 0%,
-    #6d84c4 24%,
-    #b9a8d9 44%,
-    #e8a3b8 58%,
-    #6b9bd4 82%,
-    #4d6485 100%
-  );
+  --color-home-star-color: linear-gradient(102deg,
+      #4a5f7a 0%,
+      #6d84c4 24%,
+      #b9a8d9 44%,
+      #e8a3b8 58%,
+      #6b9bd4 82%,
+      #4d6485 100%);
 }
 
 * {
@@ -105,7 +96,7 @@ html {
 
 body {
   background: var(--color-main-background);
-  font-family: "Verdana", sans-serif;
+  font-family: "Inter", sans-serif;
   overflow-x: clip;
 }
 
@@ -120,7 +111,7 @@ input[type="reset"] {
 h1,
 h2,
 h3 {
-  font-family: "Verdana", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 390;
   letter-spacing: 1.2px;
   line-height: 32px;
@@ -133,7 +124,7 @@ textarea,
 p,
 label {
   font-size: 16px;
-  font-family: "Verdana", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 390;
   letter-spacing: 1.5px;
   line-height: 32px;

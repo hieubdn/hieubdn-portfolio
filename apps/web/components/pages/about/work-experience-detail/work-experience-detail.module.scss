@@ -2,7 +2,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 48px;
   margin: 0 auto;
   padding-top: 48px;
   padding-bottom: 48px;
@@ -12,21 +12,21 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 12px;
 }
 
 .breadcrumbLink {
   letter-spacing: 1.5px;
   margin: 0;
-  font-family: "Verdana", sans-serif;
-  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
   line-height: 1.4;
-  color: var(--color-subtitle);
+  color: var(--color-supporting);
   text-decoration: none;
   transition: color 0.15s ease;
 
   &:hover {
-    color: var(--color-home-text-primary);
+    color: var(--color-subtitle);
   }
 }
 
@@ -34,10 +34,10 @@
 .breadcrumbCurrent {
   letter-spacing: 1.5px;
   margin: 0;
-  font-family: "Verdana", sans-serif;
-  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
   line-height: 1.4;
-  color: var(--color-subtitle);
+  color: var(--color-supporting);
 }
 
 .header {
@@ -50,8 +50,8 @@
 .logoWrapper {
   position: relative;
   flex-shrink: 0;
-  width: 96px;
-  height: 96px;
+  width: 100px;
+  height: 100px;
   border-radius: 16px;
   overflow: hidden;
 }
@@ -78,26 +78,25 @@
 
 .positionValue {
   margin: 0;
-  font-family: "Verdana", sans-serif;
-  font-size: clamp(22px, 4vw, 28px);
+  font-size: 24px;
   font-weight: 700;
-  color: var(--color-home-text-heading);
+  color: var(--color-text);
 }
 
 .company {
-  color: var(--color-home-text-body);
-  font-family: "Verdana", sans-serif;
-  font-size: 17px;
+  color: var(--color-subtitle);
+  font-size: 16px;
 }
 
 .metaLine {
-  color: #a0a0a0;
-  font-family: "Verdana", sans-serif;
+  color: var(--color-subtitle);
   font-size: 16px;
+  display: flex;
+  gap: 12px;
 
   .durationValue,
   .locationValue {
-    color: #a0a0a0;
+    color: var(--color-subtitle);
   }
 }
 
@@ -106,7 +105,7 @@
   align-items: center;
   gap: 6px;
   margin-top: 8px;
-  font-family: "Verdana", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 15px;
   color: var(--color-home-text-body);
   text-decoration: none;
@@ -137,29 +136,104 @@
 
 .subheading {
   margin: 0;
-  color: #52525b;
-  font-family: "Verdana", sans-serif;
+  color: var(--color-subtitle);
   font-size: 17px;
-}
-
-.projectList {
-  margin: 0;
-  padding-left: 1.25rem;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
 }
 
 .bulletList,
 .techList {
+  margin: 0;
   padding-left: 1.25rem;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
 
   li {
     font-size: 16px;
-    font-family: "Verdana", sans-serif;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    line-height: 32px;
+    color: var(--color-home-text-body);
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    margin-bottom: 4px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.projectRows {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  margin-top: 8px;
+}
+
+.projectBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.projectRow {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.projectMedia {
+  float: left;
+  width: 45%;
+  margin: 0 32px 16px 0;
+}
+
+.projectRowReverse .projectMedia {
+  float: right;
+  margin: 0 0 16px 32px;
+}
+
+.projectImage {
+  display: block;
+  width: 100%;
+  border-radius: 16px;
+  height: auto;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  .projectHeading {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    line-height: 28px;
+    color: var(--color-text);
+    overflow-wrap: anywhere;
+    word-break: break-word;
+
+    .projectDescription {
+      display: block;
+      font-size: 15px;
+      font-weight: 400;
+      font-style: italic;
+      font-family: "Inter", sans-serif;
+      letter-spacing: 0.5px;
+      line-height: 22px;
+      color: var(--color-subtitle);
+    }
+  }
+
+  .projectNote {
+    padding-left: 32px;
+    font-size: 15px;
+    font-family: "Inter", sans-serif;
     font-weight: 400;
     letter-spacing: 1.5px;
     line-height: 32px;
@@ -167,11 +241,22 @@
     overflow-wrap: anywhere;
     word-break: break-word;
   }
+
+  .projectMetaoo {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+  }
 }
 
-.projectHeading {
+
+
+
+
+.projectNote {
+  margin: 0;
   font-size: 16px;
-  font-family: "Verdana", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 400;
   letter-spacing: 1.5px;
   line-height: 32px;
@@ -180,12 +265,53 @@
   word-break: break-word;
 }
 
+.projectParagraph {
+  margin: 0;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  line-height: 32px;
+  color: var(--color-home-text-body);
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.projectCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  align-self: flex-start;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--color-home-text-body);
+  text-decoration: none;
+  transition: gap 0.2s ease;
+
+  &:hover {
+    gap: 10px;
+  }
+
+  span {
+    display: flex;
+    align-items: center;
+
+    svg {
+      width: 16px;
+      height: 16px;
+      fill: var(--color-home-text-body);
+    }
+  }
+}
+
 .backLink {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   align-self: flex-start;
-  font-family: "Verdana", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 500;
   color: var(--color-home-text-body);
@@ -205,6 +331,16 @@
     width: 22px;
     height: 22px;
     fill: var(--color-home-text-body);
+  }
+}
+
+@media (max-width: 768px) {
+
+  .projectMedia,
+  .projectRowReverse .projectMedia {
+    float: none;
+    width: 100%;
+    margin: 0 0 20px;
   }
 }
 

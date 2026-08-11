@@ -7,7 +7,7 @@ import type { CompanyExperienceEntry } from "@/components/pages/about/company-ex
 import { useLocaleText } from "@/components/layout/setting/translate/locale-provider";
 import { PATH_URL } from "@/config/path";
 import { Reveal } from "@/components/ui/reveal";
-import { BackProject, Right } from "@/assets/svg";
+import { Right } from "@/assets/svg";
 import styles from "./work-experience-detail.module.scss";
 
 type Props = {
@@ -80,24 +80,98 @@ export default function WorkExperienceDetail({ company }: Props) {
           {t(`${company.keyPrefix}.responsibilities`)}:{" "}
         </span>
         {company.variant === "detailed" && company.projects ? (
-          <ul className={styles.projectList}>
-            {company.projects.map((project) => (
-              <li key={project.headingKey} className={styles.projectHeading}>
-                {project.jobKeys.length > 0 ? (
-                  <>
-                    {t(project.headingKey)}:
+          <div className={styles.projectRows}>
+            {company.projects.map((project, index) => (
+              <Reveal
+                as="div"
+                key={project.headingKey}
+                delayMs={40 * index}
+                className={styles.projectBlock}
+              >
+
+                <div className={styles.project}>
+                  {project.jobKeys.length > 0 && (
+                    <span className={styles.projectHeading}>
+                      {t(project.headingKey)}
+                      {project.descriptionKey && (
+                        <span className={styles.projectDescription}>
+                          {t(project.descriptionKey)}
+                        </span>
+                      )}
+                      <span>Duration: 2024 - 2025</span>
+                    </span>
+                  )}
+
+                  <div className={styles.projectMetaoo}>
+                    <span className={styles.projectNote}>Role:<span className={styles.projectDescription}>Full-Stack Software Engineer</span></span>
+                    <span className={styles.projectNote}>Team size: <span className={styles.projectDescription}>1 nember</span></span>
+                  </div>
+
+                </div>
+                <div
+                  className={`${styles.projectRow} ${index % 2 === 1 ? styles.projectRowReverse : ""
+                    }`}
+                >
+                  <div className={styles.projectMedia}>
+                    {project.video ? (
+                      <video
+                        src={project.video}
+                        className={styles.projectImage}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        aria-label={project.imageAlt}
+                      />
+                    ) : (
+                      project.image && (
+                        <Image
+                          src={project.image}
+                          alt={project.imageAlt}
+                          width={project.image.width}
+                          height={project.image.height}
+                          sizes="(max-width: 768px) 100vw, 45vw"
+                          className={styles.projectImage}
+                        />
+                      )
+                    )}
+                  </div>
+                  {project.jobKeys.length > 0 ? (
                     <ul className={styles.bulletList}>
                       {project.jobKeys.map((key) => (
                         <li key={key}>{t(key)}</li>
                       ))}
                     </ul>
-                  </>
-                ) : (
-                  t(project.headingKey)
-                )}
-              </li>
+                  ) : (
+                    <p className={styles.projectParagraph}>
+                      {t(project.headingKey)}
+                      {project.descriptionKey && (
+                        <span className={styles.projectDescription}>
+                          {t(project.descriptionKey)}
+                        </span>
+                      )}
+                    </p>
+                  )}
+                </div>
+                <a
+                  href={project.ctaUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.projectCta}
+                >
+                  {t("about.page.workExperience.detail.viewProject")}{" "}
+                  <span aria-hidden="true">
+                    <Right />
+                  </span>
+                </a>
+              </Reveal>
             ))}
-          </ul>
+            {company.noteKey && (
+              <Reveal as="p" className={styles.projectNote}>
+                {t(company.noteKey)}
+              </Reveal>
+            )}
+          </div>
         ) : (
           <ul className={styles.bulletList}>
             {company.responsibilityKeys.map((key) => (
@@ -122,7 +196,7 @@ export default function WorkExperienceDetail({ company }: Props) {
 
       <Link href={PATH_URL.ABOUT} className={styles.backLink}>
         <span aria-hidden="true" className={styles.backLinkIcon}>
-          <BackProject />
+          ←
         </span>
         {t("about.page.workExperience.detail.backToAbout")}
       </Link>

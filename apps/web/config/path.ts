@@ -18,3 +18,12 @@ export const SOCIAL_LINKS = {
   INSTAGRAM: "https://www.instagram.com/_hiu.bdn/",
   FACEBOOK: "https://www.facebook.com/hieubdn/",
 } as const;
+
+// TODO: replace with the real project links once provided.
+export const WORK_PROJECT_LINKS = {
+  HDWEBSOFT_CONVOSO: "#",
+  HDWEBSOFT_POPPY: "#",
+  HDWEBSOFT_2D_TRANSIT: "#",
+  TOYAR_FIDOVN: "#",
+  TOYAR_FIDOBOX: "#",
+} as const;

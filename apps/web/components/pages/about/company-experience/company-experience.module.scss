@@ -100,16 +100,16 @@
 
   .positionValue {
     margin: 0;
-    font-family: "Verdana", sans-serif;
-    font-size: 17px;
-    font-weight: 700;
-    color: var(--color-home-text-heading);
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    color: var(--color-text);
+    text-transform: uppercase;
   }
 
   .company,
   .durationValue {
-    color: #a0a0a0;
-    font-family: "Verdana", sans-serif;
+    color: var(--color-subtitle);
+    font-family: "Inter", sans-serif;
     font-size: 16px;
 
     @media (max-width: 500px) {
@@ -126,9 +126,9 @@
 
   .company {
     margin: 0;
-    font-family: "Verdana", sans-serif;
-    font-size: 20px;
-    color: var(--color-home-text-body);
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    color: var(--color-text);
     text-transform: uppercase;
   }
 
@@ -137,16 +137,16 @@
     flex-wrap: wrap;
     gap: 8px;
     min-width: 0;
-    color: #a0a0a0;
-    font-family: "Verdana", sans-serif;
+    color: var(--color-supporting);
+    font-family: "Inter", sans-serif;
     font-size: 16px;
   }
 
   .positionValue,
   .durationValue,
   .locationValue {
-    color: #a0a0a0;
-    font-family: "Verdana", sans-serif;
+    color: var(--color-subtitle);
+    font-family: "Inter", sans-serif;
     font-size: 16px;
 
     @media (max-width: 500px) {
@@ -163,7 +163,7 @@
 .subheading {
   margin: 0;
   color: var(--color-subtitle);
-  font-family: "Verdana", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 17px;
 }
 
@@ -175,7 +175,7 @@
 
   li {
     font-size: 16px;
-    font-family: "Verdana", sans-serif;
+    font-family: "Inter", sans-serif;
     font-weight: 400;
     letter-spacing: 1.5px;
     line-height: 32px;

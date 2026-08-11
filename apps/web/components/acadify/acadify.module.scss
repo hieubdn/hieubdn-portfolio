@@ -11,7 +11,7 @@ $border: #dde5ea;
 // Unified typography: body text (390), emphasis titles (600), all ≥ 16px.
 @mixin acadify-font($size: 16px, $weight: 390) {
   font-size: $size;
-  font-family: "Verdana", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: $weight;
   letter-spacing: 0px;
   line-height: 32px;
@@ -23,7 +23,7 @@ $border: #dde5ea;
   align-items: center;
   gap: 20px;
   padding: 24px 0 64px;
-  font-family: "Verdana", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .topBar {
@@ -144,7 +144,7 @@ $border: #dde5ea;
 
 .heroKicker {
   font-size: 13px;
-  font-family: "Verdana", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 390;
   letter-spacing: 0px;
   line-height: 32px;
@@ -168,7 +168,7 @@ $border: #dde5ea;
 
 .heroMeta {
   font-size: 13px;
-  font-family: "Verdana", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 390;
   letter-spacing: 0px;
   line-height: 32px;
@@ -402,7 +402,7 @@ $border: #dde5ea;
 
 .closing {
   font-size: 14px;
-  font-family: "Verdana", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 390;
   letter-spacing: 0px;
   line-height: 32px;

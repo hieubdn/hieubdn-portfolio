@@ -5,7 +5,7 @@
   justify-content: center;
   min-height: 65px;
   margin: 0;
-  font-family: "Verdana", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 32px;
   font-weight: 900;
   letter-spacing: 0.12em;
@@ -24,7 +24,7 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   -webkit-font-smoothing: antialiased;
-  color: var(--color-home-text-muted);
+  color: var(--color-supporting);
 
   @media (max-width: 919px) {
     font-size: 28px;

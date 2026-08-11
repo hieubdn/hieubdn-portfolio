@@ -9,9 +9,9 @@
 
 .headingBlock {
   margin: 0;
-  font-family: "Verdana", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 18px;
-  color: #a0a0a0;
+  color: var(--color-text);
   text-transform: uppercase;
 }
 
@@ -20,7 +20,7 @@
   flex-direction: column;
   gap: 32px;
   margin: 0;
-  font-family: "Verdana", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 15px;
   line-height: 1.55;
   color: var(--color-home-text-body);
@@ -52,13 +52,14 @@
       svg {
         width: 20px;
         height: 20px;
-        fill: #52525b;
+        fill: #fff;
+
       }
     }
 
     .date,
     .issuedBy {
-      color: #a0a0a0;
+      color: var(--color-subtitle);
     }
   }
 }
