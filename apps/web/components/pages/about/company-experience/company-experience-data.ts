@@ -5,14 +5,17 @@ import optoroLogo from "@/assets/image/about/optoro_logo.jpg";
 import hdwebsoftLogo from "@/assets/image/about/hdwebsoft_logo.jpg";
 import toyarLogo from "@/assets/image/about/toyar_logo.jpg";
 import convosoPoster from "@/assets/image/about/project/Convoso.png";
+import poppyPoster from "@/assets/image/about/project/poppy.webp";
 import cbpoPoster from "@/assets/image/about/project/CBPO.png";
 import fidovnPoster from "@/assets/image/about/project/fidovn.jpg";
 import fidoboxPoster from "@/assets/image/about/project/fidobox.jpg";
 
 export type CompanyProject = {
-  headingKey: string;
+  titleKey: string;
   descriptionKey?: string;
-  jobKeys: readonly string[];
+  teamSizeKey: string;
+  durationKey: string;
+  highlightKeys: readonly string[];
   image?: StaticImageData;
   video?: string;
   imageAlt: string;
@@ -57,53 +60,62 @@ export const COMPANY_EXPERIENCES = {
     detailUrl: PATH_URL.ABOUT_WORK_EXPERIENCE_HDWEBSOFT,
     projects: [
       {
-        headingKey: "about.page.experience.hdwebsoft.project.0",
-        descriptionKey: "about.page.experience.hdwebsoft.project.0.description",
-        jobKeys: [
-          "about.page.experience.hdwebsoft.project.job.0",
-          "about.page.experience.hdwebsoft.project.job.1",
-          "about.page.experience.hdwebsoft.project.job.2",
-          "about.page.experience.hdwebsoft.project.job.3",
-          "about.page.experience.hdwebsoft.project.job.4",
-          "about.page.experience.hdwebsoft.project.job.5",
+        titleKey: "about.page.experience.hdwebsoft.projects.convoso.title",
+        descriptionKey:
+          "about.page.experience.hdwebsoft.projects.convoso.description",
+        teamSizeKey: "about.page.experience.hdwebsoft.projects.convoso.teamSize",
+        durationKey: "about.page.experience.hdwebsoft.projects.convoso.duration",
+        highlightKeys: [
+          "about.page.experience.hdwebsoft.projects.convoso.highlights.0",
+          "about.page.experience.hdwebsoft.projects.convoso.highlights.1",
+          "about.page.experience.hdwebsoft.projects.convoso.highlights.2",
+          "about.page.experience.hdwebsoft.projects.convoso.highlights.3",
+          "about.page.experience.hdwebsoft.projects.convoso.highlights.4",
+          "about.page.experience.hdwebsoft.projects.convoso.highlights.5",
         ],
         image: convosoPoster,
         imageAlt: "Convoso project",
         ctaUrl: WORK_PROJECT_LINKS.HDWEBSOFT_CONVOSO,
       },
       {
-        headingKey: "about.page.experience.hdwebsoft.project.1",
-        descriptionKey: "about.page.experience.hdwebsoft.project.1.description",
-        jobKeys: [
-          "about.page.experience.hdwebsoft.project.job.6",
-          "about.page.experience.hdwebsoft.project.job.7",
-          "about.page.experience.hdwebsoft.project.job.8",
-          "about.page.experience.hdwebsoft.project.job.9",
-          "about.page.experience.hdwebsoft.project.job.10",
+        titleKey: "about.page.experience.hdwebsoft.projects.poppy.title",
+        descriptionKey:
+          "about.page.experience.hdwebsoft.projects.poppy.description",
+        teamSizeKey: "about.page.experience.hdwebsoft.projects.poppy.teamSize",
+        durationKey: "about.page.experience.hdwebsoft.projects.poppy.duration",
+        highlightKeys: [
+          "about.page.experience.hdwebsoft.projects.poppy.highlights.0",
+          "about.page.experience.hdwebsoft.projects.poppy.highlights.1",
+          "about.page.experience.hdwebsoft.projects.poppy.highlights.2",
+          "about.page.experience.hdwebsoft.projects.poppy.highlights.3",
+          "about.page.experience.hdwebsoft.projects.poppy.highlights.4",
         ],
-        video: "/videos/poppy.mp4",
+        image: poppyPoster,
         imageAlt: "Poppy Flowers project",
         ctaUrl: WORK_PROJECT_LINKS.HDWEBSOFT_POPPY,
       },
       {
-        headingKey: "about.page.experience.hdwebsoft.project.2",
-        descriptionKey: "about.page.experience.hdwebsoft.project.2.description",
-        jobKeys: [
-          "about.page.experience.hdwebsoft.project.job.11",
-          "about.page.experience.hdwebsoft.project.job.12",
-          "about.page.experience.hdwebsoft.project.job.13",
-          "about.page.experience.hdwebsoft.project.job.14",
-          "about.page.experience.hdwebsoft.project.job.15",
-          "about.page.experience.hdwebsoft.project.job.16",
-          "about.page.experience.hdwebsoft.project.job.17",
+        titleKey: "about.page.experience.hdwebsoft.projects.transit.title",
+        descriptionKey:
+          "about.page.experience.hdwebsoft.projects.transit.description",
+        teamSizeKey: "about.page.experience.hdwebsoft.projects.transit.teamSize",
+        durationKey: "about.page.experience.hdwebsoft.projects.transit.duration",
+        highlightKeys: [
+          "about.page.experience.hdwebsoft.projects.transit.highlights.0",
+          "about.page.experience.hdwebsoft.projects.transit.highlights.1",
+          "about.page.experience.hdwebsoft.projects.transit.highlights.2",
+          "about.page.experience.hdwebsoft.projects.transit.highlights.3",
+          "about.page.experience.hdwebsoft.projects.transit.highlights.4",
+          "about.page.experience.hdwebsoft.projects.transit.highlights.5",
+          "about.page.experience.hdwebsoft.projects.transit.highlights.6",
         ],
         image: cbpoPoster,
         imageAlt: "2D Transit project",
         ctaUrl: WORK_PROJECT_LINKS.HDWEBSOFT_2D_TRANSIT,
       },
     ],
-    noteKey: "about.page.experience.hdwebsoft.project.3",
-    techLineKeys: ["about.page.experience.hdwebsoft.tech.tech"],
+    noteKey: "about.page.experience.hdwebsoft.additionalNote",
+    techLineKeys: ["about.page.experience.hdwebsoft.tech"],
   },
   toyar: {
     variant: "detailed",
@@ -114,31 +126,37 @@ export const COMPANY_EXPERIENCES = {
     detailUrl: PATH_URL.ABOUT_WORK_EXPERIENCE_TOYAR,
     projects: [
       {
-        headingKey: "about.page.experience.toyar.project.1",
-        descriptionKey: "about.page.experience.toyar.project.1.description",
-        jobKeys: [
-          "about.page.experience.toyar.project.job.6",
-          "about.page.experience.toyar.project.job.7",
-          "about.page.experience.toyar.project.job.8",
-          "about.page.experience.toyar.project.job.9",
-          "about.page.experience.toyar.project.job.10",
-          "about.page.experience.toyar.project.job.11",
-          "about.page.experience.toyar.project.job.12",
+        titleKey: "about.page.experience.toyar.projects.fidovn.title",
+        descriptionKey:
+          "about.page.experience.toyar.projects.fidovn.description",
+        teamSizeKey: "about.page.experience.toyar.projects.fidovn.teamSize",
+        durationKey: "about.page.experience.toyar.projects.fidovn.duration",
+        highlightKeys: [
+          "about.page.experience.toyar.projects.fidovn.highlights.0",
+          "about.page.experience.toyar.projects.fidovn.highlights.1",
+          "about.page.experience.toyar.projects.fidovn.highlights.2",
+          "about.page.experience.toyar.projects.fidovn.highlights.3",
+          "about.page.experience.toyar.projects.fidovn.highlights.4",
+          "about.page.experience.toyar.projects.fidovn.highlights.5",
+          "about.page.experience.toyar.projects.fidovn.highlights.6",
         ],
         image: fidovnPoster,
         imageAlt: "FidoVN project",
         ctaUrl: WORK_PROJECT_LINKS.TOYAR_FIDOVN,
       },
       {
-        headingKey: "about.page.experience.toyar.project.0",
-        descriptionKey: "about.page.experience.toyar.project.0.description",
-        jobKeys: [
-          "about.page.experience.toyar.project.job.0",
-          "about.page.experience.toyar.project.job.1",
-          "about.page.experience.toyar.project.job.2",
-          "about.page.experience.toyar.project.job.3",
-          "about.page.experience.toyar.project.job.4",
-          "about.page.experience.toyar.project.job.5",
+        titleKey: "about.page.experience.toyar.projects.fidobox.title",
+        descriptionKey:
+          "about.page.experience.toyar.projects.fidobox.description",
+        teamSizeKey: "about.page.experience.toyar.projects.fidobox.teamSize",
+        durationKey: "about.page.experience.toyar.projects.fidobox.duration",
+        highlightKeys: [
+          "about.page.experience.toyar.projects.fidobox.highlights.0",
+          "about.page.experience.toyar.projects.fidobox.highlights.1",
+          "about.page.experience.toyar.projects.fidobox.highlights.2",
+          "about.page.experience.toyar.projects.fidobox.highlights.3",
+          "about.page.experience.toyar.projects.fidobox.highlights.4",
+          "about.page.experience.toyar.projects.fidobox.highlights.5",
         ],
         image: fidoboxPoster,
         imageAlt: "FidoBox project",

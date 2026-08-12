@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -18,19 +19,28 @@ export default function WorkExperienceDetail({ company }: Props) {
   const { t } = useLocaleText();
   const positionValue = t(`${company.keyPrefix}.positionValue`);
   const companyName = t(`${company.keyPrefix}.company`);
+  // Accordion: expanding one project's highlights collapses whichever
+  // other project was previously expanded.
+  const [expandedProjectKey, setExpandedProjectKey] = useState<string | null>(
+    null,
+  );
+
+  const toggleProjectHighlights = (titleKey: string) => {
+    setExpandedProjectKey((prev) => (prev === titleKey ? null : titleKey));
+  };
 
   return (
     <article className={styles.root}>
       <nav aria-label="Breadcrumb" className={styles.breadcrumb}>
-        <Link href={PATH_URL.ROOT} className={styles.breadcrumbLink}>
+        <Link href={PATH_URL.ROOT} className={styles.link}>
           {t("navBar.home")}
         </Link>
-        <span className={styles.breadcrumbSep}>›</span>
-        <Link href={PATH_URL.ABOUT} className={styles.breadcrumbLink}>
+        <span>›</span>
+        <Link href={PATH_URL.ABOUT} className={styles.link}>
           {t("navBar.about")}
         </Link>
-        <span className={styles.breadcrumbSep}>›</span>
-        <span className={styles.breadcrumbCurrent}>{companyName}</span>
+        <span>›</span>
+        <span>{companyName}</span>
       </nav>
 
       <Reveal as="div" className={styles.header}>
@@ -59,115 +69,135 @@ export default function WorkExperienceDetail({ company }: Props) {
               {t(`${company.keyPrefix}.locationValue`)}
             </span>
           </span>
-          {company.variant === "detailed" && (
-            <a
-              href={company.linkUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.linkedinLink}
-            >
-              {t("about.page.workExperience.detail.viewLinkedIn")}{" "}
-              <span aria-hidden="true">
-                <Right />
-              </span>
-            </a>
-          )}
         </div>
       </Reveal>
 
       <Reveal as="div" delayMs={80} className={styles.responsibilities}>
-        <span className={styles.subheading}>
-          {t(`${company.keyPrefix}.responsibilities`)}:{" "}
-        </span>
         {company.variant === "detailed" && company.projects ? (
-          <div className={styles.projectRows}>
-            {company.projects.map((project, index) => (
-              <Reveal
-                as="div"
-                key={project.headingKey}
-                delayMs={40 * index}
-                className={styles.projectBlock}
-              >
+          <div className={styles.projects}>
+            {company.projects.map((project, index) => {
+              const isExpanded = expandedProjectKey === project.titleKey;
 
-                <div className={styles.project}>
-                  {project.jobKeys.length > 0 && (
-                    <span className={styles.projectHeading}>
-                      {t(project.headingKey)}
-                      {project.descriptionKey && (
-                        <span className={styles.projectDescription}>
-                          {t(project.descriptionKey)}
-                        </span>
-                      )}
-                      <span>Duration: 2024 - 2025</span>
-                    </span>
-                  )}
-
-                  <div className={styles.projectMetaoo}>
-                    <span className={styles.projectNote}>Role:<span className={styles.projectDescription}>Full-Stack Software Engineer</span></span>
-                    <span className={styles.projectNote}>Team size: <span className={styles.projectDescription}>1 nember</span></span>
-                  </div>
-
-                </div>
-                <div
-                  className={`${styles.projectRow} ${index % 2 === 1 ? styles.projectRowReverse : ""
-                    }`}
+              return (
+                <Reveal
+                  as="div"
+                  key={project.titleKey}
+                  delayMs={40 * index}
+                  className={styles.block}
                 >
-                  <div className={styles.projectMedia}>
-                    {project.video ? (
-                      <video
-                        src={project.video}
-                        className={styles.projectImage}
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                        aria-label={project.imageAlt}
-                      />
-                    ) : (
-                      project.image && (
-                        <Image
-                          src={project.image}
-                          alt={project.imageAlt}
-                          width={project.image.width}
-                          height={project.image.height}
-                          sizes="(max-width: 768px) 100vw, 45vw"
-                          className={styles.projectImage}
+                  <div className={styles.info}>
+                    {project.highlightKeys.length > 0 && (
+                      <span className={styles.heading}>
+                        <span className={styles.headingMain}>
+                          <span className={styles.companyName}>
+                            {t(project.titleKey)}
+                          </span>
+                          {project.descriptionKey && (
+                            <span className={styles.description}>
+                              {t(project.descriptionKey)}
+                            </span>
+                          )}
+                        </span>
+                      </span>
+                    )}
+
+                    <div className={styles.meta}>
+                      <span className={styles.metaItem}>
+                        {t("about.page.workExperience.detail.role")}:{" "}
+                        <span className={styles.metaValue}>
+                          {positionValue}
+                        </span>
+                      </span>
+                      <span className={styles.metaItem}>
+                        {t("about.page.workExperience.detail.teamSize")}:{" "}
+                        <span className={styles.metaValue}>
+                          {t(project.teamSizeKey)}
+                        </span>
+                      </span>
+                      <span className={styles.metaItem}>
+                        {t("about.page.workExperience.detail.duration")}:{" "}
+                        <span className={styles.metaValue}>
+                          {t(project.durationKey)}
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <div
+                    className={`${styles.row} ${index % 2 === 1 ? styles.rowReverse : ""}`}
+                  >
+                    <div className={styles.media}>
+                      {project.video ? (
+                        <video
+                          src={project.video}
+                          className={styles.thumbnail}
+                          autoPlay
+                          loop
+                          muted
+                          playsInline
+                          aria-label={project.imageAlt}
                         />
-                      )
+                      ) : (
+                        project.image && (
+                          <Image
+                            src={project.image}
+                            alt={project.imageAlt}
+                            width={project.image.width}
+                            height={project.image.height}
+                            sizes="(max-width: 768px) 100vw, 45vw"
+                            className={styles.thumbnail}
+                          />
+                        )
+                      )}
+                    </div>
+                    {project.highlightKeys.length > 0 ? (
+                      <ul
+                        className={`${styles.bulletList} ${
+                          isExpanded ? "" : styles.collapsed
+                        }`}
+                      >
+                        {project.highlightKeys.map((key) => (
+                          <li key={key}>{t(key)}</li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <p className={styles.paragraph}>
+                        {t(project.titleKey)}
+                        {project.descriptionKey && (
+                          <span className={styles.description}>
+                            {t(project.descriptionKey)}
+                          </span>
+                        )}
+                      </p>
                     )}
                   </div>
-                  {project.jobKeys.length > 0 ? (
-                    <ul className={styles.bulletList}>
-                      {project.jobKeys.map((key) => (
-                        <li key={key}>{t(key)}</li>
-                      ))}
-                    </ul>
-                  ) : (
-                    <p className={styles.projectParagraph}>
-                      {t(project.headingKey)}
-                      {project.descriptionKey && (
-                        <span className={styles.projectDescription}>
-                          {t(project.descriptionKey)}
-                        </span>
-                      )}
-                    </p>
+                  {project.highlightKeys.length > 0 && (
+                    <button
+                      type="button"
+                      className={styles.toggle}
+                      aria-expanded={isExpanded}
+                      onClick={() => toggleProjectHighlights(project.titleKey)}
+                    >
+                      {isExpanded
+                        ? t("about.page.workExperience.detail.showLess")
+                        : t("about.page.workExperience.detail.showMore")}
+                    </button>
                   )}
-                </div>
-                <a
-                  href={project.ctaUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.projectCta}
-                >
-                  {t("about.page.workExperience.detail.viewProject")}{" "}
-                  <span aria-hidden="true">
-                    <Right />
-                  </span>
-                </a>
-              </Reveal>
-            ))}
+                  <a
+                    href={project.ctaUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.cta}
+                  >
+                    {t("about.page.workExperience.detail.viewProject")}{" "}
+                    <span aria-hidden="true">
+                      <Right />
+                    </span>
+                  </a>
+                </Reveal>
+              );
+            })}
             {company.noteKey && (
-              <Reveal as="p" className={styles.projectNote}>
+              <Reveal as="p" className={styles.note}>
                 {t(company.noteKey)}
               </Reveal>
             )}
@@ -195,7 +225,7 @@ export default function WorkExperienceDetail({ company }: Props) {
       )}
 
       <Link href={PATH_URL.ABOUT} className={styles.backLink}>
-        <span aria-hidden="true" className={styles.backLinkIcon}>
+        <span aria-hidden="true" className={styles.icon}>
           ←
         </span>
         {t("about.page.workExperience.detail.backToAbout")}

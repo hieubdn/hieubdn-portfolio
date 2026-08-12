@@ -9,15 +9,6 @@
   margin-top: 24px;
 }
 
-.pageTitle {
-  margin: 0 0 20px;
-  font-family: "Inter", sans-serif;
-  font-size: clamp(22px, 4vw, 28px);
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  color: var(--color-home-text-heading);
-}
-
 .grid {
   display: grid;
   gap: 24px;
@@ -97,15 +88,6 @@
   margin: 24px 0;
 }
 
-.spacerRow {
-  min-height: 0;
-  padding: 0;
-  border: none;
-  background: transparent;
-  box-shadow: none;
-  pointer-events: none;
-}
-
 .kickerStrip {
   display: flex;
   flex-direction: column;
@@ -182,10 +164,6 @@
   align-items: stretch;
   justify-content: flex-start;
   min-width: 0;
-}
-
-.footerSpacer {
-  grid-area: footerSpacer;
 }
 
 .footerCv {

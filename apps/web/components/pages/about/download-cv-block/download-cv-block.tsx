@@ -17,7 +17,7 @@ export default function DownloadCvBlock() {
       href={CvPdf}
       download="BuiDoNgocHieu.pdf"
     >
-      <Reveal as="div" variant="scale" className={styles.meta}>
+      <Reveal as="div" variant="scale" className={styles.thumbnail}>
         <Image src={Cv} alt="CV" width={100} height={100} />
       </Reveal>
       <Reveal as="div" delayMs={90} className={styles.footer}>

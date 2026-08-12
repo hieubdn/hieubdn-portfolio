@@ -6,6 +6,10 @@
   margin: 0 auto;
   padding-top: 48px;
   padding-bottom: 48px;
+
+  @media (max-width: 640px) {
+    padding-top: 32px;
+  }
 }
 
 .breadcrumb {
@@ -13,31 +17,22 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 12px;
-}
-
-.breadcrumbLink {
   letter-spacing: 1.5px;
   margin: 0;
   font-family: "Inter", sans-serif;
   font-size: 14px;
   line-height: 1.4;
   color: var(--color-supporting);
-  text-decoration: none;
-  transition: color 0.15s ease;
 
-  &:hover {
-    color: var(--color-subtitle);
+  .link {
+    color: var(--color-supporting);
+    text-decoration: none;
+    transition: color 0.15s ease;
+
+    &:hover {
+      color: var(--color-subtitle);
+    }
   }
-}
-
-.breadcrumbSep,
-.breadcrumbCurrent {
-  letter-spacing: 1.5px;
-  margin: 0;
-  font-family: "Inter", sans-serif;
-  font-size: 14px;
-  line-height: 1.4;
-  color: var(--color-supporting);
 }
 
 .header {
@@ -45,99 +40,59 @@
   flex-direction: row;
   gap: 24px;
   align-items: flex-start;
-}
 
-.logoWrapper {
-  position: relative;
-  flex-shrink: 0;
-  width: 100px;
-  height: 100px;
-  border-radius: 16px;
-  overflow: hidden;
-}
-
-.logoInner {
-  position: absolute;
-  inset: 0;
-  border-radius: 16px;
-  overflow: hidden;
-}
-
-.logo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.headerInfo {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  min-width: 0;
-}
-
-.positionValue {
-  margin: 0;
-  font-size: 24px;
-  font-weight: 700;
-  color: var(--color-text);
-}
-
-.company {
-  color: var(--color-subtitle);
-  font-size: 16px;
-}
-
-.metaLine {
-  color: var(--color-subtitle);
-  font-size: 16px;
-  display: flex;
-  gap: 12px;
-
-  .durationValue,
-  .locationValue {
-    color: var(--color-subtitle);
-  }
-}
-
-.linkedinLink {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  margin-top: 8px;
-  font-family: "Inter", sans-serif;
-  font-size: 15px;
-  color: var(--color-home-text-body);
-  text-decoration: none;
-  transition: gap 0.2s ease;
-
-  &:hover {
-    gap: 10px;
+  @media (max-width: 640px) {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  span {
-    display: flex;
-    align-items: center;
+  .logoWrapper {
+    position: relative;
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 16px;
+    overflow: hidden;
 
-    svg {
-      width: 18px;
-      height: 18px;
-      fill: var(--color-home-text-body);
+    .logoInner {
+      position: absolute;
+      inset: 0;
+      border-radius: 16px;
+      overflow: hidden;
+
+      .logo {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
   }
-}
 
-.responsibilities,
-.techStack {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
+  .headerInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
 
-.subheading {
-  margin: 0;
-  color: var(--color-subtitle);
-  font-size: 17px;
+    .positionValue {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--color-text);
+    }
+
+    .company {
+      color: var(--color-subtitle);
+      font-size: 16px;
+    }
+
+    .metaLine {
+      color: var(--color-subtitle);
+      font-size: 16px;
+      display: flex;
+      gap: 12px;
+    }
+  }
 }
 
 .bulletList,
@@ -162,148 +117,268 @@
   }
 }
 
-.projectRows {
-  display: flex;
-  flex-direction: column;
-  gap: 48px;
-  margin-top: 8px;
-}
+// Collapsed state for the per-project highlight list: only applied to the
+// bulletList that sits next to the project image (see .block .row below).
+// Hides the trailing bullets per breakpoint until "Show more" is pressed.
+.bulletList.collapsed {
+  li:nth-child(n + 4) {
+    display: none;
+  }
 
-.projectBlock {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
+  @media (max-width: 1024px) {
+    li:nth-child(n + 3) {
+      display: none;
+    }
+  }
 
-.projectRow {
-  &::after {
-    content: "";
-    display: table;
-    clear: both;
+  @media (max-width: 768px) {
+    li {
+      display: none;
+    }
   }
 }
 
-.projectMedia {
-  float: left;
-  width: 45%;
-  margin: 0 32px 16px 0;
-}
-
-.projectRowReverse .projectMedia {
-  float: right;
-  margin: 0 0 16px 32px;
-}
-
-.projectImage {
+// Shared by the project heading and the plain-paragraph fallback below.
+.description {
   display: block;
-  width: 100%;
-  border-radius: 16px;
-  height: auto;
+  font-size: 15px;
+  font-weight: 400;
+  font-style: italic;
+  font-family: "Inter", sans-serif;
+  letter-spacing: 0.5px;
+  line-height: 22px;
+  color: var(--color-subtitle);
 }
 
-.project {
+.responsibilities {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
 
-  .projectHeading {
+  .projects {
     display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 24px;
-    font-weight: 400;
-    letter-spacing: 1.5px;
-    line-height: 28px;
-    color: var(--color-text);
-    overflow-wrap: anywhere;
-    word-break: break-word;
+    flex-direction: column;
+    gap: 48px;
+    margin-top: 8px;
 
-    .projectDescription {
-      display: block;
-      font-size: 15px;
-      font-weight: 400;
-      font-style: italic;
+    .block {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+
+        .heading {
+          display: flex;
+          align-items: baseline;
+          justify-content: space-between;
+          gap: 16px;
+          font-size: 24px;
+          font-weight: 400;
+          letter-spacing: 1.5px;
+          line-height: 28px;
+          color: var(--color-text);
+
+          .headingMain {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            min-width: 0;
+            overflow-wrap: anywhere;
+            word-break: break-word;
+          }
+
+          .companyName {
+            font-size: 18px;
+          }
+
+          .duration {
+            flex-shrink: 0;
+            font-size: 15px;
+            font-weight: 400;
+            font-family: "Inter", sans-serif;
+            letter-spacing: 0.5px;
+            line-height: 22px;
+            color: var(--color-subtitle);
+            white-space: nowrap;
+          }
+        }
+
+        .meta {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          gap: 4px 20px;
+          padding-left: 12px;
+          border-radius: 4px;
+          border-left: 1px solid var(--color-subtitle);
+
+          .metaItem {
+            font-size: 15px;
+            font-family: "Inter", sans-serif;
+            font-weight: 400;
+            letter-spacing: 1.5px;
+            line-height: 32px;
+            color: var(--color-home-text-body);
+
+            .metaValue {
+              font-size: 15px;
+              font-style: italic;
+              color: var(--color-subtitle);
+            }
+          }
+        }
+      }
+
+      .row {
+        &::after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        .media {
+          float: left;
+          width: 45%;
+          margin: 0 32px 16px 0;
+
+          .thumbnail {
+            display: block;
+            width: 100%;
+            border-radius: 16px;
+            height: auto;
+          }
+        }
+
+        &.rowReverse .media {
+          float: right;
+          margin: 0 0 16px 32px;
+        }
+
+        @media (max-width: 768px) {
+          .media,
+          &.rowReverse .media {
+            float: none;
+            width: 100%;
+            margin: 0 0 20px;
+          }
+        }
+
+        .paragraph {
+          margin: 0;
+          font-size: 16px;
+          font-family: "Inter", sans-serif;
+          font-weight: 400;
+          letter-spacing: 1.5px;
+          line-height: 32px;
+          color: var(--color-home-text-body);
+          overflow-wrap: anywhere;
+          word-break: break-word;
+        }
+      }
+
+      .cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        margin-top: 8px;
+        align-self: flex-start;
+        font-family: "Inter", sans-serif;
+        font-size: 15px;
+        font-weight: 500;
+        color: var(--color-home-text-body);
+        text-decoration: none;
+        transition: gap 0.2s ease;
+
+        &:hover {
+          gap: 10px;
+        }
+
+        span {
+          display: flex;
+          align-items: center;
+
+          svg {
+            width: 16px;
+            height: 16px;
+            fill: var(--color-home-text-body);
+          }
+        }
+      }
+
+      // Hidden unless the sibling .row actually has a bulletList with more
+      // items than the current breakpoint shows (see .bulletList.collapsed).
+      .toggle {
+        display: none;
+        align-self: flex-start;
+        margin-top: 8px;
+        padding: 0;
+        border: none;
+        background: none;
+        cursor: pointer;
+        font-family: "Inter", sans-serif;
+        font-size: 15px;
+        font-weight: 500;
+        color: var(--color-home-text-body);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+        transition: color 0.15s ease;
+
+        &:hover {
+          color: var(--color-subtitle);
+        }
+      }
+
+      .row:has(.bulletList li:nth-child(4)) ~ .toggle {
+        display: inline-flex;
+      }
+
+      .row:has(.bulletList.collapsed li:nth-child(4)) ~ .cta {
+        display: none;
+      }
+
+      @media (max-width: 1024px) {
+        .row:has(.bulletList li:nth-child(3)) ~ .toggle {
+          display: inline-flex;
+        }
+
+        .row:has(.bulletList.collapsed li:nth-child(3)) ~ .cta {
+          display: none;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .row:has(.bulletList li) ~ .toggle {
+          display: inline-flex;
+        }
+
+        .row:has(.bulletList.collapsed li) ~ .cta {
+          display: none;
+        }
+      }
+    }
+
+    .note {
+      margin: 0;
+      font-size: 16px;
       font-family: "Inter", sans-serif;
-      letter-spacing: 0.5px;
-      line-height: 22px;
-      color: var(--color-subtitle);
+      font-weight: 400;
+      letter-spacing: 1.5px;
+      line-height: 32px;
+      color: var(--color-home-text-body);
+      overflow-wrap: anywhere;
+      word-break: break-word;
     }
   }
-
-  .projectNote {
-    padding-left: 32px;
-    font-size: 15px;
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
-    letter-spacing: 1.5px;
-    line-height: 32px;
-    color: var(--color-home-text-body);
-    overflow-wrap: anywhere;
-    word-break: break-word;
-  }
-
-  .projectMetaoo {
-    display: flex;
-    flex-direction: row;
-    gap: 4px;
-  }
 }
 
-
-
-
-
-.projectNote {
-  margin: 0;
-  font-size: 16px;
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  letter-spacing: 1.5px;
-  line-height: 32px;
-  color: var(--color-home-text-body);
-  overflow-wrap: anywhere;
-  word-break: break-word;
-}
-
-.projectParagraph {
-  margin: 0;
-  font-size: 16px;
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  letter-spacing: 1.5px;
-  line-height: 32px;
-  color: var(--color-home-text-body);
-  overflow-wrap: anywhere;
-  word-break: break-word;
-}
-
-.projectCta {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  margin-top: 8px;
-  align-self: flex-start;
-  font-family: "Inter", sans-serif;
-  font-size: 15px;
-  font-weight: 500;
-  color: var(--color-home-text-body);
-  text-decoration: none;
-  transition: gap 0.2s ease;
-
-  &:hover {
-    gap: 10px;
-  }
-
-  span {
-    display: flex;
-    align-items: center;
-
-    svg {
-      width: 16px;
-      height: 16px;
-      fill: var(--color-home-text-body);
-    }
-  }
+.techStack {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .backLink {
@@ -321,36 +396,15 @@
   &:hover {
     gap: 12px;
   }
-}
 
-.backLinkIcon {
-  display: flex;
-  align-items: center;
+  .icon {
+    display: flex;
+    align-items: center;
 
-  svg {
-    width: 22px;
-    height: 22px;
-    fill: var(--color-home-text-body);
-  }
-}
-
-@media (max-width: 768px) {
-
-  .projectMedia,
-  .projectRowReverse .projectMedia {
-    float: none;
-    width: 100%;
-    margin: 0 0 20px;
-  }
-}
-
-@media (max-width: 640px) {
-  .root {
-    padding-top: 32px;
-  }
-
-  .header {
-    flex-direction: column;
-    align-items: flex-start;
+    svg {
+      width: 22px;
+      height: 22px;
+      fill: var(--color-home-text-body);
+    }
   }
 }

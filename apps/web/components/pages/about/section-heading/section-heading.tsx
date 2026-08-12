@@ -8,7 +8,7 @@ type Props = {
 export default function SectionHeading({ title }: Props) {
   return (
     <Reveal as="h2" variant="left" className={styles.root}>
-      <span className={styles.inner}>{title}</span>
+      <span className={styles.title}>{title}</span>
     </Reveal>
   );
 }
