@@ -31,7 +31,7 @@
 .category {
   font-size: 16px;
   letter-spacing: 3px;
-  color: #a0a0a0;
+  color: var(--color-subtitle);
 }
 
 .title {
@@ -63,19 +63,16 @@
   transition: color 0.15s ease;
 
   &:hover {
-    color: var(--color-home-text-primary);
+    color: var(--color-supporting);
   }
 }
 
 .breadcrumbSep {
   letter-spacing: 1.5px;
   margin: 0;
-  font-family:
-    Open Sans,
-    sans-serif;
   font-size: 16px;
   line-height: 1.4;
-  color: var(--color-subtitle);
+  color: var(--color-text);
 }
 
 .breadcrumbCurrent {
@@ -86,7 +83,7 @@
     sans-serif;
   font-size: 16px;
   line-height: 1.4;
-  color: var(--color-subtitle);
+  color: var(--color-text);
 }
 
 .description {
@@ -130,7 +127,7 @@
 }
 
 .metaLabel {
-  color: var(--color-home-text-body);
+  color: var(--color-text);
   letter-spacing: 1.5px;
   margin: 0;
   font-family:
@@ -145,12 +142,9 @@
   display: block;
   letter-spacing: 1.5px;
   margin: 0;
-  font-family:
-    Open Sans,
-    sans-serif;
   font-size: 16px;
   line-height: 1.4;
-  color: #a0a0a0;
+  color: var(--color-subtitle);
 }
 
 .cta {

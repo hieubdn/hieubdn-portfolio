@@ -1,6 +1,7 @@
 .root {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
   gap: 32px;
   overflow: visible;
@@ -12,10 +13,19 @@
 }
 
 .copy {
+  width: 50%;
   overflow: visible;
   display: flex;
   flex-direction: column;
   gap: 16px;
+
+  @media (max-width: 1024px) {
+    width: 60%;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 }
 
 .title {

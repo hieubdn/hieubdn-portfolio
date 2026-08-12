@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
+
+import { Reveal } from "@/components/ui/reveal";
 import styles from "./social-share.module.scss";
 
 export default function SocialShare({ title }: { title: string }) {
@@ -45,9 +47,12 @@ export default function SocialShare({ title }: { title: string }) {
 
   return (
     <div className={styles.root}>
-      {links.map(({ label, href, icon }) => (
-        <a
+      {links.map(({ label, href, icon }, index) => (
+        <Reveal
+          as="a"
           key={label}
+          variant="scale"
+          delayMs={index * 60}
           href={href}
           target="_blank"
           rel="noopener noreferrer"
@@ -55,7 +60,7 @@ export default function SocialShare({ title }: { title: string }) {
           className={styles.btn}
         >
           {icon}
-        </a>
+        </Reveal>
       ))}
     </div>
   );

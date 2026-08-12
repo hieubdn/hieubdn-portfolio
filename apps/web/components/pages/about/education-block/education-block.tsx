@@ -16,14 +16,28 @@ export default function EducationBlock() {
       </Reveal>
       <ul className={styles.list}>
         <Reveal as="li" delayMs={80}>
-          <span className={styles.title}><Certificate />{t("about.page.education.fullstack")}</span>
-          <span className={styles.date}>{t("about.page.education.fullstack.date")}</span>
-          <span className={styles.issuedBy}>{t("about.page.education.issuedBy")}</span>
+          <Reveal as="span" className={styles.title}>
+            <Certificate />
+            {t("about.page.education.fullstack")}
+          </Reveal>
+          <Reveal as="span" delayMs={15} className={styles.date}>
+            {t("about.page.education.fullstack.date")}
+          </Reveal>
+          <Reveal as="span" delayMs={30} className={styles.issuedBy}>
+            {t("about.page.education.issuedBy")}
+          </Reveal>
         </Reveal>
         <Reveal as="li" delayMs={150}>
-          <span className={styles.title}><Certificate />{t("about.page.education.mobileapp")}</span>
-          <span className={styles.date}>{t("about.page.education.mobileapp.date")}</span>
-          <span className={styles.issuedBy}>{t("about.page.education.issuedBy")}</span>
+          <Reveal as="span" className={styles.title}>
+            <Certificate />
+            {t("about.page.education.mobileapp")}
+          </Reveal>
+          <Reveal as="span" delayMs={15} className={styles.date}>
+            {t("about.page.education.mobileapp.date")}
+          </Reveal>
+          <Reveal as="span" delayMs={30} className={styles.issuedBy}>
+            {t("about.page.education.issuedBy")}
+          </Reveal>
         </Reveal>
       </ul>
     </div>

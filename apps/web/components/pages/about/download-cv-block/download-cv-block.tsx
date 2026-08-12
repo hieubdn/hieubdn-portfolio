@@ -20,9 +20,13 @@ export default function DownloadCvBlock() {
       <Reveal as="div" variant="scale" className={styles.thumbnail}>
         <Image src={Cv} alt="CV" width={100} height={100} />
       </Reveal>
-      <Reveal as="div" delayMs={90} className={styles.footer}>
-        <p className={styles.kicker}>{t("about.page.cv.kicker")}</p>
-        <p className={styles.title}>{t("about.page.cv.title")}</p>
+      <Reveal as="div" variant="fade" delayMs={90} className={styles.footer}>
+        <Reveal as="p" className={styles.kicker}>
+          {t("about.page.cv.kicker")}
+        </Reveal>
+        <Reveal as="p" delayMs={40} className={styles.title}>
+          {t("about.page.cv.title")}
+        </Reveal>
       </Reveal>
     </a>
   );

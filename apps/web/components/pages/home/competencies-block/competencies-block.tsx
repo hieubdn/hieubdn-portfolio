@@ -61,7 +61,9 @@ export default function CompetenciesBlock() {
             onClick={() => open(key)}
           >
             <Icon />
-            <span className={styles.text}>{t(`competencies.block.${key}`)}</span>
+            <Reveal as="span" className={styles.text}>
+              {t(`competencies.block.${key}`)}
+            </Reveal>
           </Reveal>
         ))}
       </div>

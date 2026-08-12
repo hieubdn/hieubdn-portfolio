@@ -61,11 +61,11 @@
     }
 
     .infoLabel {
-      color: #a0a0a0;
+      color: var(--color-text);
     }
 
     .infoValue {
-      color: #52525b;
+      color: var(--color-subtitle);
     }
   }
 
@@ -88,7 +88,8 @@
         width: 70px;
         height: 70px;
         border-radius: 50%;
-        background: var(--color-button-background);
+        background: var(--color-band-background);
+        border: 1px solid var(--color-home-block-border);
         box-shadow: 0 2px 8px #0f172a3e;
         transition:
           transform 0.15s ease,
@@ -271,7 +272,7 @@
     width: 100%;
     box-sizing: border-box;
     padding: 12px 24px;
-    border: 1px solid #a0a0a060; 
+    border: 1px solid var(--color-home-block-border); 
     border-radius: 12px;
     background: #ffffff0a;
     color: var(--color-home-text-body);

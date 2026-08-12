@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 
+import { isIntroActive, subscribeIntroActive } from "@/components/intro/intro-state";
+
 type ScrollRevealOptions = {
   threshold?: number;
   rootMargin?: string;
@@ -31,18 +33,41 @@ export function useScrollReveal<T extends Element>({
       return;
     }
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry?.isIntersecting) {
-          setIsVisible(true);
-          observer.unobserve(element);
-        }
-      },
-      { threshold, rootMargin },
-    );
+    let observer: IntersectionObserver | null = null;
+    let unsubscribeIntro: (() => void) | null = null;
 
-    observer.observe(element);
-    return () => observer.disconnect();
+    // The home page's content sits in the DOM (and in-viewport) underneath
+    // the intro overlay while it plays, so starting the observer right away
+    // would let it fire — and finish animating — while still hidden behind
+    // the overlay. Wait for the intro to actually close before observing.
+    const startObserving = () => {
+      observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry?.isIntersecting) {
+            setIsVisible(true);
+            observer?.unobserve(element);
+          }
+        },
+        { threshold, rootMargin },
+      );
+      observer.observe(element);
+    };
+
+    if (isIntroActive()) {
+      unsubscribeIntro = subscribeIntroActive(() => {
+        if (isIntroActive()) return;
+        unsubscribeIntro?.();
+        unsubscribeIntro = null;
+        startObserving();
+      });
+    } else {
+      startObserving();
+    }
+
+    return () => {
+      observer?.disconnect();
+      unsubscribeIntro?.();
+    };
   }, [threshold, rootMargin]);
 
   return { elementRef, isVisible };

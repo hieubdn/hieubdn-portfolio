@@ -131,10 +131,12 @@ export default function SelectedWorkBlock() {
         )}
       </Reveal>
       <Reveal as="div" delayMs={80} className={styles.caption}>
-        <p className={styles.sectionSubtitle} key={current.name}>
+        <Reveal as="p" key={current.name} className={styles.sectionSubtitle}>
           Project: {current.name}
-        </p>
-        <h2 className={styles.sectionTitle}>{t("selectedWork.block.title")}</h2>
+        </Reveal>
+        <Reveal as="h2" delayMs={40} className={styles.sectionTitle}>
+          {t("selectedWork.block.title")}
+        </Reveal>
       </Reveal>
     </Link>
   );

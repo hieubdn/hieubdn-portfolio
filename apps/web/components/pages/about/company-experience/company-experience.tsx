@@ -26,25 +26,31 @@ export default function CompanyExperience({ company }: CompanyExperienceProps) {
         aria-label={`${positionValue} — ${companyName}`}
       >
         <Reveal as="div" className={styles.metaSimple}>
-          <h3 className={styles.company}>{companyName}</h3>
-          <span className={styles.positionValue}>{positionValue}</span>
-          <span className={styles.metaLine}>
-            <span className={styles.durationValue}>
+          <Reveal as="h3" className={styles.company}>
+            {companyName}
+          </Reveal>
+          <Reveal as="span" delayMs={40} className={styles.positionValue}>
+            {positionValue}
+          </Reveal>
+          <Reveal as="span" variant="fade" delayMs={70} className={styles.metaLine}>
+            <Reveal as="span" delayMs={90} className={styles.durationValue}>
               {t(`${company.keyPrefix}.durationValue`)}
-            </span>
+            </Reveal>
             ◦
-            <span className={styles.locationValue}>
+            <Reveal as="span" delayMs={110} className={styles.locationValue}>
               {t(`${company.keyPrefix}.locationValue`)}
-            </span>
-          </span>
+            </Reveal>
+          </Reveal>
         </Reveal>
         <Reveal as="div" delayMs={90} className={styles.responsibilities}>
-          <span className={styles.subheading}>
+          <Reveal as="span" className={styles.subheading}>
             {t(`${company.keyPrefix}.responsibilities`)}:{" "}
-          </span>
+          </Reveal>
           <ul className={styles.bulletList}>
-            {company.responsibilityKeys.map((key) => (
-              <li key={key}>{t(key)}</li>
+            {company.responsibilityKeys.map((key, index) => (
+              <Reveal as="li" key={key} delayMs={90 + index * 40}>
+                {t(key)}
+              </Reveal>
             ))}
           </ul>
         </Reveal>
@@ -70,11 +76,15 @@ export default function CompanyExperience({ company }: CompanyExperienceProps) {
         </div>
       </div>
       <div className={styles.metaInfo}>
-        <h3 className={styles.positionValue}>{positionValue}</h3>
-        <span className={styles.company}>{companyName}</span>
-        <span className={styles.durationValue}>
+        <Reveal as="h3" className={styles.positionValue}>
+          {positionValue}
+        </Reveal>
+        <Reveal as="span" delayMs={40} className={styles.company}>
+          {companyName}
+        </Reveal>
+        <Reveal as="span" delayMs={80} className={styles.durationValue}>
           {t(`${company.keyPrefix}.durationValue`)}
-        </span>
+        </Reveal>
       </div>
     </Link>
   );

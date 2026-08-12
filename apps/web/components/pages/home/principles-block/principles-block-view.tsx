@@ -59,10 +59,12 @@ export default function PrinciplesBlockView({
                 style={{ background: SOURCE_COLORS[article.source] ?? "#888" }}
                 aria-hidden
               />
-              <span className={styles.title}>{article.title}</span>
-              <span className={styles.time}>
+              <Reveal as="span" delayMs={15} className={styles.title}>
+                {article.title}
+              </Reveal>
+              <Reveal as="span" delayMs={30} className={styles.time}>
                 {relativeTime(article.publishedAt, t)}
-              </span>
+              </Reveal>
             </a>
           </Reveal>
         ))}

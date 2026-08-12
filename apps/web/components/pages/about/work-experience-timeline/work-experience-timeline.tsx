@@ -75,7 +75,7 @@ function route(a: Rect, b: Rect): { d: string; tipX: number; tipY: number; angle
 
 export default function WorkExperienceTimeline({
   companies,
-  accentColor = "#213958",
+  accentColor = "#e5e2e9",
   traceColor = "#0b1529",
 }: WorkExperienceTimelineProps) {
   const wrapperRef = useRef<HTMLDivElement | null>(null);

@@ -109,6 +109,12 @@
     }
   }
 
+  .langSwitch {
+    display: flex;
+    align-items: center;
+    --lang-switch-trigger-bg: none;
+  }
+
   .social {
     display: flex;
     align-items: center;

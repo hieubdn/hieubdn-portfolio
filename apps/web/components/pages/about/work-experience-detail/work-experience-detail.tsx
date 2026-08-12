@@ -35,12 +35,14 @@ export default function WorkExperienceDetail({ company }: Props) {
         <Link href={PATH_URL.ROOT} className={styles.link}>
           {t("navBar.home")}
         </Link>
-        <span>›</span>
+        <Reveal as="span" variant="fade" delayMs={0}>›</Reveal>
         <Link href={PATH_URL.ABOUT} className={styles.link}>
           {t("navBar.about")}
         </Link>
-        <span>›</span>
-        <span>{companyName}</span>
+        <Reveal as="span" variant="fade" delayMs={20}>›</Reveal>
+        <Reveal as="span" variant="fade" delayMs={40}>
+          {companyName}
+        </Reveal>
       </nav>
 
       <Reveal as="div" className={styles.header}>
@@ -58,17 +60,21 @@ export default function WorkExperienceDetail({ company }: Props) {
           </div>
         )}
         <div className={styles.headerInfo}>
-          <h1 className={styles.positionValue}>{positionValue}</h1>
-          <span className={styles.company}>{companyName}</span>
-          <span className={styles.metaLine}>
-            <span className={styles.durationValue}>
+          <Reveal as="h1" className={styles.positionValue}>
+            {positionValue}
+          </Reveal>
+          <Reveal as="span" delayMs={70} className={styles.company}>
+            {companyName}
+          </Reveal>
+          <Reveal as="span" variant="fade" delayMs={100} className={styles.metaLine}>
+            <Reveal as="span" delayMs={140} className={styles.durationValue}>
               {t(`${company.keyPrefix}.durationValue`)}
-            </span>
+            </Reveal>
             ◦
-            <span className={styles.locationValue}>
+            <Reveal as="span" delayMs={200} className={styles.locationValue}>
               {t(`${company.keyPrefix}.locationValue`)}
-            </span>
-          </span>
+            </Reveal>
+          </Reveal>
         </div>
       </Reveal>
 
@@ -87,39 +93,39 @@ export default function WorkExperienceDetail({ company }: Props) {
                 >
                   <div className={styles.info}>
                     {project.highlightKeys.length > 0 && (
-                      <span className={styles.heading}>
-                        <span className={styles.headingMain}>
-                          <span className={styles.companyName}>
+                      <Reveal as="span" variant="fade" className={styles.heading}>
+                        <Reveal as="span" variant="fade" className={styles.headingMain}>
+                          <Reveal as="span" delayMs={0} className={styles.companyName}>
                             {t(project.titleKey)}
-                          </span>
+                          </Reveal>
                           {project.descriptionKey && (
-                            <span className={styles.description}>
+                            <Reveal as="span" delayMs={30} className={styles.description}>
                               {t(project.descriptionKey)}
-                            </span>
+                            </Reveal>
                           )}
-                        </span>
-                      </span>
+                        </Reveal>
+                      </Reveal>
                     )}
 
                     <div className={styles.meta}>
-                      <span className={styles.metaItem}>
+                      <Reveal as="span" delayMs={60} className={styles.metaItem}>
                         {t("about.page.workExperience.detail.role")}:{" "}
-                        <span className={styles.metaValue}>
+                        <Reveal as="span" delayMs={75} className={styles.metaValue}>
                           {positionValue}
-                        </span>
-                      </span>
-                      <span className={styles.metaItem}>
+                        </Reveal>
+                      </Reveal>
+                      <Reveal as="span" delayMs={90} className={styles.metaItem}>
                         {t("about.page.workExperience.detail.teamSize")}:{" "}
-                        <span className={styles.metaValue}>
+                        <Reveal as="span" delayMs={105} className={styles.metaValue}>
                           {t(project.teamSizeKey)}
-                        </span>
-                      </span>
-                      <span className={styles.metaItem}>
+                        </Reveal>
+                      </Reveal>
+                      <Reveal as="span" delayMs={120} className={styles.metaItem}>
                         {t("about.page.workExperience.detail.duration")}:{" "}
-                        <span className={styles.metaValue}>
+                        <Reveal as="span" delayMs={135} className={styles.metaValue}>
                           {t(project.durationKey)}
-                        </span>
-                      </span>
+                        </Reveal>
+                      </Reveal>
                     </div>
                   </div>
                   <div
@@ -155,21 +161,34 @@ export default function WorkExperienceDetail({ company }: Props) {
                           isExpanded ? "" : styles.collapsed
                         }`}
                       >
-                        {project.highlightKeys.map((key) => (
-                          <li key={key}>{t(key)}</li>
+                        {project.highlightKeys.map((key, bulletIndex) => (
+                          <Reveal as="li" key={key} delayMs={40 * bulletIndex}>
+                            {t(key)}
+                          </Reveal>
                         ))}
                       </ul>
                     ) : (
                       <p className={styles.paragraph}>
                         {t(project.titleKey)}
                         {project.descriptionKey && (
-                          <span className={styles.description}>
+                          <Reveal as="span" delayMs={30} className={styles.description}>
                             {t(project.descriptionKey)}
-                          </span>
+                          </Reveal>
                         )}
                       </p>
                     )}
                   </div>
+                  <a
+                    href={project.ctaUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.cta}
+                  >
+                    {t("about.page.workExperience.detail.viewProject")}{" "}
+                    <Reveal as="span" variant="scale" delayMs={150} aria-hidden="true">
+                      <Right />
+                    </Reveal>
+                  </a>
                   {project.highlightKeys.length > 0 && (
                     <button
                       type="button"
@@ -182,17 +201,6 @@ export default function WorkExperienceDetail({ company }: Props) {
                         : t("about.page.workExperience.detail.showMore")}
                     </button>
                   )}
-                  <a
-                    href={project.ctaUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.cta}
-                  >
-                    {t("about.page.workExperience.detail.viewProject")}{" "}
-                    <span aria-hidden="true">
-                      <Right />
-                    </span>
-                  </a>
                 </Reveal>
               );
             })}
@@ -204,8 +212,10 @@ export default function WorkExperienceDetail({ company }: Props) {
           </div>
         ) : (
           <ul className={styles.bulletList}>
-            {company.responsibilityKeys.map((key) => (
-              <li key={key}>{t(key)}</li>
+            {company.responsibilityKeys.map((key, index) => (
+              <Reveal as="li" key={key} delayMs={40 * index}>
+                {t(key)}
+              </Reveal>
             ))}
           </ul>
         )}
@@ -213,21 +223,23 @@ export default function WorkExperienceDetail({ company }: Props) {
 
       {company.variant === "detailed" && (
         <Reveal as="div" delayMs={120} className={styles.techStack}>
-          <span className={styles.subheading}>
+          <Reveal as="span" className={styles.subheading}>
             {t(`${company.keyPrefix}.techStack`)}:
-          </span>
+          </Reveal>
           <ul className={styles.techList}>
-            {company.techLineKeys.map((key) => (
-              <li key={key}>{t(key)}</li>
+            {company.techLineKeys.map((key, index) => (
+              <Reveal as="li" key={key} delayMs={40 + 30 * index}>
+                {t(key)}
+              </Reveal>
             ))}
           </ul>
         </Reveal>
       )}
 
       <Link href={PATH_URL.ABOUT} className={styles.backLink}>
-        <span aria-hidden="true" className={styles.icon}>
+        <Reveal as="span" variant="fade" aria-hidden="true" className={styles.icon}>
           ←
-        </span>
+        </Reveal>
         {t("about.page.workExperience.detail.backToAbout")}
       </Link>
     </article>

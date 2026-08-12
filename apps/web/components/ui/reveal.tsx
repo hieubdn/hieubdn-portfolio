@@ -6,15 +6,26 @@ import type {
   ElementType,
   ReactNode,
 } from "react";
+import { useEffect, useState } from "react";
 
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
 import styles from "./reveal.module.scss";
 
-export type RevealVariant = "up" | "fade" | "left" | "right" | "scale";
+export type RevealVariant = "up" | "down" | "fade" | "left" | "right" | "scale" | "random";
 
-const VARIANT_CLASS_NAME: Record<RevealVariant, string | undefined> = {
+type ResolvedRevealVariant = Exclude<RevealVariant, "random">;
+
+// The 4 directions "random" picks from — fade/scale are looks, not directions.
+const RANDOM_DIRECTIONS: readonly ResolvedRevealVariant[] = ["up", "down", "left", "right"];
+
+function pickRandomDirection(): ResolvedRevealVariant {
+  return RANDOM_DIRECTIONS[Math.floor(Math.random() * RANDOM_DIRECTIONS.length)]!;
+}
+
+const VARIANT_CLASS_NAME: Record<ResolvedRevealVariant, string | undefined> = {
   up: styles.revealUp,
+  down: styles.revealDown,
   fade: styles.revealFade,
   left: styles.revealLeft,
   right: styles.revealRight,
@@ -38,7 +49,7 @@ type RevealProps<T extends ElementType> = RevealOwnProps<T> &
 // (e.g. the home/about/projects block grids) without breaking `grid-area`.
 export function Reveal<T extends ElementType = "div">({
   as,
-  variant = "up",
+  variant = "random",
   delayMs = 0,
   threshold,
   className = "",
@@ -49,9 +60,21 @@ export function Reveal<T extends ElementType = "div">({
   const Component = (as ?? "div") as ElementType;
   const { elementRef, isVisible } = useScrollReveal<Element>({ threshold });
 
+  // "random" must resolve to a fixed direction per instance, but not via
+  // Math.random() during render — that would pick a different class on the
+  // server vs. the client and trip a hydration mismatch. Render a stable
+  // fallback first, then randomize once the client has mounted.
+  const [resolvedVariant, setResolvedVariant] = useState<ResolvedRevealVariant>(
+    variant === "random" ? "up" : variant,
+  );
+
+  useEffect(() => {
+    setResolvedVariant(variant === "random" ? pickRandomDirection() : variant);
+  }, [variant]);
+
   const revealClassName = [
     styles.reveal,
-    VARIANT_CLASS_NAME[variant],
+    VARIANT_CLASS_NAME[resolvedVariant],
     isVisible ? styles.isVisible : "",
     className,
   ]

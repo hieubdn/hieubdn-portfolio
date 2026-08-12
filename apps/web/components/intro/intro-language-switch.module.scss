@@ -9,9 +9,10 @@
   padding: 6px 10px;
   border: none;
   border-radius: 999px;
-  background: var(--color-main-background);
+  background: var(--lang-switch-trigger-bg, var(--color-main-background));
   color: var(--color-home-text-heading);
   cursor: pointer;
+  width: 90px;
 
   &:focus-visible {
     outline: 2px solid #09c469;
@@ -21,8 +22,8 @@
 
 .flagWrap {
   display: inline-flex;
-  width: 22px;
-  height: 15px;
+  width: 30px;
+  height: 25px;
   border-radius: 3px;
   overflow: hidden;
   flex-shrink: 0;
@@ -36,9 +37,10 @@
 }
 
 .shortLabel {
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.05em;
+  font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    line-height: 32px;
 }
 
 .chevron {
@@ -66,9 +68,9 @@
   max-height: min(360px, 70vh);
   overflow-y: auto;
   border-radius: 12px;
-  background: var(--shell-surface-panel);
-  box-shadow: var(--shell-shadow-popover);
-  border: 1px solid var(--shell-border);
+  background: var(--color-band-background);
+  box-shadow: var(--color-home-block-shadow);
+  border: 1px solid var(--color-home-block-border);
 }
 
 .option {
@@ -86,7 +88,7 @@
   cursor: pointer;
 
   &:hover {
-    background: var(--shell-surface-hover);
+    background: var(--color-main-background);
   }
 
   &:focus-visible {
@@ -96,13 +98,13 @@
 }
 
 .optionActive {
-  background: var(--shell-surface-active);
-  color: var(--color-home-text-primary);
+  background: var(--color-block-background);
+  color: var(--color-text);
   font-weight: 600;
 }
 
 .optionLabel {
-  font-size: 14px;
+  font-size: 16px;
   letter-spacing: 0.02em;
 }
 

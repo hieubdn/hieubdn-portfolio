@@ -48,11 +48,13 @@ export default function ContactBlock() {
       <ul className={styles.list}>
         {CONTACT_ROWS.map(({ Icon, labelKey, valueKey }, index) => (
           <Reveal as="li" key={labelKey} delayMs={60 + index * 40}>
-            <span className={styles.label}>
+            <Reveal as="span" className={styles.label}>
               <Icon />
               {t(labelKey)}:
-            </span>
-            <span className={styles.value}>{t(valueKey)}</span>
+            </Reveal>
+            <Reveal as="span" delayMs={15} className={styles.value}>
+              {t(valueKey)}
+            </Reveal>
           </Reveal>
         ))}
       </ul>

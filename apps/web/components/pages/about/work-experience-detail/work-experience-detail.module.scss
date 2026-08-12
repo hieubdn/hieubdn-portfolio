@@ -209,9 +209,8 @@
 
         .meta {
           display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
-          gap: 4px 20px;
+          flex-direction: column;
+          gap: 4px;
           padding-left: 12px;
           border-radius: 4px;
           border-left: 1px solid var(--color-subtitle);
@@ -242,7 +241,7 @@
 
         .media {
           float: left;
-          width: 45%;
+          width: 40%;
           margin: 0 32px 16px 0;
 
           .thumbnail {
@@ -259,6 +258,7 @@
         }
 
         @media (max-width: 768px) {
+
           .media,
           &.rowReverse .media {
             float: none;
@@ -284,14 +284,18 @@
         display: inline-flex;
         align-items: center;
         gap: 6px;
-        margin-top: 8px;
+        padding: 6px 12px;
         align-self: flex-start;
-        font-family: "Inter", sans-serif;
-        font-size: 15px;
-        font-weight: 500;
-        color: var(--color-home-text-body);
+        font-size: 16px;
+        color: var(--color-text);
+        margin-left: auto;
+        letter-spacing: 1.5px;
+        line-height: 32px;
         text-decoration: none;
         transition: gap 0.2s ease;
+        border: 1px solid var(--color-home-block-border);
+        border-radius: 16px;
+        background: var(--color-band-background);
 
         &:hover {
           gap: 10px;
@@ -332,45 +336,48 @@
         }
       }
 
-      .row:has(.bulletList li:nth-child(4)) ~ .toggle {
+      .row:has(.bulletList li:nth-child(4))~.toggle {
         display: inline-flex;
       }
 
-      .row:has(.bulletList.collapsed li:nth-child(4)) ~ .cta {
+      .row:has(.bulletList.collapsed li:nth-child(4))~.cta {
         display: none;
       }
 
       @media (max-width: 1024px) {
-        .row:has(.bulletList li:nth-child(3)) ~ .toggle {
+        .row:has(.bulletList li:nth-child(3))~.toggle {
           display: inline-flex;
         }
 
-        .row:has(.bulletList.collapsed li:nth-child(3)) ~ .cta {
+        .row:has(.bulletList.collapsed li:nth-child(3))~.cta {
           display: none;
         }
       }
 
       @media (max-width: 768px) {
-        .row:has(.bulletList li) ~ .toggle {
+        .row:has(.bulletList li)~.toggle {
           display: inline-flex;
         }
 
-        .row:has(.bulletList.collapsed li) ~ .cta {
+        .row:has(.bulletList.collapsed li)~.cta {
           display: none;
         }
       }
     }
 
     .note {
+      position: relative;
       margin: 0;
-      font-size: 16px;
-      font-family: "Inter", sans-serif;
-      font-weight: 400;
-      letter-spacing: 1.5px;
-      line-height: 32px;
+      padding-left: 1.25rem;
       color: var(--color-home-text-body);
       overflow-wrap: anywhere;
       word-break: break-word;
+
+      &::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+      }
     }
   }
 }
@@ -379,6 +386,7 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+  color: var(--color-text);
 }
 
 .backLink {

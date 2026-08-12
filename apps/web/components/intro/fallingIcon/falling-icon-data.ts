@@ -60,7 +60,7 @@ export const FALLING_ICON_SKILLS = [
   { name: "Sass", icon: sassIcon },
   // Backend & Cloud/DevOps
   { name: "Node.js", icon: nodeIcon },
-  { name: "Express.js", icon: expressIcon },
+  // { name: "Express.js", icon: expressIcon },
   { name: "NestJS", icon: nestIcon },
   { name: "Ruby on Rails", icon: railsIcon },
   { name: "Spring Boot", icon: springBootIcon },
@@ -90,6 +90,6 @@ export const FALLING_ICON_SKILLS = [
   { name: "SendGrid", icon: sendgridIcon },
   { name: "Airtable", icon: airtableIcon },
   { name: "Calendly", icon: calendlyIcon },
-  { name: "OpenAI API", icon: openaiIcon },
+  // { name: "OpenAI API", icon: openaiIcon },
   { name: "Drupal", icon: drupalIcon },
 ] as const;
