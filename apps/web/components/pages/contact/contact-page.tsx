@@ -64,24 +64,24 @@ const INITIAL_FORM: ContactFormState = {
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const CONTACT_FIELDS: readonly ContactFieldDef[] = [
-  { id: "name", type: "input", inputType: "text", labelKey: "contact.page.form.name" },
-  { id: "email", type: "input", inputType: "email", labelKey: "contact.page.form.email" },
-  { id: "subject", type: "input", inputType: "text", labelKey: "contact.page.form.subject" },
-  { id: "message", type: "textarea", rows: 5, labelKey: "contact.page.form.message" },
+  { id: "name", type: "input", inputType: "text", labelKey: "contact.form.name" },
+  { id: "email", type: "input", inputType: "email", labelKey: "contact.form.email" },
+  { id: "subject", type: "input", inputType: "text", labelKey: "contact.form.subject" },
+  { id: "message", type: "textarea", rows: 5, labelKey: "contact.form.message" },
 ];
 
 const INFO_ROWS: readonly InfoRow[] = [
   {
     icon: locationGif,
     alt: "Location",
-    labelKey: "contact.page.info.from",
-    valueKey: "contact.page.info.from.value",
+    labelKey: "contact.info.from.label",
+    valueKey: "contact.info.from.value",
   },
   {
     icon: jobGif,
     alt: "Job",
-    labelKey: "contact.page.info.liveIn",
-    valueKey: "contact.page.info.liveIn.value",
+    labelKey: "contact.info.location.label",
+    valueKey: "contact.info.location.value",
   },
 ];
 
@@ -124,12 +124,12 @@ function validateForm(state: ContactFormState, t: Translate): ContactFormErrors 
   const errors: ContactFormErrors = {};
   (Object.keys(state) as ContactFormField[]).forEach((field) => {
     if (!state[field].trim()) {
-      errors[field] = t("contact.page.form.validation.required");
+      errors[field] = t("contact.form.errors.required");
     }
   });
   const email = state.email.trim();
   if (!errors.email && email && !EMAIL_PATTERN.test(email)) {
-    errors.email = t("contact.page.form.validation.email");
+    errors.email = t("contact.form.errors.email");
   }
   return errors;
 }
@@ -178,18 +178,18 @@ export default function ContactSection() {
       });
       if (!response.ok) {
         if (response.status === 429) {
-          toast.error(t("contact.page.form.toast.rateLimited"));
+          toast.error(t("contact.form.toast.rateLimited"));
         } else if (response.status === 400) {
-          toast.error(t("contact.page.form.toast.invalid"));
+          toast.error(t("contact.form.toast.invalid"));
         } else {
-          toast.error(t("contact.page.form.toast.error"));
+          toast.error(t("contact.form.toast.error"));
         }
         return;
       }
-      toast.success(t("contact.page.form.toast.success"));
+      toast.success(t("contact.form.toast.success"));
       setValues(INITIAL_FORM);
     } catch {
-      toast.error(t("contact.page.form.toast.error"));
+      toast.error(t("contact.form.toast.error"));
     } finally {
       setIsSubmitting(false);
     }
@@ -199,7 +199,7 @@ export default function ContactSection() {
     <section className={styles.contactSection} data-page="contact">
       <Reveal as="div" variant="left" className={styles.info}>
         <div className={styles.infoContainer}>
-          <span className={styles.heading}>{t("contact.page.info.title")}</span>
+          <span className={styles.heading}>{t("contact.info.title")}</span>
           {INFO_ROWS.map((row, index) => (
             <Reveal as="div" key={row.valueKey} delayMs={80 + index * 70} className={styles.infoItem}>
               <div className={styles.imgaeIcon}>
@@ -221,7 +221,7 @@ export default function ContactSection() {
         </div>
 
         <div className={styles.socialsInfo}>
-          <span className={styles.heading}>{t("contact.page.socials.title")}</span>
+          <span className={styles.heading}>{t("contact.socials.title")}</span>
           <div className={styles.iconRow}>
             {SOCIAL_ITEMS.map((item, index) => (
               <Reveal
@@ -251,9 +251,9 @@ export default function ContactSection() {
       <Reveal as="div" variant="right" delayMs={100} className={styles.form}>
         <div className={styles.formHeader}>
           <h2 className={styles.formTitle}>
-            {t("contact.page.form.title")}{" "}
+            {t("contact.form.title")}{" "}
             <span className={styles.formTitleAccent}>
-              {t("contact.page.form.title.accent")}
+              {t("contact.form.titleAccent")}
             </span>
           </h2>
         </div>
@@ -286,8 +286,8 @@ export default function ContactSection() {
             disabled={isSubmitting}
           >
             {isSubmitting
-              ? t("contact.page.form.sending")
-              : t("contact.page.form.send")}
+              ? t("contact.form.sending")
+              : t("contact.form.send")}
           </button>
         </form>
       </Reveal>

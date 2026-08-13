@@ -110,24 +110,12 @@ function FlagZhCN({ className }: FlagProps) {
   );
 }
 
-function FlagZhTW({ className }: FlagProps) {
+function FlagFR({ className }: FlagProps) {
   return (
     <svg viewBox="0 0 24 16" className={className} aria-hidden="true">
-      <rect width="24" height="16" fill="#FE0000" />
-      <rect width="12" height="8" fill="#000095" />
-      <g fill="#fff">
-        {Array.from({ length: 12 }, (_, i) => (
-          <rect
-            key={i}
-            x="5.75"
-            y="1.3"
-            width="0.5"
-            height="2.5"
-            transform={`rotate(${i * 30} 6 4)`}
-          />
-        ))}
-      </g>
-      <circle cx="6" cy="4" r="1.4" fill="#000095" stroke="#fff" strokeWidth="0.4" />
+      <rect width="8" height="16" fill="#002395" />
+      <rect x="8" width="8" height="16" fill="#fff" />
+      <rect x="16" width="8" height="16" fill="#ED2939" />
     </svg>
   );
 }
@@ -139,5 +127,5 @@ export const LOCALE_FLAGS: Record<AppLocaleCode, ComponentType<FlagProps>> = {
   ko: FlagKO,
   de: FlagDE,
   "zh-CN": FlagZhCN,
-  "zh-TW": FlagZhTW,
+  fr: FlagFR,
 };

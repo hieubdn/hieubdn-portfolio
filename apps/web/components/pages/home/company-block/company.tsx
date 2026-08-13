@@ -109,7 +109,7 @@ export default function CompanyBlock() {
   }, []);
 
   return (
-    <div className={styles.root} aria-label={t("company.block.ariaLabel")}>
+    <div className={styles.root} aria-label={t("partners.ariaLabel")}>
       <Reveal as="section" variant="fade" className={styles.marqueeSection}>
         <div className={styles.viewport} aria-hidden>
           <div ref={trackRef} className={styles.track}>
@@ -119,7 +119,7 @@ export default function CompanyBlock() {
         </div>
       </Reveal>
       <Reveal as="p" delayMs={100} className={styles.sectionSubtitle}>
-        {t("company.block.footer")}
+        {t("partners.title")}
       </Reveal>
     </div>
   );

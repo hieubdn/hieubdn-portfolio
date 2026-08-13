@@ -44,7 +44,7 @@ export function FallingIconStage({ active }: FallingIconStageProps) {
         ref={bannerRef}
         className={`${styles.fallingReveal} ${marker.className}`}
       >
-        {t("intro.fallingBanner")}
+        {t("home.intro.techBanner")}
       </div>
     </div>
   );

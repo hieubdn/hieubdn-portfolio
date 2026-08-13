@@ -8,21 +8,21 @@ export default function QuoteBlock() {
   const { t } = useLocaleText();
 
   return (
-    <div className={styles.root} aria-label={t("quote.block.title")}>
+    <div className={styles.root} aria-label={t("quote.title")}>
       <Reveal as="div" variant="fade" className={styles.meta}>
         <Reveal as="p" className={styles.quote}>
-          &quot;{t("quote.block.content")}&quot;
+          &quot;{t("quote.content")}&quot;
         </Reveal>
         <Reveal as="p" delayMs={50} className={styles.author}>
-          ◦ {t("quote.block.author")} ◦
+          ◦ {t("quote.author")} ◦
         </Reveal>
       </Reveal>
       <div className={styles.caption}>
         <Reveal as="p" delayMs={100} className={styles.sectionSubtitle}>
-          {t("quote.block.kicker")}
+          {t("quote.kicker")}
         </Reveal>
         <Reveal as="h2" delayMs={170} className={styles.sectionTitle}>
-          {t("quote.block.title")}
+          {t("quote.title")}
         </Reveal>
       </div>
     </div>

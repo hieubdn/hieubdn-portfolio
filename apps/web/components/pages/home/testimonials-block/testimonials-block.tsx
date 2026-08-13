@@ -22,14 +22,14 @@ export default function TestimonialsBlock() {
     return () => window.clearInterval(id);
   }, []);
 
-  const base = `testimonials.block.items.${index}`;
+  const base = `testimonials.items.${index}`;
   const prefix = t(`${base}.prefix`);
   const name = t(`${base}.name`);
   const role = t(`${base}.role`);
   const body = t(`${base}.body`);
 
   return (
-    <div className={styles.root} aria-label={t("testimonials.block.title")}>
+    <div className={styles.root} aria-label={t("testimonials.title")}>
       <Reveal
         as="blockquote"
         variant="fade"
@@ -59,27 +59,17 @@ export default function TestimonialsBlock() {
           ) : null}
         </div>
         <div className={styles.quoteContent}>
-          <Reveal as="span" variant="fade" delayMs={60} className={styles.element}>
-            {t("testimonials.block.element1")}
-            {t("testimonials.block.element")}
-            {t("testimonials.block.element2")}
-          </Reveal>
           <Reveal as="span" delayMs={90} className={styles.quoteText}>
             {body}
-          </Reveal>
-          <Reveal as="span" variant="fade" delayMs={120} className={styles.element}>
-            {t("testimonials.block.element1.end")}
-            {t("testimonials.block.element")}
-            {t("testimonials.block.element2.end")}
           </Reveal>
         </div>
       </Reveal>
       <Reveal as="div" delayMs={100} className={styles.footer}>
         <Reveal as="p" className={styles.sectionSubtitle}>
-          {t("testimonials.block.footer")}
+          {t("testimonials.footer")}
         </Reveal>
         <Reveal as="h2" delayMs={40} className={styles.sectionTitle}>
-          {t("testimonials.block.title")}
+          {t("testimonials.title")}
         </Reveal>
       </Reveal>
     </div>

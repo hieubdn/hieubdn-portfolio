@@ -10,10 +10,10 @@ const EMAIL = process.env.MYMEMORY_EMAIL ?? "hieubdn@gmail.com";
 const TARGET_LANGS = [
   "vi",    // Tiếng Việt
   "ja",    // Tiếng Nhật
-  "zh-TW", // Tiếng Trung phồn thể
   "zh-CN", // Tiếng Trung giản thể
   "ko",    // Tiếng Hàn
   "de",    // Tiếng Đức
+  "fr",    // Tiếng Pháp
 ];
 
 async function readJson(filePath: string): Promise<Record<string, string>> {

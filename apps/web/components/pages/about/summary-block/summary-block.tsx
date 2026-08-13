@@ -7,7 +7,7 @@ import styles from "./summary-block.module.scss";
 
 export default function SummaryBlock() {
   const { t } = useLocaleText();
-  const leadParagraphs = t("about.page.summary.lead")
+  const leadParagraphs = t("about.summary.lead")
     .split(/\n\s*\n/)
     .map((s) => s.trim())
     .filter(Boolean);
@@ -15,7 +15,7 @@ export default function SummaryBlock() {
   return (
     <div className={styles.root}>
       <Reveal as="p" className={styles.name}>
-        {t("profile.block.name")}
+        {t("profile.name")}
       </Reveal>
       <div className={styles.leadWrap}>
         {leadParagraphs.map((paragraph, i) => (

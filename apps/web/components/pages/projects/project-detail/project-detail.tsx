@@ -159,11 +159,11 @@ export default function ProjectDetail({ project }: Props) {
           <Reveal as="div" variant="right" delayMs={100} className={styles.right}>
             <div className={styles.meta}>
               <div className={styles.metaItem}>
-                <span className={styles.metaLabel}>{t("project.detail.label.design")}</span>
+                <span className={styles.metaLabel}>{t("project.labels.design")}</span>
                 <MetaValue value={project.design} />
               </div>
               <div className={styles.metaItem}>
-                <span className={styles.metaLabel}>{t("project.detail.label.client")}</span>
+                <span className={styles.metaLabel}>{t("project.labels.client")}</span>
                 <MetaValue value={project.client} />
               </div>
             </div>
@@ -174,7 +174,7 @@ export default function ProjectDetail({ project }: Props) {
                 rel="noopener noreferrer"
                 className={styles.cta}
               >
-                {t("project.detail.label.openProject")} <span aria-hidden="true"><Right /></span>
+                {t("project.labels.open")} <span aria-hidden="true"><Right /></span>
               </a>
             )}
           </Reveal>

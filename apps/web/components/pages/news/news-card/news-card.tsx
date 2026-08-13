@@ -60,12 +60,12 @@ export default function NewsCard({ article }: { article: NewsArticle }) {
         {hasStats && (
           <span className={styles.stats}>
             {article.points !== undefined &&
-              t("news.card.points").replace("{n}", String(article.points))}
+              t("news.points").replace("{n}", String(article.points))}
             {article.points !== undefined &&
               article.commentCount !== undefined &&
               " · "}
             {article.commentCount !== undefined &&
-              t("news.card.comments").replace(
+              t("news.comments").replace(
                 "{n}",
                 String(article.commentCount),
               )}

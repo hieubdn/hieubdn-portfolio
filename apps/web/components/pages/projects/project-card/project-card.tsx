@@ -35,7 +35,7 @@ export default function ProjectCard({ slug, name, category, image }: Props) {
         <p className={styles.name}>{name}</p>
         <div className={styles.categoryWrapper} aria-hidden="true">
           <span className={styles.category}>{category}</span>
-          <span className={styles.showProject}>{t("project.detail.label.showProject")}</span>
+          <span className={styles.showProject}>{t("project.labels.view")}</span>
         </div>
       </Reveal>
     </Link>

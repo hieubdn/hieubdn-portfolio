@@ -22,9 +22,9 @@ export default function ProfileBlock() {
   const [imageIndex, setImageIndex] = useState(0);
 
   const profile = {
-    name: t("profile.block.name"),
-    title: t("profile.block.title"),
-    email: t("profile.block.email"),
+    name: t("profile.name"),
+    title: t("profile.title"),
+    email: t("profile.email"),
   };
 
   useEffect(() => {

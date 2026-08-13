@@ -48,7 +48,7 @@ export function GlobalActionsMenu({
       <button
         type="button"
         className={styles.globalActionsTrigger}
-        aria-label={t("aria.globalActions")}
+        aria-label={t("aria.actions")}
         aria-expanded={open}
         aria-haspopup="true"
         onClick={() => setOpen((v) => !v)}
@@ -56,7 +56,7 @@ export function GlobalActionsMenu({
         <GlobalActions />
       </button>
       {open ? (
-        <div className={styles.popover} aria-label={t("aria.globalActions")}>
+        <div className={styles.popover} aria-label={t("aria.actions")}>
           <div className={styles.popoverInner}>
             <ul className={styles.popoverList}>
               {menuLeading ? menuLeading(() => setOpen(false)) : null}

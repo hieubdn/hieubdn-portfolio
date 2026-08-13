@@ -19,12 +19,12 @@ export default function Setting() {
       [
         {
           id: "languages" as const,
-          label: t("setting.page.option.languages"),
+          label: t("settings.language.label"),
           icon: <Languages />,
         },
         {
           id: "resetSettings" as const,
-          label: t("setting.page.option.resetSettings"),
+          label: t("settings.reset"),
           icon: <ResetSettings />,
         },
       ] as const,
@@ -65,14 +65,14 @@ export default function Setting() {
   return (
     <div className={styles.setting}>
       <span className={styles.backToHome} onClick={showRouteView}>
-        <BackToHomeIcon /> {t("setting.page.moveBackToHome")}
+        <BackToHomeIcon /> {t("settings.backHome")}
       </span>
 
       <div className={styles.settingContent}>
         {isStackLayout ? (
           <div className={styles.settingPanelStack}>
             <h2 className={styles.settingMobileTitle}>
-              <SettingIcon /> {t("setting.page.title")}
+              <SettingIcon /> {t("settings.title")}
             </h2>
             {settingOptions.map((option) => (
               <section key={option.id} className={styles.settingPanel}>
@@ -84,7 +84,7 @@ export default function Setting() {
           <>
             <aside className={styles.settingSidebar}>
               <h2 className={styles.settingTitle}>
-                <SettingIcon /> {t("setting.page.title")}
+                <SettingIcon /> {t("settings.title")}
               </h2>
               <ul className={styles.settingOptionList}>
                 {settingOptions.map((option) => {

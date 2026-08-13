@@ -18,14 +18,14 @@ export default function CallToAction() {
       </Reveal>
       <Reveal as="div" delayMs={80} className={styles.copy}>
         <Reveal as="span" className={styles.line1}>
-          {t("call.action.content")}
+          {t("home.cta.part1")}
         </Reveal>
         <Reveal as="span" variant="fade" delayMs={40} className={styles.line2}>
           <Reveal as="span" delayMs={55} className={styles.work}>
-            {t("call.action.work")}{" "}
+            {t("home.cta.part2")}{" "}
           </Reveal>
           <Reveal as="span" delayMs={70} className={styles.together}>
-            {t("call.action.together")}
+            {t("home.cta.part3")}
           </Reveal>
         </Reveal>
       </Reveal>

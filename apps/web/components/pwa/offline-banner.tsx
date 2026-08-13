@@ -12,7 +12,7 @@ export function OfflineBanner() {
 
   return (
     <div className={styles.banner} role="status">
-      {t("pwa.offlineBanner")}
+      {t("pwa.offline.banner")}
     </div>
   );
 }

@@ -30,14 +30,14 @@ const DICTIONARY_LOADERS: Record<AppLocaleCode, () => Promise<LocaleMessages>> =
     import("../../../../../../database/locales/vi.json").then((m) => m.default),
   ja: () =>
     import("../../../../../../database/locales/ja.json").then((m) => m.default),
-  "zh-TW": () =>
-    import("../../../../../../database/locales/zh-TW.json").then((m) => m.default),
   "zh-CN": () =>
     import("../../../../../../database/locales/zh-CN.json").then((m) => m.default),
   ko: () =>
     import("../../../../../../database/locales/ko.json").then((m) => m.default),
   de: () =>
     import("../../../../../../database/locales/de.json").then((m) => m.default),
+  fr: () =>
+    import("../../../../../../database/locales/fr.json").then((m) => m.default),
 };
 
 const loadedMessages = new Map<AppLocaleCode, LocaleMessages>([

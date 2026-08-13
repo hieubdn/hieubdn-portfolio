@@ -17,7 +17,7 @@ type Props = {
 
 export default function WorkExperienceDetail({ company }: Props) {
   const { t } = useLocaleText();
-  const positionValue = t(`${company.keyPrefix}.positionValue`);
+  const positionValue = t(`${company.keyPrefix}.position`);
   const companyName = t(`${company.keyPrefix}.company`);
   // Accordion: expanding one project's highlights collapses whichever
   // other project was previously expanded.
@@ -33,11 +33,11 @@ export default function WorkExperienceDetail({ company }: Props) {
     <article className={styles.root}>
       <nav aria-label="Breadcrumb" className={styles.breadcrumb}>
         <Link href={PATH_URL.ROOT} className={styles.link}>
-          {t("navBar.home")}
+          {t("nav.home")}
         </Link>
         <Reveal as="span" variant="fade" delayMs={0}>›</Reveal>
         <Link href={PATH_URL.ABOUT} className={styles.link}>
-          {t("navBar.about")}
+          {t("nav.about")}
         </Link>
         <Reveal as="span" variant="fade" delayMs={20}>›</Reveal>
         <Reveal as="span" variant="fade" delayMs={40}>
@@ -68,11 +68,11 @@ export default function WorkExperienceDetail({ company }: Props) {
           </Reveal>
           <Reveal as="span" variant="fade" delayMs={100} className={styles.metaLine}>
             <Reveal as="span" delayMs={140} className={styles.durationValue}>
-              {t(`${company.keyPrefix}.durationValue`)}
+              {t(`${company.keyPrefix}.duration`)}
             </Reveal>
             ◦
             <Reveal as="span" delayMs={200} className={styles.locationValue}>
-              {t(`${company.keyPrefix}.locationValue`)}
+              {t(`${company.keyPrefix}.location`)}
             </Reveal>
           </Reveal>
         </div>
@@ -109,19 +109,19 @@ export default function WorkExperienceDetail({ company }: Props) {
 
                     <div className={styles.meta}>
                       <Reveal as="span" delayMs={60} className={styles.metaItem}>
-                        {t("about.page.workExperience.detail.role")}:{" "}
+                        {t("exp.labels.role")}:{" "}
                         <Reveal as="span" delayMs={75} className={styles.metaValue}>
                           {positionValue}
                         </Reveal>
                       </Reveal>
                       <Reveal as="span" delayMs={90} className={styles.metaItem}>
-                        {t("about.page.workExperience.detail.teamSize")}:{" "}
+                        {t("exp.labels.teamSize")}:{" "}
                         <Reveal as="span" delayMs={105} className={styles.metaValue}>
                           {t(project.teamSizeKey)}
                         </Reveal>
                       </Reveal>
                       <Reveal as="span" delayMs={120} className={styles.metaItem}>
-                        {t("about.page.workExperience.detail.duration")}:{" "}
+                        {t("exp.labels.duration")}:{" "}
                         <Reveal as="span" delayMs={135} className={styles.metaValue}>
                           {t(project.durationKey)}
                         </Reveal>
@@ -184,7 +184,7 @@ export default function WorkExperienceDetail({ company }: Props) {
                     rel="noopener noreferrer"
                     className={styles.cta}
                   >
-                    {t("about.page.workExperience.detail.viewProject")}{" "}
+                    {t("exp.labels.viewProject")}{" "}
                     <Reveal as="span" variant="scale" delayMs={150} aria-hidden="true">
                       <Right />
                     </Reveal>
@@ -197,8 +197,8 @@ export default function WorkExperienceDetail({ company }: Props) {
                       onClick={() => toggleProjectHighlights(project.titleKey)}
                     >
                       {isExpanded
-                        ? t("about.page.workExperience.detail.showLess")
-                        : t("about.page.workExperience.detail.showMore")}
+                        ? t("exp.labels.showLess")
+                        : t("exp.labels.showMore")}
                     </button>
                   )}
                 </Reveal>
@@ -224,7 +224,7 @@ export default function WorkExperienceDetail({ company }: Props) {
       {company.variant === "detailed" && (
         <Reveal as="div" delayMs={120} className={styles.techStack}>
           <Reveal as="span" className={styles.subheading}>
-            {t(`${company.keyPrefix}.techStack`)}:
+            {t("exp.labels.techStack")}:
           </Reveal>
           <ul className={styles.techList}>
             {company.techLineKeys.map((key, index) => (
@@ -240,7 +240,7 @@ export default function WorkExperienceDetail({ company }: Props) {
         <Reveal as="span" variant="fade" aria-hidden="true" className={styles.icon}>
           ←
         </Reveal>
-        {t("about.page.workExperience.detail.backToAbout")}
+        {t("exp.labels.backToAbout")}
       </Link>
     </article>
   );

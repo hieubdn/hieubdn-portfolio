@@ -28,19 +28,19 @@ export default function ProjectNav({ currentSlug }: Props) {
       <div className={`${styles.panel} ${open ? styles.panelOpen : ""}`} aria-hidden={!open}>
         <button onClick={scrollToTop} className={styles.item}>
           <span className={styles.itemIcon}>↑</span>
-          {t("project.nav.scrollTop")}
+          {t("project.scrollTop")}
         </button>
 
         {prev && (
           <Link href={`/projects/${prev.slug}`} className={styles.item} onClick={() => setOpen(false)}>
             <span className={styles.itemIcon}>←</span>
-            {t("project.nav.backProject")}
+            {t("project.back")}
           </Link>
         )}
 
         {next && (
           <Link href={`/projects/${next.slug}`} className={styles.item} onClick={() => setOpen(false)}>
-            {t("project.nav.nextProject")}
+            {t("project.next")}
             <span className={styles.itemIcon}>→</span>
           </Link>
         )}
@@ -49,7 +49,7 @@ export default function ProjectNav({ currentSlug }: Props) {
       <div className={styles.triggerRow}>
         {!open && (
           <span className={styles.hint} aria-hidden="true">
-            {t("project.nav.hint")}
+            {t("project.scrollTop")}
           </span>
         )}
         <button

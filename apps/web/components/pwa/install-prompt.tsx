@@ -72,7 +72,7 @@ export function InstallPrompt() {
       <div
         className={styles.card}
         role="dialog"
-        aria-label={t("pwa.installApp")}
+        aria-label={t("pwa.install.title")}
         aria-live="polite"
       >
         <p className={styles.message}>{t("pwa.install.prompt")}</p>
@@ -93,7 +93,7 @@ export function InstallPrompt() {
       <div
         className={styles.card}
         role="dialog"
-        aria-label={t("pwa.installApp")}
+        aria-label={t("pwa.install.title")}
         aria-live="polite"
       >
         <p className={styles.message}>{t("pwa.install.iosGuide")}</p>

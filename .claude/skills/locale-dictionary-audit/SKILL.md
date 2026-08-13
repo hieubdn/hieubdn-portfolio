@@ -5,7 +5,7 @@ description: Audit hieubdn's `database/locales/*.json` dictionaries for missing 
 
 # Locale Dictionary Audit
 
-The site's i18n system is JSON key/value dictionaries, not per-market pages or routes. There is no `/vn/`, `/jp/`, etc. — locale switching is client-side, backed by a `profile-locale` cookie + `localStorage`, resolved via `LocaleProvider` (`apps/web/components/layout/setting/translate/`). `en.json` is the canonical source; the other 6 locale files (`vi`, `ja`, `zh-CN`, `zh-TW`, `ko`, `de`) are derived from it.
+The site's i18n system is JSON key/value dictionaries, not per-market pages or routes. There is no `/vn/`, `/jp/`, etc. — locale switching is client-side, backed by a `profile-locale` cookie + `localStorage`, resolved via `LocaleProvider` (`apps/web/components/layout/setting/translate/`). `en.json` is the canonical source; the other 6 locale files (`vi`, `ja`, `zh-CN`, `ko`, `de`, `fr`) are derived from it.
 
 Use for:
 - Checking all locale files stay in sync with `en.json` after content changes.
@@ -30,7 +30,7 @@ This means two failure modes `generate:locales` cannot catch on its own:
 
 ## Workflow
 
-1. **Load all 7 files**: `database/locales/{en,vi,ja,zh-CN,zh-TW,ko,de}.json`.
+1. **Load all 7 files**: `database/locales/{en,vi,ja,zh-CN,ko,de,fr}.json`.
 2. **Key-set diff** against `en.json` for each of the other 6:
    - Missing (in `en.json`, absent here) → needs `pnpm generate:locales`.
    - Orphaned (present here, absent in `en.json`) → candidate for manual removal; confirm the key is truly unused (`grep` for the key string in `apps/web/`) before deleting.

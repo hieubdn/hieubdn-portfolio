@@ -225,7 +225,7 @@ export default function ProjectsSection() {
         ))}
       </div>
       <div className={styles.updatingBanner}>
-        <span>{t("projects.page.updating")}</span>
+        <span>{t("projects.comingSoon")}</span>
         <span className={styles.dots}>
           <span className={styles.dot}>.</span>
           <span className={styles.dot}>.</span>
