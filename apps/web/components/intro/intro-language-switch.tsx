@@ -12,13 +12,13 @@ import {
 import styles from "./intro-language-switch.module.scss";
 
 const LOCALE_SHORT_LABEL: Record<AppLocaleCode, string> = {
-  en: "EN",
-  vi: "VI",
-  ja: "JA",
-  ko: "KO",
-  de: "DE",
-  "zh-CN": "CN",
-  "zh-TW": "TW",
+  en: "English",
+  vi: "Vietnamese",
+  ja: "Japanese",
+  ko: "Korean",
+  de: "Deutsch",
+  "zh-CN": "Chinese (CN)",
+  "zh-TW": "Chinese (TW)",
 };
 
 export function IntroLanguageSwitch() {
@@ -63,7 +63,6 @@ export function IntroLanguageSwitch() {
           <CurrentFlag className={styles.flag} />
         </span>
         <span className={styles.shortLabel}>{LOCALE_SHORT_LABEL[locale]}</span>
-        <span className={`${styles.chevron} ${open ? styles.chevronOpen : ""}`} aria-hidden="true" />
       </button>
 
       {open && (

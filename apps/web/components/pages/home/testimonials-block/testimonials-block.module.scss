@@ -85,6 +85,10 @@
     line-height: 1.75;
     border-left: 1px solid var(--color-home-block-border);
     white-space: pre-line;
+
+    @media (max-width: 768px) {
+      min-height: 210px;
+    }
   }
 
   .element {

@@ -23,7 +23,7 @@
   text-transform: uppercase;
   letter-spacing: 1.5px;
   color: var(--color-supporting);
-  background: linear-gradient(90deg, #ec4899 0%, #6366f1 55%, #0ea5e9 100%);
+  background: linear-gradient(90deg, #ec4899 0%, #6366f1 24%, #0ea5e9 44%, #ec4899 58%, #6366f1 82%, #0ea5e9 100%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   padding: 0 12px;  
@@ -64,7 +64,7 @@
   font-size: 16px;
   font-weight: 700;
   letter-spacing: 2px;
-  background: linear-gradient(90deg, #ec4899 0%, #6366f1 55%, #0ea5e9 100%);
+  background: linear-gradient(90deg, #ec4899 0%, #6366f1 24%, #0ea5e9 44%, #ec4899 58%, #6366f1 82%, #0ea5e9 100%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0.5;
@@ -74,13 +74,13 @@
     content: '';
     flex: 1;
     height: 2.5px;
-    background: linear-gradient(90deg, #ec4899 0%, #6366f1 55%, #0ea5e9 100%);
+    background: linear-gradient(90deg, #ec4899 0%, #6366f1 24%, #0ea5e9 44%, #ec4899 58%, #6366f1 82%, #0ea5e9 100%);
   }
 }
 
 .subtitle {
   font-size: 16px;
-  color: var(--color-subtitle);
+  color: var(--color-supporting);
   line-height: 1.75;
   letter-spacing: 1.5px;
 }
