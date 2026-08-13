@@ -36,9 +36,15 @@ export function isAppLocaleCode(value: string): value is AppLocaleCode {
   return (APP_LOCALE_CODES as readonly string[]).includes(value);
 }
 
-export function readStoredLocale(): AppLocaleCode {
+/**
+ * Returns the locale explicitly recorded in `localStorage`, or `null` when
+ * none has ever been stored (first visit, cleared storage, storage blocked).
+ * Callers must not conflate `null` with an explicit choice of `en` — the two
+ * cases need different handling (see `LocaleProvider`'s mount effect).
+ */
+export function readStoredLocale(): AppLocaleCode | null {
   if (typeof window === "undefined") {
-    return DEFAULT_APP_LOCALE;
+    return null;
   }
   try {
     const raw = localStorage.getItem(PROFILE_LOCALE_STORAGE_KEY);
@@ -48,7 +54,7 @@ export function readStoredLocale(): AppLocaleCode {
   } catch {
     /* storage unavailable */
   }
-  return DEFAULT_APP_LOCALE;
+  return null;
 }
 
 /** Mirrors locale to a cookie so the server can SSR the same locale as localStorage. */

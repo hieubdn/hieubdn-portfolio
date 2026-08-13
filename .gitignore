@@ -40,3 +40,4 @@ yarn-error.log*
 # claude local data and config files
 .claude/rule.md 
 .claude/settings.local.json 
+.claude/settings.json 

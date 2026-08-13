@@ -33,18 +33,21 @@ export default function LanguageSettingPanel() {
 
   const applyLocale = useCallback(() => {
     // setLocale resolves after the target dictionary is loaded, so the toast
-    // below can translate into the new locale.
-    void setLocale(draftLocale).then(() => {
-      setCommittedLocale(draftLocale);
-      confirmRef.current?.close();
-      toast.success(
-        translateForLocale(
-          draftLocale,
-          "settings.language.toast",
-        ),
-      );
-    });
-  }, [draftLocale, setLocale]);
+    // below can translate into the new locale. It rejects if the dictionary
+    // failed to load — the panel must not report success in that case.
+    void setLocale(draftLocale)
+      .then(() => {
+        setCommittedLocale(draftLocale);
+        confirmRef.current?.close();
+        toast.success(
+          translateForLocale(draftLocale, "settings.language.toast"),
+        );
+      })
+      .catch((err) => {
+        console.error("[i18n] Failed to apply locale:", draftLocale, err);
+        toast.error(t("settings.language.toast.error"));
+      });
+  }, [draftLocale, setLocale, t]);
 
   useEffect(() => {
     setCommittedLocale(locale);

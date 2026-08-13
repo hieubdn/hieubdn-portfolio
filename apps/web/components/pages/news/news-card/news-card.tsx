@@ -17,8 +17,9 @@ const SOURCE_LABELS: Record<NewsSource, string> = {
   wired: "Wired",
 };
 
-function formatDate(iso: string, locale: string): string {
+function formatDate(iso: string, locale: string): string | null {
   const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return null;
   return d.toLocaleDateString(locale, {
     month: "short",
     day: "numeric",
@@ -30,6 +31,7 @@ export default function NewsCard({ article }: { article: NewsArticle }) {
   const { t, locale } = useLocaleText();
   const hasStats =
     article.points !== undefined || article.commentCount !== undefined;
+  const formattedDate = formatDate(article.publishedAt, locale);
 
   return (
     <a
@@ -43,9 +45,11 @@ export default function NewsCard({ article }: { article: NewsArticle }) {
         <span className={`${styles.badge} ${styles[article.source]}`}>
           {SOURCE_LABELS[article.source]}
         </span>
-        <time className={styles.date} dateTime={article.publishedAt}>
-          {formatDate(article.publishedAt, locale)}
-        </time>
+        {formattedDate && (
+          <time className={styles.date} dateTime={article.publishedAt}>
+            {formattedDate}
+          </time>
+        )}
       </Reveal>
 
       <Reveal as="h3" delayMs={60} className={styles.title}>

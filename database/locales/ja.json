@@ -4,16 +4,13 @@
   "nav.projects": "プロジェクト",
   "nav.news": "ニュース",
   "nav.contact": "お問い合わせ",
-
   "popover.home": "ホーム",
   "popover.about": "プロフィール",
   "popover.projects": "プロジェクト",
   "popover.news": "ニュース",
   "popover.contact": "お問い合わせ",
   "popover.github": "GitHub",
-  "popover.notifications": "通知",
   "popover.settings": "設定",
-
   "pwa.offline.banner": "オフラインです",
   "pwa.offline.title": "オフライン",
   "pwa.offline.body": "接続を確認して、もう一度お試しください。",
@@ -27,11 +24,9 @@
   "pwa.install.later": "後で",
   "pwa.install.gotIt": "了解",
   "pwa.install.iosGuide": "共有アイコンをタップし、「ホーム画面に追加」を選択するとインストールできます。",
-
   "profile.name": "Bui Do Ngoc Hieu",
   "profile.title": "ソフトウェアエンジニア",
   "profile.email": "hieubdn@gmail.com",
-
   "home.about.kicker": "経歴",
   "home.about.title": "プロフィール",
   "home.projects.kicker": "実績紹介",
@@ -57,38 +52,36 @@
   "home.news.title": "テックニュース",
   "home.news.empty": "まだ記事がありません。",
   "home.news.viewAll": "すべて見る →",
-
   "testimonials.title": "お客様の声",
   "testimonials.footer": "これまでご一緒させていただいた方々からのフィードバックです。",
-  "testimonials.items.0.prefix": "",
+  "testimonials.items.0.prefix": "Mr.",
   "testimonials.items.0.name": "Joshua Calducchi",
   "testimonials.items.0.role": "Poppy社 VP of Engineering",
   "testimonials.items.0.body": "Hieuは常に明確な価値を提供してくれる、信頼できるエンジニアです。高いパフォーマンスを維持し、プロダクト品質に着実に貢献し、私がPoppyに参加する以前からチームに長く続く影響を残してくれました。\n特にチームに加わったばかりの頃に彼から受けたサポートには、心から感謝しています。喜んでリファレンスを務めますし、今後のプロジェクトでまた一緒に仕事ができる機会を楽しみにしています。",
-  "testimonials.items.1.prefix": "",
+  "testimonials.items.1.prefix": "Ms.",
   "testimonials.items.1.name": "Katherine Patton",
   "testimonials.items.1.role": "Poppy社 Lead Engineer",
   "testimonials.items.1.body": "Hieuは仕事に明確さと効率性をもたらしてくれる、信頼できるエンジニアです。前向きな姿勢と協調性のおかげで、チームを横断して一緒に仕事がしやすい人物です。課題に対しては解決志向で取り組み、実行における高い基準を保ち、全体の生産性向上に貢献しています。品質とスピードのバランスを取る能力は特に重要なプロジェクトで価値を発揮し、彼の主体的なサポートはチームの効率と成果の両方に実質的な効果をもたらしています。",
-  "testimonials.items.2.prefix": "",
+  "testimonials.items.2.prefix": "Mr.",
   "testimonials.items.2.name": "Dat Giang",
   "testimonials.items.2.role": "HDWEBSOFT Technology Co., Ltd. CTO",
   "testimonials.items.2.body": "Hieuは、あらゆる仕事において強いオーナーシップとプロ意識を発揮します。技術力に加えて、主体的なコミュニケーションと他者を助けようとする姿勢が際立っています。プレッシャーの中でも冷静で前向きなエネルギーをチームにもたらし、常にビジネス目標に沿った成果を出しています。彼の貢献はプロダクトの安定性とチーム文化の両方に大きな影響を与えてきました。問題を早期に察知して先手を打ち、常にチームメイトがより良い成果を出せるようサポートしています。",
-  "testimonials.items.3.prefix": "",
+  "testimonials.items.3.prefix": "Mr.",
   "testimonials.items.3.name": "Matthew Zhao",
   "testimonials.items.3.role": "Fidovn Company Limited CEO",
   "testimonials.items.3.body": "Hieuとの仕事はいつもスムーズです。彼は素早く反応し、細部に気を配り、着手する前に要件を十分に理解するよう努めます。前向きな姿勢と主体性がチーム全体の勢いを保つ助けになっています。彼は期待に応えるだけでなく、ユーザー体験やプロダクトの価値を高める改善を頻繁に提案してくれます。関係者とも効果的にコミュニケーションを取り、チーム間の連携改善にも貢献しています。",
-  "testimonials.items.4.prefix": "",
+  "testimonials.items.4.prefix": "Mr.",
   "testimonials.items.4.name": "Benjamin Papillon",
   "testimonials.items.4.role": "Schematic 共同創業者兼CTO",
   "testimonials.items.4.body": "Hieuは私が最初に採用したエンジニアで、2021年の夏に会社を設立してからわずか数週間後に、一緒に働くことについて話し始めました。彼は私たちの最初のウェブサイトと、その後の重要なシステムの多くを構築してくれました。\n彼は非常に柔軟性のある同僚であり、パートナーであり、友人でした。彼なしに会社を売上ゼロの段階からシリーズA後の段階まで導くことは、ほとんど想像できません。私たちは共に事業を全国規模に拡大し、数え切れないほどの課題を乗り越えながらも成果を出し続け、その間も強いチーム文化を維持し続けました。",
-  "testimonials.items.5.prefix": "",
+  "testimonials.items.5.prefix": "Mr.",
   "testimonials.items.5.name": "Nico Martinez",
   "testimonials.items.5.role": "CTO 兼 Technology Director",
   "testimonials.items.5.body": "Hieuは高い技術力と本物のチームスピリットを兼ね備えています。彼は熱意にあふれ、フィードバックに対して常にオープンで、自身のスキルと担当するシステムの両方を常に改善しようとしています。構造立てた問題解決アプローチと細部への注意により、持続可能でメンテナンスしやすいソリューションが生まれています。彼の貢献を高く評価しており、今後のプロジェクトでも引き続き協力し、さまざまな環境で共に成長し、優れた成果を上げていくことを楽しみにしています。",
-  "testimonials.items.6.prefix": "",
+  "testimonials.items.6.prefix": "Mr.",
   "testimonials.items.6.name": "Daniel Bailey",
   "testimonials.items.6.role": "Technology Strategist | 米国陸軍退役軍人",
   "testimonials.items.6.body": "Hieu、あなたと知り合い、一緒に仕事ができたことは本当に嬉しく思っています。あなたは才能あるエンジニアであり、安定したリーダーであるだけでなく、素晴らしい人柄の持ち主です。あなたの集中力と献身は本当に尊敬に値します。一緒に過ごした時間に感謝しており、これからも連絡を取り合えたらと思っています。この先の刺激的な道のりで、すべてがうまくいくことを願っています — これからも取り組むすべてで素晴らしい成果を上げ続けてください。あなたの前向きな影響とサポートには、いつまでも感謝しています。",
-
   "competencies.title": "コアコンピテンシー",
   "competencies.kicker": "信頼性の高いソフトウェアソリューションを提供",
   "competencies.close": "閉じる",
@@ -104,18 +97,14 @@
   "competencies.mobile.title": "モバイルアプリケーション",
   "competencies.mobile.subtitle": "エンジニアリング",
   "competencies.mobile.description": "パフォーマンス、スケーラビリティ、ユーザー体験を重視し、クロスプラットフォームのモバイルアプリケーションを設計・構築しています。保守性の高いモバイルアーキテクチャの構築、実行時パフォーマンスの最適化、そして複雑な本番環境におけるiOSとAndroidの挙動の一貫性維持を得意としています。",
-
   "quote.title": "エンジニアリング哲学",
   "quote.kicker": "技術的な意思決定の背景にある考え方",
   "quote.content": "テクノロジーは持続的な価値を生み出すための手段であり、それ自体がゴールではありません。",
   "quote.author": "Bui Do Ngoc Hieu",
-
   "social.title": "ソーシャルプロフィール",
   "social.kicker": "つながりましょう",
-
   "partners.title": "信頼をいただいている企業",
   "partners.ariaLabel": "企業・パートナー一覧",
-
   "about.heading": "プロフィール",
   "about.summary.kicker": "自己紹介",
   "about.summary.lead": "ソフトウェアの仕事に携わって5年以上になります。私は問題を解決すること(全般的に、ですが主にソフトウェアを通じて)、プロダクトを作ること、そしてチームの成長を助けることが好きです。これまで数多くの異なるソフトウェアシステムに携わり、変化するニーズに応えるためにそれらを時間をかけて進化させていくことに、心から喜びを感じています。また、スケーリングにも多くの時間を費やしてきました — パフォーマンスの改善だけでなく、利用が拡大しても変更を安全に行えるプロセスと自動化の構築にも取り組んでいます。\n仕事以外では、盆栽と自宅用の木製家具づくりに情熱を注いでいます。\n\n多くのことのように聞こえるかもしれませんが、実際のところは、新しい人々と出会い、新しいパートナーと協力できることに、ただただわくわくしているだけなんです!",
@@ -146,7 +135,6 @@
   "about.education.mobile.date": "修了: 2020年",
   "about.cv.kicker": "履歴書をダウンロード",
   "about.cv.title": "私の履歴書",
-
   "exp.title": "職務経歴",
   "exp.otherTitle": "その他の経験",
   "exp.labels.responsibilities": "役割と責任",
@@ -159,7 +147,6 @@
   "exp.labels.backToAbout": "プロフィールに戻る",
   "exp.labels.showMore": "もっと見る",
   "exp.labels.showLess": "閉じる",
-
   "exp.hdwebsoft.company": "HDWEBSOFT Technology Co., Ltd.",
   "exp.hdwebsoft.duration": "2024年4月 – 現在",
   "exp.hdwebsoft.position": "フルスタックソフトウェアエンジニア",
@@ -196,7 +183,6 @@
   "exp.hdwebsoft.projects.transit.highlights.3": "PrintNode経由で複数のネットワークプリンターへ同時にラベルを印刷する高並行処理向けにバックエンドを最適化し、MongoDBのインデックスとクエリパターンを調整。プライムデーやブラックフライデーなどのピーク時にスキャン/印刷量が数倍に急増しても性能を維持できるようにしました。",
   "exp.hdwebsoft.projects.transit.highlights.4": "出荷モジュールとワークスペースモジュール全体で再利用可能なVueコンポーネントライブラリ(Pinia/Vuex、Vue Router)を構築・保守し、UIの一貫性を高め、SPA内の重複ロジックを削減。",
   "exp.hdwebsoft.projects.transit.highlights.5": "Amazon SP-API、EasyPost、PrintNode、Stripeといったサードパーティサービスを物流の中核ワークフロー(出荷同期、キャリアラベリング、ネットワーク印刷、サブスクリプション課金)に統合し、手作業を減らしSeller Centralとのデータ精度を向上させました。",
-
   "exp.toyar.company": "TOYAR INC Co., Ltd.",
   "exp.toyar.duration": "2023年7月 – 2025年5月",
   "exp.toyar.position": "フルスタックソフトウェアエンジニア",
@@ -224,7 +210,6 @@
   "exp.toyar.projects.fidovn.highlights.4": "認証済み物件/賃貸バッジシステムを備えた地図ベースの住宅検索、アプリ内の入居者向け通話・メッセージ機能、そしてオーナーおよび仲介業者向けの賃貸管理・追跡ツールを構築。",
   "exp.toyar.projects.fidovn.highlights.5": "ウェブとモバイルの両方に多言語対応(i18n)を実装し、SMS認証や地図/位置情報サービスなどのサードパーティサービスをアカウントおよび検索の中核フローに統合。",
   "exp.toyar.projects.fidovn.highlights.6": "両プラットフォームにおいて、Java/Spring BootバックエンドとJavaScript/TypeScriptフロントエンドの双方でOOPの原則とデザインパターンを一貫して適用し、Linux(Ubuntu)本番サーバーとWindows開発環境の両方で運用。アーキテクチャ設計セッションを主導し、コードレビューを実施し、Agile/Scrumワークフロー(スプリント計画、デイリースタンドアップ、振り返り)の中でジュニアエンジニアの育成を行い、GitとJiraでバージョン管理とタスク追跡を実施しました。",
-
   "exp.optoro.company": "Optoro Group, Inc.",
   "exp.optoro.duration": "2020年6月 – 2023年5月",
   "exp.optoro.position": "フルスタックソフトウェアエンジニア",
@@ -235,14 +220,12 @@
   "exp.optoro.items.1": "本番環境へのデプロイ前に高いコード品質を維持するため、コードレビューに参加しチームメンバーと連携。確立されたリリースプロセスに従って本番環境へ変更を反映しました。",
   "exp.optoro.items.2": "開発ワークフローとチームの生産性を高めるための社内ツール・スクリプトを構築。プロダクトおよびビジネス側のステークホルダーと連携し、要件を技術的なソリューションへと落とし込みました。",
   "exp.optoro.items.3": "Gitベースのバージョン管理ワークフローの中で作業し、多くのメンバーが関わる共有コードベースに貢献しました。",
-
   "exp.mindx.company": "MindX Technology School",
   "exp.mindx.duration": "2020年10月 – 2024年3月",
   "exp.mindx.position": "インストラクターマネージャー 兼 技術講師",
   "exp.mindx.location": "ベトナム・ホーチミン市",
   "exp.mindx.items.0": "フルスタックWeb開発(React、Node.js、Next.js、React Native)を指導し、複数の拠点で技術ワークショップを実施。",
   "exp.mindx.items.1": "50名以上の講師を指導・管理し、カリキュラム設計に貢献するとともに、研修全体の質の向上に取り組みました。",
-
   "projects.title": "すべてのプロジェクト",
   "projects.comingSoon": "さらに多くのプロジェクトを近日公開予定",
   "project.scrollTop": "トップに戻る",
@@ -268,7 +251,6 @@
   "project.signinapp.description": "Sign In Appは、来訪者チェックイン、従業員の出退勤、スペース予約、緊急時対応をひとつの連携システムでシームレスに統合する、スマートな職場・来訪者管理プラットフォームです。世界中の25,000以上の拠点で採用され、ISO 27001、GDPR、HIPAAの認証を取得しており、あらゆる規模の組織が入退室管理、安全性、職場体験を容易に管理できるよう支援しています。",
   "project.singlekey.description": "SingleKeyは、カナダの大家向けに構築された包括的な賃貸リスク管理プラットフォームです。与信・身元調査を伴う徹底した入居者審査、自動化された毎月の家賃回収、そして未払い家賃最大60,000米ドル、物件損害10,000米ドル、立ち退きにかかる法的費用2,000米ドルを補償する所得保証を提供し、大家に完全な安心をもたらします。",
   "project.swipedon.description": "SwipedOnは、世界中の9,000以上の職場に信頼されている職場・人事管理ソフトウェアです。従業員のチェックインを記録し、ハイブリッドワークをサポートし、あらゆるデバイスからデスクや会議室を簡単に予約できます。現在Sign In Appとの統合を進めており、SwipedOnはよりスマートで安全な職場管理を実現する次世代の統合プラットフォームへと進化しています。",
-
   "news.title": "テックニュース",
   "news.subtitle": "現代ソフトウェアの最新動向を常にキャッチアップ。世界トップクラスの開発者コミュニティから、最も価値ある記事、オープンソースのブレイクスルー、エンジニアリングの知見を厳選してお届けします — 検索に費やす時間を減らし、優れたプロダクトづくりに使える時間を増やせるように。",
   "news.time.recent": "1時間以内",
@@ -276,7 +258,6 @@
   "news.time.daysAgo": "{d}日前",
   "news.points": "{n} ポイント",
   "news.comments": "{n} 件のコメント",
-
   "contact.info.title": "連絡先情報",
   "contact.info.from.label": "出身",
   "contact.info.from.value": "ベトナム・ダナン",
@@ -297,7 +278,6 @@
   "contact.form.toast.error": "問題が発生しました。もう一度お試しください。",
   "contact.form.toast.rateLimited": "メッセージの送信回数が多すぎます。数分後にもう一度お試しください。",
   "contact.form.toast.invalid": "入力内容をご確認のうえ、もう一度お試しください。",
-
   "settings.title": "設定",
   "settings.backHome": "ホームに戻る",
   "settings.reset": "設定をリセット",
@@ -319,12 +299,10 @@
   "settings.language.confirm.ok": "確認",
   "settings.language.confirm.cancel": "キャンセル",
   "settings.language.toast": "言語を更新しました",
-
-  "notifications.title": "通知",
-  "notifications.empty": "まだ通知はありません",
-
   "aria.nav": "メインナビゲーション",
   "aria.github": "GitHubプロフィールを開く",
   "aria.actions": "クイックアクション",
-  "aria.languages": "表示言語"
+  "aria.languages": "表示言語",
+  "settings.language.toast.error": "言語を切り替えられませんでした。もう一度お試しください。",
+  "contact.form.errors.tooLong": "このフィールドは長すぎます。"
 }

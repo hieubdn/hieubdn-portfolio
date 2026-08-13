@@ -5,6 +5,7 @@ import {
   useContext,
   useEffect,
   useMemo,
+  useRef,
   useState,
   type ReactNode,
 } from "react";
@@ -89,17 +90,35 @@ export function LocaleProvider({
 
   const [locale, setLocaleState] = useState<AppLocaleCode>(initialLocale);
   const [hasHydrated, setHasHydrated] = useState(false);
+  // Tracks the most recently *requested* locale so an in-flight dictionary
+  // load that resolves after a newer request can be ignored (last click wins).
+  const latestRequestRef = useRef<AppLocaleCode>(initialLocale);
 
   useEffect(() => {
     const stored = readStoredLocale();
-    document.documentElement.lang = stored;
-    writeLocaleCookie(stored);
-    if (stored !== initialLocale) {
-      loadMessages(stored)
-        .then(() => setLocaleState(stored))
-        .catch((err) => {
-          console.error("[i18n] Failed to load locale dictionary:", stored, err);
-        });
+    if (stored === null) {
+      // No preference has ever been recorded in this browser (first visit,
+      // cleared storage, or storage blocked) — trust the cookie-derived
+      // `initialLocale` the server already rendered with, and repopulate
+      // localStorage from it instead of resetting to `en`, which would
+      // otherwise flip the page's language right after hydration and
+      // permanently overwrite a still-valid locale cookie.
+      writeStoredLocale(initialLocale);
+      document.documentElement.lang = initialLocale;
+    } else {
+      document.documentElement.lang = stored;
+      writeLocaleCookie(stored);
+      if (stored !== initialLocale) {
+        latestRequestRef.current = stored;
+        loadMessages(stored)
+          .then(() => {
+            if (latestRequestRef.current !== stored) return;
+            setLocaleState(stored);
+          })
+          .catch((err) => {
+            console.error("[i18n] Failed to load locale dictionary:", stored, err);
+          });
+      }
     }
     setHasHydrated(true);
   }, [initialLocale]);
@@ -114,18 +133,12 @@ export function LocaleProvider({
     return {
       locale: effectiveLocale,
       setLocale: async (nextLocale: AppLocaleCode) => {
-        try {
-          await loadMessages(nextLocale);
-        } catch (err) {
-          console.error(
-            "[i18n] Failed to load locale dictionary:",
-            nextLocale,
-            err,
-          );
-          return;
-        }
+        // Record intent before awaiting so a second, newer call can detect
+        // that this one is now stale once its load resolves out of order.
+        latestRequestRef.current = nextLocale;
+        await loadMessages(nextLocale);
+        if (latestRequestRef.current !== nextLocale) return;
         writeStoredLocale(nextLocale);
-        writeLocaleCookie(nextLocale);
         document.documentElement.lang = nextLocale;
         setLocaleState(nextLocale);
       },

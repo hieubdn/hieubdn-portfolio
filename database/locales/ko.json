@@ -4,16 +4,13 @@
   "nav.projects": "프로젝트",
   "nav.news": "뉴스",
   "nav.contact": "연락처",
-
   "popover.home": "홈",
   "popover.about": "소개",
   "popover.projects": "프로젝트",
   "popover.news": "뉴스",
   "popover.contact": "연락처",
   "popover.github": "GitHub",
-  "popover.notifications": "알림",
   "popover.settings": "설정",
-
   "pwa.offline.banner": "오프라인 상태입니다",
   "pwa.offline.title": "오프라인",
   "pwa.offline.body": "연결 상태를 확인한 후 다시 시도해 주세요.",
@@ -27,11 +24,9 @@
   "pwa.install.later": "나중에",
   "pwa.install.gotIt": "확인",
   "pwa.install.iosGuide": "공유 아이콘을 탭한 다음 \"홈 화면에 추가\"를 선택하면 설치할 수 있습니다.",
-
   "profile.name": "Bui Do Ngoc Hieu",
   "profile.title": "소프트웨어 엔지니어",
   "profile.email": "hieubdn@gmail.com",
-
   "home.about.kicker": "자격 요건",
   "home.about.title": "소개",
   "home.projects.kicker": "쇼케이스",
@@ -57,38 +52,36 @@
   "home.news.title": "테크 뉴스",
   "home.news.empty": "아직 게시된 글이 없습니다.",
   "home.news.viewAll": "전체 보기 →",
-
   "testimonials.title": "추천사",
   "testimonials.footer": "함께 일하는 기쁨을 누렸던 분들의 피드백입니다.",
-  "testimonials.items.0.prefix": "",
+  "testimonials.items.0.prefix": "Mr.",
   "testimonials.items.0.name": "Joshua Calducchi",
   "testimonials.items.0.role": "Poppy VP of Engineering",
   "testimonials.items.0.body": "Hieu는 항상 명확한 가치를 전달하는 믿을 수 있는 엔지니어입니다. 그는 높은 수준의 성과를 유지하고 제품 품질에 실질적으로 기여하며, 제가 Poppy에 합류하기 전부터 팀에 지속적인 영향을 남겼습니다.\n특히 제가 팀에 합류한 초창기에 Hieu가 보여준 지원에 진심으로 감사드립니다. 기꺼이 추천인이 되어드리고 싶고, 앞으로의 프로젝트에서 다시 함께 일할 기회를 기대하고 있습니다.",
-  "testimonials.items.1.prefix": "",
+  "testimonials.items.1.prefix": "Ms.",
   "testimonials.items.1.name": "Katherine Patton",
   "testimonials.items.1.role": "Poppy Lead Engineer",
   "testimonials.items.1.body": "Hieu는 업무에 명확함과 효율성을 더하는 믿을 수 있는 엔지니어입니다. 긍정적인 태도와 협업 정신 덕분에 여러 팀과도 수월하게 협력할 수 있습니다. 그는 문제 해결 중심의 사고방식으로 도전 과제에 접근하고, 실행에 있어 높은 기준을 유지하며, 전반적인 생산성 향상에 기여합니다. 품질과 속도의 균형을 맞추는 그의 능력은 중요한 프로젝트에서 특히 값진 자산이며, 적극적인 지원은 팀의 효율성과 성과 모두에 실질적인 영향을 미쳤습니다.",
-  "testimonials.items.2.prefix": "",
+  "testimonials.items.2.prefix": "Mr.",
   "testimonials.items.2.name": "Dat Giang",
   "testimonials.items.2.role": "HDWEBSOFT Technology Co., Ltd. CTO",
   "testimonials.items.2.body": "Hieu는 모든 일에서 강한 주인의식과 프로페셔널함을 보여줍니다. 기술적 역량 외에도 적극적인 커뮤니케이션과 다른 사람을 돕고자 하는 태도가 특히 돋보입니다. 압박 속에서도 차분하고 긍정적인 에너지를 팀에 불어넣으며, 항상 비즈니스 목표에 부합하는 결과를 만들어냅니다. 그의 기여는 제품 안정성과 팀 문화 모두에 의미 있는 영향을 주었습니다. 또한 문제를 미리 파악해 선제적으로 대응하고, 언제나 팀원들이 더 나은 결과를 낼 수 있도록 돕습니다.",
-  "testimonials.items.3.prefix": "",
+  "testimonials.items.3.prefix": "Mr.",
   "testimonials.items.3.name": "Matthew Zhao",
   "testimonials.items.3.role": "Fidovn Company Limited CEO",
   "testimonials.items.3.body": "Hieu와 함께 일하는 것은 언제나 순조롭습니다. 그는 빠르게 응답하고 세부 사항에 신경 쓰며, 개발에 착수하기 전에 요구사항을 완전히 이해하려고 합니다. 그의 긍정적인 태도와 적극적인 자세는 팀 전체가 계속 앞으로 나아가는 데 도움이 됩니다. 그는 기대에 부응하는 데 그치지 않고, 사용자 경험과 제품 가치를 높이는 개선안을 꾸준히 제안합니다. 또한 이해관계자들과 효과적으로 소통하며 팀 간 협업을 개선하는 데도 기여합니다.",
-  "testimonials.items.4.prefix": "",
+  "testimonials.items.4.prefix": "Mr.",
   "testimonials.items.4.name": "Benjamin Papillon",
   "testimonials.items.4.role": "Schematic 공동 창업자 겸 CTO",
   "testimonials.items.4.body": "Hieu는 제가 처음으로 채용한 엔지니어로, 2021년 여름 회사를 설립한 지 불과 몇 주 만에 함께 일하는 것에 대해 이야기를 나누기 시작했습니다. 그는 우리의 첫 웹사이트와 이후 이어진 여러 핵심 시스템을 구축했습니다.\n그는 놀라울 만큼 다재다능한 동료이자 파트너, 그리고 친구였습니다. 그가 없었다면 매출이 발생하기 전 단계에서 시리즈 A 이후 단계까지 회사를 이끌어오는 것은 상상하기 어려웠을 것입니다. 우리는 함께 사업을 전국 규모로 확장하고, 수많은 어려움을 헤쳐 나가면서도 꾸준히 성과를 냈으며, 그 과정에서도 강한 팀 문화를 유지했습니다.",
-  "testimonials.items.5.prefix": "",
+  "testimonials.items.5.prefix": "Mr.",
   "testimonials.items.5.name": "Nico Martinez",
   "testimonials.items.5.role": "CTO 겸 Technology Director",
   "testimonials.items.5.body": "Hieu는 뛰어난 기술 역량과 진정한 팀워크 정신을 겸비하고 있습니다. 그는 열정적이고 피드백에 열려 있으며, 자신의 역량과 담당하는 시스템 모두를 끊임없이 개선하려고 노력합니다. 체계적인 문제 해결 방식과 세심한 디테일에 대한 주의 덕분에 지속 가능하고 유지보수가 쉬운 솔루션이 탄생합니다. 그의 기여를 진심으로 소중하게 생각하며, 앞으로의 프로젝트에서도 계속 협업하며 다양한 환경에서 함께 성장하고 훌륭한 성과를 이루어가기를 기대합니다.",
-  "testimonials.items.6.prefix": "",
+  "testimonials.items.6.prefix": "Mr.",
   "testimonials.items.6.name": "Daniel Bailey",
   "testimonials.items.6.role": "Technology Strategist | 미 육군 예비역",
   "testimonials.items.6.body": "Hieu, 당신을 알게 되고 함께 일할 수 있어서 정말 즐거웠습니다. 당신은 재능 있는 엔지니어이자 안정적인 리더일 뿐만 아니라, 훌륭한 사람이기도 합니다. 당신의 집중력과 헌신은 정말 존경스럽습니다. 함께 일했던 시간을 소중히 생각하며, 앞으로도 계속 연락하고 지내기를 바랍니다. 앞으로 펼쳐질 흥미진진한 여정에서 모든 일이 잘 되기를 바라며, 무슨 일을 하든 계속해서 좋은 성과를 이루어가길 바랍니다. 당신의 긍정적인 영향과 도움에 항상 감사할 것입니다.",
-
   "competencies.title": "핵심 역량",
   "competencies.kicker": "신뢰할 수 있는 소프트웨어 솔루션 제공",
   "competencies.close": "닫기",
@@ -104,18 +97,14 @@
   "competencies.mobile.title": "모바일 애플리케이션",
   "competencies.mobile.subtitle": "엔지니어링",
   "competencies.mobile.description": "성능, 확장성, 사용자 경험에 중점을 두고 크로스 플랫폼 모바일 애플리케이션을 설계하고 구축합니다. 유지보수가 용이한 모바일 아키텍처, 런타임 성능 최적화, 그리고 복잡한 프로덕션 환경에서 iOS와 Android의 동작 일관성을 유지하는 데 폭넓은 경험을 갖추고 있습니다.",
-
   "quote.title": "엔지니어링 철학",
   "quote.kicker": "기술적 의사결정 이면의 생각",
   "quote.content": "기술은 지속적인 가치를 창출하기 위한 수단일 뿐, 그 자체가 목표는 아닙니다.",
   "quote.author": "Bui Do Ngoc Hieu",
-
   "social.title": "소셜 프로필",
   "social.kicker": "함께 연결해요",
-
   "partners.title": "신뢰를 보내주신 곳",
   "partners.ariaLabel": "협력 기업 및 파트너",
-
   "about.heading": "소개",
   "about.summary.kicker": "자기소개",
   "about.summary.lead": "저는 5년 넘게 소프트웨어 분야에서 일해 왔습니다. 저는 문제를 해결하는 것(전반적으로도 그렇지만, 주로 소프트웨어를 통해)과 제품을 만드는 것, 그리고 팀의 성장을 돕는 일을 즐깁니다. 다양한 소프트웨어 시스템을 다뤄왔고, 변화하는 요구에 맞춰 시간이 지나면서 이를 발전시켜 나가는 과정을 진심으로 즐깁니다. 또한 확장성에도 많은 시간을 투자해 왔습니다 — 성능을 개선하는 동시에, 사용량이 늘어나도 변경 사항이 안전하게 반영되도록 하는 프로세스와 자동화를 구축하는 데 힘써왔습니다.\n일 외적으로는 분재와 집에서 사용할 원목 가구를 만드는 데 큰 애정을 갖고 있습니다.\n\n말로는 많아 보일 수도 있지만, 사실 저는 그저 새로운 사람들을 만나고 새로운 파트너와 협업할 생각에 설레는 것뿐입니다!",
@@ -146,7 +135,6 @@
   "about.education.mobile.date": "취득: 2020년",
   "about.cv.kicker": "이력서 다운로드",
   "about.cv.title": "나의 이력서",
-
   "exp.title": "경력 사항",
   "exp.otherTitle": "기타 경험",
   "exp.labels.responsibilities": "역할 및 책임",
@@ -159,7 +147,6 @@
   "exp.labels.backToAbout": "소개로 돌아가기",
   "exp.labels.showMore": "더 보기",
   "exp.labels.showLess": "접기",
-
   "exp.hdwebsoft.company": "HDWEBSOFT Technology Co., Ltd.",
   "exp.hdwebsoft.duration": "2024년 4월 – 현재",
   "exp.hdwebsoft.position": "풀스택 소프트웨어 엔지니어",
@@ -196,7 +183,6 @@
   "exp.hdwebsoft.projects.transit.highlights.3": "PrintNode를 통해 여러 네트워크 프린터에서 동시에 라벨을 인쇄하는 높은 동시성 처리를 위해 백엔드를 최적화하고, MongoDB 인덱싱과 쿼리 패턴을 조정하여 프라임 데이나 블랙 프라이데이 같은 쇼핑 성수기에 스캔/인쇄량이 몇 배로 급증해도 성능을 유지할 수 있도록 했습니다.",
   "exp.hdwebsoft.projects.transit.highlights.4": "배송 및 워크스페이스 모듈 전반에 걸쳐 재사용 가능한 Vue 컴포넌트 라이브러리(Pinia/Vuex, Vue Router)를 구축 및 유지보수하여 UI 일관성을 높이고 SPA 내 중복 로직을 줄였습니다.",
   "exp.hdwebsoft.projects.transit.highlights.5": "Amazon SP-API, EasyPost, PrintNode, Stripe와 같은 서드파티 서비스를 핵심 물류 워크플로우(배송 동기화, 운송사 라벨링, 네트워크 인쇄, 구독 결제)에 통합하여 수작업을 줄이고 Seller Central과의 데이터 정확도를 높였습니다.",
-
   "exp.toyar.company": "TOYAR INC Co., Ltd.",
   "exp.toyar.duration": "2023년 7월 – 2025년 5월",
   "exp.toyar.position": "풀스택 소프트웨어 엔지니어",
@@ -224,7 +210,6 @@
   "exp.toyar.projects.fidovn.highlights.4": "인증된 매물/임대 배지 시스템을 갖춘 지도 기반 주택 검색, 인앱 세입자 통화/메시징, 그리고 집주인과 중개인을 위한 임대 관리 및 추적 도구를 구축했습니다.",
   "exp.toyar.projects.fidovn.highlights.5": "웹과 모바일 전반에 다국어(i18n) 지원을 구현했으며, SMS 인증 및 지도/위치 서비스 같은 서드파티 서비스를 핵심 계정 및 검색 플로우에 통합했습니다.",
   "exp.toyar.projects.fidovn.highlights.6": "두 플랫폼 모두에서 Java/Spring Boot 백엔드와 JavaScript/TypeScript 프론트엔드 전반에 걸쳐 OOP 원칙과 디자인 패턴을 일관되게 적용했으며, Linux(Ubuntu) 프로덕션 서버와 Windows 개발 환경에서 운영했습니다. 아키텍처 설계 세션을 주도하고, 코드 리뷰를 진행했으며, Agile/Scrum 워크플로우(스프린트 계획, 데일리 스탠드업, 회고) 안에서 주니어 개발자를 멘토링하고 Git과 Jira로 버전 관리 및 작업 추적을 수행했습니다.",
-
   "exp.optoro.company": "Optoro Group, Inc.",
   "exp.optoro.duration": "2020년 6월 – 2023년 5월",
   "exp.optoro.position": "풀스택 소프트웨어 엔지니어",
@@ -235,14 +220,12 @@
   "exp.optoro.items.1": "프로덕션 배포 전에 코드 품질을 높게 유지하기 위해 코드 리뷰에 참여하고 팀원들과 협업했으며, 정해진 릴리스 프로세스에 따라 변경 사항을 프로덕션에 반영했습니다.",
   "exp.optoro.items.2": "개발 워크플로우와 팀 효율성을 높이기 위한 내부 도구와 스크립트를 구축했으며, 제품 및 비즈니스 이해관계자와 협력해 요구사항을 기술적 솔루션으로 구체화했습니다.",
   "exp.optoro.items.3": "Git 기반 버전 관리 워크플로우 안에서 작업하며, 여러 기여자가 함께 사용하는 코드베이스에 기여했습니다.",
-
   "exp.mindx.company": "MindX Technology School",
   "exp.mindx.duration": "2020년 10월 – 2024년 3월",
   "exp.mindx.position": "강사 매니저 & 기술 강사",
   "exp.mindx.location": "베트남 호치민시",
   "exp.mindx.items.0": "여러 지점에서 풀스택 웹 개발(React, Node.js, Next.js, React Native)을 가르치고 기술 워크숍을 진행했습니다.",
   "exp.mindx.items.1": "50명 이상의 강사를 멘토링 및 관리하고 커리큘럼 설계에 기여했으며, 전반적인 교육 품질 향상에 힘썼습니다.",
-
   "projects.title": "전체 프로젝트",
   "projects.comingSoon": "더 많은 프로젝트가 곧 공개됩니다",
   "project.scrollTop": "맨 위로",
@@ -268,7 +251,6 @@
   "project.signinapp.description": "Sign In App은 방문자 체크인, 직원 출퇴근, 공간 예약, 비상 대응을 하나의 연결된 시스템으로 매끄럽게 결합한 스마트 워크플레이스 및 방문자 관리 플랫폼입니다. 전 세계 25,000곳 이상의 사업장이 신뢰하며 ISO 27001, GDPR, HIPAA 인증을 받아, 모든 규모의 조직이 출입 관리, 안전, 근무 환경 경험을 손쉽게 관리할 수 있도록 돕습니다.",
   "project.singlekey.description": "SingleKey는 캐나다 임대인을 위해 구축된 종합 임대 리스크 관리 플랫폼입니다. 신용 및 신원 조회를 포함한 철저한 세입자 심사, 자동화된 월 임대료 수납, 그리고 미납 임대료 최대 60,000달러, 재산 피해 10,000달러, 퇴거 관련 법률 비용 2,000달러까지 보장하는 소득 보호를 제공하여 임대인에게 완전한 안심을 선사합니다.",
   "project.swipedon.description": "SwipedOn은 전 세계 9,000곳 이상의 사업장이 신뢰하는 워크플레이스 및 인사 관리 소프트웨어입니다. 직원 체크인을 추적하고 하이브리드 근무 방식을 지원하며 모든 기기에서 손쉽게 데스크와 회의실을 예약할 수 있게 해줍니다. 현재 Sign In App과의 통합을 진행 중인 SwipedOn은 더 스마트하고 안전한 워크플레이스 관리를 위한 차세대 통합 플랫폼으로 진화하고 있습니다.",
-
   "news.title": "테크 뉴스",
   "news.subtitle": "현대 소프트웨어의 흐름을 놓치지 마세요. 전 세계 최고의 개발자 커뮤니티에서 가장 가치 있는 아티클, 오픈소스 혁신, 엔지니어링 인사이트를 엄선하여 전달해 드립니다 — 검색에 쓰는 시간은 줄이고, 훌륭한 제품을 만드는 데 쓰는 시간은 늘릴 수 있도록.",
   "news.time.recent": "1시간 이내",
@@ -276,7 +258,6 @@
   "news.time.daysAgo": "{d}일 전",
   "news.points": "{n}점",
   "news.comments": "댓글 {n}개",
-
   "contact.info.title": "연락처 정보",
   "contact.info.from.label": "출신",
   "contact.info.from.value": "베트남 다낭",
@@ -297,7 +278,6 @@
   "contact.form.toast.error": "문제가 발생했습니다. 다시 시도해 주세요.",
   "contact.form.toast.rateLimited": "메시지를 너무 많이 보내고 있습니다. 잠시 후 다시 시도해 주세요.",
   "contact.form.toast.invalid": "입력하신 정보를 확인한 후 다시 시도해 주세요.",
-
   "settings.title": "설정",
   "settings.backHome": "홈으로 돌아가기",
   "settings.reset": "설정 초기화",
@@ -319,12 +299,10 @@
   "settings.language.confirm.ok": "확인",
   "settings.language.confirm.cancel": "취소",
   "settings.language.toast": "언어가 변경되었습니다",
-
-  "notifications.title": "알림",
-  "notifications.empty": "아직 알림이 없습니다",
-
   "aria.nav": "메인 내비게이션",
   "aria.github": "GitHub 프로필 열기",
   "aria.actions": "빠른 작업",
-  "aria.languages": "표시 언어"
+  "aria.languages": "표시 언어",
+  "settings.language.toast.error": "언어를 변경할 수 없습니다. 다시 시도해주세요.",
+  "contact.form.errors.tooLong": "이 입력란은 너무 깁니다"
 }

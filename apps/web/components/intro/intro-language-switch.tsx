@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { toast } from "sonner";
 
 import { useLocaleText } from "@/components/layout/setting/translate/locale-provider";
 import { LOCALE_FLAGS } from "@/components/layout/setting/translate/locale-flags";
@@ -79,7 +80,16 @@ export function IntroLanguageSwitch() {
                   className={`${styles.option} ${selected ? styles.optionActive : ""}`}
                   onClick={() => {
                     setOpen(false);
-                    if (!selected) void setLocale(option.code);
+                    if (!selected) {
+                      setLocale(option.code).catch((err) => {
+                        console.error(
+                          "[i18n] Failed to apply locale:",
+                          option.code,
+                          err,
+                        );
+                        toast.error(t("settings.language.toast.error"));
+                      });
+                    }
                   }}
                 >
                   <span className={styles.flagWrap}>

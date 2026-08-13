@@ -4,16 +4,13 @@
   "nav.projects": "项目",
   "nav.news": "资讯",
   "nav.contact": "联系方式",
-
   "popover.home": "首页",
   "popover.about": "关于我",
   "popover.projects": "项目",
   "popover.news": "资讯",
   "popover.contact": "联系方式",
   "popover.github": "GitHub",
-  "popover.notifications": "通知",
   "popover.settings": "设置",
-
   "pwa.offline.banner": "您已离线",
   "pwa.offline.title": "离线",
   "pwa.offline.body": "请检查您的网络连接后重试。",
@@ -27,11 +24,9 @@
   "pwa.install.later": "暂不安装",
   "pwa.install.gotIt": "知道了",
   "pwa.install.iosGuide": "点击分享图标，然后选择“添加到主屏幕”即可安装。",
-
   "profile.name": "Bui Do Ngoc Hieu",
   "profile.title": "软件工程师",
   "profile.email": "hieubdn@gmail.com",
-
   "home.about.kicker": "资历背景",
   "home.about.title": "关于我",
   "home.projects.kicker": "项目展示",
@@ -57,38 +52,36 @@
   "home.news.title": "科技资讯",
   "home.news.empty": "暂无文章。",
   "home.news.viewAll": "查看全部 →",
-
   "testimonials.title": "客户评价",
   "testimonials.footer": "来自曾与我共事、给予我这份荣幸的人们的反馈。",
-  "testimonials.items.0.prefix": "",
+  "testimonials.items.0.prefix": "Mr.",
   "testimonials.items.0.name": "Joshua Calducchi",
   "testimonials.items.0.role": "Poppy 工程副总裁（VP of Engineering）",
   "testimonials.items.0.body": "Hieu 是一位值得信赖的工程师，始终能持续创造清晰的价值。他保持着高水准的表现，切实为产品质量做出贡献，甚至在我加入 Poppy 之前就已经为团队留下了深远的影响。\n我由衷感激 Hieu 所做的一切贡献，尤其是在我刚加入团队初期给予的支持。我很乐意为他提供推荐，也期待未来有机会再次与他合作。",
-  "testimonials.items.1.prefix": "",
+  "testimonials.items.1.prefix": "Ms.",
   "testimonials.items.1.name": "Katherine Patton",
   "testimonials.items.1.role": "Poppy 首席工程师",
   "testimonials.items.1.body": "Hieu 是一位可靠的工程师，工作中总能带来清晰高效的解决方案。他积极的态度和协作精神让他在跨团队合作中都很容易相处。他以解决方案为导向的思维方式应对挑战，在执行上保持高标准，并帮助提升团队整体的生产力。他在质量与速度之间取得平衡的能力，在关键项目中尤为宝贵，而他主动提供的支持也切实提升了团队效率与成果。",
-  "testimonials.items.2.prefix": "",
+  "testimonials.items.2.prefix": "Mr.",
   "testimonials.items.2.name": "Dat Giang",
   "testimonials.items.2.role": "HDWEBSOFT Technology Co., Ltd. 首席技术官",
   "testimonials.items.2.body": "Hieu 在做每一件事时都展现出强烈的责任感和专业精神。除了技术能力之外，他主动的沟通方式和乐于助人的态度尤为突出。即使在压力之下，他也能为团队带来沉稳而积极的氛围，并始终交付符合业务目标的成果。他的贡献对产品稳定性和团队文化都产生了实质性的积极影响。他还善于提前发现问题，并始终支持团队伙伴取得更好的成果。",
-  "testimonials.items.3.prefix": "",
+  "testimonials.items.3.prefix": "Mr.",
   "testimonials.items.3.name": "Matthew Zhao",
   "testimonials.items.3.role": "Fidovn Company Limited 首席执行官",
   "testimonials.items.3.body": "与 Hieu 合作总是非常顺利。他回应迅速，注重细节，并且在动手开发之前会确保完全理解需求。他积极主动的态度帮助整个团队保持推进节奏。他不仅仅满足于达到预期，还经常主动提出能够提升用户体验和产品价值的改进建议。此外，他还能与各方利益相关者有效沟通，帮助改善团队之间的协作。",
-  "testimonials.items.4.prefix": "",
+  "testimonials.items.4.prefix": "Mr.",
   "testimonials.items.4.name": "Benjamin Papillon",
   "testimonials.items.4.role": "Schematic 联合创始人兼首席技术官",
   "testimonials.items.4.body": "Hieu 是我雇用的第一位工程师，在我于2021年夏天创立公司仅几周后，我们就开始商谈合作事宜。他搭建了我们的第一个网站，以及后续许多关键系统。\n他是一位极其全能的同事、合作伙伴和朋友。我很难想象，如果没有他，公司要如何从尚未产生营收的阶段走到 Series A 融资之后的阶段。我们一起将业务拓展到全国范围，克服了无数挑战，依然如期交付成果——同时始终保持着强大的团队文化。",
-  "testimonials.items.5.prefix": "",
+  "testimonials.items.5.prefix": "Mr.",
   "testimonials.items.5.name": "Nico Martinez",
   "testimonials.items.5.role": "首席技术官兼技术总监",
   "testimonials.items.5.body": "Hieu 将扎实的技术能力与真诚的团队精神完美结合。他充满热情，乐于接受反馈，并始终致力于提升自身技艺和他所负责的系统。他有条理的问题解决方式和对细节的关注，使他打造的方案既可持续又易于维护。我非常珍视他的贡献，也期待在未来的项目中继续与他合作——共同成长，在各种不同的环境中取得优异的成果。",
-  "testimonials.items.6.prefix": "",
+  "testimonials.items.6.prefix": "Mr.",
   "testimonials.items.6.name": "Daniel Bailey",
   "testimonials.items.6.role": "技术战略顾问 | 美国陆军退伍军人",
   "testimonials.items.6.body": "Hieu，认识你并与你共事，对我来说是一件非常愉快的事。你不仅是一位才华横溢的工程师、一位沉稳可靠的领导者，更是一个非常出色的人。你的专注与投入令人钦佩。我非常珍惜我们一起共事的这段时光，也希望我们能保持联系。祝愿你在前方充满机遇的道路上一切顺利——愿你在所做的每一件事上都能不断取得出色的成绩。我会永远感激你带来的积极影响与支持。",
-
   "competencies.title": "核心能力",
   "competencies.kicker": "交付可靠的软件解决方案",
   "competencies.close": "关闭",
@@ -104,18 +97,14 @@
   "competencies.mobile.title": "移动应用",
   "competencies.mobile.subtitle": "工程开发",
   "competencies.mobile.description": "我专注于性能、可扩展性与用户体验，设计并构建跨平台移动应用。我的经验涵盖可维护的移动端架构、运行时性能优化，以及在复杂生产环境中保持 iOS 与 Android 行为的一致性。",
-
   "quote.title": "工程理念",
   "quote.kicker": "技术决策背后的思考",
   "quote.content": "技术是创造持久价值的手段，而非终极目标本身。",
   "quote.author": "Bui Do Ngoc Hieu",
-
   "social.title": "社交主页",
   "social.kicker": "与我建立联系",
-
   "partners.title": "深受信赖的合作品牌",
   "partners.ariaLabel": "合作公司与伙伴",
-
   "about.heading": "关于我",
   "about.summary.kicker": "个人简介",
   "about.summary.lead": "我从事软件行业已超过五年。我喜欢解决问题（广义而言，但主要是通过软件），打造产品，并帮助团队成长。我曾参与过许多不同的软件系统，也真心喜欢随着时间推移不断改进它们，以满足不断变化的需求。我还投入了大量时间在系统扩展方面——既提升性能，也构建流程与自动化机制，确保在使用量增长的同时，各项变更依然安全可靠。\n工作之外，我热衷于盆景艺术，也喜欢为自己的家打造木制家具。\n\n这么说似乎有很多——但其实，我只是很期待认识新朋友，并与新的合作伙伴一起共事！",
@@ -146,7 +135,6 @@
   "about.education.mobile.date": "完成时间：2020年",
   "about.cv.kicker": "下载简历",
   "about.cv.title": "我的简历",
-
   "exp.title": "工作经历",
   "exp.otherTitle": "其他经历",
   "exp.labels.responsibilities": "职责与工作内容",
@@ -159,7 +147,6 @@
   "exp.labels.backToAbout": "返回“关于我”",
   "exp.labels.showMore": "展开更多",
   "exp.labels.showLess": "收起",
-
   "exp.hdwebsoft.company": "HDWEBSOFT Technology Co., Ltd.",
   "exp.hdwebsoft.duration": "2024年4月 – 至今",
   "exp.hdwebsoft.position": "全栈软件工程师",
@@ -196,7 +183,6 @@
   "exp.hdwebsoft.projects.transit.highlights.3": "针对多台网络打印机（通过 PrintNode）同时进行高并发标签打印的场景优化后端，调整 MongoDB 索引与查询模式，以便在 Prime Day、黑色星期五等购物高峰期——扫描/打印量成倍激增时——依然保持稳定的性能表现。",
   "exp.hdwebsoft.projects.transit.highlights.4": "构建并维护跨货件与工作空间模块可复用的 Vue 组件库（Pinia/Vuex、Vue Router），提升 UI 一致性，减少单页应用中的重复逻辑。",
   "exp.hdwebsoft.projects.transit.highlights.5": "将 Amazon SP-API、EasyPost、PrintNode、Stripe 等第三方服务集成到核心物流工作流（货件同步、承运商标签打印、网络打印、订阅计费）中，减少人工操作，并提升与 Seller Central 之间的数据准确性。",
-
   "exp.toyar.company": "TOYAR INC Co., Ltd.",
   "exp.toyar.duration": "2023年7月 – 2025年5月",
   "exp.toyar.position": "全栈软件工程师",
@@ -224,7 +210,6 @@
   "exp.toyar.projects.fidovn.highlights.4": "构建带有认证房源/租赁标识系统的地图化住房搜索功能、应用内租客通话/消息功能，以及面向房东和经纪人的租赁管理与追踪工具。",
   "exp.toyar.projects.fidovn.highlights.5": "在 Web 端和移动端实现多语言（i18n）支持，并将短信验证、地图/地理定位等第三方服务集成到核心账户与搜索流程中。",
   "exp.toyar.projects.fidovn.highlights.6": "在两个平台上，于 Java/Spring Boot 后端和 JavaScript/TypeScript 前端中始终如一地应用面向对象编程原则与设计模式，运行于 Linux（Ubuntu）生产服务器和 Windows 开发环境；主导架构设计会议，开展代码评审，并在 Agile/Scrum 工作流程（迭代计划、每日站会、回顾会议）中指导初级开发者，使用 Git 和 Jira 进行版本控制与任务追踪。",
-
   "exp.optoro.company": "Optoro Group, Inc.",
   "exp.optoro.duration": "2020年6月 – 2023年5月",
   "exp.optoro.position": "全栈软件工程师",
@@ -235,14 +220,12 @@
   "exp.optoro.items.1": "参与代码评审并与团队成员密切协作，确保在部署到生产环境前保持较高的代码质量；按照既定的发布流程将变更上线至生产环境。",
   "exp.optoro.items.2": "构建内部工具和脚本，以提升开发工作流程与团队效率；与产品及业务相关方协作，将需求转化为技术解决方案。",
   "exp.optoro.items.3": "在基于 Git 的版本控制工作流中开展工作，为多人共用的代码库做出贡献。",
-
   "exp.mindx.company": "MindX Technology School",
   "exp.mindx.duration": "2020年10月 – 2024年3月",
   "exp.mindx.position": "讲师主管兼技术讲师",
   "exp.mindx.location": "越南胡志明市",
   "exp.mindx.items.0": "教授全栈 Web 开发课程（React、Node.js、Next.js、React Native），并在多个校区主持技术研讨会。",
   "exp.mindx.items.1": "指导并管理 50 多名讲师，参与课程体系设计，并提升整体培训质量。",
-
   "projects.title": "全部项目",
   "projects.comingSoon": "更多项目即将上线",
   "project.scrollTop": "返回顶部",
@@ -268,7 +251,6 @@
   "project.signinapp.description": "Sign In App 是一款智能职场与访客管理平台，将访客登记、员工签到、空间预订与紧急情况响应无缝整合于同一个互联系统中。该平台已获得全球超过 25,000 个场所的信赖，并通过 ISO 27001、GDPR 及 HIPAA 认证，帮助各类规模的组织轻松管理出入权限、安全与办公体验。",
   "project.singlekey.description": "SingleKey 是一个面向加拿大房东打造的综合租赁风险管理平台。它提供包含信用与背景调查的严格租客审查、自动化的每月租金收取，以及最高可保障 60,000 美元未付租金、10,000 美元财产损失及 2,000 美元驱逐法律费用的收入保障服务，为房东带来全面的安心保障。",
   "project.swipedon.description": "SwipedOn 是一款获得全球超过 9,000 个工作场所信赖的职场与人员管理软件。它可追踪员工签到情况，支持混合办公模式，并支持在任意设备上轻松预订工位与会议室。目前 SwipedOn 正与 Sign In App 进行整合，逐步发展成为新一代统一平台，实现更智能、更安全的职场管理。",
-
   "news.title": "科技资讯",
   "news.subtitle": "时刻紧跟现代软件发展的脉搏。我从全球顶尖开发者社区中精心筛选出最具价值的文章、开源领域的突破以及工程洞见——让你少花时间搜索，多花时间打造卓越的产品。",
   "news.time.recent": "不到 1 小时前",
@@ -276,7 +258,6 @@
   "news.time.daysAgo": "{d} 天前",
   "news.points": "{n} 点赞",
   "news.comments": "{n} 条评论",
-
   "contact.info.title": "联系信息",
   "contact.info.from.label": "来自",
   "contact.info.from.value": "越南岘港",
@@ -297,7 +278,6 @@
   "contact.form.toast.error": "出现了一些问题，请重试。",
   "contact.form.toast.rateLimited": "您发送消息过于频繁，请几分钟后再试。",
   "contact.form.toast.invalid": "请检查您填写的信息后重试。",
-
   "settings.title": "设置",
   "settings.backHome": "返回首页",
   "settings.reset": "重置设置",
@@ -319,12 +299,10 @@
   "settings.language.confirm.ok": "确认",
   "settings.language.confirm.cancel": "取消",
   "settings.language.toast": "语言已更新",
-
-  "notifications.title": "通知",
-  "notifications.empty": "暂无通知",
-
   "aria.nav": "主导航",
   "aria.github": "打开 GitHub 主页",
   "aria.actions": "快捷操作",
-  "aria.languages": "显示语言"
+  "aria.languages": "显示语言",
+  "settings.language.toast.error": "无法切换语言。请重试。",
+  "contact.form.errors.tooLong": "此字段过长"
 }

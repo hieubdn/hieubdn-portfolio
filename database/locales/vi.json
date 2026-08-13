@@ -4,16 +4,13 @@
   "nav.projects": "Dự án",
   "nav.news": "Tin tức",
   "nav.contact": "Liên hệ",
-
   "popover.home": "Trang chủ",
   "popover.about": "Giới thiệu",
   "popover.projects": "Dự án",
   "popover.news": "Tin tức",
   "popover.contact": "Liên hệ",
   "popover.github": "GitHub",
-  "popover.notifications": "Thông báo",
   "popover.settings": "Cài đặt",
-
   "pwa.offline.banner": "Bạn đang ngoại tuyến",
   "pwa.offline.title": "Ngoại tuyến",
   "pwa.offline.body": "Vui lòng kiểm tra kết nối mạng và thử lại.",
@@ -27,11 +24,9 @@
   "pwa.install.later": "Để sau",
   "pwa.install.gotIt": "Đã hiểu",
   "pwa.install.iosGuide": "Nhấn vào biểu tượng Chia sẻ, sau đó chọn \"Thêm vào Màn hình chính\" để cài đặt.",
-
   "profile.name": "Bùi Đỗ Ngọc Hiếu",
   "profile.title": "Kỹ sư phần mềm",
   "profile.email": "hieubdn@gmail.com",
-
   "home.about.kicker": "Hồ sơ năng lực",
   "home.about.title": "Về tôi",
   "home.projects.kicker": "Trưng bày",
@@ -57,7 +52,6 @@
   "home.news.title": "Tin công nghệ",
   "home.news.empty": "Chưa có bài viết nào.",
   "home.news.viewAll": "Xem tất cả →",
-
   "testimonials.title": "Đánh giá",
   "testimonials.footer": "Phản hồi từ những người tôi từng có cơ hội làm việc cùng.",
   "testimonials.items.0.prefix": "Ông",
@@ -88,7 +82,6 @@
   "testimonials.items.6.name": "Daniel Bailey",
   "testimonials.items.6.role": "Chiến lược gia Công nghệ | Cựu binh Lục quân Hoa Kỳ",
   "testimonials.items.6.body": "Hiếu, thật sự rất vui khi được quen biết và làm việc cùng bạn. Bạn không chỉ là một kỹ sư tài năng và một người dẫn dắt vững vàng, mà còn là một con người tuyệt vời. Sự tập trung và tận tâm của bạn thật đáng ngưỡng mộ. Tôi trân trọng khoảng thời gian chúng ta đã làm việc cùng nhau và mong sẽ tiếp tục giữ liên lạc. Chúc bạn mọi điều tốt đẹp nhất trên chặng đường đầy hứng khởi phía trước — hãy tiếp tục gặt hái thành công trong mọi việc bạn theo đuổi. Tôi luôn trân trọng ảnh hưởng tích cực và sự hỗ trợ của bạn.",
-
   "competencies.title": "Năng lực cốt lõi",
   "competencies.kicker": "Cung cấp các giải pháp phần mềm đáng tin cậy",
   "competencies.close": "Đóng",
@@ -104,18 +97,14 @@
   "competencies.mobile.title": "Ứng dụng di động",
   "competencies.mobile.subtitle": "Kỹ thuật",
   "competencies.mobile.description": "Tôi thiết kế và phát triển các ứng dụng di động đa nền tảng với trọng tâm là hiệu năng, khả năng mở rộng và trải nghiệm người dùng. Kinh nghiệm của tôi bao gồm xây dựng kiến trúc di động dễ bảo trì, tối ưu hiệu năng runtime và đảm bảo tính nhất quán giữa iOS và Android trong các môi trường production phức tạp.",
-
   "quote.title": "Triết lý kỹ thuật",
   "quote.kicker": "Tư duy đằng sau các quyết định kỹ thuật",
   "quote.content": "Công nghệ là phương tiện để tạo ra giá trị bền vững — không phải đích đến cuối cùng.",
   "quote.author": "Bùi Đỗ Ngọc Hiếu",
-
   "social.title": "Hồ sơ mạng xã hội",
   "social.kicker": "Cùng kết nối",
-
   "partners.title": "Được tin tưởng bởi",
   "partners.ariaLabel": "Các công ty và đối tác",
-
   "about.heading": "Giới thiệu",
   "about.summary.kicker": "Tóm tắt bản thân",
   "about.summary.lead": "Tôi đã làm việc trong lĩnh vực phần mềm hơn 5 năm. Tôi thích giải quyết vấn đề (nói chung, nhưng chủ yếu bằng phần mềm), xây dựng sản phẩm và góp phần giúp đội ngũ phát triển. Tôi từng làm việc với nhiều hệ thống phần mềm khác nhau và thực sự yêu thích việc cải tiến chúng theo thời gian để đáp ứng những nhu cầu thay đổi. Tôi cũng dành nhiều thời gian cho bài toán mở rộng quy mô — vừa nâng cao hiệu năng, vừa xây dựng quy trình và tự động hóa để mọi thay đổi luôn an toàn khi lượng người dùng tăng lên.\nNgoài công việc, tôi đam mê cây cảnh (đặc biệt là bonsai) và tự đóng đồ nội thất gỗ cho ngôi nhà của mình.\n\nNghe có vẻ nhiều nhỉ — nhưng thật ra, tôi chỉ đơn giản là háo hức được gặp gỡ mọi người và hợp tác với những đối tác mới!",
@@ -146,7 +135,6 @@
   "about.education.mobile.date": "Hoàn thành: 2020",
   "about.cv.kicker": "Tải CV",
   "about.cv.title": "CV của tôi",
-
   "exp.title": "Kinh nghiệm làm việc",
   "exp.otherTitle": "Kinh nghiệm khác",
   "exp.labels.responsibilities": "Vai trò & trách nhiệm",
@@ -159,7 +147,6 @@
   "exp.labels.backToAbout": "Quay lại Giới thiệu",
   "exp.labels.showMore": "Xem thêm",
   "exp.labels.showLess": "Thu gọn",
-
   "exp.hdwebsoft.company": "HDWEBSOFT Technology Co., Ltd.",
   "exp.hdwebsoft.duration": "04/2024 – Hiện tại",
   "exp.hdwebsoft.position": "Kỹ sư phần mềm Full-Stack",
@@ -196,7 +183,6 @@
   "exp.hdwebsoft.projects.transit.highlights.3": "Tối ưu backend cho việc in nhãn với độ đồng thời cao trên nhiều máy in mạng cùng lúc (qua PrintNode), tinh chỉnh chỉ mục và mẫu truy vấn MongoDB để giữ vững hiệu năng trong các đợt mua sắm cao điểm (như Prime Day, Black Friday) khi khối lượng quét/in tăng vọt nhiều lần.",
   "exp.hdwebsoft.projects.transit.highlights.4": "Xây dựng và duy trì thư viện Vue component tái sử dụng (Pinia/Vuex, Vue Router) giữa các mô-đun lô hàng và workspace, tăng tính nhất quán của giao diện và giảm logic trùng lặp trong SPA.",
   "exp.hdwebsoft.projects.transit.highlights.5": "Tích hợp các dịch vụ bên thứ ba — Amazon SP-API, EasyPost, PrintNode, Stripe — vào các luồng logistics cốt lõi (đồng bộ lô hàng, dán nhãn vận chuyển, in qua mạng, thanh toán thuê bao), giảm thao tác thủ công và tăng độ chính xác dữ liệu với Seller Central.",
-
   "exp.toyar.company": "TOYAR INC Co., Ltd.",
   "exp.toyar.duration": "07/2023 – 05/2025",
   "exp.toyar.position": "Kỹ sư phần mềm Full-Stack",
@@ -224,7 +210,6 @@
   "exp.toyar.projects.fidovn.highlights.4": "Xây dựng tìm kiếm nhà ở trên bản đồ với hệ thống huy hiệu xác thực cho nhà/phòng cho thuê, tính năng gọi/nhắn tin với người thuê trong ứng dụng, cùng các công cụ quản lý và theo dõi nhà/phòng cho thuê dành cho chủ nhà và môi giới.",
   "exp.toyar.projects.fidovn.highlights.5": "Triển khai hỗ trợ đa ngôn ngữ (i18n) trên cả web và di động, tích hợp các dịch vụ bên thứ ba như xác minh SMS và bản đồ/định vị vào các luồng tài khoản và tìm kiếm cốt lõi.",
   "exp.toyar.projects.fidovn.highlights.6": "Trên cả hai nền tảng, áp dụng nhất quán các nguyên tắc OOP và design pattern cho backend Java/Spring Boot lẫn frontend JavaScript/TypeScript, vận hành trên máy chủ production Linux (Ubuntu) và môi trường phát triển Windows; chủ trì các phiên thiết kế kiến trúc, thực hiện code review và kèm cặp lập trình viên trẻ trong quy trình Agile/Scrum (sprint planning, daily standup, retrospective), sử dụng Git và Jira để quản lý phiên bản và theo dõi công việc.",
-
   "exp.optoro.company": "Optoro Group, Inc.",
   "exp.optoro.duration": "06/2020 – 05/2023",
   "exp.optoro.position": "Kỹ sư phần mềm Full-Stack",
@@ -235,14 +220,12 @@
   "exp.optoro.items.1": "Tham gia code review và phối hợp với các thành viên trong đội để giữ chất lượng mã ở mức cao trước khi đưa lên production; triển khai thay đổi lên production theo đúng quy trình phát hành đã thiết lập.",
   "exp.optoro.items.2": "Xây dựng công cụ và script nội bộ để cải thiện quy trình phát triển và hiệu suất của đội; phối hợp với các bên phụ trách sản phẩm và kinh doanh để chuyển hóa yêu cầu thành giải pháp kỹ thuật.",
   "exp.optoro.items.3": "Làm việc trong quy trình quản lý phiên bản dựa trên Git, đóng góp vào một codebase dùng chung giữa nhiều người cùng phát triển.",
-
   "exp.mindx.company": "Trường Công nghệ MindX",
   "exp.mindx.duration": "10/2020 – 03/2024",
   "exp.mindx.position": "Quản lý giảng viên & Giảng viên kỹ thuật",
   "exp.mindx.location": "TP. Hồ Chí Minh, Việt Nam",
   "exp.mindx.items.0": "Giảng dạy lập trình web full-stack (React, Node.js, Next.js, React Native) và tổ chức các workshop kỹ thuật tại nhiều cơ sở.",
   "exp.mindx.items.1": "Kèm cặp và quản lý hơn 50 giảng viên, tham gia thiết kế chương trình giảng dạy và nâng cao chất lượng đào tạo chung.",
-
   "projects.title": "Tất cả dự án",
   "projects.comingSoon": "Nhiều dự án khác sắp ra mắt",
   "project.scrollTop": "Lên đầu trang",
@@ -268,7 +251,6 @@
   "project.signinapp.description": "Sign In App là nền tảng quản lý khách và nơi làm việc thông minh, kết hợp liền mạch việc check-in của khách, chấm công nhân viên, đặt chỗ không gian làm việc và ứng phó khẩn cấp trong một hệ thống kết nối duy nhất. Được hơn 25.000 địa điểm trên toàn thế giới tin dùng và đạt chứng nhận tuân thủ ISO 27001, GDPR và HIPAA, nền tảng giúp các tổ chức ở mọi quy mô quản lý ra vào, an toàn và trải nghiệm nơi làm việc một cách dễ dàng.",
   "project.singlekey.description": "SingleKey là nền tảng quản lý rủi ro cho thuê toàn diện dành cho chủ nhà tại Canada. Nền tảng cung cấp dịch vụ sàng lọc người thuê kỹ lưỡng với kiểm tra tín dụng và lý lịch, tự động thu tiền thuê hàng tháng, cùng gói bảo đảm thu nhập chi trả tới 60.000 USD tiền thuê chưa thanh toán, 10.000 USD thiệt hại tài sản và 2.000 USD phí pháp lý khi cần thu hồi nhà — mang lại sự an tâm trọn vẹn cho chủ nhà.",
   "project.swipedon.description": "SwipedOn là phần mềm quản lý nơi làm việc và nhân sự được hơn 9.000 văn phòng trên toàn cầu tin dùng. Phần mềm theo dõi việc check-in của nhân viên, hỗ trợ mô hình làm việc kết hợp (hybrid) và cho phép đặt bàn làm việc, phòng họp dễ dàng từ bất kỳ thiết bị nào. Đang trong quá trình hợp nhất với Sign In App, SwipedOn dần trở thành nền tảng hợp nhất thế hệ mới cho việc quản lý nơi làm việc thông minh và an toàn hơn.",
-
   "news.title": "Tin tức công nghệ",
   "news.subtitle": "Luôn bắt nhịp cùng thế giới phần mềm hiện đại. Tôi chọn lọc những bài viết giá trị nhất, các đột phá mã nguồn mở và góc nhìn kỹ thuật chuyên sâu từ những cộng đồng lập trình viên hàng đầu thế giới — để bạn tốn ít thời gian tìm kiếm hơn và có nhiều thời gian hơn để xây dựng những sản phẩm xuất sắc.",
   "news.time.recent": "< 1 giờ trước",
@@ -276,7 +258,6 @@
   "news.time.daysAgo": "{d} ngày trước",
   "news.points": "{n} điểm",
   "news.comments": "{n} bình luận",
-
   "contact.info.title": "Thông tin liên hệ",
   "contact.info.from.label": "Quê quán",
   "contact.info.from.value": "Đà Nẵng, Việt Nam",
@@ -297,7 +278,6 @@
   "contact.form.toast.error": "Đã xảy ra sự cố. Vui lòng thử lại.",
   "contact.form.toast.rateLimited": "Bạn đang gửi quá nhiều tin nhắn. Vui lòng thử lại sau ít phút.",
   "contact.form.toast.invalid": "Vui lòng kiểm tra lại thông tin và thử lại.",
-
   "settings.title": "Cài đặt",
   "settings.backHome": "Về Trang chủ",
   "settings.reset": "Đặt lại cài đặt",
@@ -319,12 +299,10 @@
   "settings.language.confirm.ok": "Xác nhận",
   "settings.language.confirm.cancel": "Hủy",
   "settings.language.toast": "Đã cập nhật ngôn ngữ",
-
-  "notifications.title": "Thông báo",
-  "notifications.empty": "Chưa có thông báo nào",
-
   "aria.nav": "Điều hướng chính",
   "aria.github": "Mở trang GitHub",
   "aria.actions": "Thao tác nhanh",
-  "aria.languages": "Ngôn ngữ hiển thị"
+  "aria.languages": "Ngôn ngữ hiển thị",
+  "settings.language.toast.error": "Không thể chuyển đổi ngôn ngữ. Vui lòng thử lại.",
+  "contact.form.errors.tooLong": "Trường này quá dài"
 }

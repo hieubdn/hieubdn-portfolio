@@ -4,16 +4,13 @@
   "nav.projects": "Projects",
   "nav.news": "News",
   "nav.contact": "Contact",
-
   "popover.home": "Home",
   "popover.about": "About",
   "popover.projects": "Projects",
   "popover.news": "News",
   "popover.contact": "Contact",
   "popover.github": "GitHub",
-  "popover.notifications": "Notifications",
   "popover.settings": "Settings",
-
   "pwa.offline.banner": "You're offline",
   "pwa.offline.title": "Offline",
   "pwa.offline.body": "Please check your connection and try again.",
@@ -27,11 +24,9 @@
   "pwa.install.later": "Not now",
   "pwa.install.gotIt": "Got it",
   "pwa.install.iosGuide": "Tap the Share icon, then \"Add to Home Screen\" to install.",
-
   "profile.name": "Bui Do Ngoc Hieu",
   "profile.title": "Software Engineer",
   "profile.email": "hieubdn@gmail.com",
-
   "home.about.kicker": "Credentials",
   "home.about.title": "About Me",
   "home.projects.kicker": "Showcase",
@@ -57,7 +52,6 @@
   "home.news.title": "Tech News",
   "home.news.empty": "No articles yet.",
   "home.news.viewAll": "View all →",
-
   "testimonials.title": "Testimonials",
   "testimonials.footer": "Feedback from people I've had the pleasure of working with.",
   "testimonials.items.0.prefix": "Mr.",
@@ -88,7 +82,6 @@
   "testimonials.items.6.name": "Daniel Bailey",
   "testimonials.items.6.role": "Technology Strategist | U.S. Army Veteran",
   "testimonials.items.6.body": "Hieu, it has been a real pleasure getting to know you and working with you. You are not only a talented engineer and a steady leader, but also a wonderful person. Your focus and dedication are truly admirable. I value the time we spent working together and hope we stay in touch. Wishing you all the best on the exciting road ahead — keep achieving great things in everything you take on. I will always appreciate your positive influence and support.",
-
   "competencies.title": "Core Competencies",
   "competencies.kicker": "Delivering reliable software solutions",
   "competencies.close": "Close",
@@ -104,18 +97,14 @@
   "competencies.mobile.title": "Mobile Applications",
   "competencies.mobile.subtitle": "Engineering",
   "competencies.mobile.description": "I design and build cross-platform mobile applications with a focus on performance, scalability, and user experience. My experience covers maintainable mobile architectures, runtime performance optimization, and keeping iOS and Android behavior consistent in complex production environments.",
-
   "quote.title": "Engineering Philosophy",
   "quote.kicker": "The thinking behind technical decisions",
   "quote.content": "Technology is a means of creating lasting value — not the end goal.",
   "quote.author": "Bui Do Ngoc Hieu",
-
   "social.title": "Social Profiles",
   "social.kicker": "Let's Connect",
-
   "partners.title": "Trusted by",
   "partners.ariaLabel": "Companies and partners",
-
   "about.heading": "About",
   "about.summary.kicker": "Personal Summary",
   "about.summary.lead": "I've been working in software for more than five years. I enjoy solving problems (in general, but mostly with software), building products, and helping teams grow. I've worked across many different software systems and genuinely enjoy evolving them over time to meet changing needs. I've also spent a lot of time on scaling — both improving performance and building the processes and automation that keep changes safe as usage grows.\nOutside of work, I'm passionate about bonsai and building wooden furniture for my home.\n\nThat may sound like a lot — but really, I'm just excited to meet new people and collaborate with new partners!",
@@ -146,7 +135,6 @@
   "about.education.mobile.date": "Completed: 2020",
   "about.cv.kicker": "Download CV",
   "about.cv.title": "My CV",
-
   "exp.title": "Work Experience",
   "exp.otherTitle": "Other Experience",
   "exp.labels.responsibilities": "Roles & Responsibilities",
@@ -159,7 +147,6 @@
   "exp.labels.backToAbout": "Back to About",
   "exp.labels.showMore": "Show more",
   "exp.labels.showLess": "Show less",
-
   "exp.hdwebsoft.company": "HDWEBSOFT Technology Co., Ltd.",
   "exp.hdwebsoft.duration": "Apr 2024 – Present",
   "exp.hdwebsoft.position": "Full-Stack Software Engineer",
@@ -196,7 +183,6 @@
   "exp.hdwebsoft.projects.transit.highlights.3": "Optimized the backend for high-concurrency label printing across multiple simultaneous network printers (via PrintNode), tuning MongoDB indexing and query patterns to sustain performance through peak shopping events (e.g., Prime Day, Black Friday) when scan/print volume spikes severalfold.",
   "exp.hdwebsoft.projects.transit.highlights.4": "Built and maintained a reusable Vue component library (Pinia/Vuex, Vue Router) across shipment and workspace modules, improving UI consistency and reducing duplicated logic in the SPA.",
   "exp.hdwebsoft.projects.transit.highlights.5": "Integrated third-party services — Amazon SP-API, EasyPost, PrintNode, Stripe — into core logistics workflows (shipment sync, carrier labeling, network printing, subscription billing), reducing manual overhead and improving data accuracy with Seller Central.",
-
   "exp.toyar.company": "TOYAR INC Co., Ltd.",
   "exp.toyar.duration": "Jul 2023 – May 2025",
   "exp.toyar.position": "Full-Stack Software Engineer",
@@ -224,7 +210,6 @@
   "exp.toyar.projects.fidovn.highlights.4": "Built map-based housing search with a verified home/rental badge system, in-app tenant calling/messaging, and rental management and tracking tools for owners and brokers.",
   "exp.toyar.projects.fidovn.highlights.5": "Implemented multilingual (i18n) support across web and mobile, and integrated third-party services such as SMS verification and mapping/geolocation into core account and search flows.",
   "exp.toyar.projects.fidovn.highlights.6": "Across both platforms, applied OOP principles and design patterns consistently on the Java/Spring Boot backend and JavaScript/TypeScript frontends, running on Linux (Ubuntu) production servers and Windows development environments; led architecture design sessions, conducted code reviews, and mentored junior developers within an Agile/Scrum workflow (sprint planning, daily standups, retrospectives), using Git and Jira for version control and task tracking.",
-
   "exp.optoro.company": "Optoro Group, Inc.",
   "exp.optoro.duration": "Jun 2020 – May 2023",
   "exp.optoro.position": "Full-Stack Software Engineer",
@@ -235,14 +220,12 @@
   "exp.optoro.items.1": "Participated in code reviews and coordinated with team members to keep code quality high before production deployment; shipped changes to production following established release processes.",
   "exp.optoro.items.2": "Built internal tools and scripts to improve development workflows and team efficiency; collaborated with product and business stakeholders to translate requirements into technical solutions.",
   "exp.optoro.items.3": "Worked in a Git-based version-control workflow, contributing to a codebase shared across many contributors.",
-
   "exp.mindx.company": "MindX Technology School",
   "exp.mindx.duration": "Oct 2020 – Mar 2024",
   "exp.mindx.position": "Instructor Manager & Technical Instructor",
   "exp.mindx.location": "Ho Chi Minh City, Vietnam",
   "exp.mindx.items.0": "Taught full-stack web development (React, Node.js, Next.js, React Native) and ran technical workshops across multiple branches.",
   "exp.mindx.items.1": "Mentored and managed 50+ instructors, contributing to curriculum design and raising overall training quality.",
-
   "projects.title": "All Projects",
   "projects.comingSoon": "More projects coming soon",
   "project.scrollTop": "Back to top",
@@ -268,7 +251,6 @@
   "project.signinapp.description": "Sign In App is a smart workplace and visitor management platform that seamlessly combines visitor check-in, employee sign-in, space booking, and emergency response in one connected system. Trusted by 25,000+ sites worldwide and certified for ISO 27001, GDPR, and HIPAA compliance, it helps organizations of every size manage access, safety, and workplace experience with ease.",
   "project.singlekey.description": "SingleKey is a comprehensive rental risk-management platform built for Canadian landlords. It provides thorough tenant screening with credit and background checks, automated monthly rent collection, and guaranteed income protection covering up to $60,000 in unpaid rent, $10,000 in property damage, and $2,000 in eviction legal fees — giving landlords complete peace of mind.",
   "project.swipedon.description": "SwipedOn is a workplace and people management software trusted by 9,000+ workplaces globally. It tracks employee check-ins, supports hybrid work arrangements, and enables easy desk and meeting-room booking from any device. Now merging with Sign In App, SwipedOn is evolving into a next-generation unified platform for smarter, safer workplace management.",
-
   "news.title": "Tech News",
   "news.subtitle": "Stay in tune with the pulse of modern software. I curate the most valuable articles, open-source breakthroughs, and engineering insights from the world's leading developer communities — so you can spend less time searching and more time building exceptional products.",
   "news.time.recent": "< 1 hour ago",
@@ -276,7 +258,6 @@
   "news.time.daysAgo": "{d}d ago",
   "news.points": "{n} points",
   "news.comments": "{n} comments",
-
   "contact.info.title": "Contact Information",
   "contact.info.from.label": "From",
   "contact.info.from.value": "Da Nang, Vietnam",
@@ -292,12 +273,12 @@
   "contact.form.send": "SEND MESSAGE",
   "contact.form.sending": "SENDING...",
   "contact.form.errors.required": "This field is required",
+  "contact.form.errors.tooLong": "This field is too long",
   "contact.form.errors.email": "Please enter a valid email address",
   "contact.form.toast.success": "Your message has been sent successfully",
   "contact.form.toast.error": "Something went wrong. Please try again.",
   "contact.form.toast.rateLimited": "You're sending too many messages. Please try again in a few minutes.",
   "contact.form.toast.invalid": "Please check your details and try again.",
-
   "settings.title": "Settings",
   "settings.backHome": "Back to Home",
   "settings.reset": "Reset settings",
@@ -319,10 +300,7 @@
   "settings.language.confirm.ok": "Confirm",
   "settings.language.confirm.cancel": "Cancel",
   "settings.language.toast": "Language updated",
-
-  "notifications.title": "Notifications",
-  "notifications.empty": "No notifications yet",
-
+  "settings.language.toast.error": "Couldn't switch language. Please try again.",
   "aria.nav": "Main navigation",
   "aria.github": "Open GitHub profile",
   "aria.actions": "Quick actions",

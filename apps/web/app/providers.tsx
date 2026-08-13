@@ -2,8 +2,6 @@
 
 import { type ReactNode } from "react";
 import { MainScreenProvider } from "@/components/layout/main-screen/main-screen-context";
-import { NotificationFeedProvider } from "@/components/layout/notification/notification-feed-context";
-import { NotificationProvider } from "@/components/layout/notification/notification-context";
 import { LocaleProvider } from "@/components/layout/setting/translate/locale-provider";
 import type { AppLocaleCode } from "@/components/layout/setting/translate/locale-constants";
 import { AppToaster } from "@/components/layout/toast/app-toaster";
@@ -29,11 +27,7 @@ export function AppProviders({
         initialMessages={initialMessages}
       >
         <OfflineBanner />
-        <NotificationFeedProvider>
-          <NotificationProvider>
-            <MainScreenProvider>{children}</MainScreenProvider>
-          </NotificationProvider>
-        </NotificationFeedProvider>
+        <MainScreenProvider>{children}</MainScreenProvider>
         <InstallPrompt />
         <ServiceWorkerUpdateNotifier />
       </LocaleProvider>

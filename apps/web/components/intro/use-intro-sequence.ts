@@ -62,6 +62,24 @@ export function useIntroSequence() {
     setIntroActive(stage !== "closed");
   }, [stage]);
 
+  const transitionTimeoutRef = useRef<number | null>(null);
+
+  // IntroOverlay only renders on the home route, so navigating away (e.g. the
+  // browser back button) while `stage` hasn't reached "closed" unmounts this
+  // hook without ever running the `settled === "closed"` branch below. Without
+  // this cleanup, `introActive` would stay stuck `true` for the rest of the
+  // SPA session, permanently blocking every scroll-reveal animation sitewide,
+  // and the pending transition timeout would still fire `setStage` against a
+  // dead instance.
+  useEffect(() => {
+    return () => {
+      if (transitionTimeoutRef.current !== null) {
+        window.clearTimeout(transitionTimeoutRef.current);
+      }
+      setIntroActive(false);
+    };
+  }, []);
+
   const runTransition = useCallback(
     (transitional: IntroStage, settled: IntroStage) => {
       if (isLockedRef.current) return;
@@ -70,7 +88,8 @@ export function useIntroSequence() {
       const delay = prefersReducedMotion()
         ? 0
         : ANIMATION_MS + UNLOCK_BUFFER_MS;
-      window.setTimeout(() => {
+      transitionTimeoutRef.current = window.setTimeout(() => {
+        transitionTimeoutRef.current = null;
         setStage(settled);
         if (settled === "closed") {
           markIntroPlayed();

@@ -16,7 +16,10 @@ export default function ProjectNav({ currentSlug }: Props) {
 
   const currentIndex = PROJECTS_DATA.findIndex((p) => p.slug === currentSlug);
   const prev = currentIndex > 0 ? PROJECTS_DATA[currentIndex - 1] : null;
-  const next = currentIndex < PROJECTS_DATA.length - 1 ? PROJECTS_DATA[currentIndex + 1] : null;
+  const next =
+    currentIndex !== -1 && currentIndex < PROJECTS_DATA.length - 1
+      ? PROJECTS_DATA[currentIndex + 1]
+      : null;
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });

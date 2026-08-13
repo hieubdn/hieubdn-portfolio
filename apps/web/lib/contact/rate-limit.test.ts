@@ -51,14 +51,22 @@ describe("createRateLimiter", () => {
 });
 
 describe("clientIpFromHeaders", () => {
-  it("uses the first x-forwarded-for entry", () => {
+  it("prefers x-real-ip over x-forwarded-for, since the platform sets it directly", () => {
+    const headers = new Headers({
+      "x-real-ip": "203.0.113.9",
+      "x-forwarded-for": "203.0.113.7, 10.0.0.1",
+    });
+    expect(clientIpFromHeaders(headers)).toBe("203.0.113.9");
+  });
+
+  it("uses the last x-forwarded-for entry, not the first — the first is client-suppliable and would let a caller spoof a fresh IP per request", () => {
     const headers = new Headers({
       "x-forwarded-for": "203.0.113.7, 10.0.0.1",
     });
-    expect(clientIpFromHeaders(headers)).toBe("203.0.113.7");
+    expect(clientIpFromHeaders(headers)).toBe("10.0.0.1");
   });
 
-  it("falls back to x-real-ip", () => {
+  it("falls back to x-real-ip when x-forwarded-for is absent", () => {
     const headers = new Headers({ "x-real-ip": "203.0.113.9" });
     expect(clientIpFromHeaders(headers)).toBe("203.0.113.9");
   });

@@ -1,6 +1,8 @@
+import { getSiteUrl } from "@/lib/site-url";
+
 import { escapeHtml, type ContactInput } from "./validation";
 
-const SITE_URL = process.env.NEXT_SITE_URL ?? "https://hieubdn.vercel.app";
+const SITE_URL = getSiteUrl();
 
 export function formatSubmittedAt(date: Date): string {
   const timeZone = "Asia/Ho_Chi_Minh";

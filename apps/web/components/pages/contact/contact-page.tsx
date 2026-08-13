@@ -18,7 +18,7 @@ import jobGif from "@/assets/image/contact/factory.png";
 import locationGif from "@/assets/image/contact/home.png";
 import { useLocaleText } from "@/components/layout/setting/translate/locale-provider";
 import { SOCIAL_LINKS } from "@/config/path";
-import { HONEYPOT_FIELD } from "@/lib/contact/validation";
+import { EMAIL_PATTERN, HONEYPOT_FIELD, MAX_LENGTH } from "@/lib/contact/validation";
 import { Reveal } from "@/components/ui/reveal";
 
 import styles from "./contact-page.module.scss";
@@ -60,8 +60,6 @@ const INITIAL_FORM: ContactFormState = {
   subject: "",
   message: "",
 };
-
-const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const CONTACT_FIELDS: readonly ContactFieldDef[] = [
   { id: "name", type: "input", inputType: "text", labelKey: "contact.form.name" },
@@ -123,8 +121,11 @@ const SOCIAL_ITEMS: readonly SocialItem[] = [
 function validateForm(state: ContactFormState, t: Translate): ContactFormErrors {
   const errors: ContactFormErrors = {};
   (Object.keys(state) as ContactFormField[]).forEach((field) => {
-    if (!state[field].trim()) {
+    const value = state[field].trim();
+    if (!value) {
       errors[field] = t("contact.form.errors.required");
+    } else if (value.length > MAX_LENGTH[field]) {
+      errors[field] = t("contact.form.errors.tooLong");
     }
   });
   const email = state.email.trim();
@@ -180,7 +181,11 @@ export default function ContactSection() {
         if (response.status === 429) {
           toast.error(t("contact.form.toast.rateLimited"));
         } else if (response.status === 400) {
-          toast.error(t("contact.form.toast.invalid"));
+          const serverMessage = await response
+            .json()
+            .then((data: { error?: string }) => data.error)
+            .catch(() => undefined);
+          toast.error(serverMessage ?? t("contact.form.toast.invalid"));
         } else {
           toast.error(t("contact.form.toast.error"));
         }
@@ -317,6 +322,7 @@ function renderField(args: RenderFieldArgs): ReactNode {
     onChange,
     placeholder,
     disabled,
+    maxLength: MAX_LENGTH[field.id],
     "aria-invalid": Boolean(error),
     "aria-describedby": errorId,
   } as const;
