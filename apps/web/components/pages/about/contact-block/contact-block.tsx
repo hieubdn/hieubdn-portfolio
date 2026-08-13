@@ -23,17 +23,17 @@ type ContactRow = {
 };
 
 const CONTACT_ROWS: readonly ContactRow[] = [
-  { Icon: Name, labelKey: "about.page.contact.name", valueKey: "about.page.contact.name1" },
-  { Icon: Email, labelKey: "about.page.contact.email", valueKey: "about.page.contact.email1" },
-  { Icon: Phone, labelKey: "about.page.contact.phone", valueKey: "about.page.contact.phone1" },
-  { Icon: Hometown, labelKey: "about.page.contact.hometown", valueKey: "about.page.contact.hometown1" },
+  { Icon: Name, labelKey: "about.contact.name.label", valueKey: "about.contact.name.value" },
+  { Icon: Email, labelKey: "about.contact.email.label", valueKey: "about.contact.email.value" },
+  { Icon: Phone, labelKey: "about.contact.phone.label", valueKey: "about.contact.phone.value" },
+  { Icon: Hometown, labelKey: "about.contact.hometown.label", valueKey: "about.contact.hometown.value" },
   {
     Icon: CurrentAddress,
-    labelKey: "about.page.contact.currentaddress",
-    valueKey: "about.page.contact.currentaddress1",
+    labelKey: "about.contact.address.label",
+    valueKey: "about.contact.address.value",
   },
-  { Icon: Nationality, labelKey: "about.page.contact.nationality", valueKey: "about.page.contact.nationality1" },
-  { Icon: Languagesicon, labelKey: "about.page.contact.languages", valueKey: "about.page.contact.languages1" },
+  { Icon: Nationality, labelKey: "about.contact.nationality.label", valueKey: "about.contact.nationality.value" },
+  { Icon: Languagesicon, labelKey: "about.contact.languages.label", valueKey: "about.contact.languages.value" },
 ];
 
 export default function ContactBlock() {
@@ -42,7 +42,7 @@ export default function ContactBlock() {
   return (
     <div className={styles.root}>
       <Reveal as="h3" className={styles.headingBlock}>
-        {t("about.page.contact.title")}
+        {t("about.contact.title")}
       </Reveal>
 
       <ul className={styles.list}>

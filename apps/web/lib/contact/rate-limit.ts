@@ -56,11 +56,23 @@ export function createRateLimiter(maxRequests: number, windowMs: number) {
   };
 }
 
+/**
+ * `x-real-ip` is set by the platform's edge for the actual connecting client
+ * and can't be forged by the request itself, so it's trusted first. Within
+ * `x-forwarded-for`, the *first* entry is attacker-suppliable (it's whatever
+ * the original client put there); the *last* entry is the one closest to our
+ * own trusted edge, so it's the one to key the rate limit on.
+ */
 export function clientIpFromHeaders(headers: Headers): string {
+  const realIp = headers.get("x-real-ip")?.trim();
+  if (realIp) return realIp;
+
   const forwardedFor = headers.get("x-forwarded-for");
   if (forwardedFor) {
-    const first = forwardedFor.split(",")[0]?.trim();
-    if (first) return first;
+    const parts = forwardedFor.split(",");
+    const last = parts[parts.length - 1]?.trim();
+    if (last) return last;
   }
-  return headers.get("x-real-ip") ?? "unknown";
+
+  return "unknown";
 }

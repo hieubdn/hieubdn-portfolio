@@ -29,7 +29,7 @@ export function useInstallPrompt(): {
 
   const promptInstall = useCallback(async () => {
     if (!deferred) return;
-    await deferred.prompt();
+    await deferred.prompt().catch(() => undefined);
     await deferred.userChoice.catch(() => undefined);
     setDeferred(null);
   }, [deferred]);

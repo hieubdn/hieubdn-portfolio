@@ -17,7 +17,7 @@ import {
 import { Reveal } from "@/components/ui/reveal";
 import styles from "./competencies.module.scss";
 
-type CompetencyKey = "software" | "website" | "mobileApp";
+type CompetencyKey = "software" | "web" | "mobile";
 
 type Competency = {
   key: CompetencyKey;
@@ -27,8 +27,8 @@ type Competency = {
 
 const COMPETENCIES: readonly Competency[] = [
   { key: "software", Icon: SoftwareEngineer, accent: "#ff2d8c" },
-  { key: "website", Icon: WebDevelopment, accent: "#4a9eff" },
-  { key: "mobileApp", Icon: MobileDevelopment, accent: "#ff8c42" },
+  { key: "web", Icon: WebDevelopment, accent: "#4a9eff" },
+  { key: "mobile", Icon: MobileDevelopment, accent: "#ff8c42" },
 ];
 
 export default function CompetenciesBlock() {
@@ -48,7 +48,7 @@ export default function CompetenciesBlock() {
   const active = COMPETENCIES.find((c) => c.key === selected);
 
   return (
-    <div className={styles.root} aria-label={t("competencies.block.title")}>
+    <div className={styles.root} aria-label={t("competencies.title")}>
       <div className={styles.meta}>
         {COMPETENCIES.map(({ key, Icon }, index) => (
           <Reveal
@@ -62,17 +62,17 @@ export default function CompetenciesBlock() {
           >
             <Icon />
             <Reveal as="span" className={styles.text}>
-              {t(`competencies.block.${key}`)}
+              {t(`competencies.${key}.label`)}
             </Reveal>
           </Reveal>
         ))}
       </div>
       <div className={styles.caption}>
         <Reveal as="p" delayMs={210} className={styles.sectionSubtitle}>
-          {t("competencies.block.kicker")}
+          {t("competencies.kicker")}
         </Reveal>
         <Reveal as="h2" delayMs={280} className={styles.sectionTitle}>
-          {t("competencies.block.title")}
+          {t("competencies.title")}
         </Reveal>
       </div>
 
@@ -91,7 +91,7 @@ export default function CompetenciesBlock() {
               type="button"
               className={styles.close}
               onClick={close}
-              aria-label={t("competencies.popup.close")}
+              aria-label={t("competencies.close")}
             >
               ×
             </button>
@@ -104,16 +104,16 @@ export default function CompetenciesBlock() {
                   className={`${styles.cardTitle} ${styles.underline}`}
                   style={{ "--underline-color": active.accent } as CSSProperties}
                 >
-                  {t(`competencies.popup.${active.key}.title`)}
+                  {t(`competencies.${active.key}.title`)}
                 </span>
-                <span className={styles.cardSubtitle}>{t(`competencies.popup.${active.key}.subtitle`)}</span>
+                <span className={styles.cardSubtitle}>{t(`competencies.${active.key}.subtitle`)}</span>
               </div>
             </div>
 
             <div>
               <span className={styles.tag}>&lt;span&gt;</span>
               <p className={styles.description}>
-                {t(`competencies.popup.${active.key}.description`)}
+                {t(`competencies.${active.key}.description`)}
               </p>
               <span className={styles.tag}>&lt;/span&gt;</span></div>
 

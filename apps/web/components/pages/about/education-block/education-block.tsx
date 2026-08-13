@@ -12,31 +12,31 @@ export default function EducationBlock() {
   return (
     <div className={styles.root}>
       <Reveal as="h3" className={styles.headingBlock}>
-        {t("about.page.education.title")}
+        {t("about.education.title")}
       </Reveal>
       <ul className={styles.list}>
         <Reveal as="li" delayMs={80}>
           <Reveal as="span" className={styles.title}>
             <Certificate />
-            {t("about.page.education.fullstack")}
+            {t("about.education.fullstack.title")}
           </Reveal>
           <Reveal as="span" delayMs={15} className={styles.date}>
-            {t("about.page.education.fullstack.date")}
+            {t("about.education.fullstack.date")}
           </Reveal>
           <Reveal as="span" delayMs={30} className={styles.issuedBy}>
-            {t("about.page.education.issuedBy")}
+            {t("about.education.issuer")}
           </Reveal>
         </Reveal>
         <Reveal as="li" delayMs={150}>
           <Reveal as="span" className={styles.title}>
             <Certificate />
-            {t("about.page.education.mobileapp")}
+            {t("about.education.mobile.title")}
           </Reveal>
           <Reveal as="span" delayMs={15} className={styles.date}>
-            {t("about.page.education.mobileapp.date")}
+            {t("about.education.mobile.date")}
           </Reveal>
           <Reveal as="span" delayMs={30} className={styles.issuedBy}>
-            {t("about.page.education.issuedBy")}
+            {t("about.education.issuer")}
           </Reveal>
         </Reveal>
       </ul>

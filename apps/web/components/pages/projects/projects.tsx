@@ -48,16 +48,20 @@ type ProjectBlockId =
   | "singlekey"
   | "swipedon";
 
-type ProjectVariant = "card" | "static";
-
-type ProjectBlock = {
-  id: ProjectBlockId;
-  label: string;
-  variant: ProjectVariant;
-  slug?: string;
-  category?: string;
-  image?: StaticImageData;
-};
+type ProjectBlock =
+  | {
+      id: ProjectBlockId;
+      label: string;
+      variant: "static";
+    }
+  | {
+      id: ProjectBlockId;
+      label: string;
+      variant: "card";
+      slug: string;
+      category: string;
+      image: StaticImageData;
+    };
 
 const PROJECT_BLOCKS: readonly ProjectBlock[] = [
   {
@@ -215,9 +219,9 @@ export default function ProjectsSection() {
               <TitleBlock />
             ) : (
               <ProjectCard
-                slug={block.slug!}
+                slug={block.slug}
                 name={block.label}
-                category={block.category!}
+                category={block.category}
                 image={block.image}
               />
             )}
@@ -225,7 +229,7 @@ export default function ProjectsSection() {
         ))}
       </div>
       <div className={styles.updatingBanner}>
-        <span>{t("projects.page.updating")}</span>
+        <span>{t("projects.comingSoon")}</span>
         <span className={styles.dots}>
           <span className={styles.dot}>.</span>
           <span className={styles.dot}>.</span>

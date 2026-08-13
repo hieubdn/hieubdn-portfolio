@@ -9,9 +9,9 @@ import styles from "./stats-block.module.scss";
 export default function StatsBlock() {
   const { t } = useLocaleText();
   const stats: readonly { value?: string; label: string }[] = [
-    { value: t("stats.block.years"), label: t("stats.block.exp") },
-    { label: t("stats.block.madeWithLove") },
-    { value: t("stats.block.projects"), label: t("stats.block.totalProjects") },
+    { value: t("home.stats.years.value"), label: t("home.stats.years.label") },
+    { label: t("home.stats.tagline") },
+    { value: t("home.stats.projects.value"), label: t("home.stats.projects.label") },
   ];
 
   return (

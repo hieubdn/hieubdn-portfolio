@@ -61,6 +61,18 @@ describe("parseInput", () => {
   it("ignores extra fields", () => {
     expect(parseInput({ ...VALID_BODY, extra: "ignored" })).toEqual(VALID_BODY);
   });
+
+  it("rejects newlines in name or subject (header-injection defense)", () => {
+    expect(
+      parseInput({ ...VALID_BODY, subject: "Hi\nBcc: attacker@evil.com" }),
+    ).toBeNull();
+    expect(parseInput({ ...VALID_BODY, name: "Jane\r\nDoe" })).toBeNull();
+  });
+
+  it("still allows multi-line messages", () => {
+    const result = parseInput({ ...VALID_BODY, message: "Line one\nLine two" });
+    expect(result?.message).toBe("Line one\nLine two");
+  });
 });
 
 describe("isHoneypotTripped", () => {

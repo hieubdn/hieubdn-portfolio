@@ -20,6 +20,14 @@ export type ContactInput = {
   message: string;
 };
 
+// `name`/`subject` are rendered into single-line contexts (an email Subject:
+// header, a one-line summary row); a CR/LF in either could be used to try to
+// inject extra headers downstream. `message` is intentionally excluded — it's
+// a free-form multi-line field, and `email` already can't contain them since
+// EMAIL_PATTERN excludes all whitespace.
+const SINGLE_LINE_FIELDS = new Set<keyof ContactInput>(["name", "subject"]);
+const CONTROL_CHAR_PATTERN = /[\r\n]/;
+
 export function parseInput(body: unknown): ContactInput | null {
   if (!body || typeof body !== "object") return null;
   const source = body as Record<string, unknown>;
@@ -29,6 +37,9 @@ export function parseInput(body: unknown): ContactInput | null {
     if (typeof value !== "string") return null;
     const trimmed = value.trim();
     if (!trimmed || trimmed.length > MAX_LENGTH[field]) return null;
+    if (SINGLE_LINE_FIELDS.has(field) && CONTROL_CHAR_PATTERN.test(trimmed)) {
+      return null;
+    }
     out[field] = trimmed;
   }
   return EMAIL_PATTERN.test(out.email) ? out : null;

@@ -23,7 +23,7 @@ const SOURCE_COLORS: Record<string, string> = {
 function relativeTime(iso: string, t: (key: string) => string): string {
   const diff = Date.now() - new Date(iso).getTime();
   const h = Math.floor(diff / 3_600_000);
-  if (h < 1) return t("news.time.lessThanHour");
+  if (h < 1) return t("news.time.recent");
   if (h < 24) return t("news.time.hoursAgo").replace("{h}", String(h));
   const d = Math.floor(h / 24);
   return t("news.time.daysAgo").replace("{d}", String(d));

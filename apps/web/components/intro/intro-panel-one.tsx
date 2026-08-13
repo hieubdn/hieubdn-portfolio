@@ -16,17 +16,17 @@ export function IntroPanelOne({ onAdvance }: IntroPanelOneProps) {
     <div className={styles.panelInner}>
       <div className={styles.centerContent}>
         <h1 className={styles.introName} suppressHydrationWarning>
-          {t("profile.block.name")}
+          {t("profile.name")}
         </h1>
         <p className={styles.introTitle} suppressHydrationWarning>
-          {t("profile.block.title")}
+          {t("profile.title")}
         </p>
         <p className={styles.introLocation} suppressHydrationWarning>
-          {t("intro.location")}
+          {t("home.intro.location")}
         </p>
       </div>
       <ScrollCue
-        label={t("intro.scrollCue")}
+        label={t("home.intro.scrollCue")}
         onClick={onAdvance}
         className={styles.cuePosition}
       />

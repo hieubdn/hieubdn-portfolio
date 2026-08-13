@@ -73,7 +73,7 @@ export default function AboutSection() {
       id: "workExperienceHeading",
       label: "Work experience section",
       variant: "sectionHeading",
-      render: () => <SectionHeading title={t("about.page.workExperience.heading")} />,
+      render: () => <SectionHeading title={t("exp.title")} />,
     },
     {
       id: "workExperienceTimeline",
@@ -93,7 +93,7 @@ export default function AboutSection() {
       id: "otherExperienceHeading",
       label: "Other experience section",
       variant: "sectionHeading",
-      render: () => <SectionHeading title={t("about.page.otherExperience.heading")} />,
+      render: () => <SectionHeading title={t("exp.otherTitle")} />,
     },
     { id: "mindx", label: "MindX", variant: "card", render: () => <CompanyExperience company={COMPANY_EXPERIENCES.mindx} /> },
     { id: "footerDivider", label: "Section divider", variant: "divider", render: () => <hr className={styles.rule} /> },

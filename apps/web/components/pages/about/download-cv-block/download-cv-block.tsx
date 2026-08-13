@@ -22,10 +22,10 @@ export default function DownloadCvBlock() {
       </Reveal>
       <Reveal as="div" variant="fade" delayMs={90} className={styles.footer}>
         <Reveal as="p" className={styles.kicker}>
-          {t("about.page.cv.kicker")}
+          {t("about.cv.kicker")}
         </Reveal>
         <Reveal as="p" delayMs={40} className={styles.title}>
-          {t("about.page.cv.title")}
+          {t("about.cv.title")}
         </Reveal>
       </Reveal>
     </a>

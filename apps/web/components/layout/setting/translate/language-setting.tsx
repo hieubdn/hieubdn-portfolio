@@ -33,18 +33,21 @@ export default function LanguageSettingPanel() {
 
   const applyLocale = useCallback(() => {
     // setLocale resolves after the target dictionary is loaded, so the toast
-    // below can translate into the new locale.
-    void setLocale(draftLocale).then(() => {
-      setCommittedLocale(draftLocale);
-      confirmRef.current?.close();
-      toast.success(
-        translateForLocale(
-          draftLocale,
-          "setting.page.option.languages.toast.success",
-        ),
-      );
-    });
-  }, [draftLocale, setLocale]);
+    // below can translate into the new locale. It rejects if the dictionary
+    // failed to load — the panel must not report success in that case.
+    void setLocale(draftLocale)
+      .then(() => {
+        setCommittedLocale(draftLocale);
+        confirmRef.current?.close();
+        toast.success(
+          translateForLocale(draftLocale, "settings.language.toast"),
+        );
+      })
+      .catch((err) => {
+        console.error("[i18n] Failed to apply locale:", draftLocale, err);
+        toast.error(t("settings.language.toast.error"));
+      });
+  }, [draftLocale, setLocale, t]);
 
   useEffect(() => {
     setCommittedLocale(locale);
@@ -57,18 +60,18 @@ export default function LanguageSettingPanel() {
   return (
     <div className={styles.languageSetting}>
       <h3 className={styles.title}>
-        <Languages /> {t("setting.page.option.languages")}
+        <Languages /> {t("settings.language.label")}
       </h3>
 
       <div className={styles.languageSettingContent}>
         <div className={styles.languageSettingContentTitle}>
-          <span className={styles.contentTitle}>{t("setting.page.option.languages.title")}</span>
-          <span className={styles.hint}>{t("setting.page.option.languages.hint")}</span>
+          <span className={styles.contentTitle}>{t("settings.language.title")}</span>
+          <span className={styles.hint}>{t("settings.language.hint")}</span>
         </div>
       <ul
         className={styles.optionList}
         role="radiogroup"
-        aria-label={t("aria.languages.list")}
+        aria-label={t("aria.languages")}
       >
         {LOCALE_OPTIONS.map((option) => {
           const selected = draftLocale === option.code;
@@ -84,7 +87,7 @@ export default function LanguageSettingPanel() {
                 <span className={styles.optionTexts}>
                   <span className={styles.nativeLabel}>{option.nativeLabel}</span>
                   <span className={styles.hintVi}>
-                    {t(`setting.page.option.languages.${option.code}`)}
+                    {t(`settings.language.options.${option.code}`)}
                   </span>
                 </span>
                 <span
@@ -105,25 +108,25 @@ export default function LanguageSettingPanel() {
           disabled={!dirty}
           onClick={openConfirm}
         >
-          {t("setting.page.option.languages.button")}
+          {t("settings.language.button")}
         </button>
       </div>
 
       <dialog ref={confirmRef} className={styles.confirmDialog} aria-labelledby="locale-confirm-title">
         <div className={styles.confirmInner}>
           <h4 id="locale-confirm-title" className={styles.confirmTitle}>
-            {t("setting.page.option.languages.popup.title")}
+            {t("settings.language.confirm.title")}
           </h4>
           <p className={styles.confirmBody}>
-            {t("setting.page.option.languages.popup.body")} <strong>{draftLabel}</strong>?{" "}
-            {t("setting.page.option.languages.popup.body.strong")}
+            {t("settings.language.confirm.body")} <strong>{draftLabel}</strong>?{" "}
+            {t("settings.language.confirm.note")}
           </p>
           <div className={styles.confirmActions}>
             <button type="button" className={styles.confirmCancel} onClick={cancelConfirm}>
-              {t("setting.page.option.languages.popup.button.cancel")}
+              {t("settings.language.confirm.cancel")}
             </button>
             <button type="button" className={styles.confirmOk} onClick={applyLocale}>
-              {t("setting.page.option.languages.popup.button.confirm")}
+              {t("settings.language.confirm.ok")}
             </button>
           </div>
         </div>

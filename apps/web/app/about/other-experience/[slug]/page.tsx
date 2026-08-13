@@ -25,7 +25,7 @@ export async function generateMetadata({
 
   const messages = await loadLocaleMessages("en");
   return {
-    title: messages[`${company.keyPrefix}.positionValue`],
+    title: messages[`${company.keyPrefix}.position`],
     description: messages[`${company.keyPrefix}.company`],
   };
 }

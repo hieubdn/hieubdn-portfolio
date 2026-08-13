@@ -48,5 +48,5 @@ No logo file exists in the repo yet. Default to a text wordmark ("hieubdn") or a
 
 ## Locales
 
-- Supported: `en`, `vi`, `ja`, `zh-CN`, `zh-TW`, `ko`, `de` — dictionaries in `database/locales/*.json`.
+- Supported: `en`, `vi`, `ja`, `zh-CN`, `ko`, `de`, `fr` — dictionaries in `database/locales/*.json`.
 - Locale switching is cookie/localStorage based (`profile-locale`), not URL-path based — there are no market-specific routes like `/vn/` or `/jp/`.

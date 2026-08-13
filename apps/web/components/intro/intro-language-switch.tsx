@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { toast } from "sonner";
 
 import { useLocaleText } from "@/components/layout/setting/translate/locale-provider";
 import { LOCALE_FLAGS } from "@/components/layout/setting/translate/locale-flags";
@@ -18,7 +19,7 @@ const LOCALE_SHORT_LABEL: Record<AppLocaleCode, string> = {
   ko: "Korean",
   de: "Deutsch",
   "zh-CN": "Chinese (CN)",
-  "zh-TW": "Chinese (TW)",
+  fr: "French",
 };
 
 export function IntroLanguageSwitch() {
@@ -56,7 +57,7 @@ export function IntroLanguageSwitch() {
         className={styles.trigger}
         aria-haspopup="listbox"
         aria-expanded={open}
-        aria-label={t("setting.page.option.languages")}
+        aria-label={t("settings.language.label")}
         onClick={() => setOpen((prev) => !prev)}
       >
         <span className={styles.flagWrap}>
@@ -66,7 +67,7 @@ export function IntroLanguageSwitch() {
       </button>
 
       {open && (
-        <ul className={styles.menu} role="listbox" aria-label={t("aria.languages.list")}>
+        <ul className={styles.menu} role="listbox" aria-label={t("aria.languages")}>
           {LOCALE_OPTIONS.map((option) => {
             const Flag = LOCALE_FLAGS[option.code];
             const selected = option.code === locale;
@@ -79,7 +80,16 @@ export function IntroLanguageSwitch() {
                   className={`${styles.option} ${selected ? styles.optionActive : ""}`}
                   onClick={() => {
                     setOpen(false);
-                    if (!selected) void setLocale(option.code);
+                    if (!selected) {
+                      setLocale(option.code).catch((err) => {
+                        console.error(
+                          "[i18n] Failed to apply locale:",
+                          option.code,
+                          err,
+                        );
+                        toast.error(t("settings.language.toast.error"));
+                      });
+                    }
                   }}
                 >
                   <span className={styles.flagWrap}>

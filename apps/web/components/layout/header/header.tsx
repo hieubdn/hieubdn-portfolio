@@ -20,11 +20,11 @@ export default function Header() {
   const { t } = useLocaleText();
   const { canInstall, promptInstall } = useInstallPrompt();
   const nav = [
-    { href: PATH_URL.ROOT, label: t("navBar.home") },
-    { href: PATH_URL.ABOUT, label: t("navBar.about") },
-    { href: PATH_URL.PROJECTS, label: t("navBar.projects") },
-    { href: PATH_URL.NEWS, label: t("navBar.news") },
-    { href: PATH_URL.CONTACT, label: t("navBar.contact") },
+    { href: PATH_URL.ROOT, label: t("nav.home") },
+    { href: PATH_URL.ABOUT, label: t("nav.about") },
+    { href: PATH_URL.PROJECTS, label: t("nav.projects") },
+    { href: PATH_URL.NEWS, label: t("nav.news") },
+    { href: PATH_URL.CONTACT, label: t("nav.contact") },
   ] as const;
 
   return (
@@ -37,7 +37,7 @@ export default function Header() {
         >
           Hello World!
         </Link>
-        <nav className={styles.nav} aria-label={t("aria.header.nav")}>
+        <nav className={styles.nav} aria-label={t("aria.nav")}>
           <div className={styles.navInline}>
             {nav.map((item) => (
               <Link
@@ -53,7 +53,7 @@ export default function Header() {
               type="button"
               className={styles.social}
               onClick={openGitHubProfile}
-              aria-label={t("aria.header.github")}
+              aria-label={t("aria.github")}
             >
               <GitHub />
             </button>
@@ -65,7 +65,7 @@ export default function Header() {
             installAction={
               canInstall
                 ? {
-                    label: t("pwa.installApp"),
+                    label: t("pwa.install.title"),
                     onSelect: () => {
                       void promptInstall();
                     },
@@ -96,7 +96,7 @@ export default function Header() {
                       closeMenu();
                       openGitHubProfile();
                     }}
-                    aria-label={t("aria.header.github")}
+                    aria-label={t("aria.github")}
                   >
                     <GitHub />
                     {t("popover.github")}

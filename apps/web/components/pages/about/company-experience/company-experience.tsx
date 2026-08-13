@@ -15,7 +15,7 @@ type CompanyExperienceProps = {
 
 export default function CompanyExperience({ company }: CompanyExperienceProps) {
   const { t } = useLocaleText();
-  const positionValue = t(`${company.keyPrefix}.positionValue`);
+  const positionValue = t(`${company.keyPrefix}.position`);
   const companyName = t(`${company.keyPrefix}.company`);
 
   if (company.variant === "simple") {
@@ -34,17 +34,17 @@ export default function CompanyExperience({ company }: CompanyExperienceProps) {
           </Reveal>
           <Reveal as="span" variant="fade" delayMs={70} className={styles.metaLine}>
             <Reveal as="span" delayMs={90} className={styles.durationValue}>
-              {t(`${company.keyPrefix}.durationValue`)}
+              {t(`${company.keyPrefix}.duration`)}
             </Reveal>
             ◦
             <Reveal as="span" delayMs={110} className={styles.locationValue}>
-              {t(`${company.keyPrefix}.locationValue`)}
+              {t(`${company.keyPrefix}.location`)}
             </Reveal>
           </Reveal>
         </Reveal>
         <Reveal as="div" delayMs={90} className={styles.responsibilities}>
           <Reveal as="span" className={styles.subheading}>
-            {t(`${company.keyPrefix}.responsibilities`)}:{" "}
+            {t("exp.labels.responsibilities")}:{" "}
           </Reveal>
           <ul className={styles.bulletList}>
             {company.responsibilityKeys.map((key, index) => (
@@ -83,7 +83,7 @@ export default function CompanyExperience({ company }: CompanyExperienceProps) {
           {companyName}
         </Reveal>
         <Reveal as="span" delayMs={80} className={styles.durationValue}>
-          {t(`${company.keyPrefix}.durationValue`)}
+          {t(`${company.keyPrefix}.duration`)}
         </Reveal>
       </div>
     </Link>

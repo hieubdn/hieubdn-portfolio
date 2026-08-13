@@ -1,15 +1,15 @@
 export const PROFILE_LOCALE_STORAGE_KEY = "profile-locale";
 
-export type AppLocaleCode = "vi" | "ja" | "zh-TW" | "zh-CN" | "ko" | "de" | "en";
+export type AppLocaleCode = "vi" | "ja" | "zh-CN" | "ko" | "de" | "fr" | "en";
 
 export const APP_LOCALE_CODES: readonly AppLocaleCode[] = [
   "en",
   "vi",
   "ja",
-  "zh-TW",
   "zh-CN",
   "ko",
   "de",
+  "fr",
 ] as const;
 
 export const DEFAULT_APP_LOCALE: AppLocaleCode = "en";
@@ -23,26 +23,28 @@ export const LOCALE_OPTIONS: readonly {
   { code: "en", nativeLabel: "English (US)", labelInVietnamese: "Tiếng Anh" },
   { code: "ja", nativeLabel: "日本語", labelInVietnamese: "Tiếng Nhật" },
   {
-    code: "zh-TW",
-    nativeLabel: "繁體中文",
-    labelInVietnamese: "Tiếng Trung phồn thể",
-  },
-  {
     code: "zh-CN",
     nativeLabel: "简体中文",
     labelInVietnamese: "Tiếng Trung giản thể",
   },
   { code: "ko", nativeLabel: "한국어", labelInVietnamese: "Tiếng Hàn" },
   { code: "de", nativeLabel: "Deutsch", labelInVietnamese: "Tiếng Đức" },
+  { code: "fr", nativeLabel: "Français", labelInVietnamese: "Tiếng Pháp" },
 ] as const;
 
 export function isAppLocaleCode(value: string): value is AppLocaleCode {
   return (APP_LOCALE_CODES as readonly string[]).includes(value);
 }
 
-export function readStoredLocale(): AppLocaleCode {
+/**
+ * Returns the locale explicitly recorded in `localStorage`, or `null` when
+ * none has ever been stored (first visit, cleared storage, storage blocked).
+ * Callers must not conflate `null` with an explicit choice of `en` — the two
+ * cases need different handling (see `LocaleProvider`'s mount effect).
+ */
+export function readStoredLocale(): AppLocaleCode | null {
   if (typeof window === "undefined") {
-    return DEFAULT_APP_LOCALE;
+    return null;
   }
   try {
     const raw = localStorage.getItem(PROFILE_LOCALE_STORAGE_KEY);
@@ -52,7 +54,7 @@ export function readStoredLocale(): AppLocaleCode {
   } catch {
     /* storage unavailable */
   }
-  return DEFAULT_APP_LOCALE;
+  return null;
 }
 
 /** Mirrors locale to a cookie so the server can SSR the same locale as localStorage. */

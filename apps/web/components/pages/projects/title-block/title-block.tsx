@@ -14,7 +14,7 @@ export default function TitleBlock() {
       <span className={styles.kickerIcon} aria-hidden>
         <Star gradientId="project-summary-kicker-star-a" />
       </span>{" "}
-      {t("projects.block.title")}{" "}
+      {t("home.projects.title")}{" "}
       <span className={styles.kickerIcon} aria-hidden>
         <Star gradientId="project-summary-kicker-star-b" />
       </span>

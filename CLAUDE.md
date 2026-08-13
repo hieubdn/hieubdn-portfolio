@@ -46,7 +46,7 @@ profile/
 │   ├── eslint-config/       # base / next / react-internal ESLint configs
 │   └── typescript-config/   # base / nextjs / react-library TS configs
 ├── database/
-│   └── locales/             # Translation JSON for 7 languages (en, vi, ja, zh-CN, zh-TW, ko, de)
+│   └── locales/             # Translation JSON for 7 languages (en, vi, ja, zh-CN, ko, de, fr)
 ├── scripts/
 │   └── generate-locales.ts  # Auto-translate script against MyMemory API, seeded from en.json
 ├── .github/workflows/ci.yml # CI pipeline
@@ -165,7 +165,7 @@ When adding a new package: place it under `packages/<name>/`, set `"name": "@rep
 ## 7. Internationalization (i18n)
 
 - **Source**: `database/locales/en.json` is the canonical dictionary.
-- **Supported locales**: `en`, `vi`, `ja`, `zh-CN`, `zh-TW`, `ko`, `de` (see `AppLocaleCode` in `apps/web/components/layout/setting/translate/locale-constants.ts`).
+- **Supported locales**: `en`, `vi`, `ja`, `zh-CN`, `ko`, `de`, `fr` (see `AppLocaleCode` in `apps/web/components/layout/setting/translate/locale-constants.ts`).
 - **Loading strategy**: only `en` (the fallback) is statically bundled into the client. The root layout loads the active locale's dictionary server-side (`apps/web/lib/i18n/load-messages.ts`) and passes it to `LocaleProvider` as `initialMessages`; other locales are dynamically imported when the user switches language. `setLocale` is async — it resolves after the target dictionary is loaded.
 - **Persistence**: a `profile-locale` cookie plus `localStorage` under the same key so that SSR and CSR agree on the active locale.
 - **Filling missing translations**: `pnpm generate:locales` (the script calls `https://api.mymemory.translated.net/` with the email `hieubdn@gmail.com` for a higher quota, waits 1 s between keys, and only translates missing keys).

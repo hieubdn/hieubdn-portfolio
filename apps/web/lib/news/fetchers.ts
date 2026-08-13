@@ -41,6 +41,17 @@ function makeId(source: NewsSource, url: string): string {
   return `${source}-${hash}`;
 }
 
+/** Parses an RSS `pubDate` defensively — a single unparseable date must not
+ * throw and take down the whole feed via the uncaught `RangeError` that
+ * `toISOString()` raises on an Invalid Date. */
+function parsePubDate(pubDate: string): string {
+  if (!pubDate) return new Date(0).toISOString();
+  const parsed = new Date(pubDate);
+  return Number.isNaN(parsed.getTime())
+    ? new Date(0).toISOString()
+    : parsed.toISOString();
+}
+
 function parseRSS(
   xml: string,
   source: NewsSource,
@@ -71,7 +82,7 @@ function parseRSS(
       title,
       url: link,
       excerpt: stripHTML(decodeEntities(rawDescription)).slice(0, 220),
-      publishedAt: pubDate ? new Date(pubDate).toISOString() : new Date(0).toISOString(),
+      publishedAt: parsePubDate(pubDate),
       author: author ? decodeEntities(author) : undefined,
     });
   }

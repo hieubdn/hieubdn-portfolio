@@ -14,7 +14,7 @@ export default function SummaryKickerBlock() {
       <Reveal as="span" variant="scale" delayMs={0} className={styles.kickerIcon} aria-hidden>
         <Star gradientId="about-summary-kicker-star-a" />
       </Reveal>{" "}
-      {t("about.page.summary.kicker")}{" "}
+      {t("about.summary.kicker")}{" "}
       <Reveal as="span" variant="scale" delayMs={40} className={styles.kickerIcon} aria-hidden>
         <Star gradientId="about-summary-kicker-star-b" />
       </Reveal>

@@ -10,10 +10,10 @@ export function OfflinePageClient() {
 
   return (
     <div className={styles.wrap}>
-      <h1 className={styles.title}>{t("pwa.offlinePage.title")}</h1>
-      <p className={styles.body}>{t("pwa.offlinePage.body")}</p>
+      <h1 className={styles.title}>{t("pwa.offline.title")}</h1>
+      <p className={styles.body}>{t("pwa.offline.body")}</p>
       <Link className={styles.link} href={PATH_URL.ROOT}>
-        {t("pwa.offlinePage.home")}
+        {t("pwa.offline.backHome")}
       </Link>
     </div>
   );

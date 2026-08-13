@@ -26,10 +26,10 @@ export default function AboutBlock() {
       </Reveal>
       <div className={styles.caption}>
         <Reveal as="p" className={styles.sectionSubtitle}>
-          {t("about.block.kicker")}
+          {t("home.about.kicker")}
         </Reveal>
         <Reveal as="h2" delayMs={80} className={styles.sectionTitle}>
-          {t("about.block.title")}
+          {t("home.about.title")}
         </Reveal>
       </div>
     </Link>

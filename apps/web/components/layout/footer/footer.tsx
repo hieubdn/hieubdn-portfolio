@@ -12,15 +12,15 @@ export default function Footer() {
   const { showRouteView } = useMainScreen();
   const { t } = useLocaleText();
   const nav = [
-    { href: PATH_URL.ROOT, label: t("navBar.home") },
-    { href: PATH_URL.ABOUT, label: t("navBar.about") },
-    { href: PATH_URL.PROJECTS, label: t("navBar.projects") },
-    { href: PATH_URL.CONTACT, label: t("navBar.contact") },
+    { href: PATH_URL.ROOT, label: t("nav.home") },
+    { href: PATH_URL.ABOUT, label: t("nav.about") },
+    { href: PATH_URL.PROJECTS, label: t("nav.projects") },
+    { href: PATH_URL.CONTACT, label: t("nav.contact") },
   ] as const;
 
   return (
     <footer className={styles.footer}>
-      <nav className={styles.links} aria-label={t("aria.header.nav")}>
+      <nav className={styles.links} aria-label={t("aria.nav")}>
         {nav.map((item) => (
           <Link
             key={item.href}

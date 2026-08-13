@@ -58,7 +58,7 @@ A project is defined across three places that must stay in sync:
 3. **Add/update the `ProjectData` entry** in `projects-data.ts`. Keep `slug` stable once published (it's the route param and the image-map key).
 4. **Add image imports + poster/detail map entries** in `project-detail.tsx`. Reuse existing images under `apps/web/assets/image/projects-page/` if the project already has assets; otherwise ask for image files or hand off to `image-creator`/`icon-creator` for a generated poster only if no real screenshot exists (prefer real product screenshots over generated art for project proof).
 5. **Add the `project.<slug>.description` key** to `database/locales/en.json`, matching (or lightly polishing) the `description` field text.
-6. **Run `pnpm generate:locales`** so the description key gets machine-translated into `vi`, `ja`, `zh-CN`, `zh-TW`, `ko`, `de`. Review generated translations only if the user asks for a quality pass — the script is a first draft, not a final translation.
+6. **Run `pnpm generate:locales`** so the description key gets machine-translated into `vi`, `ja`, `zh-CN`, `ko`, `de`, `fr`. Review generated translations only if the user asks for a quality pass — the script is a first draft, not a final translation.
 7. **Update `apps/web/components/pages/projects/project-detail/project-nav.tsx`** only if project ordering/navigation is affected — check whether it derives order from `PROJECTS_DATA` automatically before editing it directly.
 
 ## 3. Writing rules

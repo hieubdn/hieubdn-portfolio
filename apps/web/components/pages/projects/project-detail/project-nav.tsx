@@ -16,7 +16,10 @@ export default function ProjectNav({ currentSlug }: Props) {
 
   const currentIndex = PROJECTS_DATA.findIndex((p) => p.slug === currentSlug);
   const prev = currentIndex > 0 ? PROJECTS_DATA[currentIndex - 1] : null;
-  const next = currentIndex < PROJECTS_DATA.length - 1 ? PROJECTS_DATA[currentIndex + 1] : null;
+  const next =
+    currentIndex !== -1 && currentIndex < PROJECTS_DATA.length - 1
+      ? PROJECTS_DATA[currentIndex + 1]
+      : null;
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -28,19 +31,19 @@ export default function ProjectNav({ currentSlug }: Props) {
       <div className={`${styles.panel} ${open ? styles.panelOpen : ""}`} aria-hidden={!open}>
         <button onClick={scrollToTop} className={styles.item}>
           <span className={styles.itemIcon}>↑</span>
-          {t("project.nav.scrollTop")}
+          {t("project.scrollTop")}
         </button>
 
         {prev && (
           <Link href={`/projects/${prev.slug}`} className={styles.item} onClick={() => setOpen(false)}>
             <span className={styles.itemIcon}>←</span>
-            {t("project.nav.backProject")}
+            {t("project.back")}
           </Link>
         )}
 
         {next && (
           <Link href={`/projects/${next.slug}`} className={styles.item} onClick={() => setOpen(false)}>
-            {t("project.nav.nextProject")}
+            {t("project.next")}
             <span className={styles.itemIcon}>→</span>
           </Link>
         )}
@@ -49,7 +52,7 @@ export default function ProjectNav({ currentSlug }: Props) {
       <div className={styles.triggerRow}>
         {!open && (
           <span className={styles.hint} aria-hidden="true">
-            {t("project.nav.hint")}
+            {t("project.scrollTop")}
           </span>
         )}
         <button

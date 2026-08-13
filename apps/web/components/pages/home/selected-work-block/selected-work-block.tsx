@@ -135,7 +135,7 @@ export default function SelectedWorkBlock() {
           Project: {current.name}
         </Reveal>
         <Reveal as="h2" delayMs={40} className={styles.sectionTitle}>
-          {t("selectedWork.block.title")}
+          {t("home.selectedWork.title")}
         </Reveal>
       </Reveal>
     </Link>
