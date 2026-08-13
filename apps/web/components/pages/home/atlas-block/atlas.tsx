@@ -14,7 +14,7 @@ const Atlas = () => {
                 <Reveal as="div" delayMs={120} className={styles.starIcon}> <StarIcon /></Reveal>
                 <Reveal as="div" delayMs={180} className={styles.infoImageItem}>
                     <Image src={IconMap} alt="icon-map" />
-                    <span>Đà Nẵng</span>
+                    <Reveal as="span" delayMs={200}>Đà Nẵng</Reveal>
                 </Reveal>
                 <Reveal as="div" delayMs={240} className={styles.hoangSa}>QĐ Hoàng Sa</Reveal>
                 <Reveal as="div" delayMs={300} className={styles.truongSa}>QĐ Trường Sa</Reveal>

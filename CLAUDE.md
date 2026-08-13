@@ -71,8 +71,7 @@ apps/web/app/
 ├── page.tsx                 # Home page ("/")
 ├── loading.tsx              # Full-page loading skeleton
 ├── error.tsx                # Error boundary
-├── theme-init-script.tsx    # Inline script that prevents theme FOUC
-├── globals.scss             # Reset + global CSS variables
+├── globals.scss             # Reset + global CSS variables (single dark theme)
 ├── about/page.tsx           # "/about"
 ├── projects/page.tsx        # "/projects"
 ├── contact/page.tsx         # "/contact"
@@ -112,7 +111,6 @@ apps/web/components/
 │   ├── news/                # Tech-news page: news-card, news-section (data from lib/news)
 │   └── contact/             # Contact page (form posting to /api/contact)
 ├── sections/                # Reusable sections: skill
-├── theme/                   # ThemePreferenceProvider + theme-constants
 ├── pwa/                     # InstallPrompt, OfflineBanner, ServiceWorkerUpdateNotifier, StandaloneViewportLock
 └── ui/                      # Shared Skeleton / page-skeleton primitives
 ```
@@ -179,9 +177,7 @@ To add a new string: add the key to `en.json` and run `pnpm generate:locales` to
 
 ## 8. Theming
 
-- `ThemePreferenceProvider` (client) holds the dark/light preference.
-- `theme-init-script.tsx` injects an inline `<head>` script to avoid a theme flash during SSR.
-- `components/theme/theme-constants.ts` declares shared constants.
+- The site ships a single dark theme — there is no light/dark toggle. All theme colors are plain CSS custom properties in `app/globals.scss` (`:root`), no `data-theme` attribute or provider involved.
 
 ---
 
@@ -258,7 +254,7 @@ Declared in `turbo.json` (`globalEnv`) — Turbo forwards these to every task:
 
 - **Do not run** `pnpm install` unless the user asks — `node_modules` is already present.
 - **Do not create** new files when editing an existing one is enough; prefer placing new components next to where they are used rather than inventing new top-level folders.
-- When touching layout/theme/locale: remember that `app/layout.tsx` is a Server Component and reads the `profile-locale` cookie, so avoid reintroducing FOUC — keep `theme-init-script.tsx` in place.
+- When touching layout/locale: remember that `app/layout.tsx` is a Server Component and reads the `profile-locale` cookie, so avoid reintroducing FOUC. There is no dark/light toggle anymore — don't reintroduce a `data-theme` attribute or a theme provider.
 - When changing `/api/contact`: preserve the `{ ok: boolean, error?: string }` response contract so the client form stays untouched.
 - When adding a new env var: also add it to `turbo.json > globalEnv` so the build cache stays consistent across environments.
 - When adding a new route: register it in `apps/web/config/path.ts` so the header/footer/nav can pick it up.

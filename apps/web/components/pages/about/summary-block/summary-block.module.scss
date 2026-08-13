@@ -5,28 +5,28 @@
   min-height: 0;
   gap: 16px;
   justify-content: center;
-}
 
-.name {
-  font-family: "Verdana", sans-serif;
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 1.25;
-  letter-spacing: 0.02em;
-  color: var(--color-home-text-heading);
-}
+  .name {
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.25;
+    letter-spacing: 0.02em;
+    color: var(--color-home-text-heading);
+  }
 
-.leadWrap {
-  display: flex;
-  flex-direction: column;
-  gap: 0.45em;
-}
+  .leadWrap {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45em;
 
-.lead {
-  margin: 0;
-  font-family: "Verdana", sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  color: var(--color-home-text-body);
-  white-space: pre-line;
+    .lead {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--color-home-text-body);
+      white-space: pre-line;
+    }
+  }
 }

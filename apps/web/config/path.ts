@@ -6,6 +6,10 @@ export const PATH_URL = {
   NEWS: "/news",
   ACADIFY: "/acadify",
   ACADIFY_SURVEY: "/acadify/survey",
+  ABOUT_WORK_EXPERIENCE_HDWEBSOFT: "/about/work-experience/hdwebsoft",
+  ABOUT_WORK_EXPERIENCE_TOYAR: "/about/work-experience/toyar",
+  ABOUT_WORK_EXPERIENCE_OPTORO: "/about/work-experience/optoro",
+  ABOUT_OTHER_EXPERIENCE_MINDX: "/about/other-experience/mindx",
 } as const;
 
 export const SOCIAL_LINKS = {
@@ -13,4 +17,13 @@ export const SOCIAL_LINKS = {
   LINKEDIN: "https://www.linkedin.com/in/hieubdn/",
   INSTAGRAM: "https://www.instagram.com/_hiu.bdn/",
   FACEBOOK: "https://www.facebook.com/hieubdn/",
+} as const;
+
+// TODO: replace with the real project links once provided.
+export const WORK_PROJECT_LINKS = {
+  HDWEBSOFT_CONVOSO: "#",
+  HDWEBSOFT_POPPY: "#",
+  HDWEBSOFT_2D_TRANSIT: "#",
+  TOYAR_FIDOVN: "#",
+  TOYAR_FIDOBOX: "#",
 } as const;

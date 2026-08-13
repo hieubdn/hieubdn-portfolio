@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 
-import { BackProject,NextProject,  Navigation, ScrollUp } from "@/assets/svg";
+import { Navigation } from "@/assets/svg";
 import { useLocaleText } from "@/components/layout/setting/translate/locale-provider";
 import { PROJECTS_DATA } from "@/config/projects-data";
 import styles from "./project-nav.module.scss";
@@ -27,13 +27,13 @@ export default function ProjectNav({ currentSlug }: Props) {
     <div className={styles.root}>
       <div className={`${styles.panel} ${open ? styles.panelOpen : ""}`} aria-hidden={!open}>
         <button onClick={scrollToTop} className={styles.item}>
-          <span className={styles.itemIcon}><ScrollUp /></span>
+          <span className={styles.itemIcon}>↑</span>
           {t("project.nav.scrollTop")}
         </button>
 
         {prev && (
           <Link href={`/projects/${prev.slug}`} className={styles.item} onClick={() => setOpen(false)}>
-            <span className={styles.itemIcon}><BackProject /></span>
+            <span className={styles.itemIcon}>←</span>
             {t("project.nav.backProject")}
           </Link>
         )}
@@ -41,7 +41,7 @@ export default function ProjectNav({ currentSlug }: Props) {
         {next && (
           <Link href={`/projects/${next.slug}`} className={styles.item} onClick={() => setOpen(false)}>
             {t("project.nav.nextProject")}
-            <span className={styles.itemIcon}><NextProject /></span>
+            <span className={styles.itemIcon}>→</span>
           </Link>
         )}
       </div>

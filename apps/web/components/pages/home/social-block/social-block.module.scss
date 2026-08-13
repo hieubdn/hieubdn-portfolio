@@ -12,7 +12,7 @@
   min-height: 150px;
   width: 100%;
   border-radius: 14px;
-  background: var(--color-home-icons-band);
+  background: var(--color-band-background);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,7 +35,7 @@
     width: 75px;
     height: 75px;
     border-radius: 50%;
-    background: var(--color-home-icon-button-bg);
+    background: var(--color-button-background);
     box-shadow: 0 2px 8px #0f172a3e;
     transition:
       transform 0.15s ease,
@@ -124,11 +124,11 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 8px;
-  font-family: "Verdana", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
-.kicker {
-  color: var(--color-home-text-subtle);
+.sectionSubtitle {
+  color: var(--color-subtitle);
   letter-spacing: 1.4px;
   margin: 0;
   font-size: 14px;
@@ -137,8 +137,8 @@
   line-height: 1.3;
 }
 
-.title {
-  color: var(--color-home-text-subtle);
+.sectionTitle {
+  color: var(--color-text);
   letter-spacing: 1.5px;
   margin: 0;
   font-family:
@@ -158,7 +158,7 @@
     height: 55px;
   }
 
-  .kicker {
+  .sectionSubtitle {
     font-size: 12px;
   }
 }

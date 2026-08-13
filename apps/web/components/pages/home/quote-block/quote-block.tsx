@@ -10,14 +10,18 @@ export default function QuoteBlock() {
   return (
     <div className={styles.root} aria-label={t("quote.block.title")}>
       <Reveal as="div" variant="fade" className={styles.meta}>
-        <p className={styles.quote}>&quot;{t("quote.block.content")}&quot;</p>
-        <p className={styles.author}>◦ {t("quote.block.author")} ◦</p>
+        <Reveal as="p" className={styles.quote}>
+          &quot;{t("quote.block.content")}&quot;
+        </Reveal>
+        <Reveal as="p" delayMs={50} className={styles.author}>
+          ◦ {t("quote.block.author")} ◦
+        </Reveal>
       </Reveal>
       <div className={styles.caption}>
-        <Reveal as="p" delayMs={100} className={styles.kicker}>
+        <Reveal as="p" delayMs={100} className={styles.sectionSubtitle}>
           {t("quote.block.kicker")}
         </Reveal>
-        <Reveal as="h2" delayMs={170} className={styles.title}>
+        <Reveal as="h2" delayMs={170} className={styles.sectionTitle}>
           {t("quote.block.title")}
         </Reveal>
       </div>

@@ -25,7 +25,7 @@
     align-items: center;
     gap: 8px;
     min-width: 0;
-    font-family: "Verdana", sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 32px;
     font-weight: 900;
     letter-spacing: 1.5px;
@@ -61,12 +61,12 @@
     flex-shrink: 0;
     align-items: center;
     gap: 32px;
-    font-family: "Verdana", sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 17px;
     font-weight: 500;
     letter-spacing: 1.2px;
     line-height: 32px;
-    color: var(--header-text);
+    color: var(--color-text);
 
     @media (max-width: 919px) {
       gap: 8px;
@@ -107,6 +107,12 @@
     &:hover {
       color: var(--shell-accent-hover);
     }
+  }
+
+  .langSwitch {
+    display: flex;
+    align-items: center;
+    --lang-switch-trigger-bg: none;
   }
 
   .social {

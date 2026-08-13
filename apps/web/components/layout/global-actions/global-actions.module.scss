@@ -2,6 +2,10 @@
   position: relative;
   display: flex;
   align-items: center;
+
+  @media (min-width: 901px) {
+    display: none;
+  }
 }
 
 .globalActionsTrigger {
@@ -22,7 +26,7 @@
 
   &:hover,
   &[aria-expanded="true"] {
-    color: var(--shell-accent-hover);
+    color: var(--color-subtle);
   }
 
   svg {
@@ -42,7 +46,7 @@
   position: absolute;
   z-index: 1000;
   top: 38px;
-  right: -5px;
+  right: 2px;
   padding-top: 6px;
   filter: drop-shadow(var(--shell-shadow-popover));
   min-width: 180px;
@@ -56,16 +60,17 @@
     height: 0;
     border-left: 7px solid transparent;
     border-right: 7px solid transparent;
-    border-bottom: 7px solid var(--shell-border);
+    border-bottom: 7px solid var(--color-home-block-border);
     transform: translateY(-1px);
   }
 }
 
 .popoverInner {
   position: relative;
-  padding: 12px 24px 10px;
-  background: var(--shell-surface-popover);
-  border: 1px solid var(--shell-border);
+  padding: 6px;
+  background: var(--color-band-background);
+  box-shadow: var(--color-home-block-shadow);
+  border: 1px solid var(--color-home-block-border);
   border-radius: 2px;
 
   &::before {
@@ -77,7 +82,7 @@
     height: 0;
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
-    border-bottom: 6px solid var(--shell-border);
+    border-bottom: 6px solid var(--color-home-block-border);
   }
 }
 
@@ -86,7 +91,7 @@
   padding: 0;
   list-style: none;
 
-  > li {
+  >li {
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -102,28 +107,21 @@
 .popoverItem {
   display: flex;
   align-items: center;
-  gap: 16px;
-  align-self: stretch;
-  width: auto;
-  margin: 0;
-  min-height: 44px;
-  padding: 8px 0;
+  gap: 8px;
+  width: 100%;
+  padding: 8px 10px;
   border: none;
-  background: var(--shell-surface-popover);
-  font-family: "Verdana", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  letter-spacing: 1.2px;
-  line-height: 32px;
-  color: var(--shell-text);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--color-home-text-heading);
+  font: inherit;
   text-align: left;
-  text-decoration: none;
   cursor: pointer;
-  transition: color 0.15s ease;
-  box-sizing: border-box;
+  text-decoration: none;
 
   &:hover {
-    color: var(--shell-accent-hover);
+    background: var(--color-main-background);
+    color: var(--color-subtle);
   }
 
   svg {

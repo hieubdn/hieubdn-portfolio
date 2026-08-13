@@ -3,7 +3,7 @@
   inset: 0;
   z-index: 5000;
   overflow: hidden;
-  background: var(--color-page-background);
+  background: var(--color-main-background);
   transition: transform 0.65s cubic-bezier(0.65, 0, 0.35, 1);
   outline: none;
 }
@@ -31,12 +31,12 @@
 
 .panelT1 {
   z-index: 2;
-  background: var(--color-page-background);
+  background: var(--color-main-background);
 }
 
 .panelT2 {
   z-index: 1;
-  background: var(--color-page-background);
+  background: var(--color-main-background);
 }
 
 .hiddenUp {
@@ -108,7 +108,7 @@
 
 .introTitle {
   font-size: 20px;
-  color: var(--color-home-text-muted);
+  color: var(--color-supporting);
   letter-spacing: 0.02em;
 
   @media (max-width: 768px) {
@@ -118,7 +118,7 @@
 
 .introLocation {
   font-size: 16px;
-  color: var(--color-home-text-subtle);
+  color: var(--color-subtitle);
   letter-spacing: 0.02em;
 
   @media (max-width: 768px) {
@@ -142,7 +142,7 @@
   border: none;
   padding: 8px;
   cursor: pointer;
-  color: var(--color-home-text-subtle);
+  color: var(--color-subtitle);
 }
 
 .scrollCueMouse {
@@ -167,7 +167,7 @@
 
 .scrollCueLabel {
   font-size: 14px;
-  color: var(--color-home-text-subtle);
+  color: var(--color-subtitle);
   letter-spacing: 0.05em;
 }
 

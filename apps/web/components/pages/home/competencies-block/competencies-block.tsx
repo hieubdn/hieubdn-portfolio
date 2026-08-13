@@ -61,15 +61,17 @@ export default function CompetenciesBlock() {
             onClick={() => open(key)}
           >
             <Icon />
-            <span className={styles.text}>{t(`competencies.block.${key}`)}</span>
+            <Reveal as="span" className={styles.text}>
+              {t(`competencies.block.${key}`)}
+            </Reveal>
           </Reveal>
         ))}
       </div>
       <div className={styles.caption}>
-        <Reveal as="p" delayMs={210} className={styles.kicker}>
+        <Reveal as="p" delayMs={210} className={styles.sectionSubtitle}>
           {t("competencies.block.kicker")}
         </Reveal>
-        <Reveal as="h2" delayMs={280} className={styles.title}>
+        <Reveal as="h2" delayMs={280} className={styles.sectionTitle}>
           {t("competencies.block.title")}
         </Reveal>
       </div>

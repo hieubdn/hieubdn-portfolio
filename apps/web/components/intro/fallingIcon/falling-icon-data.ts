@@ -3,7 +3,6 @@ import nextIcon from "@/assets/image/skill/nextjs-icon.svg";
 import tsIcon from "@/assets/image/skill/typescriptlang-icon.svg";
 import flutterIcon from "@/assets/image/skill/flutterio-icon.svg";
 import nodeIcon from "@/assets/image/skill/nodejs-icon.svg";
-import expressIcon from "@/assets/image/skill/expressjs-icon.svg";
 import nestIcon from "@/assets/image/skill/nestjs-icon.svg";
 import serverlessIcon from "@/assets/image/skill/serverless-icon.svg";
 import dockerIcon from "@/assets/image/skill/docker-icon.svg";
@@ -40,7 +39,6 @@ import plaidIcon from "@/assets/image/tech-stack/plaid.svg";
 import sendgridIcon from "@/assets/image/tech-stack/sendgrid.svg";
 import airtableIcon from "@/assets/image/tech-stack/airtable.svg";
 import calendlyIcon from "@/assets/image/tech-stack/calendly.svg";
-import openaiIcon from "@/assets/image/tech-stack/openai.svg";
 
 // Curated separately from `SKILLS` (home/skill-block) on purpose: the
 // falling-icon canvas tracks the fuller "24+ Technologies & Tools" list,
@@ -60,7 +58,7 @@ export const FALLING_ICON_SKILLS = [
   { name: "Sass", icon: sassIcon },
   // Backend & Cloud/DevOps
   { name: "Node.js", icon: nodeIcon },
-  { name: "Express.js", icon: expressIcon },
+  // { name: "Express.js", icon: expressIcon },
   { name: "NestJS", icon: nestIcon },
   { name: "Ruby on Rails", icon: railsIcon },
   { name: "Spring Boot", icon: springBootIcon },
@@ -90,6 +88,6 @@ export const FALLING_ICON_SKILLS = [
   { name: "SendGrid", icon: sendgridIcon },
   { name: "Airtable", icon: airtableIcon },
   { name: "Calendly", icon: calendlyIcon },
-  { name: "OpenAI API", icon: openaiIcon },
+  // { name: "OpenAI API", icon: openaiIcon },
   { name: "Drupal", icon: drupalIcon },
 ] as const;

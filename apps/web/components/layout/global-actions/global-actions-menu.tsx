@@ -1,9 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, type ReactNode } from "react";
-import { GlobalActions, Notification, Setting } from "@/assets/svg";
-import { useMainScreen } from "@/components/layout/main-screen/main-screen-context";
-import { useNotificationPanel } from "@/components/layout/notification/notification-context";
+import { GlobalActions } from "@/assets/svg";
 import { useLocaleText } from "@/components/layout/setting/translate/locale-provider";
 import styles from "./global-actions.module.scss";
 
@@ -21,8 +19,6 @@ export function GlobalActionsMenu({
 }: GlobalActionsMenuProps) {
   const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
-  const { openNotificationPanel } = useNotificationPanel();
-  const { openSettingView } = useMainScreen();
   const { t } = useLocaleText();
 
   useEffect(() => {
@@ -78,30 +74,6 @@ export function GlobalActionsMenu({
                   </button>
                 </li>
               ) : null}
-              <li>
-                <button
-                  type="button"
-                  className={styles.popoverItem}
-                  onClick={() => {
-                    setOpen(false);
-                    openNotificationPanel();
-                  }}
-                >
-                  <Notification /> {t("popover.notification")}
-                </button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  className={styles.popoverItem}
-                  onClick={() => {
-                    setOpen(false);
-                    openSettingView();
-                  }}
-                >
-                  <Setting /> {t("popover.setting")}
-                </button>
-              </li>
             </ul>
           </div>
         </div>

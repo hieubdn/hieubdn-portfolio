@@ -12,7 +12,7 @@
 .panel {
   display: flex;
   flex-direction: column;
-  background: var(--color-home-block-background, rgba(255,255,255,0.85));
+  background: var(--color-block-background, rgba(255,255,255,0.85));
   border-radius: 16px;
   overflow: hidden;
   backdrop-filter: blur(16px);
@@ -50,7 +50,7 @@
   width: 100%;
   text-align: left;
   white-space: nowrap;
-  font-family: "Verdana", sans-serif;
+  font-family: "Inter", sans-serif;
 
   opacity: 0;
   transform: translateY(6px);
@@ -106,7 +106,7 @@
 
 .hint {
   font-size: 16px;
-  font-family: "Verdana", sans-serif;
+  font-family: "Inter", sans-serif;
   letter-spacing: 1.2px;
   color: #52525b;
   white-space: nowrap;
@@ -124,7 +124,7 @@
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  background: var(--color-home-block-background, rgba(255,255,255,0.85));
+  background: var(--color-block-background, rgba(255,255,255,0.85));
   border: none;
   backdrop-filter: blur(16px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);

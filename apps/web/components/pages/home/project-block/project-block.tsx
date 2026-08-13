@@ -25,10 +25,10 @@ export default function ProjectBlock() {
         />
       </Reveal>
       <div className={styles.caption}>
-        <Reveal as="p" className={styles.kicker}>
+        <Reveal as="p" className={styles.sectionSubtitle}>
           {t("projects.block.kicker")}
         </Reveal>
-        <Reveal as="h2" delayMs={80} className={styles.title}>
+        <Reveal as="h2" delayMs={80} className={styles.sectionTitle}>
           {t("projects.block.title")}
         </Reveal>
       </div>

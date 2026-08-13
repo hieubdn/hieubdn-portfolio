@@ -11,8 +11,6 @@ import { InstallPrompt } from "@/components/pwa/install-prompt";
 import { OfflineBanner } from "@/components/pwa/offline-banner";
 import { ServiceWorkerUpdateNotifier } from "@/components/pwa/sw-update-notifier";
 import { StandaloneViewportLock } from "@/components/pwa/standalone-viewport-lock";
-import { ThemePreferenceProvider } from "@/components/theme/theme-preference-provider";
-import { ThemeInitScript } from "./theme-init-script";
 
 export function AppProviders({
   children,
@@ -25,24 +23,21 @@ export function AppProviders({
 }) {
   return (
     <>
-      <ThemeInitScript />
       <StandaloneViewportLock />
-      <ThemePreferenceProvider>
-        <LocaleProvider
-          initialLocale={initialLocale}
-          initialMessages={initialMessages}
-        >
-          <OfflineBanner />
-          <NotificationFeedProvider>
-            <NotificationProvider>
-              <MainScreenProvider>{children}</MainScreenProvider>
-            </NotificationProvider>
-          </NotificationFeedProvider>
-          <InstallPrompt />
-          <ServiceWorkerUpdateNotifier />
-        </LocaleProvider>
-        <AppToaster />
-      </ThemePreferenceProvider>
+      <LocaleProvider
+        initialLocale={initialLocale}
+        initialMessages={initialMessages}
+      >
+        <OfflineBanner />
+        <NotificationFeedProvider>
+          <NotificationProvider>
+            <MainScreenProvider>{children}</MainScreenProvider>
+          </NotificationProvider>
+        </NotificationFeedProvider>
+        <InstallPrompt />
+        <ServiceWorkerUpdateNotifier />
+      </LocaleProvider>
+      <AppToaster />
     </>
   );
 }

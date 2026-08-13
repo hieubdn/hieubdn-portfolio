@@ -6,10 +6,6 @@ import { IntroPanelTwo } from "./intro-panel-two";
 import { useIntroSequence } from "./use-intro-sequence";
 import styles from "./intro-overlay.module.scss";
 
-// Full-viewport overlay that sits on top of the already-rendered home page.
-// It never changes the route: it only intercepts scroll/touch/keyboard input
-// while active, and unmounts once the sequence finishes, letting the home
-// page (already sitting underneath, unscrolled) show through.
 export function IntroOverlay() {
   const { stage, wrapperRef, t1Ref, t2ScrollRef, goToT2, goHome } =
     useIntroSequence();

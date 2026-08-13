@@ -9,6 +9,7 @@ import { GlobalActionsMenu } from "@/components/layout/global-actions/global-act
 import { useMainScreen } from "@/components/layout/main-screen/main-screen-context";
 import { useLocaleText } from "@/components/layout/setting/translate/locale-provider";
 import { useInstallPrompt } from "@/hooks/use-install-prompt";
+import { IntroLanguageSwitch } from "@/components/intro/intro-language-switch";
 
 function openGitHubProfile() {
   window.open(SOCIAL_LINKS.GITHUB, "_blank", "noopener,noreferrer");
@@ -56,6 +57,9 @@ export default function Header() {
             >
               <GitHub />
             </button>
+          </div>
+          <div className={styles.langSwitch}>
+            <IntroLanguageSwitch />
           </div>
           <GlobalActionsMenu
             installAction={

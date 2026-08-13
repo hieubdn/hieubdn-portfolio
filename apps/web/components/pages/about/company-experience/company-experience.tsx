@@ -1,8 +1,7 @@
 "use client";
 
-import { useState } from "react";
-
 import Image from "next/image";
+import Link from "next/link";
 
 import { useLocaleText } from "@/components/layout/setting/translate/locale-provider";
 
@@ -16,136 +15,77 @@ type CompanyExperienceProps = {
 
 export default function CompanyExperience({ company }: CompanyExperienceProps) {
   const { t } = useLocaleText();
-  const [expanded, setExpanded] = useState(false);
+  const positionValue = t(`${company.keyPrefix}.positionValue`);
+  const companyName = t(`${company.keyPrefix}.company`);
 
   if (company.variant === "simple") {
     return (
-      <div className={styles.root}>
+      <Link
+        href={company.detailUrl}
+        className={styles.root}
+        aria-label={`${positionValue} — ${companyName}`}
+      >
         <Reveal as="div" className={styles.metaSimple}>
-          <h3 className={styles.company}>
-            {t(`${company.keyPrefix}.company`)}
-          </h3>
-          <span className={styles.positionValue}>
-            {t(`${company.keyPrefix}.positionValue`)}
-          </span>
-          <span className={styles.metaLine}>
-            <span className={styles.durationValue}>
+          <Reveal as="h3" className={styles.company}>
+            {companyName}
+          </Reveal>
+          <Reveal as="span" delayMs={40} className={styles.positionValue}>
+            {positionValue}
+          </Reveal>
+          <Reveal as="span" variant="fade" delayMs={70} className={styles.metaLine}>
+            <Reveal as="span" delayMs={90} className={styles.durationValue}>
               {t(`${company.keyPrefix}.durationValue`)}
-            </span>
+            </Reveal>
             ◦
-            <span className={styles.locationValue}>
+            <Reveal as="span" delayMs={110} className={styles.locationValue}>
               {t(`${company.keyPrefix}.locationValue`)}
-            </span>
-          </span>
+            </Reveal>
+          </Reveal>
         </Reveal>
         <Reveal as="div" delayMs={90} className={styles.responsibilities}>
-          <span className={styles.subheading}>
+          <Reveal as="span" className={styles.subheading}>
             {t(`${company.keyPrefix}.responsibilities`)}:{" "}
-          </span>
+          </Reveal>
           <ul className={styles.bulletList}>
-            {company.responsibilityKeys.map((key) => (
-              <li key={key}>{t(key)}</li>
+            {company.responsibilityKeys.map((key, index) => (
+              <Reveal as="li" key={key} delayMs={90 + index * 40}>
+                {t(key)}
+              </Reveal>
             ))}
           </ul>
         </Reveal>
-      </div>
+      </Link>
     );
   }
 
   return (
-    <div
-      className={
-        company.noRootGap ? `${styles.root} ${styles.rootNoGap}` : styles.root
-      }
+    <Link
+      href={company.detailUrl}
+      className={styles.card}
+      aria-label={`${positionValue} — ${companyName}`}
     >
-      <Reveal
-        as="div"
-        className={styles.meta}
-        onClick={() => setExpanded((prev) => !prev)}
-        role="button"
-        aria-expanded={expanded}
-      >
-        <a
-          href={company.linkUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.logoWrapper}
-          onClick={(e) => e.stopPropagation()}
-        >
-          <div className={styles.logoInner}>
-            <Image
-              src={company.logo}
-              alt={company.logoAlt}
-              width={120}
-              height={120}
-              className={styles.logo}
-            />
-          </div>
-        </a>
-        <div className={styles.metaInfo}>
-          <h3 className={styles.positionValue}>
-            {t(`${company.keyPrefix}.positionValue`)}
-          </h3>
-          <span className={styles.company}>
-            {t(`${company.keyPrefix}.company`)}
-          </span>
-          <span className={styles.durationValue}>
-            {t(`${company.keyPrefix}.durationValue`)} <span className={styles.metaLine}>◦</span> {t(`${company.keyPrefix}.locationValue`)}
-          </span>
+      <div className={styles.logoWrapper}>
+        <div className={styles.logoInner}>
+          <Image
+            src={company.logo}
+            alt={company.logoAlt}
+            width={64}
+            height={64}
+            className={styles.logo}
+          />
         </div>
-        <span className={`${styles.chevron} ${expanded ? styles.chevronOpen : ""}`}>▾</span>
-      </Reveal>
-      {expanded && (
-        <div
-          className={
-            company.projects
-              ? `${styles.details} ${styles.detailsWithProjects}`
-              : styles.details
-          }
-        >
-          <div className={styles.responsibilities}>
-            <span className={styles.subheading}>
-              {t(`${company.keyPrefix}.responsibilities`)}:{" "}
-            </span>
-            {company.projects ? (
-              <ul className={styles.projectList}>
-                {company.projects.map((project) => (
-                  <li key={project.headingKey} className={styles.projectHeading}>
-                    {project.jobKeys.length > 0 ? (
-                      <>
-                        {t(project.headingKey)}:
-                        <ul className={styles.bulletList}>
-                          {project.jobKeys.map((key) => (
-                            <li key={key}>{t(key)}</li>
-                          ))}
-                        </ul>
-                      </>
-                    ) : (
-                      t(project.headingKey)
-                    )}
-                  </li>
-                ))}
-              </ul>
-            ) : (
-              <ul className={styles.bulletList}>
-                {company.responsibilityKeys.map((key) => (
-                  <li key={key}>{t(key)}</li>
-                ))}
-              </ul>
-            )}
-          </div>
-          <div className={styles.techStack}>
-            <span className={styles.subheading}>
-              {t(`${company.keyPrefix}.techStack`)}:
-            </span>
-            <ul className={styles.techList}>
-              {company.techLineKeys.map((key) => (
-                <li key={key}>{t(key)}</li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      )}
-    </div>
+      </div>
+      <div className={styles.metaInfo}>
+        <Reveal as="h3" className={styles.positionValue}>
+          {positionValue}
+        </Reveal>
+        <Reveal as="span" delayMs={40} className={styles.company}>
+          {companyName}
+        </Reveal>
+        <Reveal as="span" delayMs={80} className={styles.durationValue}>
+          {t(`${company.keyPrefix}.durationValue`)}
+        </Reveal>
+      </div>
+    </Link>
   );
 }

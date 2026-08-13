@@ -38,39 +38,49 @@ export default function TestimonialsBlock() {
         aria-atomic="true"
       >
         <div className={styles.author}>
-          <span className={styles.nameLine}>
+          <Reveal as="span" variant="fade" className={styles.nameLine}>
             {prefix ? (
               <>
                 {prefix}{" "}
-                <span className={styles.authorName}>{name}</span>
+                <Reveal as="span" delayMs={20} className={styles.authorName}>
+                  {name}
+                </Reveal>
               </>
             ) : (
-              <span className={styles.authorName}>{name}</span>
+              <Reveal as="span" className={styles.authorName}>
+                {name}
+              </Reveal>
             )}
-          </span>
+          </Reveal>
           {role ? (
-            <span className={styles.role}>
+            <Reveal as="span" delayMs={40} className={styles.role}>
               <Briefcase /> {role}
-            </span>
+            </Reveal>
           ) : null}
         </div>
         <div className={styles.quoteContent}>
-          <span className={styles.element}>
+          <Reveal as="span" variant="fade" delayMs={60} className={styles.element}>
             {t("testimonials.block.element1")}
             {t("testimonials.block.element")}
             {t("testimonials.block.element2")}
-          </span>
-          <span className={styles.quoteText}>{body}</span>
-          <span className={styles.element}>
+          </Reveal>
+          <Reveal as="span" delayMs={90} className={styles.quoteText}>
+            {body}
+          </Reveal>
+          <Reveal as="span" variant="fade" delayMs={120} className={styles.element}>
             {t("testimonials.block.element1.end")}
             {t("testimonials.block.element")}
             {t("testimonials.block.element2.end")}
-          </span>
+          </Reveal>
         </div>
       </Reveal>
       <Reveal as="div" delayMs={100} className={styles.footer}>
-        <p className={styles.feedback}>{t("testimonials.block.footer")}</p>
-        <h2 className={styles.kicker}>{t("testimonials.block.title")}</h2>
+        <Reveal as="p" className={styles.sectionSubtitle}>
+          {t("testimonials.block.footer")}
+        </Reveal>
+        <Reveal as="h2" delayMs={40} className={styles.sectionTitle}>
+          {t("testimonials.block.title")}
+        </Reveal>
       </Reveal>
     </div>
   );

@@ -5,23 +5,18 @@
 .trigger {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
   padding: 6px 10px;
   border: none;
   border-radius: 999px;
-  background: var(--color-page-background);
-  color: var(--color-home-text-heading);
+  background: none;
+  color: var(--color-text);
   cursor: pointer;
-
-  &:focus-visible {
-    outline: 2px solid #09c469;
-    outline-offset: 2px;
-  }
 }
 
 .flagWrap {
   display: inline-flex;
-  width: 22px;
+  width: 25px;
   height: 15px;
   border-radius: 3px;
   overflow: hidden;
@@ -36,22 +31,10 @@
 }
 
 .shortLabel {
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-}
-
-.chevron {
-  width: 0;
-  height: 0;
-  border-left: 4px solid transparent;
-  border-right: 4px solid transparent;
-  border-top: 5px solid currentColor;
-  transition: transform 0.2s ease;
-}
-
-.chevronOpen {
-  transform: rotate(180deg);
+  font-size: 15px;
+  font-weight: 390;
+  letter-spacing: 1.5px;
+  line-height: 32px;
 }
 
 .menu {
@@ -62,19 +45,19 @@
   list-style: none;
   margin: 0;
   padding: 6px;
-  min-width: 200px;
+  min-width: 160px;
   max-height: min(360px, 70vh);
   overflow-y: auto;
   border-radius: 12px;
-  background: var(--shell-surface-panel);
-  box-shadow: var(--shell-shadow-popover);
-  border: 1px solid var(--shell-border);
+  background: var(--color-band-background);
+  box-shadow: var(--color-home-block-shadow);
+  border: 1px solid var(--color-home-block-border);
 }
 
 .option {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 4px;
   width: 100%;
   padding: 8px 10px;
   border: none;
@@ -86,23 +69,18 @@
   cursor: pointer;
 
   &:hover {
-    background: var(--shell-surface-hover);
-  }
-
-  &:focus-visible {
-    outline: 2px solid #09c469;
-    outline-offset: 2px;
+    background: var(--color-main-background);
   }
 }
 
 .optionActive {
-  background: var(--shell-surface-active);
-  color: var(--color-home-text-primary);
-  font-weight: 600;
+  background: var(--color-block-background);
+  color: var(--color-text);
+  
 }
 
 .optionLabel {
-  font-size: 14px;
+  font-size: 15px;
   letter-spacing: 0.02em;
 }
 

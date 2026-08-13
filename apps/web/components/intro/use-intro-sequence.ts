@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 
-import { hasPlayedIntro, markIntroPlayed } from "./intro-state";
+import { hasPlayedIntro, markIntroPlayed, setIntroActive } from "./intro-state";
 
 export type IntroStage =
   | "t1"
@@ -53,6 +53,13 @@ export function useIntroSequence() {
     if (stage === "t1") {
       wrapperRef.current?.focus();
     }
+  }, [stage]);
+
+  // Runs before the home page's own scroll-reveal effects (this component
+  // sits earlier in the tree), so Reveal instances can read the up-to-date
+  // flag as soon as they mount.
+  useEffect(() => {
+    setIntroActive(stage !== "closed");
   }, [stage]);
 
   const runTransition = useCallback(

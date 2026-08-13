@@ -1,16 +1,15 @@
 "use client";
 
-import { BackToHomeIcon, SettingIcon, Languages, Theme, ResetSettings } from "@/assets/svg";
+import { BackToHomeIcon, SettingIcon, Languages, ResetSettings } from "@/assets/svg";
 import { useEffect, useMemo, useState } from "react";
 import { useMainScreen } from "@/components/layout/main-screen/main-screen-context";
 import LanguageSettingPanel from "@/components/layout/setting/translate/language-setting";
 import { useLocaleText } from "@/components/layout/setting/translate/locale-provider";
-import ThemeSettingPanel from "@/components/layout/setting/theme/theme";
 import styles from "./setting.module.scss";
 
 const SETTINGS_STACK_MQ = "(max-width: 960px)";
 
-type SettingOptionId = "languages" | "darkMode" | "resetSettings";
+type SettingOptionId = "languages" | "resetSettings";
 
 export default function Setting() {
   const { showRouteView } = useMainScreen();
@@ -22,11 +21,6 @@ export default function Setting() {
           id: "languages" as const,
           label: t("setting.page.option.languages"),
           icon: <Languages />,
-        },
-        {
-          id: "darkMode" as const,
-          label: t("setting.page.option.darkMode"),
-          icon: <Theme />,
         },
         {
           id: "resetSettings" as const,
@@ -56,8 +50,6 @@ export default function Setting() {
   const panelForOption = (option: (typeof settingOptions)[number]) =>
     option.id === "languages" ? (
       <LanguageSettingPanel />
-    ) : option.id === "darkMode" ? (
-      <ThemeSettingPanel />
     ) : (
       <>
         <h3 className={styles.settingPanelTitle}>

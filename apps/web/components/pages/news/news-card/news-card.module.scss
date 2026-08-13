@@ -5,7 +5,7 @@
   padding: 20px;
   border-radius: 16px;
   border: 1.5px solid var(--color-home-block-border);
-  background: var(--color-home-block-background);
+  background: var(--color-block-background);
   text-decoration: none;
   color: inherit;
   height: 100%;
@@ -87,7 +87,7 @@
 
 .date {
   font-size: 16px;
-  color: var(--color-home-text-subtle);
+  color: var(--color-subtitle);
   letter-spacing: 1.5px;
   line-height: 1.75;
 }
@@ -110,7 +110,7 @@
 .excerpt {
   margin: 0;
   font-size: 16px;
-  color: var(--color-home-text-subtle);
+  color: var(--color-subtitle);
   line-height: 1.75;
   letter-spacing: 1.5px;
   display: -webkit-box;
@@ -136,14 +136,14 @@
 
 .stats {
   font-size: 16px;
-  color: var(--color-home-text-subtle);
+  color: var(--color-subtitle);
   letter-spacing: 1.5px;
   line-height: 1.75;
 }
 
 .author {
   font-size: 16px;
-  color: var(--color-home-text-muted);
+  color: var(--color-supporting);
   letter-spacing: 1.5px;
   line-height: 1.75;
   font-style: italic;

@@ -43,7 +43,7 @@
   max-width: 100%;
   border-radius: 20px;
   border: 2px solid var(--color-home-block-border);
-  background-color: var(--color-home-block-background);
+  background-color: var(--color-block-background);
   padding: 20px;
   display: flex;
   align-items: flex-end;
@@ -55,8 +55,8 @@
 }
 
 .blockLabel {
-  color: var(--color-home-text-subtle);
-  font-family: "Verdana", sans-serif;
+  color: var(--color-subtitle);
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   line-height: 32px;
   letter-spacing: 1.2px;

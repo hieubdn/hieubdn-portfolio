@@ -11,13 +11,13 @@ export default function SummaryKickerBlock() {
 
   return (
     <Reveal as="p" className={styles.kicker}>
-      <span className={styles.kickerIcon} aria-hidden>
+      <Reveal as="span" variant="scale" delayMs={0} className={styles.kickerIcon} aria-hidden>
         <Star gradientId="about-summary-kicker-star-a" />
-      </span>{" "}
+      </Reveal>{" "}
       {t("about.page.summary.kicker")}{" "}
-      <span className={styles.kickerIcon} aria-hidden>
+      <Reveal as="span" variant="scale" delayMs={40} className={styles.kickerIcon} aria-hidden>
         <Star gradientId="about-summary-kicker-star-b" />
-      </span>
+      </Reveal>
     </Reveal>
   );
 }

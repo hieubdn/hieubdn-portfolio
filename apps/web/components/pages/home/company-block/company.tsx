@@ -118,7 +118,7 @@ export default function CompanyBlock() {
           </div>
         </div>
       </Reveal>
-      <Reveal as="p" delayMs={100} className={styles.footer}>
+      <Reveal as="p" delayMs={100} className={styles.sectionSubtitle}>
         {t("company.block.footer")}
       </Reveal>
     </div>

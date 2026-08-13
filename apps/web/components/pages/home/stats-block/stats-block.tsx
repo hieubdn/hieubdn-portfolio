@@ -27,15 +27,21 @@ export default function StatsBlock() {
           >
             {item.value ? (
               <>
-                <p className={styles.value}>{item.value}</p>
-                <p className={styles.cardLabel}>{item.label}</p>
+                <Reveal as="p" className={styles.value}>
+                  {item.value}
+                </Reveal>
+                <Reveal as="p" delayMs={20} className={styles.cardLabel}>
+                  {item.label}
+                </Reveal>
               </>
             ) : (
               <>
-                <span className={styles.heartWrap} aria-hidden>
+                <Reveal as="span" variant="scale" aria-hidden className={styles.heartWrap}>
                   <HeartIcon />
-                </span>
-                <p className={styles.cardLabel}>{item.label}</p>
+                </Reveal>
+                <Reveal as="p" delayMs={20} className={styles.cardLabel}>
+                  {item.label}
+                </Reveal>
               </>
             )}
           </Reveal>

@@ -1,6 +1,7 @@
 .root {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
   gap: 32px;
   overflow: visible;
@@ -12,10 +13,19 @@
 }
 
 .copy {
+  width: 50%;
   overflow: visible;
   display: flex;
   flex-direction: column;
   gap: 16px;
+
+  @media (max-width: 1024px) {
+    width: 60%;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 }
 
 .title {
@@ -23,7 +33,7 @@
   font-weight: 500;
   width: 100%;
   line-height: 1.5;
-  color: var(--color-home-text-muted);
+  color: var(--color-supporting);
 
   @media (max-width: 1024px) {
     font-size: 28px;
@@ -48,7 +58,7 @@
   font-size: 16px;
   line-height: 2;
   letter-spacing: 0.02em;
-  color: var(--color-home-text-subtle);
+  color: var(--color-subtitle);
 
   @media (max-width: 768px) {
     text-align: center;

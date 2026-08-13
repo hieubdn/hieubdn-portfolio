@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import signature from "@/assets/image/about/chuky.png";
+import signature from "@/assets/image/about/chuky1.png";
 import { useLocaleText } from "@/components/layout/setting/translate/locale-provider";
 import { PATH_URL } from "@/config/path";
 import { Reveal } from "@/components/ui/reveal";
@@ -25,10 +25,10 @@ export default function AboutBlock() {
         />
       </Reveal>
       <div className={styles.caption}>
-        <Reveal as="p" className={styles.kicker}>
+        <Reveal as="p" className={styles.sectionSubtitle}>
           {t("about.block.kicker")}
         </Reveal>
-        <Reveal as="h2" delayMs={80} className={styles.title}>
+        <Reveal as="h2" delayMs={80} className={styles.sectionTitle}>
           {t("about.block.title")}
         </Reveal>
       </div>

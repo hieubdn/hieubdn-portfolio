@@ -121,7 +121,9 @@ function MetaValue({ value }: { value: string | string[] }) {
   return (
     <>
       {items.map((item, i) => (
-        <span key={i} className={styles.metaValue}>{item}</span>
+        <Reveal as="span" key={i} delayMs={i * 30} className={styles.metaValue}>
+          {item}
+        </Reveal>
       ))}
     </>
   );

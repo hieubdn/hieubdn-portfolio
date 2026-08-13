@@ -6,7 +6,7 @@
   width: 100%;
   min-height: 0;
   gap: 16px !important;
-  font-family: "Verdana", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .marqueeSection {
@@ -22,9 +22,9 @@
   border-radius: inherit;
 }
 
-.footer {
+.sectionSubtitle {
   margin: 0;
-  color: var(--color-home-text-subtle);
+  color: var(--color-subtitle);
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 2px;

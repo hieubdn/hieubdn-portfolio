@@ -156,12 +156,12 @@ export const Star = ({ gradientId }: { gradientId: string }) => {
                     y2="0"
                     gradientTransform="rotate(102 0.5 0.5)"
                 >
-                    <stop offset="0%" stopColor="#4a5f7a" />
-                    <stop offset="24%" stopColor="#6d84c4" />
-                    <stop offset="44%" stopColor="#b9a8d9" />
-                    <stop offset="58%" stopColor="#e8a3b8" />
-                    <stop offset="82%" stopColor="#6b9bd4" />
-                    <stop offset="100%" stopColor="#4d6485" />
+                    <stop offset="0%" stopColor="#ec4899" />
+                    <stop offset="24%" stopColor="#6366f1" />
+                    <stop offset="44%" stopColor="#0ea5e9" />
+                    <stop offset="58%" stopColor="#ec4899" />
+                    <stop offset="82%" stopColor="#6366f1" />
+                    <stop offset="100%" stopColor="#0ea5e9" />
                 </linearGradient>
             </defs>
             <path
@@ -289,25 +289,6 @@ export const MobileDevelopment = () => {
 export const Right = () => {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" id="Bold" viewBox="0 0 24 24" width="512" height="512"><path d="M17.061,9.525,13.475,5.939a1.5,1.5,0,0,0-2.121,2.122L13.793,10.5H5a1.5,1.5,0,0,0,0,3h8.793l-2.439,2.439a1.5,1.5,0,0,0,2.121,2.122l3.586-3.586A3.505,3.505,0,0,0,17.061,9.525Z" /></svg>
-    );
-}
-
-export const ScrollUp = () => {
-    return (
-        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="512" height="512"><path d="M10,24c-1.66,0-3-1.34-3-3V13h-1.92c-1.17,0-2.29-.62-2.8-1.67-.57-1.18-.34-2.51,.57-3.43L9.17,1.18c1.57-1.57,4.09-1.57,5.64-.02,0,0,6.37,6.77,6.37,6.77,.85,.84,1.1,2.09,.63,3.22-.47,1.13-1.52,1.84-2.74,1.85h-2.06v8c0,1.66-1.34,3-3,3h-4Z" /></svg>
-    );
-}
-
-export const NextProject = () => {
-    return (
-        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="512" height="512"><path d="M14,22.03c-.39,0-.78-.08-1.16-.23-1.13-.47-1.84-1.52-1.85-2.75v-2.06H3.97c-2.19,0-3.97-1.8-3.97-4.01v-1.98c0-2.21,1.78-4.01,3.97-4.01h7.03v-2.06c0-1.23,.71-2.28,1.85-2.75,1.13-.47,2.38-.22,3.24,.65l6.72,6.33,.02,.02c1.55,1.55,1.55,4.07,0,5.62l-6.77,6.37c-.56,.56-1.3,.86-2.06,.86Z" /></svg>
-
-    );
-}
-
-export const BackProject = () => {
-    return (
-        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="512" height="512"><path d="M10,22.03c-.77,0-1.51-.3-2.09-.88L1.18,14.82c-1.57-1.57-1.57-4.09-.02-5.64,0,0,.01-.01,.02-.02L7.93,2.81c.84-.85,2.09-1.1,3.22-.63s1.84,1.52,1.85,2.74v2.06h7.03c2.19,0,3.97,1.8,3.97,4.01v1.98c0,2.21-1.78,4.01-3.97,4.01h-7.03v2.06c0,1.23-.71,2.28-1.85,2.75-.38,.16-.77,.23-1.15,.23Z" /></svg>
     );
 }
 

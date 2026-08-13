@@ -17,15 +17,25 @@ export default function CallToAction() {
         <WorkTogetherStarsIcon />
       </Reveal>
       <Reveal as="div" delayMs={80} className={styles.copy}>
-        <span className={styles.line1}>{t("call.action.content")}</span>
-        <span className={styles.line2}>
-          <span className={styles.work}>{t("call.action.work")} </span>
-          <span className={styles.together}>{t("call.action.together")}</span>
-        </span>
+        <Reveal as="span" className={styles.line1}>
+          {t("call.action.content")}
+        </Reveal>
+        <Reveal as="span" variant="fade" delayMs={40} className={styles.line2}>
+          <Reveal as="span" delayMs={55} className={styles.work}>
+            {t("call.action.work")}{" "}
+          </Reveal>
+          <Reveal as="span" delayMs={70} className={styles.together}>
+            {t("call.action.together")}
+          </Reveal>
+        </Reveal>
       </Reveal>
       <Reveal as="div" delayMs={160} className={styles.availability}>
-        <p className={styles.time}>Average response time: 1–2 business days.</p>
-        <p className={styles.status}>Status: Available for new projects</p>
+        <Reveal as="p" className={styles.time}>
+          Average response time: 1–2 business days.
+        </Reveal>
+        <Reveal as="p" delayMs={40} className={styles.status}>
+          Status: Available for new projects
+        </Reveal>
       </Reveal>
     </Link>
   );
