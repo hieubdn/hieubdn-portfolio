@@ -247,8 +247,10 @@
           .thumbnail {
             display: block;
             width: 100%;
-            border-radius: 16px;
             height: auto;
+            aspect-ratio: 3 / 2;
+            border-radius: 16px;
+            object-fit: cover;
           }
         }
 

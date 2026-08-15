@@ -21,9 +21,9 @@ export const SOCIAL_LINKS = {
 
 // TODO: replace with the real project links once provided.
 export const WORK_PROJECT_LINKS = {
-  HDWEBSOFT_CONVOSO: "#",
-  HDWEBSOFT_POPPY: "#",
-  HDWEBSOFT_2D_TRANSIT: "#",
-  TOYAR_FIDOVN: "#",
-  TOYAR_FIDOBOX: "#",
+  CONVOSO: "https://www.convoso.com/",
+  POPPY: "https://www.poppyflowers.com/",
+  HD_2D_TRANSIT: "https://app.2dtransit.com/",
+  TOYAR_FIDOVN: "https://www.fidovn.com/",
+  TOYAR_FIDOBOX: "https://www.facebook.com/fidoboxvietnam/?locale=vi_VN",
 } as const;

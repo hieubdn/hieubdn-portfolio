@@ -4,22 +4,25 @@ import { PATH_URL, WORK_PROJECT_LINKS } from "@/config/path";
 import optoroLogo from "@/assets/image/about/optoro_logo.jpg";
 import hdwebsoftLogo from "@/assets/image/about/hdwebsoft_logo.jpg";
 import toyarLogo from "@/assets/image/about/toyar_logo.jpg";
+import mindxLogo from "@/assets/image/about/logoMindx.jpg";
 import convosoPoster from "@/assets/image/about/project/Convoso.png";
 import poppyPoster from "@/assets/image/about/project/poppy.webp";
 import cbpoPoster from "@/assets/image/about/project/CBPO.png";
 import fidovnPoster from "@/assets/image/about/project/fidovn.jpg";
 import fidoboxPoster from "@/assets/image/about/project/fidobox.jpg";
+import mindxLecturerPoster from "@/assets/image/about/project/mindx01.jpg";
+import mindxManagerPoster from "@/assets/image/about/project/mindx02.jpg";
 
 export type CompanyProject = {
   titleKey: string;
   descriptionKey?: string;
-  teamSizeKey: string;
-  durationKey: string;
+  teamSizeKey?: string;
+  durationKey?: string;
   highlightKeys: readonly string[];
   image?: StaticImageData;
   video?: string;
   imageAlt: string;
-  ctaUrl: string;
+  ctaUrl?: string;
 };
 
 type DetailedCompanyExperienceBase = {
@@ -60,57 +63,57 @@ export const COMPANY_EXPERIENCES = {
     detailUrl: PATH_URL.ABOUT_WORK_EXPERIENCE_HDWEBSOFT,
     projects: [
       {
-        titleKey: "exp.hdwebsoft.projects.convoso.title",
+        titleKey: "exp.hdwebsoft.convoso.title",
         descriptionKey:
-          "exp.hdwebsoft.projects.convoso.subtitle",
-        teamSizeKey: "exp.hdwebsoft.projects.convoso.teamSize",
-        durationKey: "exp.hdwebsoft.projects.convoso.duration",
+          "exp.hdwebsoft.convoso.subtitle",
+        teamSizeKey: "exp.hdwebsoft.convoso.teamSize",
+        durationKey: "exp.hdwebsoft.convoso.duration",
         highlightKeys: [
-          "exp.hdwebsoft.projects.convoso.highlights.0",
-          "exp.hdwebsoft.projects.convoso.highlights.1",
-          "exp.hdwebsoft.projects.convoso.highlights.2",
-          "exp.hdwebsoft.projects.convoso.highlights.3",
-          "exp.hdwebsoft.projects.convoso.highlights.4",
-          "exp.hdwebsoft.projects.convoso.highlights.5",
+          "exp.hdwebsoft.convoso.highlights.0",
+          "exp.hdwebsoft.convoso.highlights.1",
+          "exp.hdwebsoft.convoso.highlights.2",
+          "exp.hdwebsoft.convoso.highlights.3",
+          "exp.hdwebsoft.convoso.highlights.4",
+          "exp.hdwebsoft.convoso.highlights.5",
         ],
         image: convosoPoster,
         imageAlt: "Convoso project",
-        ctaUrl: WORK_PROJECT_LINKS.HDWEBSOFT_CONVOSO,
+        ctaUrl: WORK_PROJECT_LINKS.CONVOSO,
       },
       {
-        titleKey: "exp.hdwebsoft.projects.poppy.title",
+        titleKey: "exp.hdwebsoft.poppy.title",
         descriptionKey:
-          "exp.hdwebsoft.projects.poppy.subtitle",
-        teamSizeKey: "exp.hdwebsoft.projects.poppy.teamSize",
-        durationKey: "exp.hdwebsoft.projects.poppy.duration",
+          "exp.hdwebsoft.poppy.subtitle",
+        teamSizeKey: "exp.hdwebsoft.poppy.teamSize",
+        durationKey: "exp.hdwebsoft.poppy.duration",
         highlightKeys: [
-          "exp.hdwebsoft.projects.poppy.highlights.0",
-          "exp.hdwebsoft.projects.poppy.highlights.1",
-          "exp.hdwebsoft.projects.poppy.highlights.2",
-          "exp.hdwebsoft.projects.poppy.highlights.3",
-          "exp.hdwebsoft.projects.poppy.highlights.4",
+          "exp.hdwebsoft.poppy.highlights.0",
+          "exp.hdwebsoft.poppy.highlights.1",
+          "exp.hdwebsoft.poppy.highlights.2",
+          "exp.hdwebsoft.poppy.highlights.3",
+          "exp.hdwebsoft.poppy.highlights.4",
         ],
         image: poppyPoster,
         imageAlt: "Poppy Flowers project",
-        ctaUrl: WORK_PROJECT_LINKS.HDWEBSOFT_POPPY,
+        ctaUrl: WORK_PROJECT_LINKS.POPPY,
       },
       {
-        titleKey: "exp.hdwebsoft.projects.transit.title",
+        titleKey: "exp.hdwebsoft.transit.title",
         descriptionKey:
-          "exp.hdwebsoft.projects.transit.subtitle",
-        teamSizeKey: "exp.hdwebsoft.projects.transit.teamSize",
-        durationKey: "exp.hdwebsoft.projects.transit.duration",
+          "exp.hdwebsoft.transit.subtitle",
+        teamSizeKey: "exp.hdwebsoft.transit.teamSize",
+        durationKey: "exp.hdwebsoft.transit.duration",
         highlightKeys: [
-          "exp.hdwebsoft.projects.transit.highlights.0",
-          "exp.hdwebsoft.projects.transit.highlights.1",
-          "exp.hdwebsoft.projects.transit.highlights.2",
-          "exp.hdwebsoft.projects.transit.highlights.3",
-          "exp.hdwebsoft.projects.transit.highlights.4",
-          "exp.hdwebsoft.projects.transit.highlights.5",
+          "exp.hdwebsoft.transit.highlights.0",
+          "exp.hdwebsoft.transit.highlights.1",
+          "exp.hdwebsoft.transit.highlights.2",
+          "exp.hdwebsoft.transit.highlights.3",
+          "exp.hdwebsoft.transit.highlights.4",
+          "exp.hdwebsoft.transit.highlights.5",
         ],
         image: cbpoPoster,
         imageAlt: "2D Transit project",
-        ctaUrl: WORK_PROJECT_LINKS.HDWEBSOFT_2D_TRANSIT,
+        ctaUrl: WORK_PROJECT_LINKS.HD_2D_TRANSIT,
       },
     ],
     noteKey: "exp.hdwebsoft.note",
@@ -125,37 +128,37 @@ export const COMPANY_EXPERIENCES = {
     detailUrl: PATH_URL.ABOUT_WORK_EXPERIENCE_TOYAR,
     projects: [
       {
-        titleKey: "exp.toyar.projects.fidovn.title",
+        titleKey: "exp.toyar.fidovn.title",
         descriptionKey:
-          "exp.toyar.projects.fidovn.subtitle",
-        teamSizeKey: "exp.toyar.projects.fidovn.teamSize",
-        durationKey: "exp.toyar.projects.fidovn.duration",
+          "exp.toyar.fidovn.subtitle",
+        teamSizeKey: "exp.toyar.fidovn.teamSize",
+        durationKey: "exp.toyar.fidovn.duration",
         highlightKeys: [
-          "exp.toyar.projects.fidovn.highlights.0",
-          "exp.toyar.projects.fidovn.highlights.1",
-          "exp.toyar.projects.fidovn.highlights.2",
-          "exp.toyar.projects.fidovn.highlights.3",
-          "exp.toyar.projects.fidovn.highlights.4",
-          "exp.toyar.projects.fidovn.highlights.5",
-          "exp.toyar.projects.fidovn.highlights.6",
+          "exp.toyar.fidovn.highlights.0",
+          "exp.toyar.fidovn.highlights.1",
+          "exp.toyar.fidovn.highlights.2",
+          "exp.toyar.fidovn.highlights.3",
+          "exp.toyar.fidovn.highlights.4",
+          "exp.toyar.fidovn.highlights.5",
+          "exp.toyar.fidovn.highlights.6",
         ],
         image: fidovnPoster,
         imageAlt: "FidoVN project",
         ctaUrl: WORK_PROJECT_LINKS.TOYAR_FIDOVN,
       },
       {
-        titleKey: "exp.toyar.projects.fidobox.title",
+        titleKey: "exp.toyar.fidobox.title",
         descriptionKey:
-          "exp.toyar.projects.fidobox.subtitle",
-        teamSizeKey: "exp.toyar.projects.fidobox.teamSize",
-        durationKey: "exp.toyar.projects.fidobox.duration",
+          "exp.toyar.fidobox.subtitle",
+        teamSizeKey: "exp.toyar.fidobox.teamSize",
+        durationKey: "exp.toyar.fidobox.duration",
         highlightKeys: [
-          "exp.toyar.projects.fidobox.highlights.0",
-          "exp.toyar.projects.fidobox.highlights.1",
-          "exp.toyar.projects.fidobox.highlights.2",
-          "exp.toyar.projects.fidobox.highlights.3",
-          "exp.toyar.projects.fidobox.highlights.4",
-          "exp.toyar.projects.fidobox.highlights.5",
+          "exp.toyar.fidobox.highlights.0",
+          "exp.toyar.fidobox.highlights.1",
+          "exp.toyar.fidobox.highlights.2",
+          "exp.toyar.fidobox.highlights.3",
+          "exp.toyar.fidobox.highlights.4",
+          "exp.toyar.fidobox.highlights.5",
         ],
         image: fidoboxPoster,
         imageAlt: "FidoBox project",
@@ -180,13 +183,37 @@ export const COMPANY_EXPERIENCES = {
     techLineKeys: ["exp.optoro.tech"],
   },
   mindx: {
-    variant: "simple",
+    variant: "detailed",
     keyPrefix: "exp.mindx",
+    logo: mindxLogo,
+    logoAlt: "MindX Technology School logo",
+    linkUrl: "https://mindx.edu.vn/",
     detailUrl: PATH_URL.ABOUT_OTHER_EXPERIENCE_MINDX,
-    responsibilityKeys: [
-      "exp.mindx.items.0",
-      "exp.mindx.items.1",
+    projects: [
+      {
+        titleKey: "exp.mindx.lecturer.title",
+        highlightKeys: [
+          "exp.mindx.highlights.1",
+          "exp.mindx.highlights.2",
+          "exp.mindx.highlights.3",
+          "exp.mindx.highlights.4",
+        ],
+        image: mindxLecturerPoster,
+        imageAlt: "Lecturer at MindX Technology School",
+      },
+      {
+        titleKey: "exp.mindx.manager.title",
+        highlightKeys: [
+          "exp.mindx.highlights.5",
+          "exp.mindx.highlights.6",
+          "exp.mindx.highlights.7",
+          "exp.mindx.highlights.8",
+        ],
+        image: mindxManagerPoster,
+        imageAlt: "Teaching Manager at MindX Technology School",
+      },
     ],
+    techLineKeys: ["exp.mindx.tech"],
   },
 } as const satisfies Record<string, CompanyExperienceEntry>;
 

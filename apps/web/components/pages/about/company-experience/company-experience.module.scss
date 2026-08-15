@@ -1,4 +1,4 @@
-// Simple (non-expandable) variant — used by mindx.
+// Simple (non-expandable) variant — no companies currently use it.
 .root {
   display: flex;
   flex-direction: column;
@@ -77,7 +77,7 @@
   }
 }
 
-// Detailed-variant card (hdwebsoft/toyar/optoro) rendered inside
+// Detailed-variant card (hdwebsoft/toyar/optoro/mindx) rendered inside
 // WorkExperienceTimeline: owns its own box chrome since it no longer sits
 // inside a per-company grid block in about.module.scss.
 .card {
