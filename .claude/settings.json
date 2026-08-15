@@ -12,7 +12,10 @@
       "Bash(pnpm lint *)",
       "Bash(pnpm check-types *)",
       "Bash(pnpm install *)",
-      "Bash(pnpm test *)"
+      "Bash(pnpm test *)",
+      "Bash(node -e \"JSON.parse\\(require\\('fs'\\).readFileSync\\('database/locales/en.json','utf-8'\\)\\); console.log\\('en.json OK'\\)\")",
+      "Bash(pnpm --filter web check-types)",
+      "Bash(node -e \"require.resolve\\('sharp'\\)\")"
     ]
   }
 }

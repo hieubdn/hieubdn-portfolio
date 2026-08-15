@@ -114,18 +114,22 @@ export default function WorkExperienceDetail({ company }: Props) {
                           {positionValue}
                         </Reveal>
                       </Reveal>
-                      <Reveal as="span" delayMs={90} className={styles.metaItem}>
-                        {t("exp.labels.teamSize")}:{" "}
-                        <Reveal as="span" delayMs={105} className={styles.metaValue}>
-                          {t(project.teamSizeKey)}
+                      {project.teamSizeKey && (
+                        <Reveal as="span" delayMs={90} className={styles.metaItem}>
+                          {t("exp.labels.teamSize")}:{" "}
+                          <Reveal as="span" delayMs={105} className={styles.metaValue}>
+                            {t(project.teamSizeKey)}
+                          </Reveal>
                         </Reveal>
-                      </Reveal>
-                      <Reveal as="span" delayMs={120} className={styles.metaItem}>
-                        {t("exp.labels.duration")}:{" "}
-                        <Reveal as="span" delayMs={135} className={styles.metaValue}>
-                          {t(project.durationKey)}
+                      )}
+                      {project.durationKey && (
+                        <Reveal as="span" delayMs={120} className={styles.metaItem}>
+                          {t("exp.labels.duration")}:{" "}
+                          <Reveal as="span" delayMs={135} className={styles.metaValue}>
+                            {t(project.durationKey)}
+                          </Reveal>
                         </Reveal>
-                      </Reveal>
+                      )}
                     </div>
                   </div>
                   <div
@@ -178,17 +182,19 @@ export default function WorkExperienceDetail({ company }: Props) {
                       </p>
                     )}
                   </div>
-                  <a
-                    href={project.ctaUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.cta}
-                  >
-                    {t("exp.labels.viewProject")}{" "}
-                    <Reveal as="span" variant="scale" delayMs={150} aria-hidden="true">
-                      <Right />
-                    </Reveal>
-                  </a>
+                  {project.ctaUrl && (
+                    <a
+                      href={project.ctaUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.cta}
+                    >
+                      {t("exp.labels.viewProject")}{" "}
+                      <Reveal as="span" variant="scale" delayMs={150} aria-hidden="true">
+                        <Right />
+                      </Reveal>
+                    </a>
+                  )}
                   {project.highlightKeys.length > 0 && (
                     <button
                       type="button"

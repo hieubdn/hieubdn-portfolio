@@ -95,7 +95,7 @@ export default function AboutSection() {
       variant: "sectionHeading",
       render: () => <SectionHeading title={t("exp.otherTitle")} />,
     },
-    { id: "mindx", label: "MindX", variant: "card", render: () => <CompanyExperience company={COMPANY_EXPERIENCES.mindx} /> },
+    { id: "mindx", label: "MindX", variant: "timeline", render: () => <CompanyExperience company={COMPANY_EXPERIENCES.mindx} /> },
     { id: "footerDivider", label: "Section divider", variant: "divider", render: () => <hr className={styles.rule} /> },
     { id: "footerSocial", label: "Social profiles", variant: "card", render: () => <SocialBlock /> },
     { id: "cta", label: "Call to action", variant: "card", render: () => <CallToAction /> },
