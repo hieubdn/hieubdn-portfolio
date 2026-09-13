@@ -32,6 +32,7 @@ type DetailedCompanyExperienceBase = {
   logoAlt: string;
   linkUrl: string;
   techLineKeys: readonly string[];
+  engineeringLineKeys?: readonly string[];
   detailUrl: string;
   noteKey?: string;
 };
@@ -118,6 +119,7 @@ export const COMPANY_EXPERIENCES = {
     ],
     noteKey: "exp.hdwebsoft.note",
     techLineKeys: ["exp.hdwebsoft.tech"],
+    engineeringLineKeys: ["exp.hdwebsoft.engineering"],
   },
   toyar: {
     variant: "detailed",
@@ -179,6 +181,7 @@ export const COMPANY_EXPERIENCES = {
       "exp.optoro.items.1",
       "exp.optoro.items.2",
       "exp.optoro.items.3",
+      "exp.optoro.items.4",
     ],
     techLineKeys: ["exp.optoro.tech"],
   },
